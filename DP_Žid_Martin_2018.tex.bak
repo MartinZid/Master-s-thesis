@@ -70,16 +70,17 @@ všechny zdrojové kódy jak aplikace, tak i testů společně s~vytvořenými w
 
 \chapter{Analýza a návrh}
 
-\section{Architektury při tvorbě iOS aplikací}
-Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
+\section{Architektury}
+Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této aplikaci budu rozebírat pouze MVC, MVVM a VIPER.
 
 \subsection{MVC}
 Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o softwarovou architekturu, které se velice často používá při tvorbě aplikací s uživatelským rozhraním. \cite{MVCMozilla}
-\begin{itemize}
-\item $Model$ definuje jaká data aplikace obsahuje a pokud dojde k jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
-\item $View$ vrstva je prezentována samotnému uživateli. Tedy jsou zde zobrazena aplikační data a je zachycována uživatelova práce s aplikací.\cite{MVCMozilla}
-\item $Controller$ je vrstva mezi $View$ a $Model$ zabezpečující logiku aplikace. Stará se o promítnutí změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Model$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
-\end{itemize}
+
+$Model$ definuje jaká data aplikace obsahuje a pokud dojde k jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
+
+$View$ vrstva je prezentována samotnému uživateli. Tedy jsou zde zobrazena aplikační data a je zachycována uživatelova práce s aplikací.\cite{MVCMozilla}
+
+$Controller$ je vrstva mezi $View$ a $Model$ zabezpečující logiku aplikace. Stará se o promítnutí změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Model$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
 
 Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$. \cite{Orlov}
 
@@ -99,13 +100,14 @@ MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou mo
 
 \subsection{MVVM}
 Architektura MVVM má obdobné koncepce jako MVC. Jedná se také o zkratku, tentokrát \uv{Model-View-ViewModel}. \cite{MVVMMicrosoft}
-\begin{itemize}
-\item $Model$ je totožný s $Model$ vrstvou architektury MVC, jedná se tedy o datovou část aplikace.
-\item $View$ prezentuje aplikační data uživateli a monitoruje jeho akce. Však, jak již bylo zmíněno dříve, u iOS aplikací se jedná spíše o vrstvu\\ $View/View controller$. Tato vrstva obsahuje pouze minimum logiky aplikace a reaguje hlavně na $ViewModel$.  \cite{Morrison}
-\item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s  $Model$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele, např.: kliknutí na tlačítko. \cite{MVVMMicrosoft}
-\end{itemize}
 
-Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/View controller$ a $Model$. Když potom uvažujeme architekturu MVVM $View/View controller$  je opravdu pouze jednou vrstvou a mezi ní a $Model$ je vložena nová vrstva  $ViewModel$, která je spojuje a do které je přesunuta i většina aplikační logiky.
+$Model$ je totožný s $Model$ vrstvou architektury MVC, jedná se tedy o datovou část aplikace.
+
+$View$ prezentuje aplikační data uživateli a monitoruje jeho akce. Však, jak již bylo zmíněno dříve, u iOS aplikací se jedná spíše o vrstvu $View/View controller$. Tato vrstva obsahuje pouze minimum logiky aplikace a reaguje hlavně na $ViewModel$.  \cite{Morrison}
+
+$ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s  $Model$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele, např.: kliknutí na tlačítko. \cite{MVVMMicrosoft}
+
+Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve téměř pouze dvě vrstvy $View/View controller$ a $Model$. Když potom uvažujeme architekturu MVVM $View/View controller$  je opravdu pouze jednou vrstvou a mezi ní a $Model$ je vložena nová vrstva $ViewModel$, do které je přesunuta i většina aplikační logiky.
 
 Mezi výhody architektury MVVM oproti MVC patří např.:
 \begin{itemize}

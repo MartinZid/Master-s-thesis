@@ -4,47 +4,49 @@ The top-level auxiliary file: DP_Žid_Martin_2018.aux
 The style file: csn690.bst
 Database file #1: mybibliographyfile.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Warning--empty chapter and pages in kobltypo
-Warning--empty pages in kobltypo
-You've used 1 entry,
+Warning--to sort, need author or key in MVCMozilla
+Warning--to sort, need author or key in MVCGoogle
+Warning--to sort, need author or key in mvc-pic
+Warning--to sort, need author or key in MVVMMicrosoft
+You've used 6 entries,
             3185 wiz_defined-function locations,
-            657 strings with 5589 characters,
-and the built_in function-call counts, 448 in all, are:
-= -- 23
-> -- 14
+            698 strings with 6728 characters,
+and the built_in function-call counts, 1780 in all, are:
+= -- 120
+> -- 25
 < -- 0
-+ -- 7
-- -- 4
-* -- 27
-:= -- 56
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 4
++ -- 15
+- -- 6
+* -- 89
+:= -- 173
+add.period$ -- 12
+call.type$ -- 6
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 42
-empty$ -- 47
-format.name$ -- 5
-if$ -- 90
+cite$ -- 10
+duplicate$ -- 195
+empty$ -- 204
+format.name$ -- 7
+if$ -- 388
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 30
+int.to.str$ -- 6
+missing$ -- 45
+newline$ -- 34
+num.names$ -- 4
+pop$ -- 111
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 15
 quote$ -- 0
-skip$ -- 14
+skip$ -- 74
 stack$ -- 0
-substring$ -- 5
-swap$ -- 16
+substring$ -- 43
+swap$ -- 78
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2
-warning$ -- 2
-while$ -- 2
-width$ -- 2
-write$ -- 17
-(There were 2 warnings)
+type$ -- 24
+warning$ -- 4
+while$ -- 4
+width$ -- 7
+write$ -- 65
+(There were 4 warnings)

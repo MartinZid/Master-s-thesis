@@ -4,6 +4,9 @@
 \contentsline {chapter}{{\' U}vod}{1}{chapter*.5}
 \contentsline {chapter}{\chapternumberline {1}C\IeC {\'\i }l pr\IeC {\'a}ce}{3}{chapter.1}
 \contentsline {chapter}{\chapternumberline {2}Anal\IeC {\'y}za a n\IeC {\'a}vrh}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Architektury p\IeC {\v r}i tvorb\IeC {\v e} iOS aplikac\IeC {\'\i }}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}MVC}{5}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}MVVM}{5}{subsection.2.1.2}
 \contentsline {chapter}{\chapternumberline {3}Realizace}{7}{chapter.3}
 \contentsline {chapter}{Z{\' a}v{\v e}r}{9}{chapter*.6}
 \contentsline {chapter}{Literatura}{11}{section*.8}

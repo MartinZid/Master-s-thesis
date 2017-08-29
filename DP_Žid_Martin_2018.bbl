@@ -8,8 +8,35 @@
 \providecommand{\selectlanguage}[1]{\relax}
 \providecommand{\eprint}[2][]{\biburl{#2}}
 
-\bibitem{kobltypo}
-Ko{\v c}i{\v c}ka, P.; Blazek, F.: \emph{Praktick{\' a} typografie}. Brno:
-  Computer Press, 2004.
+\bibitem{MVCMozilla}
+MVC Architecture. \emph{MDN web docs} [online]. Mountain View, California,
+  United States: Mozilla and individual contributors, © 2005-2017, {[cit.
+  2017-08-29]}.
+\urlprefix\biburl{https://developer.mozilla.org/cs/}
+
+\bibitem{MVCGoogle}
+MVC Architecture. \emph{Developer Chrome } [online]. Silicon Valley: Google, ©
+  2017, {[cit. 2017-08-29]}.
+\urlprefix\biburl{https://developer.mozilla.org/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture}
+
+\bibitem{Orlov}
+Orlov, B.: IOS Architecture Patterns. \emph{Medium \emph{[online]}}, 2015,
+  {[cit. 2017-08-29]}.
+\urlprefix\biburl{https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52}
+
+\bibitem{mvc-pic}
+Model-View-Controller. \emph{Apple Developer} [online]. California, U.S.: Apple
+  Inc., © 2015, {[cit. 2017-08-29]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html}
+
+\bibitem{MVVMMicrosoft}
+The MVVM Pattern. \emph{Microsoft Developer Network } [online]. Washington,
+  U.S.: Microsoft, © 2017, {[cit. 2017-08-29]}.
+\urlprefix\biburl{https://msdn.microsoft.com/en-us/library/hh848246.aspx}
+
+\bibitem{Morrison}
+Morrison, J.; Schmidt, M.: IOS Design Patterns: MVC and MVVM. \emph{CapTech},
+  2014, {[cit. 2017-08-29]}.
+\urlprefix\biburl{https://www.captechconsulting.com/blogs/ios-design-patterns-mvc-and-mvvm}
 
 \end{thebibliography}
