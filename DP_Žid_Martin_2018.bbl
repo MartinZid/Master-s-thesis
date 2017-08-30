@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\biburl}[1]{\url{#1}}
 \providecommand{\urlprefix}{Dostupn{\' e} z: }
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,7 +15,7 @@ MVC Architecture. \emph{MDN web docs} [online]. Mountain View, California,
 \urlprefix\biburl{https://developer.mozilla.org/cs/}
 
 \bibitem{MVCGoogle}
-MVC Architecture. \emph{Developer Chrome } [online]. Silicon Valley: Google, ©
+MVC Architecture. \emph{Developer Chrome} [online]. Silicon Valley: Google, ©
   2017, {[cit. 2017-08-29]}.
 \urlprefix\biburl{https://developer.mozilla.org/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture}
 
@@ -29,6 +29,11 @@ Model-View-Controller. \emph{Apple Developer} [online]. California, U.S.: Apple
   Inc., © 2015, {[cit. 2017-08-29]}.
 \urlprefix\biburl{https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html}
 
+\bibitem{mvc-apple-pic}
+Orlov, B.: Realistic Cocoa MVC. \emph{\emph{In:} Medium \emph{[online]}}, 2015,
+  {[cit. 2017-08-29]}.
+\urlprefix\biburl{https://cdn-images-1.medium.com/max/800/1*PkWjDU0jqGJOB972cMsrnA.png}
+
 \bibitem{MVVMMicrosoft}
 The MVVM Pattern. \emph{Microsoft Developer Network } [online]. Washington,
   U.S.: Microsoft, © 2017, {[cit. 2017-08-29]}.
@@ -38,5 +43,19 @@ The MVVM Pattern. \emph{Microsoft Developer Network } [online]. Washington,
 Morrison, J.; Schmidt, M.: IOS Design Patterns: MVC and MVVM. \emph{CapTech},
   2014, {[cit. 2017-08-29]}.
 \urlprefix\biburl{https://www.captechconsulting.com/blogs/ios-design-patterns-mvc-and-mvvm}
+
+\bibitem{mvvm-pic}
+Orlov, B.: MVVM. \emph{\emph{In:} Medium \emph{[online]}}, 2015, {[cit.
+  2017-08-30]}.
+\urlprefix\biburl{https://cdn-images-1.medium.com/max/800/1*uhPpTHYzTmHGrAZy8hiM7w.png}
+
+\bibitem{VIPER}
+Architecting iOS Apps with VIPER. \emph{Objc} [online]. Berlin: Objc.io, 2013.
+\urlprefix\biburl{https://www.objc.io/issues/13-architecture/viper/}
+
+\bibitem{viper-pic}
+Orlov, B.: VIPER. \emph{\emph{In:} Medium \emph{[online]}}, 2015, {[cit.
+  2017-08-30]}.
+\urlprefix\biburl{https://cdn-images-1.medium.com/max/800/1*0pN3BNTXfwKbf08lhwutag.png}
 
 \end{thebibliography}

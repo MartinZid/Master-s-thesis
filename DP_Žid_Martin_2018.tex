@@ -81,20 +81,20 @@ Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponent
 \item $Controller$ je vrstva mezi $View$ a $Model$ zabezpečující logiku aplikace. Stará se o promítnutí změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Model$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
 \end{itemize}
 
-Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$. \cite{Orlov}
+Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$. Což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
 
 Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} a \ref{fig:mvc-apple}.
 
 MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou možností.
 
 \begin{figure}[h]\centering
- \includegraphics[width=0.60\textwidth]{./pictures/model_view_controller}
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/model_view_controller}
  \caption[Model-View-Controller diagram]{Model-View-Controller diagram \cite{mvc-pic}}\label{fig:mvc}
 \end{figure}
 
 \begin{figure}[h]\centering
- \includegraphics[width=0.60\textwidth]{./pictures/appleMVC}
- \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace \cite{Orlov}}\label{fig:mvc-apple}
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/appleMVC}
+ \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace \cite{mvc-apple-pic}}\label{fig:mvc-apple}
 \end{figure}
 
 \subsection{MVVM}
@@ -112,6 +112,34 @@ Mezi výhody architektury MVVM oproti MVC patří např.:
 \item poskytuje návrhový princip tzv. separation of concerns, neboli oddělení zájmů;
 \item zlepšuje možnost testovatelnosti aplikace.
 \end{itemize}
+
+\begin{figure}[h]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/MVVM}
+ \caption[Model-View-ViewModel architektura]{Model-View-ViewModel architektura \cite{mvvm-pic}}\label{fig:mvvm}
+\end{figure}
+
+\subsection{VIPER}
+VIPER je poslední rozebíranou možností, co se týče architektur. I zde je název složen z prvních písmen jednotlivých vrstev architektury, tedy \uv{View, Interactor, Presenter, Entity, Router}.
+\begin{itemize}
+\item $View$  zobrazuje data uživateli a předává uživatelovi vstupy vrstvě $Presenter$.
+\item $Interactor$ obsahuje logiku aplikace spojenou s daty ($Entity$).
+\item $Presenter$ vrstva má na starosti $View$ logiku.  Reaguje tedy na uživatelovi akce a komunikuje s vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
+\item $Entity$ jsou datové objekty aplikace přístupné pouze části $Interactor$.
+\item $Routing$ obsahuje navigační logiku. \cite{VIPER}
+\end{itemize}
+
+Mezi výhody architektury VIPER znovu patří např.:
+\begin{itemize}
+\item dobře rozděluje odpovědnosti;
+\item zlepšuje možnost testovatelnosti aplikace. \cite{Orlov}
+\end{itemize}
+
+Tato architektura však může být příliš náročná a přehnaná pro menší aplikace. \cite{Orlov}
+
+\begin{figure}[h]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.jpg}
+ \caption[VIPER architektura]{VIPER architektura \cite{viper-pic}}\label{fig:viper}
+\end{figure}
 
 
 
