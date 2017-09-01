@@ -58,4 +58,28 @@ Orlov, B.: VIPER. \emph{\emph{In:} Medium \emph{[online]}}, 2015, {[cit.
   2017-08-30]}.
 \urlprefix\biburl{https://cdn-images-1.medium.com/max/800/1*0pN3BNTXfwKbf08lhwutag.png}
 
+\bibitem{technopediaFRP}
+Functional Reactive Programming (FRP). \emph{Technopedia} [online]. Techopedia
+  Inc., © 2017, {[cit. 2017-09-01]}.
+\urlprefix\biburl{https://www.techopedia.com/definition/29571/functional-reactive-programming-frp}
+
+\bibitem{Ztaltz2014}
+Staltz, A.: The introduction to Reactive Programming you've been missing. In
+  \emph{GitHubGist}, California, US.: GitHub, 2014, {[cit. 2017-09-01]}.
+\urlprefix\biburl{https://gist.github.com/staltz/868e7e9bc2a7b8c1f754}
+
+\bibitem{Blackheath2016}
+Blackheath, S.; Jones, A.: \emph{Functional reactive programming}. United
+  States: Manning Publications, 2016, ISBN 978-163-3430-105.
+
+\bibitem{ReactiveSwift}
+ReactiveSwift. \emph{GitHub} [online]. California, US.: GitHub Inc., © 2017,
+  {[cit. 2017-09-01]}.
+\urlprefix\biburl{https://github.com/ReactiveCocoa/ReactiveSwift}
+
+\bibitem{ReactiveCocoa}
+ReactiveCocoa. \emph{GitHub} [online]. California, US.: GitHub Inc., © 2017,
+  {[cit. 2017-09-01]}.
+\urlprefix\biburl{https://github.com/ReactiveCocoa/ReactiveCocoa}
+
 \end{thebibliography}

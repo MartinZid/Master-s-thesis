@@ -63,13 +63,23 @@ všechny zdrojové kódy jak aplikace, tak i testů společně s~vytvořenými w
 % \newacronym{FIT}{FIT}{Fakulta informa{\v c}n{\' i}ch technologi{\' i}}
 
 \begin{introduction}
-	%sem napište úvod Vaší práce
+V dnešní době, kdy existují mobilní aplikace na téměř vše, mě zarazil fakt, že u pilotů tomu tak nemusí být. Aplikace na evidenci letů samozřejmě existují, však je tu hned několik problémů. Ty aplikace jsou často velice drahé, nemusí odpovídat leteckým přepisům České republiky nebo nemají vyhovující funkcionalitu.
+
+Z tohoto důvodu jsem se rozhodl vytvořit iOS aplikaci na evidenci letů. Tato aplikace bude pomáhat pilotům zaznamenávat elektronicky své lety, bude také kontrolovat předpisy a umožňovat export do formátu pro tisk.
+
+Začínám analýzou podobných aplikací a to pro zařízení iOS i Android. Poté navrhuji vhodnou funkcionalitu a vytvářím návrh uživatelského rozhraní.
+
+Dalším tématem, které ve své práci řeším jsou softwarové architektury při vývoji iOS aplikace. Zde analyzuji alternativy k architektuře MVC ve spojení s funkcionálně reaktivním programováním neboli FRP.
+
+Tuto analýzu následně aplikuji v praxi, kdy se zvolenou architekturou a FRP implementuji společně s jednotkovými testy dříve zmíněnou aplikaci. Nakonec aplikaci podrobím uživatelským testům a podle jejich výsledků
+upravím aplikaci do finální podoby.
+
+V poslední části své práce se snažím zhodnotit postupy FRP společně s mnou zvolenou moderní architekturou a jejich časovou a implementační náročnost oproti klasickému MVC.
 \end{introduction}
 
 \chapter{Cíl práce}
 
 \chapter{Analýza a návrh}
-
 \section{Architektury při tvorbě iOS aplikací}
 Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
 
@@ -141,8 +151,19 @@ Tato architektura však může být příliš náročná a přehnaná pro menš�
  \caption[VIPER architektura]{VIPER architektura \cite{viper-pic}}\label{fig:viper}
 \end{figure}
 
+\section{Funkcionálně reaktivní programování}
+Podle \cite{technopediaFRP} je funkcionálně reaktivní programování kombinací funkcionálního a reaktivního programování. Díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za nějaký čas.
 
+Pro vysvětlení, co je reaktivní programování cituji \cite{Ztaltz2014} \uv{reaktivní programování je programování s asynchronními datovými toky}.
 
+Na spojení funkcionální a reaktivního programování může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko, nebo i dotaz na server a jsme informování o každé změně v podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Je tedy možné toky spojovat ($merge$), filtrovat ($filter$) pouze události, které nás zajímají,  mapovat ($map$) jeden tok na nový a další. \cite{Ztaltz2014}
+
+\subsection{FRP frameworky pro iOS}
+V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení společně s ukázkami jsou v k nalezení v kapitole Realizace.
+\subsubsection{ReactiveSwift}
+ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$, \ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
+\subsubsection{ReactiveCocoa}
+ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje různé aspekty Apple Cocoa frameworku základními prvky frameworku ReactiveSwift. Umožňuje vazbu na prvky uživatelského rozhraní, u interaktivních prvků napojuje $Signal$ a $Action$ pro kontrolu událostí a změn. Dále také umožňuje vytvářet signály na volání metod (např. i pro UIKit třídy). \cite{ReactiveCocoa}
 
 
 \chapter{Realizace}

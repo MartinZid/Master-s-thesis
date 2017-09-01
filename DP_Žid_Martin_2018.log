@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  30 AUG 2017 10:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  1 SEP 2017 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1018,7 +1018,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 60.
 
-<cvut-logo-bw.pdf, id=50, 91.34125pt x 69.25874pt>
+<cvut-logo-bw.pdf, id=54, 91.34125pt x 69.25874pt>
 File: cvut-logo-bw.pdf Graphic file (type pdf)
  <use cvut-logo-bw.pdf>
 Package pdftex.def Info: cvut-logo-bw.pdf used on input line 60.
@@ -1068,7 +1068,7 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.69 \chapter
+l.80 \chapter
              {CÃ­l prÃ¡ce} [1
 
 
@@ -1076,74 +1076,74 @@ l.69 \chapter
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.69 \chapter
+l.80 \chapter
              {CÃ­l prÃ¡ce} [2
 
 ] [3] [4
 
 ]
-<./pictures/architektury/model_view_controller.png, id=153, 1308.89pt x 541.021
+<./pictures/architektury/model_view_controller.png, id=158, 1308.89pt x 541.021
 26pt>
 File: ./pictures/architektury/model_view_controller.png Graphic file (type png)
 
  <use ./pictures/architektury/model_view_controller.png>
 Package pdftex.def Info: ./pictures/architektury/model_view_controller.png used
- on input line 91.
+ on input line 101.
 (pdftex.def)             Requested size: 365.31203pt x 150.99785pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./pictures/architektury/appleMVC.png, id=156, 803.0pt x 256.96pt>
+<./pictures/architektury/appleMVC.png, id=161, 803.0pt x 256.96pt>
 File: ./pictures/architektury/appleMVC.png Graphic file (type png)
 
 <use ./pictures/architektury/appleMVC.png>
 Package pdftex.def Info: ./pictures/architektury/appleMVC.png used on input lin
-e 96.
+e 106.
 (pdftex.def)             Requested size: 365.31203pt x 116.90129pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.5174pt too wide) in paragraph at lines 101--103
+Overfull \hbox (4.5174pt too wide) in paragraph at lines 111--113
 \T1/lmr/m/n/10.95 Architektura MVVM má ob-dobné kon-cepce jako MVC. Jedná se ta
 ké o zkratku,
  []
 
 [5] [6 <./pictures/architektury/model_view_controller.png> <./pictures/architek
 tury/appleMVC.png (PNG copy)>]
-<./pictures/architektury/MVVM.png, id=182, 803.0pt x 242.9075pt>
+<./pictures/architektury/MVVM.png, id=187, 803.0pt x 242.9075pt>
 File: ./pictures/architektury/MVVM.png Graphic file (type png)
 
 <use ./pictures/architektury/MVVM.png>
-Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 11
+Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 12
 7.
 (pdftex.def)             Requested size: 365.31203pt x 110.50824pt.
 
-Overfull \hbox (20.02321pt too wide) in paragraph at lines 124--125
+Overfull \hbox (20.02321pt too wide) in paragraph at lines 134--135
 []$\OML/lmm/m/it/10.95 View$ \T1/lmr/m/n/10.95 zob-ra-zuje data uºi-va-teli a p
 °e-dává uºi-va-te-lovi vstupy vrstv¥ $\OML/lmm/m/it/10.95 Presenter$\T1/lmr/m/n
 /10.95 . 
  []
 
-<./pictures/architektury/viper.jpg, id=189, 803.0pt x 354.32375pt>
+<./pictures/architektury/viper.jpg, id=194, 803.0pt x 354.32375pt>
 File: ./pictures/architektury/viper.jpg Graphic file (type jpg)
 
 <use ./pictures/architektury/viper.jpg>
 Package pdftex.def Info: ./pictures/architektury/viper.jpg used on input line 1
-40.
+50.
 (pdftex.def)             Requested size: 365.31203pt x 161.19592pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [7 <./pictures/architektury/MVVM.png (PNG copy)>] [8 <./pictures/architektury/v
-iper.jpg>] [9
+iper.jpg>] [9] [10
 
-] [10
+] [11] [12
 
-] (./DP_ZÌŒid_Martin_2018.bbl [11] [12
+] (./DP_ZÌŒid_Martin_2018.bbl [13] [14
 
 ]
 bibitemlist
@@ -1211,7 +1211,7 @@ mages -[] 1\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 medium\OML/lmm/m/it/10.95 :\
 T1/lmtt/m/n/10.95 com / max / 800 /
  []
 
-[13]
+[15]
 Underfull \hbox (badness 8170) in paragraph at lines 57--60
 []\T1/lmr/m/n/10.95 Orlov, B.: VI-PER. In: \T1/lmr/m/it/10.95 Me-dium \T1/lmr/m
 /n/10.95 [on-line], 2015, [cit. 2017-08-
@@ -1224,35 +1224,66 @@ mages -[] 1\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 medium\OML/lmm/m/it/10.95 :\
 T1/lmtt/m/n/10.95 com / max / 800 /
  []
 
-) [14] [15
 
-] [16
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+[]\T1/lmr/m/n/10.95 Functional Re-active Pro-gra-m-ming (FRP). \T1/lmr/m/it/10.
+95 Tech-no-pe-dia \T1/lmr/m/n/10.95 [on-
+ []
 
-] [17]
+
+Underfull \hbox (badness 5217) in paragraph at lines 62--65
+\T1/lmr/m/n/10.95 line]. Te-cho-pe-dia Inc., [] 2017, [cit. 2017-09-01]. Do-stu
+pné z:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--65
+[]$\T1/lmtt/m/n/10.95 https : / / www\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 te
+chopedia\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / definition / 29571 / func
+tional -[]
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 76--79
+\T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
+ / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
+ []
+
+
+Underfull \hbox (badness 1052) in paragraph at lines 81--84
+\T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
+ / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
+ []
+
+) [16] [17
+
+] [18
+
+] [19]
 \tf@toc=\write5
 \openout5 = `DP_ZÌŒid_Martin_2018.toc'.
 
 \tf@lof=\write6
 \openout6 = `DP_ZÌŒid_Martin_2018.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 290.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 290.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 310.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 310.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 290.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 290.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 310.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 310.
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
-(rerunfilecheck)             Checksum: 8B1C1611DBD771A77705D0B057E95DAC;1141.
+(rerunfilecheck)             Checksum: C346AA3B26FECC1EFCF8BC68656DE5DB;1392.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 290.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 310.
  ) 
 Here is how much of TeX's memory you used:
- 13459 strings out of 492995
- 186507 string characters out of 6132704
- 316982 words of memory out of 5000000
- 16820 multiletter control sequences out of 15000+600000
+ 13477 strings out of 492995
+ 186784 string characters out of 6132704
+ 317161 words of memory out of 5000000
+ 16827 multiletter control sequences out of 15000+600000
  68785 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,32p,1104b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1270,10 +1301,10 @@ texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/201
 e1/public/lm/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
 c/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt1
 0.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (31 pages, 431652 bytes).
+Output written on DP_ZÌŒid_Martin_2018.pdf (33 pages, 440711 bytes).
 PDF statistics:
- 324 PDF objects out of 1000 (max. 8388607)
- 267 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 98 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 359 PDF objects out of 1000 (max. 8388607)
+ 300 compressed objects within 3 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

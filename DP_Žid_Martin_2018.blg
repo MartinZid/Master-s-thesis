@@ -9,45 +9,49 @@ Warning--to sort, need author or key in MVCGoogle
 Warning--to sort, need author or key in mvc-pic
 Warning--to sort, need author or key in MVVMMicrosoft
 Warning--to sort, need author or key in VIPER
-You've used 10 entries,
+Warning--to sort, need author or key in technopediaFRP
+Warning--to sort, need author or key in ReactiveSwift
+Warning--to sort, need author or key in ReactiveCocoa
+Warning--empty pages in Ztaltz2014
+You've used 15 entries,
             3185 wiz_defined-function locations,
-            717 strings with 7185 characters,
-and the built_in function-call counts, 3020 in all, are:
-= -- 199
-> -- 47
+            749 strings with 7947 characters,
+and the built_in function-call counts, 4612 in all, are:
+= -- 299
+> -- 71
 < -- 0
-+ -- 25
-- -- 12
-* -- 150
-:= -- 316
-add.period$ -- 20
-call.type$ -- 10
-change.case$ -- 26
++ -- 39
+- -- 18
+* -- 233
+:= -- 464
+add.period$ -- 30
+call.type$ -- 15
+change.case$ -- 41
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 340
-empty$ -- 341
-format.name$ -- 13
-if$ -- 650
+cite$ -- 24
+duplicate$ -- 520
+empty$ -- 537
+format.name$ -- 20
+if$ -- 1006
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 80
-newline$ -- 50
-num.names$ -- 10
-pop$ -- 184
+int.to.str$ -- 15
+missing$ -- 123
+newline$ -- 69
+num.names$ -- 14
+pop$ -- 290
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 39
 quote$ -- 0
-skip$ -- 121
+skip$ -- 183
 stack$ -- 0
-substring$ -- 69
-swap$ -- 135
+substring$ -- 103
+swap$ -- 210
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 40
-warning$ -- 5
-while$ -- 10
-width$ -- 12
-write$ -- 103
-(There were 5 warnings)
+type$ -- 58
+warning$ -- 9
+while$ -- 14
+width$ -- 17
+write$ -- 150
+(There were 9 warnings)

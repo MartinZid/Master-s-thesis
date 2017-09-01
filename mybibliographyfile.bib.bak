@@ -86,6 +86,64 @@
   URL = {https://cdn-images-1.medium.com/max/800/1*0pN3BNTXfwKbf08lhwutag.png},
   note = "{[cit. 2017-08-30]}"
 }
+@inproceedings{Ztaltz2014,
+  author = {Andre Staltz},
+  booktitle = {GitHubGist},
+  title = {The introduction to Reactive Programming you've been missing},
+  publisher = {GitHub},
+  address = {California, US.},
+  year = {2014},
+  URL = {https://gist.github.com/staltz/868e7e9bc2a7b8c1f754},
+  note = "{[cit. 2017-09-01]}"
+}
+
+@misc{technopediaFRP,
+  journal = {Technopedia},
+  title = {Functional Reactive Programming (FRP)},
+  publisher = {Techopedia Inc.},
+  howpublished = {\emph{Technopedia} [online]. Techopedia Inc.},
+  year = {© 2017},
+  URL = {https://www.techopedia.com/definition/29571/functional-reactive-programming-frp},
+  note = "{[cit. 2017-09-01]}"
+}
+
+@book{Blackheath2016,
+  author = {Stephen Blackheath and Anthony Jones},
+  title = {Functional reactive programming},
+  publisher = {Manning Publications},
+  address = {United States},
+  year = {2016},
+  ISBN = {978-163-3430-105},
+}
+@misc{ReactiveSwift,
+  journal = {GitHub},
+  title = {ReactiveSwift},
+  publisher = {GitHub Inc.},
+  howpublished = {\emph{GitHub} [online]. California, US.: GitHub Inc.},
+  address = {California, US.},
+  year = {© 2017},
+  URL = {https://github.com/ReactiveCocoa/ReactiveSwift/},
+  note = "{[cit. 2017-09-01]}"
+}
+@misc{ReactiveCocoa,
+  journal = {GitHub},
+  title = {ReactiveCocoa},
+  publisher = {GitHub Inc.},
+  howpublished = {\emph{GitHub} [online]. California, US.: GitHub Inc.},
+  address = {California, US.},
+  year = {© 2017},
+  URL = {https://github.com/ReactiveCocoa/ReactiveCocoa/},
+  note = "{[cit. 2017-09-01]}"
+}
+
+
+
+
+
+
+
+
+
 
 
 
