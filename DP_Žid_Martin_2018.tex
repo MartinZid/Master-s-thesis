@@ -16,6 +16,8 @@
 
 \usepackage{dirtree} %directory tree visualisation
 
+\usepackage{nameref}
+
 % % list of acronyms
 % \usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
 % \iflanguage{czech}{\renewcommand*{\acronymname}{Seznam pou{\v z}it{\' y}ch zkratek}}{}
@@ -40,14 +42,15 @@
 
 \abstractCS{
 %TOTO NENI FINALNI VERZE
-Tato práce realizuje iOS aplikaci pro evidenci letů.  Práce analyzuje obdobné aplikace a předpisy pro piloty České republiky, podle nichž probíhá návrh funkcionality vytvářené aplikace. Podle návrhu je následně zvolena vhodná architektura a vytvořeno uživatelského rozhraní v podobě wireframů.
+Tato práce realizuje iOS aplikaci pro evidenci letů.  V první části analyzuji obdobné aplikace a předpisy pro piloty České republiky, podle nichž probíhá návrh funkcionality vytvářené aplikace. Podle návrhu je následně zvolena vhodná architektura a vytvořeno uživatelského rozhraní v podobě wireframů.
 
 Aplikace je implementována s použitím zvolené architektury a pomocí principů FRP. V průběhu implementace aplikace jsou realizovány jednotkové testy a na konci jsou provedeny uživatelské testy. Na základě výsledků testů je aplikace upravena do finální podoby.
 
+V poslední části práce popisuji výhody a nevýhody, které přinesly postupy FRP. Také hodnotím časovou a implementační náročnost oproti standardním postupům a architektuře MVC. 
+
 V~práci jsem vytvořil funkční iOS aplikaci s využitím moderní architektury a principů FRP. Aplikace bude sloužit pilotům České republiky pro elektronickou evidenci letů a bude jim také ulehčovat administrativu s evidencí spojenou.
 
-V~příloze této bakalářské práce je možné nalézt
-všechny zdrojové kódy jak aplikace, tak i testů společně s~vytvořenými wireframy.
+V~příloze této bakalářské práce je možné nalézt všechny zdrojové kódy jak aplikace, tak i testů společně s~vytvořenými wireframy.
 }
 
 \abstractEN{Sem doplňte ekvivalent abstraktu Vaší práce v~angličtině.}
@@ -78,6 +81,16 @@ V poslední části své práce se snažím zhodnotit postupy FRP společně s m
 \end{introduction}
 
 \chapter{Cíl práce}
+Cílem této práce je navrhnout a implementovat aplikaci k evidenci letů pro platformu iOS. A to pomocí postupů FRP (funkcionálně reaktivního programování) a s využitím moderní softwarové architektury jako např. MVVM nebo VIPER.  Tato aplikace bude sloužit pilotům České republiky k elektronické evidenci letů. Tento cíl je rozdělen do několika podúkolů.
+
+V první části analyzuji podobné aplikace pro evidenci letů a to jak pro platformu iOS, tak i pro Android. Na základě této analýzy navrhnu vhodnou funkcionalitu pro vytvářenou aplikaci. Podle navržených funkcionalit si zvolím architekturu  a navrhnu uživatelské rozhraní v podobě wireframů.
+
+V dalším kroku aplikaci implementuji pomocí postupů FRP a se zvolenou architekturou. V průběhu realizace aplikace budou vytvářeny také testy a dokumentace aplikace.
+
+Dále bude aplikace podrobena uživatelským testům, podle kterých bude vhodně upravena.
+
+V poslední části budu popisovat výhody a nevýhody, které přinesly postupy FRP. Budu také hodnotit časovou a implementační náročnost oproti standardním postupům a architektuře MVC. 
+
 
 \chapter{Analýza a návrh}
 \section{Architektury při tvorbě iOS aplikací}
@@ -159,14 +172,17 @@ Pro vysvětlení, co je reaktivní programování cituji \cite{Ztaltz2014} \uv{r
 Na spojení funkcionální a reaktivního programování může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko, nebo i dotaz na server a jsme informování o každé změně v podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Je tedy možné toky spojovat ($merge$), filtrovat ($filter$) pouze události, které nás zajímají,  mapovat ($map$) jeden tok na nový a další. \cite{Ztaltz2014}
 
 \subsection{FRP frameworky pro iOS}
-V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení společně s ukázkami jsou v k nalezení v kapitole Realizace.
+V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami jsou v k nalezení v kapitole: \nameref{chap:realizace}.
 \subsubsection{ReactiveSwift}
 ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$, \ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
 \subsubsection{ReactiveCocoa}
 ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje různé aspekty Apple Cocoa frameworku základními prvky frameworku ReactiveSwift. Umožňuje vazbu na prvky uživatelského rozhraní, u interaktivních prvků napojuje $Signal$ a $Action$ pro kontrolu událostí a změn. Dále také umožňuje vytvářet signály na volání metod (např. i pro UIKit třídy). \cite{ReactiveCocoa}
+\subsubsection{RxSwift}
+RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem \cite{ReactiveExtensionsDocs}, je zde uváděn a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
 
 
 \chapter{Realizace}
+\label{chap:realizace}
 
 \begin{conclusion}
 	%sem napište závěr Vaší práce
@@ -180,8 +196,10 @@ ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje r�
 \chapter{Seznam použitých zkratek}
 % \printglossaries
 \begin{description}
-	\item[GUI] Graphical user interface
-	\item[XML] Extensible markup language
+	\item[FRP] funkcionálně reaktivní programování
+	\item[MVC] Model View Controller
+	\item[MVVM] Model View ViewModel
+	\item[VIPER] View Interactor Presenter Entity Router
 \end{description}
 
 

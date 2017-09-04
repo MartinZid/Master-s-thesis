@@ -12,46 +12,50 @@ Warning--to sort, need author or key in VIPER
 Warning--to sort, need author or key in technopediaFRP
 Warning--to sort, need author or key in ReactiveSwift
 Warning--to sort, need author or key in ReactiveCocoa
+Warning--to sort, need author or key in RxSwift
+Warning--to sort, need author or key in RxNET
+Warning--to sort, need author or key in ReactiveExtensionsDocs
+Warning--to sort, need author or key in ReactiveExtensions
 Warning--empty pages in Ztaltz2014
-You've used 15 entries,
+You've used 19 entries,
             3185 wiz_defined-function locations,
-            749 strings with 7947 characters,
-and the built_in function-call counts, 4612 in all, are:
-= -- 299
-> -- 71
+            766 strings with 8282 characters,
+and the built_in function-call counts, 5610 in all, are:
+= -- 369
+> -- 75
 < -- 0
-+ -- 39
++ -- 43
 - -- 18
-* -- 233
-:= -- 464
-add.period$ -- 30
-call.type$ -- 15
-change.case$ -- 41
+* -- 279
+:= -- 538
+add.period$ -- 38
+call.type$ -- 19
+change.case$ -- 49
 chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 520
-empty$ -- 537
+cite$ -- 32
+duplicate$ -- 630
+empty$ -- 667
 format.name$ -- 20
-if$ -- 1006
+if$ -- 1238
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 123
-newline$ -- 69
+int.to.str$ -- 19
+missing$ -- 147
+newline$ -- 85
 num.names$ -- 14
-pop$ -- 290
+pop$ -- 364
 preamble$ -- 1
-purify$ -- 39
+purify$ -- 47
 quote$ -- 0
-skip$ -- 183
+skip$ -- 229
 stack$ -- 0
-substring$ -- 103
-swap$ -- 210
+substring$ -- 131
+swap$ -- 252
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
-warning$ -- 9
+type$ -- 74
+warning$ -- 13
 while$ -- 14
-width$ -- 17
-write$ -- 150
-(There were 9 warnings)
+width$ -- 21
+write$ -- 184
+(There were 13 warnings)

@@ -82,4 +82,22 @@ ReactiveCocoa. \emph{GitHub} [online]. California, US.: GitHub Inc., © 2017,
   {[cit. 2017-09-01]}.
 \urlprefix\biburl{https://github.com/ReactiveCocoa/ReactiveCocoa}
 
+\bibitem{RxSwift}
+RxSwift: ReactiveX for Swift. \emph{GitHub} [online]. California, US.: GitHub
+  Inc., © 2017, {[cit. 2017-09-04]}.
+\urlprefix\biburl{https://github.com/ReactiveX/RxSwift}
+
+\bibitem{RxNET}
+Reactive Extensions. \emph{GitHub} [online]. California, US.: GitHub Inc., ©
+  2017, {[cit. 2017-09-04]}.
+\urlprefix\biburl{https://github.com/Reactive-Extensions/Rx.NET}
+
+\bibitem{ReactiveExtensionsDocs}
+ReactiveX. \emph{ReactiveX} [online], {[cit. 2017-09-04]}.
+\urlprefix\biburl{http://reactivex.io/intro.html}
+
+\bibitem{ReactiveExtensions}
+ReactiveX. \emph{ReactiveX} [online], {[cit. 2017-09-04]}.
+\urlprefix\biburl{http://reactivex.io/}
+
 \end{thebibliography}

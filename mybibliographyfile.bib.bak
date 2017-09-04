@@ -122,7 +122,7 @@
   howpublished = {\emph{GitHub} [online]. California, US.: GitHub Inc.},
   address = {California, US.},
   year = {© 2017},
-  URL = {https://github.com/ReactiveCocoa/ReactiveSwift/},
+  URL = {https://github.com/ReactiveCocoa/ReactiveSwift},
   note = "{[cit. 2017-09-01]}"
 }
 @misc{ReactiveCocoa,
@@ -132,9 +132,45 @@
   howpublished = {\emph{GitHub} [online]. California, US.: GitHub Inc.},
   address = {California, US.},
   year = {© 2017},
-  URL = {https://github.com/ReactiveCocoa/ReactiveCocoa/},
+  URL = {https://github.com/ReactiveCocoa/ReactiveCocoa},
   note = "{[cit. 2017-09-01]}"
 }
+@misc{RxSwift,
+  journal = {GitHub},
+  title = {RxSwift: ReactiveX for Swift},
+  publisher = {GitHub Inc.},
+  howpublished = {\emph{GitHub} [online]. California, US.: GitHub Inc.},
+  address = {California, US.},
+  year = {© 2017},
+  URL = {https://github.com/ReactiveX/RxSwift},
+  note = "{[cit. 2017-09-04]}"
+}
+@misc{RxNET,
+  journal = {GitHub},
+  title = {Reactive Extensions},
+  publisher = {GitHub Inc.},
+  howpublished = {\emph{GitHub} [online]. California, US.: GitHub Inc.},
+  address = {California, US.},
+  year = {© 2017},
+  URL = {https://github.com/Reactive-Extensions/Rx.NET},
+  note = "{[cit. 2017-09-04]}"
+}
+@misc{ReactiveExtensions,
+  journal = {ReactiveX},
+  title = {ReactiveX},
+  howpublished = {\emph{ReactiveX} [online]},
+  URL = {http://reactivex.io/},
+  note = "{[cit. 2017-09-04]}"
+}
+@misc{ReactiveExtensionsDocs,
+  journal = {ReactiveX},
+  title = {ReactiveX},
+  howpublished = {\emph{ReactiveX} [online]},
+  URL = {http://reactivex.io/intro.html},
+  note = "{[cit. 2017-09-04]}"
+}
+
+
 
 
 
