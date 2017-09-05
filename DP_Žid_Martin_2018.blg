@@ -4,6 +4,12 @@ The top-level auxiliary file: DP_Žid_Martin_2018.aux
 The style file: csn690.bst
 Database file #1: mybibliographyfile.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--to sort, need author or key in Nielsen
+Warning--to sort, need author or key in objc
+Warning--to sort, need author or key in swift
+Warning--to sort, need author or key in saleforce
+Warning--to sort, need author or key in cordova
+Warning--to sort, need author or key in upwork
 Warning--to sort, need author or key in MVCMozilla
 Warning--to sort, need author or key in MVCGoogle
 Warning--to sort, need author or key in mvc-pic
@@ -17,45 +23,45 @@ Warning--to sort, need author or key in RxNET
 Warning--to sort, need author or key in ReactiveExtensionsDocs
 Warning--to sort, need author or key in ReactiveExtensions
 Warning--empty pages in Ztaltz2014
-You've used 19 entries,
+You've used 25 entries,
             3185 wiz_defined-function locations,
-            766 strings with 8282 characters,
-and the built_in function-call counts, 5610 in all, are:
-= -- 369
-> -- 75
+            805 strings with 9652 characters,
+and the built_in function-call counts, 7128 in all, are:
+= -- 477
+> -- 81
 < -- 0
-+ -- 43
++ -- 49
 - -- 18
-* -- 279
-:= -- 538
-add.period$ -- 38
-call.type$ -- 19
-change.case$ -- 49
+* -- 351
+:= -- 652
+add.period$ -- 50
+call.type$ -- 25
+change.case$ -- 61
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 630
-empty$ -- 667
+cite$ -- 44
+duplicate$ -- 798
+empty$ -- 865
 format.name$ -- 20
-if$ -- 1238
+if$ -- 1592
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 147
-newline$ -- 85
+int.to.str$ -- 25
+missing$ -- 183
+newline$ -- 109
 num.names$ -- 14
-pop$ -- 364
+pop$ -- 466
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 59
 quote$ -- 0
-skip$ -- 229
+skip$ -- 301
 stack$ -- 0
-substring$ -- 131
-swap$ -- 252
+substring$ -- 173
+swap$ -- 318
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 74
-warning$ -- 13
+type$ -- 98
+warning$ -- 19
 while$ -- 14
-width$ -- 21
-write$ -- 184
-(There were 13 warnings)
+width$ -- 27
+write$ -- 238
+(There were 19 warnings)

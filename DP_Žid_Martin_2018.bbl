@@ -8,6 +8,39 @@
 \providecommand{\selectlanguage}[1]{\relax}
 \providecommand{\eprint}[2][]{\biburl{#2}}
 
+\bibitem{Nielsen}
+Mobile: Native Apps, Web Apps, and Hybrid Apps. \emph{Nielsen Norman Group}
+  [online]. United States of America: Nielsen Norman Group, © 1998-2017,
+  {[cit. 2017-09-05]}.
+\urlprefix\biburl{https://www.nngroup.com/articles/mobile-native-apps/}
+
+\bibitem{objc}
+About Objective-C. \emph{Apple Developer} [online]. California, U.S.: Apple
+  Inc., © 2014, {[cit. 2017-09-05]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html}
+
+\bibitem{swift}
+Swift. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., © 2017,
+  {[cit. 2017-09-05]}.
+\urlprefix\biburl{https://developer.apple.com/swift/}
+
+\bibitem{saleforce}
+Native, HTML5, or Hybrid: Understanding Your Mobile Application Development
+  Options. \emph{Saleforce Developers} [online]. Suite 300, San Francisco, CA
+  94105, United States: Salesforce.com, inc., © 2000-2017, {[cit.
+  2017-09-05]}.
+\urlprefix\biburl{https://developer.salesforce.com/page/Native,_HTML5,_or_Hybrid:_Understanding_Your_Mobile_Application_Development_Options}
+
+\bibitem{cordova}
+Apache Cordova. \emph{Apache Cordova} [online]. Forest Hill, Maryland, United
+  States: The Apache Software Foundation, © 2015, {[cit. 2017-09-05]}.
+\urlprefix\biburl{https://cordova.apache.org/}
+
+\bibitem{upwork}
+Should You Build a Hybrid Mobile App? \emph{UpWork} [online]. Mountain View,
+  CA, US.: Upwork Global Inc., © 2015 - 2017, {[cit. 2017-09-05]}.
+\urlprefix\biburl{https://www.upwork.com/hiring/mobile/should-you-build-a-hybrid-mobile-app/}
+
 \bibitem{MVCMozilla}
 MVC Architecture. \emph{MDN web docs} [online]. Mountain View, California,
   United States: Mozilla and individual contributors, © 2005-2017, {[cit.

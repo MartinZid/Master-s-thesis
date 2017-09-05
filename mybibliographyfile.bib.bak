@@ -1,3 +1,64 @@
+@misc{Nielsen,
+  journal = {Nielsen Norman Group},
+  title = {Mobile: Native Apps, Web Apps, and Hybrid Apps},
+  publisher = {Nielsen Norman Group},
+  howpublished = {\emph{Nielsen Norman Group} [online]. United States of America: Nielsen Norman Group},
+  address = {United States of America},
+  year = {© 1998-2017},
+  URL = {https://www.nngroup.com/articles/mobile-native-apps/},
+  note = "{[cit. 2017-09-05]}"
+}
+@misc{saleforce,
+  journal = {Saleforce Developers},
+  title = {Native, HTML5, or Hybrid: Understanding Your Mobile Application Development Options},
+  publisher = {Salesforce.com, inc.},
+  howpublished = {\emph{Saleforce Developers} [online]. Suite 300, San Francisco, CA 94105, United States: Salesforce.com, inc.},
+  address = {Suite 300, San Francisco, CA 94105, United States},
+  year = {© 2000-2017},
+  URL = {https://developer.salesforce.com/page/Native,_HTML5,_or_Hybrid:_Understanding_Your_Mobile_Application_Development_Options},
+  note = "{[cit. 2017-09-05]}"
+}
+@misc{cordova,
+  journal = {Apache Cordova},
+  title = {Apache Cordova},
+  publisher = {The Apache Software Foundation},
+  howpublished = {\emph{Apache Cordova} [online]. Forest Hill, Maryland, United States: The Apache Software Foundation},
+  address = {Forest Hill, Maryland, United States},
+  year = {© 2015},
+  URL = {https://cordova.apache.org/},
+  note = "{[cit. 2017-09-05]}"
+}
+@misc{upwork,
+  journal = {UpWork},
+  title = {Should You Build a Hybrid Mobile App?},
+  publisher = {Upwork Global Inc.},
+  address = {Mountain View, CA, US.},
+  howpublished = {\emph{UpWork} [online]. Mountain View, CA, US.: Upwork Global Inc.},
+  year = {© 2015 - 2017},
+  URL = {https://www.upwork.com/hiring/mobile/should-you-build-a-hybrid-mobile-app/},
+  note = "{[cit. 2017-09-05]}"
+}
+@misc{objc,
+  journal = {Apple Developer},
+  title = {About Objective-C},
+  publisher = {Apple Inc.},
+  howpublished = {\emph{Apple Developer} [online]. California, U.S.: Apple Inc.},
+  address = {California, U.S.},
+  year = {© 2014},
+  URL = {https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/Introduction/Introduction.html},
+  note = "{[cit. 2017-09-05]}"
+}
+@misc{swift,
+  journal = {Apple Developer},
+  title = {Swift},
+  publisher = {Apple Inc.},
+  howpublished = {\emph{Apple Developer} [online]. California, U.S.: Apple Inc.},
+  address = {California, U.S.},
+  year = {© 2017},
+  URL = {https://developer.apple.com/swift/},
+  note = "{[cit. 2017-09-05]}"
+}
+
 @misc{MVCGoogle,
   journal = {Google},
   title = {MVC Architecture},

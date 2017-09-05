@@ -93,6 +93,32 @@ V poslední části budu popisovat výhody a nevýhody, které přinesly postupy
 
 
 \chapter{Analýza a návrh}
+
+\section{Tvorba iOS aplikací}
+Vývoj iOS aplikace je možný hned několika způsoby, každý má své výhody a nevýhody, právě ty bych rád v této kapitole rozebral. Mezi možné způsoby vývoje bych rád zmínil nativní aplikace, hybridní aplikace a mobilní webové aplikace.
+
+\subsection{Nativní aplikace}
+Nativní aplikace jsou vyvíjeny specificky pro jednu platformu. Díky tomu mají přístup ke všem funkcím daného zařízení jako např. GPS. kamera nebo kontakty. Mohou fungovat i pouze offline, tedy bez nutnosti internetového připojení. \cite{Nielsen}
+
+Však pokud bychom chtěli aplikaci distribuovat na více platforem, tak s tímto přístup by bylo nutné vytvořit pro každou platformu vlastní aplikaci. To by prodloužilo vývoj a znesnadnilo následnou údržbu aplikací.
+
+Co se týče iOS vývoje, je možné si zvolit z dvou programovacích jazyků -- Objective-C nebo Swift. \cite{objc} \cite{swift}
+
+\subsection{Hybridní aplikace}
+Hybridní aplikace jsou aplikace tvořené nejčastěji pomocí HTML5 a JavaScriptu, následně jsou spuštěné v nativním kontejneru. \cite{saleforce} Jako příklad je možné uvést např. Apache Cordova. Tento kontejner umožňuje přístup k funkcím daného přístroje, podporuje použití aplikace offline a dává možnost publikace vytvořené aplikace do obchodu tzv. app store. \cite{cordova}
+
+Však výhodou nativních aplikacím proti hybridním je to, že jsou vytvářeny přesně pro danou platformu a tudíž jejich vzhled a výkon bude vždy lepší. \cite{upwork}
+
+\subsection{Mobilní webové aplikace}
+Poslední možností jsou mobilní webové aplikace. Tyto aplikace jsou pouze upravené webové stránky do podoby a chování nativních aplikací. Přesto, že běží pouze v prohlížeči mohou mít i tyto aplikace přístup k určitým (ne však ke všem) nativním funkcím. \cite{Nielsen}
+
+Tím, že jsou mobilní webové aplikace spouštěny v prohlížeči a nejsou stahovány přes obchody, je ulehčena údržba a vývoj, protože si uživatel nemusí vždy stahovat novou verzi aplikace.
+
+Však tento postup má i své nevýhody. Jak již bylo zmíněno dříve, aplikace nemá přístup ke všem nativním funkcím daného přístroje. S dalším problémem se můžeme setkat u offline ukládání dat a to se zabezpečením, které nemusí být tak dokonalé nebo uživatelsky přívětivé, jako u nativních aplikací.  \cite{saleforce}
+
+\subsection{Zvolené řešení}
+
+
 \section{Architektury při tvorbě iOS aplikací}
 Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
 
