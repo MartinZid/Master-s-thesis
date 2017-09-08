@@ -41,6 +41,31 @@ Should You Build a Hybrid Mobile App? \emph{UpWork} [online]. Mountain View,
   CA, US.: Upwork Global Inc., © 2015 - 2017, {[cit. 2017-09-05]}.
 \urlprefix\biburl{https://www.upwork.com/hiring/mobile/should-you-build-a-hybrid-mobile-app/}
 
+\bibitem{appStoreLogTen}
+LogTen Pro X. \emph{ITunes} [online]. California, U.S.: Apple Inc., © 2017,
+  {[cit. 2017-09-08]}.
+\urlprefix\biburl{https://itunes.apple.com/us/app/logten-pro-x/id837274884?mt=8}
+
+\bibitem{appStoreSafeLog}
+Safelog Pilot Logbook. \emph{ITunes} [online]. California, U.S.: Apple Inc., ©
+  2017, {[cit. 2017-09-08]}.
+\urlprefix\biburl{https://itunes.apple.com/us/app/safelog-pilot-logbook/id411409786}
+
+\bibitem{appStoreLogbookPro}
+Logbook Pro Aviation Flight Log for Pilots. \emph{ITunes} [online]. California,
+  U.S.: Apple Inc., © 2017, {[cit. 2017-09-08]}.
+\urlprefix\biburl{https://itunes.apple.com/us/app/logbook-pro-aviation-flight-log-for-pilots/id410773111?mt=8}
+
+\bibitem{googleFlyLogio}
+FlyLogio - Pilot Logbook. \emph{Google Play} [online]. Silicon Valley: Google,
+  ©2017, {[cit. 2017-09-08]}.
+\urlprefix\biburl{https://play.google.com/store/apps/details?id=com.flylogio&hl=en}
+
+\bibitem{googleSmartLogbook}
+Smart Logbook. \emph{Google Play} [online]. Silicon Valley: Google, ©2017,
+  {[cit. 2017-09-08]}.
+\urlprefix\biburl{https://play.google.com/store/apps/details?id=com.kviation.logbook\&hl=en}
+
 \bibitem{MVCMozilla}
 MVC Architecture. \emph{MDN web docs} [online]. Mountain View, California,
   United States: Mozilla and individual contributors, © 2005-2017, {[cit.
@@ -83,7 +108,8 @@ Orlov, B.: MVVM. \emph{\emph{In:} Medium \emph{[online]}}, 2015, {[cit.
 \urlprefix\biburl{https://cdn-images-1.medium.com/max/800/1*uhPpTHYzTmHGrAZy8hiM7w.png}
 
 \bibitem{VIPER}
-Architecting iOS Apps with VIPER. \emph{Objc} [online]. Berlin: Objc.io, 2013.
+Architecting iOS Apps with VIPER. \emph{Objc} [online]. Berlin: Objc.io, 2013,
+  {[cit. 2017-08-30]}.
 \urlprefix\biburl{https://www.objc.io/issues/13-architecture/viper/}
 
 \bibitem{viper-pic}
