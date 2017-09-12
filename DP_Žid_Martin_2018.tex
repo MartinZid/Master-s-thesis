@@ -50,7 +50,7 @@ V poslední části práce popisuji výhody a nevýhody, které přinesly postup
 
 V~práci jsem vytvořil funkční iOS aplikaci s využitím moderní architektury a principů FRP. Aplikace bude sloužit pilotům České republiky pro elektronickou evidenci letů a bude jim také ulehčovat administrativu s evidencí spojenou.
 
-V~příloze této bakalářské práce je možné nalézt všechny zdrojové kódy jak aplikace, tak i testů společně s~vytvořenými wireframy.
+V~příloze této diplomové práce je možné nalézt všechny zdrojové kódy jak aplikace, tak i testů společně s~vytvořenými wireframy.
 }
 
 \abstractEN{Sem doplňte ekvivalent abstraktu Vaší práce v~angličtině.}
@@ -66,24 +66,24 @@ V~příloze této bakalářské práce je možné nalézt všechny zdrojové kó
 % \newacronym{FIT}{FIT}{Fakulta informa{\v c}n{\' i}ch technologi{\' i}}
 
 \begin{introduction}
-V dnešní době, kdy existují mobilní aplikace na téměř vše, mě zarazil fakt, že u pilotů tomu tak nemusí být. Aplikace na evidenci letů samozřejmě existují, však je tu hned několik problémů. Ty aplikace jsou často velice drahé, nemusí odpovídat leteckým přepisům České republiky nebo nemají vyhovující funkcionalitu.
+V dnešní době, kdy existují mobilní aplikace na téměř vše, mě zarazil fakt, že u pilotů tomu tak nemusí být. Aplikace na evidenci letů samozřejmě existují, však je tu hned několik problémů. Tyto aplikace jsou často velice drahé, nemusí odpovídat leteckým přepisům České republiky nebo nemají vyhovující funkcionalitu.
 
 Z tohoto důvodu jsem se rozhodl vytvořit iOS aplikaci na evidenci letů. Tato aplikace bude pomáhat pilotům zaznamenávat elektronicky své lety, bude také kontrolovat předpisy a umožňovat export do formátu pro tisk.
 
-Začínám analýzou podobných aplikací a to pro zařízení iOS i Android. Poté navrhuji vhodnou funkcionalitu a vytvářím návrh uživatelského rozhraní.
+Začínám analýzou podobných aplikací, a to pro zařízení iOS i Android. Poté navrhuji vhodnou funkcionalitu a vytvářím návrh uživatelského rozhraní.
 
-Dalším tématem, které ve své práci řeším jsou softwarové architektury při vývoji iOS aplikace. Zde analyzuji alternativy k architektuře MVC ve spojení s funkcionálně reaktivním programováním neboli FRP.
+Dalším tématem, které ve své práci řeším, jsou softwarové architektury při vývoji iOS aplikace. Zde analyzuji alternativy k architektuře MVC ve spojení s funkcionálně reaktivním programováním neboli FRP.
 
 Tuto analýzu následně aplikuji v praxi, kdy se zvolenou architekturou a FRP implementuji společně s jednotkovými testy dříve zmíněnou aplikaci. Nakonec aplikaci podrobím uživatelským testům a podle jejich výsledků
 upravím aplikaci do finální podoby.
 
-V poslední části své práce se snažím zhodnotit postupy FRP společně s mnou zvolenou moderní architekturou a jejich časovou a implementační náročnost oproti klasickému MVC.
+V poslední části své práce se snažím zhodnotit postupy FRP společně se mnou zvolenou moderní architekturou a jejich časovou a implementační náročnost oproti klasickému MVC.
 \end{introduction}
 
 \chapter{Cíl práce}
-Cílem této práce je navrhnout a implementovat aplikaci k evidenci letů pro platformu iOS. A to pomocí postupů FRP (funkcionálně reaktivního programování) a s využitím moderní softwarové architektury jako např. MVVM nebo VIPER.  Tato aplikace bude sloužit pilotům České republiky k elektronické evidenci letů. Tento cíl je rozdělen do několika podúkolů.
+Cílem této práce je navrhnout a implementovat aplikaci k evidenci letů pro platformu iOS, a to pomocí postupů FRP (funkcionálně reaktivního programování) a s využitím moderní softwarové architektury jako např. MVVM nebo VIPER.  Tato aplikace bude sloužit pilotům České republiky k elektronické evidenci letů. Tento cíl je rozdělen do několika podúkolů.
 
-V první části analyzuji podobné aplikace pro evidenci letů a to jak pro platformu iOS, tak i pro Android. Na základě této analýzy navrhnu vhodnou funkcionalitu pro vytvářenou aplikaci. Podle navržených funkcionalit si zvolím architekturu  a navrhnu uživatelské rozhraní v podobě wireframů.
+V první části analyzuji podobné aplikace pro evidenci letů, a to jak pro platformu iOS, tak i pro Android. Na základě této analýzy navrhnu vhodnou funkcionalitu pro vytvářenou aplikaci. Podle navržených funkcionalit si zvolím architekturu  a navrhnu uživatelské rozhraní v podobě wireframů.
 
 V dalším kroku aplikaci implementuji pomocí postupů FRP a se zvolenou architekturou. V průběhu realizace aplikace budou vytvářeny také testy a dokumentace aplikace.
 
@@ -98,7 +98,7 @@ V poslední části budu popisovat výhody a nevýhody, které přinesly postupy
 Vývoj iOS aplikace je možný hned několika způsoby, každý má své výhody a nevýhody, právě ty bych rád v této kapitole rozebral. Mezi možné způsoby vývoje bych rád zmínil nativní aplikace, hybridní aplikace a mobilní webové aplikace.
 
 \subsection{Nativní aplikace}
-Nativní aplikace jsou vyvíjeny specificky pro jednu platformu. Díky tomu mají přístup ke všem funkcím daného zařízení jako např. GPS. kamera nebo kontakty. Mohou fungovat i pouze offline, tedy bez nutnosti internetového připojení. \cite{Nielsen}
+Nativní aplikace jsou vyvíjeny specificky pro jednu platformu. Díky tomu mají přístup ke všem funkcím daného zařízení jako např. GPS, kamera nebo kontakty. Mohou fungovat i pouze offline, tedy bez nutnosti internetového připojení. \cite{Nielsen}
 
 Však pokud bychom chtěli aplikaci distribuovat na více platforem, tak s tímto přístup by bylo nutné vytvořit pro každou platformu vlastní aplikaci. To by prodloužilo vývoj a znesnadnilo následnou údržbu aplikací.
 
@@ -107,17 +107,17 @@ Co se týče iOS vývoje, je možné si zvolit z dvou programovacích jazyků --
 \subsection{Hybridní aplikace}
 Hybridní aplikace jsou aplikace tvořené nejčastěji pomocí HTML5 a JavaScriptu, následně jsou spuštěné v nativním kontejneru. \cite{saleforce} Jako příklad je možné uvést např. Apache Cordova. Tento kontejner umožňuje přístup k funkcím daného přístroje, podporuje použití aplikace offline a dává možnost publikace vytvořené aplikace do obchodu tzv. app store. \cite{cordova}
 
-Však výhodou nativních aplikacím proti hybridním je to, že jsou vytvářeny přesně pro danou platformu a tudíž jejich vzhled a výkon bude vždy lepší. \cite{upwork}
+Však výhodou nativních aplikacím proti hybridním je to, že jsou vytvářeny přesně pro danou platformu, a tudíž jejich vzhled a výkon bude vždy lepší. \cite{upwork}
 
 \subsection{Mobilní webové aplikace}
-Poslední možností jsou mobilní webové aplikace. Tyto aplikace jsou pouze upravené webové stránky do podoby a chování nativních aplikací. Přesto, že běží pouze v prohlížeči mohou mít i tyto aplikace přístup k určitým (ne však ke všem) nativním funkcím. \cite{Nielsen}
+Poslední možností jsou mobilní webové aplikace. Tyto aplikace jsou pouze upravené webové stránky do podoby a chování nativních aplikací. Přestože běží pouze v prohlížeči, mohou mít i tyto aplikace přístup k určitým (ne však ke všem) nativním funkcím. \cite{Nielsen}
 
 Tím, že jsou mobilní webové aplikace spouštěny v prohlížeči a nejsou stahovány přes obchody, je ulehčena údržba a vývoj, protože si uživatel nemusí vždy stahovat novou verzi aplikace.
 
-Však tento postup má i své nevýhody. Jak již bylo zmíněno dříve, aplikace nemá přístup ke všem nativním funkcím daného přístroje. S dalším problémem se můžeme setkat u offline ukládání dat a to se zabezpečením, které nemusí být tak dokonalé nebo uživatelsky přívětivé, jako u nativních aplikací.  \cite{saleforce}
+Však tento postup má i své nevýhody. Jak již bylo zmíněno dříve, aplikace nemá přístup ke všem nativním funkcím daného přístroje. S dalším problémem se můžeme setkat u offline ukládání dat, a to se zabezpečením, které nemusí být tak dokonalé nebo uživatelsky přívětivé, jako u nativních aplikací.  \cite{saleforce}
 
 \subsection{Zvolené řešení}
-Pro svou práci jsem si zvolil možnost nativní mobilní aplikace z důvodu zaměření pouze na platformu iOS. Bude se tedy jednat pouze o jednu aplikaci,která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
+Pro svou práci jsem si zvolil možnost nativní mobilní aplikace z důvodu zaměření pouze na platformu iOS. Bude se tedy jednat pouze o jednu aplikaci, která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
 
 \section{Analýza existujících aplikací pro evidenci letů}
 Tato kapitola se zabývá analýzou již existujících aplikací pro evidenci letů. Pro analýzu bylo vybráno pět aplikací -- tři pro iOS a dvě pro platformu Android.
@@ -128,6 +128,17 @@ Tato kapitola se zabývá analýzou již existujících aplikací pro evidenci l
 \item FlyLogio - Pilot Logbook -- česká aplikace vyvinutá pro platformu Android společností FlyLogio.com. \cite{googleFlyLogio}
 \item Smart Logbook -- anglická Andriod aplikace vydána firmou Kviation, Inc. \cite{googleSmartLogbook}
 \end{enumerate}
+
+\subsection{Kritéria hodnocení}
+\subsection{Srovnávací tabulka}
+\subsection{Výsledky}
+
+\section{Funkční a nefunkční požadavky}
+\section{Případy užití}
+
+\section{Návrh uživatelského rozhraní}
+\subsection{Wireframe}
+\subsection{Heuristická analýza}
 
 \begin{figure}[]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/existujiciAplikace/LogTenProX}
@@ -157,12 +168,12 @@ Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této 
 \subsection{MVC}
 Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o softwarovou architekturu, které se velice často používá při tvorbě aplikací s uživatelským rozhraním. \cite{MVCMozilla}
 \begin{itemize}
-\item $Model$ definuje jaká data aplikace obsahuje a pokud dojde k jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
+\item $Model$ definuje jaká data aplikace obsahuje, a pokud dojde k jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
 \item $View$ vrstva je prezentována samotnému uživateli. Tedy jsou zde zobrazena aplikační data a je zachycována uživatelova práce s aplikací.\cite{MVCMozilla}
 \item $Controller$ je vrstva mezi $View$ a $Model$ zabezpečující logiku aplikace. Stará se o promítnutí změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Model$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
 \end{itemize}
 
-Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$. Což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
+Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
 
 Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} a \ref{fig:mvc-apple}.
 
@@ -183,10 +194,10 @@ Architektura MVVM má obdobné koncepce jako MVC. Jedná se také o zkratku, ten
 \begin{itemize}
 \item $Model$ je totožný s $Model$ vrstvou architektury MVC, jedná se tedy o datovou část aplikace.
 \item $View$ prezentuje aplikační data uživateli a monitoruje jeho akce. Však, jak již bylo zmíněno dříve, u iOS aplikací se jedná spíše o vrstvu\\ $View/View controller$. Tato vrstva obsahuje pouze minimum logiky aplikace a reaguje hlavně na $ViewModel$.  \cite{Morrison}
-\item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s  $Model$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele, např.: kliknutí na tlačítko. \cite{MVVMMicrosoft}
+\item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s  $Model$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele např.: kliknutí na tlačítko. \cite{MVVMMicrosoft}
 \end{itemize}
 
-Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/View controller$ a $Model$. Když potom uvažujeme architekturu MVVM $View/View controller$  je opravdu pouze jednou vrstvou a mezi ní a $Model$ je vložena nová vrstva  $ViewModel$, která je spojuje a do které je přesunuta i většina aplikační logiky.
+Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/View controller$ a $Model$. Když potom uvažujeme architekturu MVVM ,$View/View controller$  je opravdu pouze jednou vrstvou a mezi ní a $Model$ je vložena nová vrstva  $ViewModel$, která je spojuje, a do které je přesunuta i většina aplikační logiky.
 
 Mezi výhody architektury MVVM oproti MVC patří např.:
 \begin{itemize}
@@ -204,7 +215,7 @@ VIPER je poslední rozebíranou možností, co se týče architektur. I zde je n
 \begin{itemize}
 \item $View$  zobrazuje data uživateli a předává uživatelovi vstupy vrstvě $Presenter$.
 \item $Interactor$ obsahuje logiku aplikace spojenou s daty ($Entity$).
-\item $Presenter$ vrstva má na starosti $View$ logiku.  Reaguje tedy na uživatelovi akce a komunikuje s vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
+\item $Presenter$ vrstva má na starosti $View$ logiku.  Reaguje tedy na uživatelovy akce a komunikuje s vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
 \item $Entity$ jsou datové objekty aplikace přístupné pouze části $Interactor$.
 \item $Routing$ obsahuje navigační logiku. \cite{VIPER}
 \end{itemize}
@@ -215,7 +226,7 @@ Mezi výhody architektury VIPER znovu patří např.:
 \item zlepšuje možnost testovatelnosti aplikace. \cite{Orlov}
 \end{itemize}
 
-Tato architektura však může být příliš náročná a přehnaná pro menší aplikace. \cite{Orlov}
+Tato architektura však může být zbytečně složitá pro menší aplikace. \cite{Orlov}
 
 \begin{figure}[h]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.jpg}
@@ -223,24 +234,33 @@ Tato architektura však může být příliš náročná a přehnaná pro menš�
 \end{figure}
 
 \section{Funkcionálně reaktivní programování}
-Podle \cite{technopediaFRP} je funkcionálně reaktivní programování kombinací funkcionálního a reaktivního programování. Díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za nějaký čas.
+Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za nějaký čas. \cite{technopediaFRP}
 
 Pro vysvětlení, co je reaktivní programování cituji \cite{Ztaltz2014} \uv{reaktivní programování je programování s asynchronními datovými toky}.
 
-Na spojení funkcionální a reaktivního programování může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko, nebo i dotaz na server a jsme informování o každé změně v podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Je tedy možné toky spojovat ($merge$), filtrovat ($filter$) pouze události, které nás zajímají,  mapovat ($map$) jeden tok na nový a další. \cite{Ztaltz2014}
+Na spojení funkcionální a reaktivního programování může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko nebo i dotaz na server a jsme informování o každé změně v podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Je tedy možné toky spojovat ($merge$), filtrovat ($filter$) pouze události, které nás zajímají,  mapovat ($map$) jeden tok na nový a další. \cite{Ztaltz2014}
 
 \subsection{FRP frameworky pro iOS}
-V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami jsou v k nalezení v kapitole: \nameref{chap:realizace}.
+V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami jsou k nalezení v kapitole \nameref{chap:realizace}.
 \subsubsection{ReactiveSwift}
-ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$, \ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
+ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$\ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
 \subsubsection{ReactiveCocoa}
 ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje různé aspekty Apple Cocoa frameworku základními prvky frameworku ReactiveSwift. Umožňuje vazbu na prvky uživatelského rozhraní, u interaktivních prvků napojuje $Signal$ a $Action$ pro kontrolu událostí a změn. Dále také umožňuje vytvářet signály na volání metod (např. i pro UIKit třídy). \cite{ReactiveCocoa}
 \subsubsection{RxSwift}
-RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem \cite{ReactiveExtensionsDocs}, je zde uváděn a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
+RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem, \cite{ReactiveExtensionsDocs} je zde uváděn, a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
 
+\section{Persistence dat}
 
 \chapter{Realizace}
 \label{chap:realizace}
+
+\section{iOS aplikace a Swift}
+\section{Unit testy}
+\section{Použité nástroje při vývoji}
+\section{Uživatelské testování}
+
+\section{Postupy FRP v aplikaci}
+\section{Zhodnocení MVVM a FRP}
 
 \begin{conclusion}
 	%sem napište závěr Vaší práce
