@@ -11,10 +11,11 @@ Warning--to sort, need author or key in saleforce
 Warning--to sort, need author or key in cordova
 Warning--to sort, need author or key in upwork
 Warning--to sort, need author or key in appStoreLogTen
-Warning--to sort, need author or key in appStoreSafeLog
 Warning--to sort, need author or key in appStoreLogbookPro
+Warning--to sort, need author or key in appStoreSafeLog
 Warning--to sort, need author or key in googleFlyLogio
 Warning--to sort, need author or key in googleSmartLogbook
+Warning--to sort, need author or key in SafelogPrices
 Warning--to sort, need author or key in MVCMozilla
 Warning--to sort, need author or key in MVCGoogle
 Warning--to sort, need author or key in mvc-pic
@@ -28,45 +29,45 @@ Warning--to sort, need author or key in RxNET
 Warning--to sort, need author or key in ReactiveExtensionsDocs
 Warning--to sort, need author or key in ReactiveExtensions
 Warning--empty pages in Ztaltz2014
-You've used 30 entries,
+You've used 31 entries,
             3185 wiz_defined-function locations,
-            831 strings with 10421 characters,
-and the built_in function-call counts, 8413 in all, are:
-= -- 569
-> -- 86
+            839 strings with 10647 characters,
+and the built_in function-call counts, 8646 in all, are:
+= -- 585
+> -- 87
 < -- 0
-+ -- 54
++ -- 55
 - -- 18
-* -- 413
-:= -- 748
-add.period$ -- 60
-call.type$ -- 30
-change.case$ -- 71
+* -- 423
+:= -- 766
+add.period$ -- 62
+call.type$ -- 31
+change.case$ -- 73
 chr.to.int$ -- 0
-cite$ -- 54
-duplicate$ -- 941
-empty$ -- 1031
+cite$ -- 56
+duplicate$ -- 966
+empty$ -- 1063
 format.name$ -- 20
-if$ -- 1891
+if$ -- 1946
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 214
-newline$ -- 129
+int.to.str$ -- 31
+missing$ -- 219
+newline$ -- 133
 num.names$ -- 14
-pop$ -- 552
+pop$ -- 568
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 71
 quote$ -- 0
-skip$ -- 361
+skip$ -- 373
 stack$ -- 0
-substring$ -- 210
-swap$ -- 375
+substring$ -- 215
+swap$ -- 384
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 118
-warning$ -- 24
+type$ -- 122
+warning$ -- 25
 while$ -- 14
-width$ -- 32
-write$ -- 284
-(There were 24 warnings)
+width$ -- 33
+write$ -- 292
+(There were 25 warnings)

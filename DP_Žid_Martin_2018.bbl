@@ -46,15 +46,15 @@ LogTen Pro X. \emph{ITunes} [online]. California, U.S.: Apple Inc., © 2017,
   {[cit. 2017-09-08]}.
 \urlprefix\biburl{https://itunes.apple.com/us/app/logten-pro-x/id837274884?mt=8}
 
-\bibitem{appStoreSafeLog}
-Safelog Pilot Logbook. \emph{ITunes} [online]. California, U.S.: Apple Inc., ©
-  2017, {[cit. 2017-09-08]}.
-\urlprefix\biburl{https://itunes.apple.com/us/app/safelog-pilot-logbook/id411409786}
-
 \bibitem{appStoreLogbookPro}
 Logbook Pro Aviation Flight Log for Pilots. \emph{ITunes} [online]. California,
   U.S.: Apple Inc., © 2017, {[cit. 2017-09-08]}.
 \urlprefix\biburl{https://itunes.apple.com/us/app/logbook-pro-aviation-flight-log-for-pilots/id410773111?mt=8}
+
+\bibitem{appStoreSafeLog}
+Safelog Pilot Logbook. \emph{ITunes} [online]. California, U.S.: Apple Inc., ©
+  2017, {[cit. 2017-09-08]}.
+\urlprefix\biburl{https://itunes.apple.com/us/app/safelog-pilot-logbook/id411409786}
 
 \bibitem{googleFlyLogio}
 FlyLogio - Pilot Logbook. \emph{Google Play} [online]. Silicon Valley: Google,
@@ -65,6 +65,11 @@ FlyLogio - Pilot Logbook. \emph{Google Play} [online]. Silicon Valley: Google,
 Smart Logbook. \emph{Google Play} [online]. Silicon Valley: Google, ©2017,
   {[cit. 2017-09-08]}.
 \urlprefix\biburl{https://play.google.com/store/apps/details?id=com.kviation.logbook\&hl=en}
+
+\bibitem{SafelogPrices}
+Logbook Pro Desktop. \emph{NC Software} [online]. Richmond, Virginia: NC
+  Software, Inc., © 2017.
+\urlprefix\biburl{http://www.nc-software.com/Logbook-Pro-Flight-Log-Software-for-Pilots}
 
 \bibitem{MVCMozilla}
 MVC Architecture. \emph{MDN web docs} [online]. Mountain View, California,

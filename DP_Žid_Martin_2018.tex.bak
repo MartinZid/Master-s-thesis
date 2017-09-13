@@ -17,6 +17,9 @@
 \usepackage{dirtree} %directory tree visualisation
 
 \usepackage{nameref}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{pifont}
 
 % % list of acronyms
 % \usepackage[acronym,nonumberlist,toc,numberedsection=autolabel]{glossaries}
@@ -119,26 +122,18 @@ Však tento postup má i své nevýhody. Jak již bylo zmíněno dříve, aplika
 \subsection{Zvolené řešení}
 Pro svou práci jsem si zvolil možnost nativní mobilní aplikace z důvodu zaměření pouze na platformu iOS. Bude se tedy jednat pouze o jednu aplikaci, která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
 
+\section{EASA a předpisy}
+Limity, certifikáty, evidence letu ...
+
 \section{Analýza existujících aplikací pro evidenci letů}
 Tato kapitola se zabývá analýzou již existujících aplikací pro evidenci letů. Pro analýzu bylo vybráno pět aplikací -- tři pro iOS a dvě pro platformu Android.
 \begin{enumerate}
 \item LogTen Pro X -- iOS aplikace v angličtině vyvíjená společností Coradine Aviation. \cite{appStoreLogTen}
-\item Safelog Pilot Logbook -- druhá iOS aplikace, také v angličtině, vytvořená Dauntless Software. \cite{appStoreSafeLog}
-\item Logbook Pro Aviation Flight Log for Pilots -- poslední z analyzovaných iOS aplikací. I tato aplikace je v anglickém jazyce. Publikována NC Software, Inc. \cite{appStoreLogbookPro}
+\item Logbook Pro Aviation Flight Log for Pilots -- druhá iOS aplikace, také v angličtině, vytvořená NC Software, Inc. \cite{appStoreLogbookPro}
+\item Safelog Pilot Logbook -- poslední z analyzovaných iOS aplikací. I tato aplikace je v anglickém jazyce. Publikována Dauntless Software. \cite{appStoreSafeLog}
 \item FlyLogio - Pilot Logbook -- česká aplikace vyvinutá pro platformu Android společností FlyLogio.com. \cite{googleFlyLogio}
 \item Smart Logbook -- anglická Andriod aplikace vydána firmou Kviation, Inc. \cite{googleSmartLogbook}
 \end{enumerate}
-
-\subsection{Kritéria hodnocení}
-\subsection{Srovnávací tabulka}
-\subsection{Výsledky}
-
-\section{Funkční a nefunkční požadavky}
-\section{Případy užití}
-
-\section{Návrh uživatelského rozhraní}
-\subsection{Wireframe}
-\subsection{Heuristická analýza}
 
 \begin{figure}[]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/existujiciAplikace/LogTenProX}
@@ -160,6 +155,117 @@ Tato kapitola se zabývá analýzou již existujících aplikací pro evidenci l
  \includegraphics[width=0.99\textwidth]{./pictures/existujiciAplikace/SmartLogbook}
  \caption[Smart Logbook]{Smart Logbook}\label{fig:LogTenProX}
 \end{figure}
+
+\subsection{Kritéria hodnocení}
+Kritéria hodnocení byla rozdělena do několika kategorií -- přihlášení, platby, napojení externích databází, doplňkové položky při vkládání záznamu, limity a certifikáty, reporty a zálohování.	
+
+Při vkládání záznamu jsou brány v potaz pouze doplňkové položky, protože aplikace bude tvořena podle předpisu EASA FCL.050 \url{www.easa.europa.eu/system/files/dfu/Part-FCL.pdf}, který udává povinné údaje při evidování letu. Také položka v hodnocení  -- reporty podle EASA, je analyzována z pohledu předpisu FCL.050. 
+
+Všechny položky hodnocení jsou uváděny z pohledu mobilní/tablet aplikace.
+
+\subsection{Srovnávací tabulka}
+\newcommand{\OK}{\ding{51}}
+\newcommand{\NOK}{\ding{55}}
+\newcommand{\rot}{\rotatebox{90}}
+
+{\setlength\extrarowheight{2pt}
+\begin{longtable}{@{\extracolsep{\fill}}l c c c c c c}
+   \caption[Srovnávací tabulka]{Srovnávací tabulka}\label{tab:srovnavaci_tabulka} \\
+   Kritéria & \rot{Log Ten Pro X} & \rot{Logbook Pro} & \rot{Safelog} &
+   \rot{FlyLogio} & \rot{Smart Logbook} & \rot{Výsledek} \\
+  \endfirsthead
+   \caption[Srovnávací tabulka]{Srovnávací tabulka}\label{tab:srovnavaci_tabulka} \\
+   Kritéria & \rot{Log Ten Pro X} & \rot{Logbook Pro} & \rot{Safelog} &
+   \rot{FlyLogio} & \rot{Smart Logbook} & \rot{Výsledek} \\
+  \endhead
+
+   \hline
+   \multicolumn{7}{c}{Přihlášení} \\
+   \hline
+   Aplikace funkční bez přihlášení 			 & \OK & \NOK & \NOK & \NOK & \NOK & 1/5 \\
+   Možnost přihlášení								 & \OK & \OK & \OK & \OK & \OK  & 5/5 \\
+   
+   \hline
+   \multicolumn{7}{c}{Platby} \\
+   \hline
+   Platby jednorázové			 & \NOK & \NOK & \NOK & \NOK & \OK & 1/5 \\
+   Opakované platby			 & \OK & \OK & \OK & \OK & \OK  & 5/5 \\
+   
+   \hline
+   \multicolumn{7}{c}{Napojení externích databází} \\
+   \hline
+   Napojení na databázi letišť		 & \NOK & \OK \footnote{Logbook Pro umí nalézt pouze nejbližší letiště.} & \OK & \OK & \OK & 4/5 \\
+   Napojení na databázi letadel	 & \NOK & \NOK & \OK & \OK & \NOK  & 2/5 \\
+   
+   \hline
+   \multicolumn{7}{c}{Doplňkové položky při vkládání záznamu} \\
+   \hline
+   Možnost přidání fotky						 & \OK & \NOK & \OK & \NOK & \NOK & 2/5 \\
+   Možnost přidání dokumentu			 & \OK & \NOK & \OK & \NOK & \NOK & 2/5 \\
+   
+   \hline
+   \multicolumn{7}{c}{Limity a certifikáty} \\
+   \hline
+   Kontrola limitů					 & \OK & \OK & \OK \footnote{Safelog zobrazuje limity ve webové verzi.} & \NOK & \OK & 4/5 \\
+   Certifikáty							 & \OK & \OK & \OK \footnote{Safelog zobrazuje certifikáty ve webové verzi.} & \NOK & \OK & 4/5 \\
+   
+   \hline
+   \multicolumn{7}{c}{Reporty} \\
+   \hline
+   Generování reportů					 & \OK & \NOK & \OK \footnote{Safelog zobrazuje reporty ve webové verzi.}  & \NOK & \OK & 3/5 \\
+   Reporty podle EASA					 & \NOK & \NOK & \OK & \NOK & \OK & 2/5 \\
+   Jiné reporty								 & \OK & \OK & \OK & \NOK & \OK & 2/5 \\
+   
+   \hline
+   \multicolumn{7}{c}{Perzistence dat} \\
+   \hline
+   iCloud/Google					 & \OK & \NOK & \NOK & \OK & \OK & 3/5 \\
+   Vlastní řešení						 & \NOK & \OK & \OK & \NOK & \NOK & 2/5 \\
+   Synchronizace více zařízení  & \OK & \OK & \OK & \OK & \OK & 5/5 \\
+
+\end{longtable}
+}
+\subsection{Výsledky a vlastní zhodnocení}
+\subsubsection{LogTen Pro X}
+LogTen Pro X je z analyzovaných iOS aplikací nejvíce uživatelsky přívětivá. Zobrazuje přehledně limity a certifikáty, i vkládání je intuitivní. Má však i několik nedostatků: 
+\begin{itemize}
+\item není napojená na databázi letišť, tudíž uživatel musí vyplnit všechny informace o daném letišti sám, bez automatického doplnění nebo našeptávání;
+\item neumožňuje generování reportů podle předpisu EASA FCL.050;
+\item aplikace je placená ročně --
+	\begin{itemize}
+	\item iPhone + iPad + Mac -- 3550 Kč,
+	\item Mac -- 3550 Kč,
+	\item iPhone + iPad -- 2150 Kč.
+	\end{itemize}
+\end{itemize}
+Data o aplikaci a cenách jsou získány přímo z aplikace LogTen Pro X. 
+
+\subsubsection{Logbook Pro Aviation Flight Log for Pilots}
+Aplikace Logbook Pro vyžaduje pro přihlášení stažení PC aplikace (pouze pro Windows). S touto aplikací je následně synchronizován. Některá funkcionalita, např. generování reportů, je dostupná pouze v PC verzi.
+
+PC verze aplikace je zadarmo pouze ve zkušební verzi, poté základní verze stojí v přepočtu 1800 Kč. iOS verze aplikace se platí ročně v přepočtu za 1045 Kč, je nutné si zaplatit i zálohování a další funkcionality. \cite{SafelogPrices}
+
+\subsubsection{Safelog Pilot Logbook}
+Safelog Pilot Logbook obsahuje pouze některé funkce přímo v aplikaci, u ostatních je uživatel odkázán do webového rozhraní (SafelogWeb Cloud) viz. \ref{fig:Safelog}. Toto webové rozhraní zobrazené v aplikaci však není přizpůsobené pro mobilní zařízení, často je zobrazena pouze část stránky a není možné např. vyplnit všechna pole formuláře.
+
+Tato aplikace však, pokud budeme brát v potaz i funkce ve webovém rozhraní, obsahuje nejširší spektrum funkcionalit.
+
+Samotná aplikace je zadarmo, ale pro plnou verzi aplikace je nutné předplatné. To se pohybuje od 1320 Kč za jeden rok až po 8990 Kč za deset let. Data o aplikaci a cenách jsou získány z aplikace Safelog Pilot Logbook.
+
+\subsubsection{FlyLogio - Pilot Logbook}
+Android aplikace FlyLogio - Pilot Logbook je jedinou aplikací kompletně zadarmo. Z uživatelského pohledu se jedná o přehlednou a jednoduchou aplikaci.  Však neobsahuje takovou funkcionalitu jako ostatní placené aplikace, např. chybí generování jakýchkoliv reportů nebo kontrolování limitů.
+
+\subsubsection{Smart Logbook}
+Smart Logbook je poslední analyzovanou aplikací, jedná se o Android aplikaci. Obsahuje mnoho funkcionalit -- generování reportů podle mnoha norem, hlídání limitů i expirace certifikátů.
+
+Aplikace je zadarmo pouze ve zkušební verzi, následně je nutné aplikaci zakoupit za 300 Kč. Je nutné také
+
+\section{Funkční a nefunkční požadavky}
+\section{Případy užití}
+
+\section{Návrh uživatelského rozhraní}
+\subsection{Wireframe}
+\subsection{Heuristická analýza}
 
 
 \section{Architektury při tvorbě iOS aplikací}
@@ -278,6 +384,7 @@ RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato k
 	\item[MVC] Model View Controller
 	\item[MVVM] Model View ViewModel
 	\item[VIPER] View Interactor Presenter Entity Router
+	\item[PC] Personal Computer
 \end{description}
 
 

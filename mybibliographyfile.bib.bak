@@ -108,6 +108,15 @@
   URL = {https://play.google.com/store/apps/details?id=com.kviation.logbook\&hl=en},
   note = "{[cit. 2017-09-08]}"
 }
+@misc{SafelogPrices,
+  journal = {NC Software},
+  title = {Logbook Pro Desktop},
+  publisher = {NC Software, Inc.},
+  howpublished = {\emph{NC Software} [online]. Richmond, Virginia: NC Software, Inc.},
+  address = {Richmond, Virginia},
+  year = {© 2017},
+  URL = {http://www.nc-software.com/Logbook-Pro-Flight-Log-Software-for-Pilots},
+}
 
 @misc{MVCGoogle,
   journal = {Google},

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  12 SEP 2017 15:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  13 SEP 2017 12:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -920,38 +920,71 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 Redoing nameref's sectioning
 Redoing nameref's label
 LaTeX Info: Redefining \nameref on input line 20.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip186
+\LTright=\skip187
+\LTpre=\skip188
+\LTpost=\skip189
+\LTchunksize=\count158
+\LTcapwidth=\dimen164
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count159
+\LT@rows=\count160
+\c@LT@tables=\count161
+\c@LT@chunks=\count162
+\LT@p@ftn=\toks25
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
 (./DP_ZÌŒid_Martin_2018.aux
+
+LaTeX Warning: Label `tab:srovnavaci_tabulka' multiply defined.
+
 
 LaTeX Warning: Label `fig:LogTenProX' multiply defined.
 
 )
 \openout1 = `DP_ZÌŒid_Martin_2018.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 66.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-\AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 63.
-LaTeX Info: Redefining \ref on input line 63.
-LaTeX Info: Redefining \pageref on input line 63.
-LaTeX Info: Redefining \nameref on input line 63.
+\AtBeginShipoutBox=\box33
+Package hyperref Info: Link coloring OFF on input line 66.
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+LaTeX Info: Redefining \nameref on input line 66.
 
 (./DP_ZÌŒid_Martin_2018.out) (./DP_ZÌŒid_Martin_2018.out)
 \@outlinefile=\write4
@@ -960,17 +993,17 @@ LaTeX Info: Redefining \nameref on input line 63.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count158
-\scratchdimen=\dimen164
-\scratchbox=\box30
-\nofMPsegments=\count159
-\nofMParguments=\count160
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count161
-\MPscratchDim=\dimen165
-\MPnumerator=\count162
-\makeMPintoPDFobject=\count163
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count163
+\scratchdimen=\dimen165
+\scratchbox=\box34
+\nofMPsegments=\count164
+\nofMParguments=\count165
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen166
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -994,38 +1027,38 @@ e
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 63.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 66.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 63.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 66.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 63.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 66.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 63.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 66.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 63.
+(Font)              <10.95> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 63.
+(Font)              <8> on input line 66.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 63.
+(Font)              <6> on input line 66.
 
-<cvut-logo-bw.pdf, id=102, 91.34125pt x 69.25874pt>
+<cvut-logo-bw.pdf, id=106, 91.34125pt x 69.25874pt>
 File: cvut-logo-bw.pdf Graphic file (type pdf)
  <use cvut-logo-bw.pdf>
-Package pdftex.def Info: cvut-logo-bw.pdf used on input line 63.
+Package pdftex.def Info: cvut-logo-bw.pdf used on input line 66.
 (pdftex.def)             Requested size: 59.04135pt x 44.76717pt.
 
 [1
@@ -1035,27 +1068,27 @@ Package pdftex.def Info: cvut-logo-bw.pdf used on input line 63.
 ]
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 63.
+(Font)              using `T1/lmr/bx/n' instead on input line 66.
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 63.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 66.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `T1/lmss/bx/sc' undefined
-(Font)              using `T1/lmss/bx/n' instead on input line 63.
+(Font)              using `T1/lmss/bx/n' instead on input line 66.
 
 [3
 
 ] [4
 
 ] [5]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 63.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 66.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 63.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 66.
 
 [6
 
@@ -1072,7 +1105,7 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83 \chapter
+l.86 \chapter
              {CÃ­l prÃ¡ce} [1
 
 
@@ -1080,13 +1113,13 @@ l.83 \chapter
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.83 \chapter
+l.86 \chapter
              {CÃ­l prÃ¡ce} [2
 
 ] [3] [4
 
 ]
-Overfull \hbox (9.59679pt too wide) in paragraph at lines 108--109
+Overfull \hbox (9.59679pt too wide) in paragraph at lines 111--112
 \T1/lmr/m/n/10.95 Hybridní apli-kace jsou apli-kace tvo-°ené nej-£as-t¥ji po-mo
 cí HTML5 a Ja-vaScriptu,
  []
@@ -1094,145 +1127,157 @@ cí HTML5 a Ja-vaScriptu,
 [5]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 143.
+               Default added (so using `tbp') on input line 138.
 
 
-<./pictures/existujiciAplikace/LogTenProX.png, id=248, 1555.8125pt x 1339.0025p
+<./pictures/existujiciAplikace/LogTenProX.png, id=253, 1555.8125pt x 1339.0025p
 t>
 File: ./pictures/existujiciAplikace/LogTenProX.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogTenProX.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/LogTenProX.png used on i
-nput line 144.
-(pdftex.def)             Requested size: 365.31203pt x 314.40002pt.
- [6]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 147.
-
-
-<./pictures/existujiciAplikace/Safelog.png, id=266, 1555.8125pt x 1339.0025pt>
-File: ./pictures/existujiciAplikace/Safelog.png Graphic file (type png)
-
-<use ./pictures/existujiciAplikace/Safelog.png>
-Package pdftex.def Info: ./pictures/existujiciAplikace/Safelog.png used on inpu
-t line 148.
+nput line 139.
 (pdftex.def)             Requested size: 365.31203pt x 314.40002pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 151.
+               Default added (so using `tbp') on input line 143.
 
 
-<./pictures/existujiciAplikace/LogbookPro.png, id=267, 1555.8125pt x 1339.0025p
+<./pictures/existujiciAplikace/LogbookPro.png, id=255, 1555.8125pt x 1339.0025p
 t>
 File: ./pictures/existujiciAplikace/LogbookPro.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogbookPro.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/LogbookPro.png used on i
-nput line 152.
+nput line 144.
 (pdftex.def)             Requested size: 365.31203pt x 314.40002pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 155.
+               Default added (so using `tbp') on input line 148.
 
-<./pictures/existujiciAplikace/FlyLogio.png, id=268, 1254.6875pt x 1027.84pt>
+
+<./pictures/existujiciAplikace/Safelog.png, id=256, 1555.8125pt x 1339.0025pt>
+File: ./pictures/existujiciAplikace/Safelog.png Graphic file (type png)
+
+<use ./pictures/existujiciAplikace/Safelog.png>
+Package pdftex.def Info: ./pictures/existujiciAplikace/Safelog.png used on inpu
+t line 149.
+(pdftex.def)             Requested size: 365.31203pt x 314.40002pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 153.
+
+<./pictures/existujiciAplikace/FlyLogio.png, id=257, 1254.6875pt x 1027.84pt>
 File: ./pictures/existujiciAplikace/FlyLogio.png Graphic file (type png)
 
 <use ./pictures/existujiciAplikace/FlyLogio.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/FlyLogio.png used on inp
-ut line 156.
+ut line 154.
 (pdftex.def)             Requested size: 365.31203pt x 299.25792pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 159.
+               Default added (so using `tbp') on input line 158.
 
 
-<./pictures/existujiciAplikace/SmartLogbook.png, id=269, 1254.6875pt x 1027.84p
+<./pictures/existujiciAplikace/SmartLogbook.png, id=258, 1254.6875pt x 1027.84p
 t>
 File: ./pictures/existujiciAplikace/SmartLogbook.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/SmartLogbook.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/SmartLogbook.png used on
- input line 160.
+ input line 159.
 (pdftex.def)             Requested size: 365.31203pt x 299.25792pt.
+ [6]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 166.
 
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 201.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 201.
+
+Underfull \vbox (badness 10000) detected at line 225
+ []
+
+[7 <./pictures/existujiciAplikace/LogTenProX.png>] [8 <./pictures/existujiciApl
+ikace/LogbookPro.png>] [9]
+Underfull \vbox (badness 1248) has occurred while \output is active []
+
+ [10 <./pictures/existujiciAplikace/Safelog.png>] [11 <./pictures/existujiciApl
+ikace/FlyLogio.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <./pictures/existujiciAplikace/LogTenProX.png>]
-Overfull \vbox (10.86227pt too high) has occurred while \output is active []
-
-
-[8 <./pictures/existujiciAplikace/Safelog.png>] [9 <./pictures/existujiciAplika
-ce/LogbookPro.png>]
-<./pictures/architektury/model_view_controller.png, id=301, 1308.89pt x 541.021
+ [12 <./pictures/existujiciAplikace/SmartLogbook.png>]
+<./pictures/architektury/model_view_controller.png, id=341, 1308.89pt x 541.021
 26pt>
 File: ./pictures/architektury/model_view_controller.png Graphic file (type png)
 
  <use ./pictures/architektury/model_view_controller.png>
 Package pdftex.def Info: ./pictures/architektury/model_view_controller.png used
- on input line 183.
+ on input line 293.
 (pdftex.def)             Requested size: 365.31203pt x 150.99785pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./pictures/architektury/appleMVC.png, id=304, 803.0pt x 256.96pt>
+<./pictures/architektury/appleMVC.png, id=344, 803.0pt x 256.96pt>
 File: ./pictures/architektury/appleMVC.png Graphic file (type png)
 
 <use ./pictures/architektury/appleMVC.png>
 Package pdftex.def Info: ./pictures/architektury/appleMVC.png used on input lin
-e 188.
+e 298.
 (pdftex.def)             Requested size: 365.31203pt x 116.90129pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.5174pt too wide) in paragraph at lines 193--195
+Overfull \hbox (4.5174pt too wide) in paragraph at lines 303--305
 \T1/lmr/m/n/10.95 Architektura MVVM má ob-dobné kon-cepce jako MVC. Jedná se ta
 ké o zkratku,
  []
 
-[10 <./pictures/existujiciAplikace/FlyLogio.png>]
-<./pictures/architektury/MVVM.png, id=320, 803.0pt x 242.9075pt>
+[13] [14 <./pictures/architektury/model_view_controller.png> <./pictures/archit
+ektury/appleMVC.png (PNG copy)>]
+<./pictures/architektury/MVVM.png, id=369, 803.0pt x 242.9075pt>
 File: ./pictures/architektury/MVVM.png Graphic file (type png)
 
 <use ./pictures/architektury/MVVM.png>
-Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 20
+Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 31
 9.
 (pdftex.def)             Requested size: 365.31203pt x 110.50824pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11 <./pictures/existujiciAplikace/SmartLogbook.png>]
-Overfull \hbox (20.02321pt too wide) in paragraph at lines 216--217
+Overfull \hbox (20.02321pt too wide) in paragraph at lines 326--327
 []$\OML/lmm/m/it/10.95 View$ \T1/lmr/m/n/10.95 zob-ra-zuje data uºi-va-teli a p
 °e-dává uºi-va-te-lovi vstupy vrstv¥ $\OML/lmm/m/it/10.95 Presenter$\T1/lmr/m/n
 /10.95 . 
  []
 
-[12 <./pictures/architektury/model_view_controller.png> <./pictures/architektur
-y/appleMVC.png (PNG copy)> <./pictures/architektury/MVVM.png (PNG copy)>]
-<./pictures/architektury/viper.jpg, id=341, 803.0pt x 354.32375pt>
+<./pictures/architektury/viper.jpg, id=376, 803.0pt x 354.32375pt>
 File: ./pictures/architektury/viper.jpg Graphic file (type jpg)
 
 <use ./pictures/architektury/viper.jpg>
-Package pdftex.def Info: ./pictures/architektury/viper.jpg used on input line 2
-32.
+Package pdftex.def Info: ./pictures/architektury/viper.jpg used on input line 3
+42.
 (pdftex.def)             Requested size: 365.31203pt x 161.19592pt.
- [13 <./pictures/architektury/viper.jpg>] [14] [15
 
-] [16
 
-] (./DP_ZÌŒid_Martin_2018.bbl [17] [18
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15 <./pictures/architektury/MVVM.png (PNG copy)>] [16 <./pictures/architektury
+/viper.jpg>] [17] [18
+
+] [19] [20
+
+] (./DP_ZÌŒid_Martin_2018.bbl [21] [22
 
 ]
 bibitemlist
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 15.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
 []\T1/lmr/m/n/10.95 About Objective-C. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-per \
 T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia, U.S.:
@@ -1283,122 +1328,116 @@ rce\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / page / Native\OML/lmm/m/it/10.
 _ Hybrid :
  []
 
-[19]
-Underfull \hbox (badness 1127) in paragraph at lines 55--58
+
+Underfull \hbox (badness 1127) in paragraph at lines 50--53
 []\T1/lmr/m/n/10.95 Logbook Pro Avi-ation Fli-ght Log for Pi-lots. \T1/lmr/m/it
 /10.95 ITu-nes \T1/lmr/m/n/10.95 [on-line]. Ca-
  []
 
 
-Underfull \hbox (badness 1371) in paragraph at lines 55--58
+Underfull \hbox (badness 1371) in paragraph at lines 50--53
 \T1/lmr/m/n/10.95 li-for-nia, U.S.: Ap-ple Inc., [] 2017, [cit. 2017-09-08]. Do
 -stupné z:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--58
+Underfull \hbox (badness 10000) in paragraph at lines 50--53
 []$\T1/lmtt/m/n/10.95 https : / / itunes\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95
  apple\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / us / app / logbook -[] pro 
 -[] aviation -[] flight -[]
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 81--84
 \T1/lmtt/m/n/10.95 en -[] US / Apps / Fundamentals / Modern _ web _ app _ archi
 tecture / MVC _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 []\T1/lmr/m/n/10.95 Model-View-Controller. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-p
 er \T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 \T1/lmr/m/n/10.95 U.S.: Ap-ple Inc., [] 2015, [cit. 2017-08-29]. Do-stupné z:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
 []$\T1/lmtt/m/n/10.95 https : / / developer\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10
 .95 apple\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / library / content / docu
 mentation /
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 91--94
+Underfull \hbox (badness 1242) in paragraph at lines 96--99
 []\T1/lmr/m/n/10.95 Orlov, B.: Re-a-lis-tic Co-coa MVC. In: \T1/lmr/m/it/10.95 
 Me-dium \T1/lmr/m/n/10.95 [on-line], 2015, [cit.
  []
 
 
-Underfull \hbox (badness 8094) in paragraph at lines 101--104
+Underfull \hbox (badness 8094) in paragraph at lines 106--109
 []\T1/lmr/m/n/10.95 Morrison, J.; Schmidt, M.: IOS De-sign Pat-terns: MVC and
  []
 
 
-Underfull \hbox (badness 5607) in paragraph at lines 101--104
+Underfull \hbox (badness 5607) in paragraph at lines 106--109
 \T1/lmr/m/n/10.95 MVVM. \T1/lmr/m/it/10.95 Cap-Tech\T1/lmr/m/n/10.95 , 2014, [c
 it. 2017-08-29]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--104
+Underfull \hbox (badness 10000) in paragraph at lines 106--109
 \T1/lmtt/m/n/10.95 / / www\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 captechconsul
 ting\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / blogs / ios -[] design -[] pa
 tterns -[] mvc -[]
  []
 
-
-Underfull \hbox (badness 7649) in paragraph at lines 106--109
+[24]
+Underfull \hbox (badness 7649) in paragraph at lines 111--114
 []\T1/lmr/m/n/10.95 Orlov, B.: MVVM. In: \T1/lmr/m/it/10.95 Me-dium \T1/lmr/m/n
 /10.95 [on-line], 2015, [cit. 2017-08-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 \T1/lmr/m/n/10.95 30]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https : / / cdn -[] i
 mages -[] 1\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 medium\OML/lmm/m/it/10.95 :\
 T1/lmtt/m/n/10.95 com / max / 800 /
  []
 
-[20]
-Underfull \hbox (badness 8170) in paragraph at lines 116--119
+
+Underfull \hbox (badness 8170) in paragraph at lines 121--124
 []\T1/lmr/m/n/10.95 Orlov, B.: VI-PER. In: \T1/lmr/m/it/10.95 Me-dium \T1/lmr/m
 /n/10.95 [on-line], 2015, [cit. 2017-08-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--119
+Underfull \hbox (badness 10000) in paragraph at lines 121--124
 \T1/lmr/m/n/10.95 30]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https : / / cdn -[] i
 mages -[] 1\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 medium\OML/lmm/m/it/10.95 :\
 T1/lmtt/m/n/10.95 com / max / 800 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--124
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 []\T1/lmr/m/n/10.95 Functional Re-active Pro-gra-m-ming (FRP). \T1/lmr/m/it/10.
 95 Tech-no-pe-dia \T1/lmr/m/n/10.95 [on-
  []
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 121--124
+Underfull \hbox (badness 5217) in paragraph at lines 126--129
 \T1/lmr/m/n/10.95 line]. Te-cho-pe-dia Inc., [] 2017, [cit. 2017-09-01]. Do-stu
 pné z:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--124
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 []$\T1/lmtt/m/n/10.95 https : / / www\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 te
 chopedia\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / definition / 29571 / func
 tional -[]
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 135--138
-\T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
- / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
  []
 
 
@@ -1407,24 +1446,30 @@ Underfull \hbox (badness 1052) in paragraph at lines 140--143
  / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
  []
 
-) [21] [22
 
-] [23] [24
+Underfull \hbox (badness 1052) in paragraph at lines 145--148
+\T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
+ / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
+ []
 
-] [25]
+[25]) [26] [27
+
+] [28
+
+] [29]
 \tf@toc=\write5
 \openout5 = `DP_ZÌŒid_Martin_2018.toc'.
 
 \tf@lof=\write6
 \openout6 = `DP_ZÌŒid_Martin_2018.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 407.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 407.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 518.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 518.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 407.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 407.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 518.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 518.
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
-(rerunfilecheck)             Checksum: B05ED779C7DF91CF2037239EA8CF799F;3583.
+(rerunfilecheck)             Checksum: F0036AFC2A7AD366EFA101C01F80C49E;3722.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1432,16 +1477,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 407.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 518.
  ) 
 Here is how much of TeX's memory you used:
- 13588 strings out of 492995
- 188937 string characters out of 6132704
- 321703 words of memory out of 5000000
- 16879 multiletter control sequences out of 15000+600000
- 68785 words of font info for 45 fonts, out of 8000000 for 9000
+ 13755 strings out of 492995
+ 191198 string characters out of 6132704
+ 338266 words of memory out of 5000000
+ 17007 multiletter control sequences out of 15000+600000
+ 82647 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,13n,32p,1104b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,32p,1104b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-d
@@ -1451,15 +1496,17 @@ ic/lm/lmbxi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmc
 sc10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><
 /usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/201
-7/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/public/lm/lmssbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publi
-c/lm/lmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt1
-0.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (39 pages, 1388671 bytes).
+7/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1
+/public/lm/lmr9.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/l
+mri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pf
+b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on DP_ZÌŒid_Martin_2018.pdf (43 pages, 1450909 bytes).
 PDF statistics:
- 560 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 500000)
- 227 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 619 PDF objects out of 1000 (max. 8388607)
+ 534 compressed objects within 6 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 235 words of extra memory for PDF output out of 10000 (max. 10000000)
 
