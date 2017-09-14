@@ -122,8 +122,68 @@ Však tento postup má i své nevýhody. Jak již bylo zmíněno dříve, aplika
 \subsection{Zvolené řešení}
 Pro svou práci jsem si zvolil možnost nativní mobilní aplikace z důvodu zaměření pouze na platformu iOS. Bude se tedy jednat pouze o jednu aplikaci, která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
 
-\section{EASA a předpisy}
-Limity, certifikáty, evidence letu ...
+\section{EASA}
+EASA, neboli European Aviation Safety Agency, je agentura spadající pod Evropskou Unii, která má na starosti technické přepisy, bezpečnost, regulace a certifikace v oboru letectví. \cite{EU} 
+
+Pro tuto diplomovou práci je EASA důležitá, protože vydává i pokyny např. pro evidenci letů nebo limity odlétaných hodin. \cite{EASARegulations}
+
+\subsection{Pokyny pro evidenci letů}
+Pokyny pro evidenci letů udává předpis FCL.050. Tento předpis specifikuje povinné položky každého leteckého záznamu. \cite{FCL} 
+
+\uv{
+Každý záznam letů by měl obsahovat minimálně tyto informace:
+\begin{enumerate}
+\item osobní informace: jméno a adresu pilota;
+\item každý záznam letu by měl obsahovat:
+	\begin{itemize}
+	\item jméno velícího pilota (PIC -- Pilot-in-command),
+	\item datum letu,
+	\item čas a místo odletu a příletu,
+	\item typ, značku, model, variantu a registraci letadla,
+	\item označení zda je letadlo jednomotorové (SE -- single engine) nebo vícemotorové (ME -- multi engine),
+	\item čas letu,
+	\item celkový čas letu.
+	\end{itemize}
+\item každý záznam z výcvikového zařízení pro simulaci letu (FSTD -- flight simulation training devices) by měl obsahovat:
+	\begin{itemize}
+	\item typ a kvalifikační číslo výcvikového zařízení,
+	\item instrukce výcvikového zařízení pro simulaci letu,
+	\item datum,
+	\item čas,
+	\item celkový čas.
+	\end{itemize}
+\item funkce pilota -- velící pilot (včetně sólového, velícím pilotem student (Student PIC) nebo velící pilot pod dohledem (PICUS -- pilot-in-command under supervision)), druhý pilot, dvojí pilot (dual), instruktor (FI -- Flight Instructor) nebo zkoušející (FE -- Flight Examiner);
+\item provozní podmínky -- pokud se let uskutečnil v noci nebo pokud byl prováděn podle pravidel pro let podle přístrojů.
+\end{enumerate}
+} \cite{FCL} (překlad vlastní)
+
+\subsection{Limity}
+Limity letového času a času ve službě obsahuje předpis ORO.FTL.210.
+
+\uv{
+Celková doba služby, na kterou může být člen posádky přidělen, nesmí překročit:
+\begin{enumerate}
+\item 60 hodin služby za 7 po sobě jdoucích dnů;
+\item 110 hodin služby za 14 po sobě jdoucích dnů; a 
+\item 190 hodin služby za 28 po sobě jdoucích dnů, rozdělených co nejrovnoměrněji během tohoto období.
+\end{enumerate}
+Celkový čas, na který je jedinec přidělen jako člen provozní posádky, nesmí překročit:
+\begin{enumerate}
+\item 100 hodin letu za 28 po sobě jdoucích dnů;
+\item 900 hodin letu v kalendářním roce; a
+\item 1000 hodin letu během 12 po sobě jdoucích kalendářních měsících.
+\end{enumerate}
+Poletová služba se počítá do doby služby.
+} \cite{FTL} (překlad vlastní)
+
+\subsection{Zdravotní certifikáty}
+Informace o zdravotních certifikátech obsahuje předpis Part-MED. Certifikáty jsou tří druhů -- zdravotní certifikát třídy 1 (Class 1 medical certificate), zdravotní certifikát třídy 2 (Class 2 medical certificate) a zdravotní certifikát pro licence na lehká letadla (LAPL -- Light Aircraft Pilot Licence). Každý z těchto certifikátů má jinak nastavenou dobu platnosti a je pro jiné typy pilotních licencí.
+
+LAPL certifikát je pouze pro pilotní licence na lehká letadla. Platnost je 60 měsíců u pilotů do věku 40 let, poté je platnost pouze 24 měsíců.
+
+Zdravotní certifikát třídy 2 je pro pilotní licence PPL (Private Pilot Licence), SPL (Sailplane Pilot Licence) a BPL (Balloon Pilot Licence), tedy pro piloty soukromých letadel, kluzáků a balónů. Platnost licence se znovu odvíjí od věku pilota -- 60 měsíců u pilotů do věku 40 let, následně 24 měsíců do věku 50 let a nakonec platnost licence klesá na 12 měsíců.
+
+Zdravotní certifikát třídy 1 je certifikát nejvyšší úrovně. Je pro pilotní licence CPL (Commercial Pilot Licence), MPL (Multi-crew Pilot Licence) a ATPL (Airline Transport Pilot Licence), tedy pro piloty komerčních, vícečlenných a dopravních letadel. Platnost licence je 12 měsíců. To neplatí u pilotů starších 40 let, létajících jednopilotní komerční lety s cestujícími nebo u pilotů starších 60 let, zde se platnost licence snižuje na 6 měsíců. \cite{CAA}
 
 \section{Analýza existujících aplikací pro evidenci letů}
 Tato kapitola se zabývá analýzou již existujících aplikací pro evidenci letů. Pro analýzu bylo vybráno pět aplikací -- tři pro iOS a dvě pro platformu Android.
@@ -163,7 +223,7 @@ Tato kapitola se zabývá analýzou již existujících aplikací pro evidenci l
 \subsection{Kritéria hodnocení}
 Kritéria hodnocení byla rozdělena do několika kategorií -- přihlášení, platby, napojení externích databází, doplňkové položky při vkládání záznamu, limity a certifikáty, reporty a zálohování.	
 
-Při vkládání záznamu jsou brány v potaz pouze doplňkové položky, protože aplikace bude tvořena podle předpisu EASA FCL.050 \url{www.easa.europa.eu/system/files/dfu/Part-FCL.pdf}, který udává povinné údaje při evidování letu. Také položka v hodnocení  -- reporty podle EASA, je analyzována z pohledu předpisu FCL.050. 
+Při vkládání záznamu jsou brány v potaz pouze doplňkové položky, protože aplikace bude tvořena podle předpisu EASA FCL.050, který udává povinné údaje při evidování letu. Také položka v hodnocení  -- reporty podle EASA, je analyzována z pohledu předpisu FCL.050. 
 
 Všechny položky hodnocení jsou uváděny z pohledu mobilní/tablet aplikace.
 
@@ -384,11 +444,24 @@ RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato k
 \chapter{Seznam použitých zkratek}
 % \printglossaries
 \begin{description}
-	\item[FRP] funkcionálně reaktivní programování
+	\item[FRP] Funkcionálně reaktivní programování
 	\item[MVC] Model View Controller
 	\item[MVVM] Model View ViewModel
 	\item[VIPER] View Interactor Presenter Entity Router
 	\item[PC] Personal Computer
+	\item[EASA] European Aviation Safety Agency
+	\item[PIC] Pilot-in-command
+	\item[SE] Single engine
+	\item[ME] Multi engine
+	\item[SPIC] Student PIC
+	\item[PICUS] PIC under supervision
+	\item[FSTD] flight simulation training devices
+	\item[FI] Flight instructor
+	\item[FE] Flight examiner
+	\item[LAPL] Light Aircraft Pilot Licence
+	\item[SPL] Sailplane Pilot Licence
+	\item[BPL] Balloon Pilot Licence
+	\item[PPL] Private Pilot Licence
 \end{description}
 
 

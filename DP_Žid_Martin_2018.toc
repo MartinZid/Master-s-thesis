@@ -9,39 +9,42 @@
 \contentsline {subsection}{\numberline {2.1.2}Hybridn\IeC {\'\i } aplikace}{5}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Mobiln\IeC {\'\i } webov\IeC {\'e} aplikace}{6}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{6}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}EASA a p\IeC {\v r}edpisy}{6}{section.2.2}
-\contentsline {section}{\numberline {2.3}Anal\IeC {\'y}za existuj\IeC {\'\i }c\IeC {\'\i }ch aplikac\IeC {\'\i } pro evidenci let\IeC {\r u}}{6}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Krit\IeC {\'e}ria hodnocen\IeC {\'\i }}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Srovn\IeC {\'a}vac\IeC {\'\i } tabulka}{7}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}V\IeC {\'y}sledky a vlastn\IeC {\'\i } zhodnocen\IeC {\'\i }}{9}{subsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.3.1}LogTen Pro X}{9}{subsubsection.2.3.3.1}
-\contentsline {subsubsection}{\numberline {2.3.3.2}Logbook Pro Aviation Flight Log for Pilots}{10}{subsubsection.2.3.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3.3}Safelog Pilot Logbook}{11}{subsubsection.2.3.3.3}
-\contentsline {subsubsection}{\numberline {2.3.3.4}FlyLogio - Pilot Logbook}{11}{subsubsection.2.3.3.4}
-\contentsline {subsubsection}{\numberline {2.3.3.5}Smart Logbook}{12}{subsubsection.2.3.3.5}
-\contentsline {section}{\numberline {2.4}Funk\IeC {\v c}n\IeC {\'\i } a nefunk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{13}{section.2.4}
-\contentsline {section}{\numberline {2.5}P\IeC {\v r}\IeC {\'\i }pady u\IeC {\v z}it\IeC {\'\i }}{13}{section.2.5}
-\contentsline {section}{\numberline {2.6}N\IeC {\'a}vrh u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{13}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Wireframe}{13}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{13}{subsection.2.6.2}
-\contentsline {section}{\numberline {2.7}Architektury p\IeC {\v r}i tvorb\IeC {\v e} iOS aplikac\IeC {\'\i }}{13}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}MVC}{13}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}MVVM}{13}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}VIPER}{15}{subsection.2.7.3}
-\contentsline {section}{\numberline {2.8}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{15}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}FRP frameworky pro iOS}{16}{subsection.2.8.1}
-\contentsline {subsubsection}{\numberline {2.8.1.1}ReactiveSwift}{16}{subsubsection.2.8.1.1}
-\contentsline {subsubsection}{\numberline {2.8.1.2}ReactiveCocoa}{16}{subsubsection.2.8.1.2}
-\contentsline {subsubsection}{\numberline {2.8.1.3}RxSwift}{17}{subsubsection.2.8.1.3}
-\contentsline {section}{\numberline {2.9}Persistence dat}{17}{section.2.9}
-\contentsline {chapter}{\chapternumberline {3}Realizace}{19}{chapter.3}
-\contentsline {section}{\numberline {3.1}iOS aplikace a Swift}{19}{section.3.1}
-\contentsline {section}{\numberline {3.2}Unit testy}{19}{section.3.2}
-\contentsline {section}{\numberline {3.3}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{19}{section.3.3}
-\contentsline {section}{\numberline {3.4}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{19}{section.3.4}
-\contentsline {section}{\numberline {3.5}Postupy FRP v aplikaci}{19}{section.3.5}
-\contentsline {section}{\numberline {3.6}Zhodnocen\IeC {\'\i } MVVM a FRP}{19}{section.3.6}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{21}{chapter*.6}
-\contentsline {chapter}{Literatura}{23}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{27}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{29}{appendix.B}
+\contentsline {section}{\numberline {2.2}EASA}{6}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Pokyny pro evidenci let\IeC {\r u}}{6}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Limity}{7}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Zdravotn\IeC {\'\i } certifik\IeC {\'a}ty}{8}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Anal\IeC {\'y}za existuj\IeC {\'\i }c\IeC {\'\i }ch aplikac\IeC {\'\i } pro evidenci let\IeC {\r u}}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Krit\IeC {\'e}ria hodnocen\IeC {\'\i }}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Srovn\IeC {\'a}vac\IeC {\'\i } tabulka}{9}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}V\IeC {\'y}sledky a vlastn\IeC {\'\i } zhodnocen\IeC {\'\i }}{11}{subsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.1}LogTen Pro X}{11}{subsubsection.2.3.3.1}
+\contentsline {subsubsection}{\numberline {2.3.3.2}Logbook Pro Aviation Flight Log for Pilots}{12}{subsubsection.2.3.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3.3}Safelog Pilot Logbook}{13}{subsubsection.2.3.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.4}FlyLogio - Pilot Logbook}{13}{subsubsection.2.3.3.4}
+\contentsline {subsubsection}{\numberline {2.3.3.5}Smart Logbook}{14}{subsubsection.2.3.3.5}
+\contentsline {section}{\numberline {2.4}Funk\IeC {\v c}n\IeC {\'\i } a nefunk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{15}{section.2.4}
+\contentsline {section}{\numberline {2.5}P\IeC {\v r}\IeC {\'\i }pady u\IeC {\v z}it\IeC {\'\i }}{15}{section.2.5}
+\contentsline {section}{\numberline {2.6}N\IeC {\'a}vrh u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{15}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Wireframe}{15}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{15}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Architektury p\IeC {\v r}i tvorb\IeC {\v e} iOS aplikac\IeC {\'\i }}{15}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}MVC}{15}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}MVVM}{15}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}VIPER}{17}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{17}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}FRP frameworky pro iOS}{18}{subsection.2.8.1}
+\contentsline {subsubsection}{\numberline {2.8.1.1}ReactiveSwift}{18}{subsubsection.2.8.1.1}
+\contentsline {subsubsection}{\numberline {2.8.1.2}ReactiveCocoa}{18}{subsubsection.2.8.1.2}
+\contentsline {subsubsection}{\numberline {2.8.1.3}RxSwift}{19}{subsubsection.2.8.1.3}
+\contentsline {section}{\numberline {2.9}Persistence dat}{19}{section.2.9}
+\contentsline {chapter}{\chapternumberline {3}Realizace}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}iOS aplikace a Swift}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Unit testy}{21}{section.3.2}
+\contentsline {section}{\numberline {3.3}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{21}{section.3.3}
+\contentsline {section}{\numberline {3.4}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{21}{section.3.4}
+\contentsline {section}{\numberline {3.5}Postupy FRP v aplikaci}{21}{section.3.5}
+\contentsline {section}{\numberline {3.6}Zhodnocen\IeC {\'\i } MVVM a FRP}{21}{section.3.6}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{23}{chapter*.6}
+\contentsline {chapter}{Literatura}{25}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{29}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{31}{appendix.B}

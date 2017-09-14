@@ -58,6 +58,52 @@
   URL = {https://developer.apple.com/swift/},
   note = "{[cit. 2017-09-05]}"
 }
+@misc{EU,
+  journal = {European Union},
+  title = {European Aviation Safety Agency (EASA)},
+  howpublished = {\emph{European Union} [online]},
+  URL = {https://europa.eu/european-union/about-eu/agencies/easa_en},
+  note = "{[cit. 2017-09-14]}"
+}
+@misc{EASARegulations,
+  journal = {European Aviation Safety Agency},
+  title = {Regulations},
+  howpublished = {\emph{European Aviation Safety Agency} [online]},
+  year = {© 2017},
+  URL = {https://www.easa.europa.eu/regulations},
+  note = "{[cit. 2017-09-14]}"
+}
+@misc{FCL,
+  title = {PART-FCL},
+  publisher = {EASA},
+  address = {London, United Kingdom},
+  howpublished = {London, United Kingdom: EASA},
+  year = {June 2016},
+  number = {V1},
+  URL = {https://www.easa.europa.eu/system/files/dfu/Part-FCL.pdf},
+}
+@misc{FTL,
+  title = {Official Journal of the European Union},
+  publisher = {EASA},
+  address = {London, United Kingdom},
+  howpublished = {London, United Kingdom: EASA},
+  year = {2014},
+  number = {83/2014},
+  URL = {http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2014:028:0017:0029:EN:PDF},
+}
+
+@misc{CAA,
+  journal = {Civil Aviation Authority},
+  title = {EU Part-MED medical certificates for EU licences},
+  publisher = {Civil Aviation Authority},
+  howpublished = {\emph{Civil Aviation Authority} [online]. London, United Kingdom: Civil Aviation Authority},
+  address = {London, United Kingdom},
+  year = {© 2015},
+  URL = {https://www.caa.co.uk/General-aviation/Pilot-licences/EASA-requirements/Medical/EASA-Part-MED-requirements/},
+  note = "{[cit. 2017-09-14]}"
+}
+
+
 @misc{appStoreLogTen,
   journal = {ITunes},
   title = {LogTen Pro X},

@@ -10,6 +10,11 @@ Warning--to sort, need author or key in swift
 Warning--to sort, need author or key in saleforce
 Warning--to sort, need author or key in cordova
 Warning--to sort, need author or key in upwork
+Warning--to sort, need author or key in EU
+Warning--to sort, need author or key in EASARegulations
+Warning--to sort, need author or key in FCL
+Warning--to sort, need author or key in FTL
+Warning--to sort, need author or key in CAA
 Warning--to sort, need author or key in appStoreLogTen
 Warning--to sort, need author or key in appStoreLogbookPro
 Warning--to sort, need author or key in appStoreSafeLog
@@ -29,45 +34,45 @@ Warning--to sort, need author or key in RxNET
 Warning--to sort, need author or key in ReactiveExtensionsDocs
 Warning--to sort, need author or key in ReactiveExtensions
 Warning--empty pages in Ztaltz2014
-You've used 31 entries,
+You've used 36 entries,
             3185 wiz_defined-function locations,
-            839 strings with 10647 characters,
-and the built_in function-call counts, 8646 in all, are:
-= -- 585
-> -- 87
+            872 strings with 11512 characters,
+and the built_in function-call counts, 9864 in all, are:
+= -- 670
+> -- 92
 < -- 0
-+ -- 55
++ -- 60
 - -- 18
-* -- 423
-:= -- 766
-add.period$ -- 62
-call.type$ -- 31
-change.case$ -- 73
+* -- 478
+:= -- 858
+add.period$ -- 72
+call.type$ -- 36
+change.case$ -- 83
 chr.to.int$ -- 0
-cite$ -- 56
-duplicate$ -- 966
-empty$ -- 1063
+cite$ -- 66
+duplicate$ -- 1099
+empty$ -- 1225
 format.name$ -- 20
-if$ -- 1946
+if$ -- 2231
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 219
-newline$ -- 133
+int.to.str$ -- 36
+missing$ -- 247
+newline$ -- 153
 num.names$ -- 14
-pop$ -- 568
+pop$ -- 654
 preamble$ -- 1
-purify$ -- 71
+purify$ -- 81
 quote$ -- 0
-skip$ -- 373
+skip$ -- 432
 stack$ -- 0
-substring$ -- 215
-swap$ -- 384
+substring$ -- 246
+swap$ -- 434
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 122
-warning$ -- 25
+type$ -- 142
+warning$ -- 30
 while$ -- 14
-width$ -- 33
-write$ -- 292
-(There were 25 warnings)
+width$ -- 38
+write$ -- 334
+(There were 30 warnings)
