@@ -33,46 +33,55 @@ Warning--to sort, need author or key in RxSwift
 Warning--to sort, need author or key in RxNET
 Warning--to sort, need author or key in ReactiveExtensionsDocs
 Warning--to sort, need author or key in ReactiveExtensions
+Warning--to sort, need author or key in coredata
+Warning--to sort, need author or key in CoreDataPersistentTypes
+Warning--to sort, need author or key in CoreDataXcode
+Warning--to sort, need author or key in iCloud
+Warning--to sort, need author or key in CloudKitDoc
+Warning--to sort, need author or key in CloudKit
+Warning--to sort, need author or key in AppleDeveloperProgram
+Warning--to sort, need author or key in AppleDeveloperProgramPrice
+Warning--to sort, need author or key in realmOverview
 Warning--empty pages in Ztaltz2014
-You've used 36 entries,
+You've used 45 entries,
             3185 wiz_defined-function locations,
-            872 strings with 11512 characters,
-and the built_in function-call counts, 9864 in all, are:
-= -- 670
-> -- 92
+            908 strings with 12582 characters,
+and the built_in function-call counts, 12143 in all, are:
+= -- 832
+> -- 101
 < -- 0
-+ -- 60
++ -- 70
 - -- 18
-* -- 478
-:= -- 858
-add.period$ -- 72
-call.type$ -- 36
-change.case$ -- 83
+* -- 586
+:= -- 1029
+add.period$ -- 90
+call.type$ -- 45
+change.case$ -- 101
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 1099
-empty$ -- 1225
+cite$ -- 84
+duplicate$ -- 1351
+empty$ -- 1522
 format.name$ -- 20
-if$ -- 2231
+if$ -- 2762
 int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 247
-newline$ -- 153
+int.to.str$ -- 45
+missing$ -- 301
+newline$ -- 189
 num.names$ -- 14
-pop$ -- 654
+pop$ -- 807
 preamble$ -- 1
-purify$ -- 81
+purify$ -- 99
 quote$ -- 0
-skip$ -- 432
+skip$ -- 540
 stack$ -- 0
-substring$ -- 246
-swap$ -- 434
+substring$ -- 310
+swap$ -- 533
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 142
-warning$ -- 30
+type$ -- 178
+warning$ -- 39
 while$ -- 14
-width$ -- 38
-write$ -- 334
-(There were 30 warnings)
+width$ -- 47
+write$ -- 415
+(There were 39 warnings)

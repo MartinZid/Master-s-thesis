@@ -420,6 +420,28 @@ ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje r�
 RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem, \cite{ReactiveExtensionsDocs} je zde uváděn, a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
 
 \section{Persistence dat}
+\subsection{Core Data}
+Core Data je Apple framework, který má na starosti model vrstvu aplikace. Stará se o životní cyklus objektů, jejich vztahy (objektový graf) i perzistenci. \cite{coredata}
+
+Core Data má více možností na způsob uložení např. SQLite a XML. Jedná se tedy o uložení dat na disku daného zařízení.  \cite{CoreDataPersistentTypes}
+
+Výhodou tohoto frameworku je to, že je zcela zdarma a má podporu přímo v Xcode. \cite{CoreDataXcode}
+
+\subsection{iCloud}
+iCloud je cloudové úložiště od společnosti Apple. Umožňuje ukládat aplikační data i dokumenty a přistupovat k nim na všech Apple zařízeních a na webu. \cite{iCloud}
+
+Při vývoji iOS aplikací se pro využití iCloud používá framework CloudKit. CloudKit zajišťuje rozhraní pro komunikaci dané aplikace a iCloud. \cite{CloudKitDoc} Poskytuje ověření uživatele, tři druhy databáze -- soukromou, veřejnou a sdílenou, dále také analytický nástroj CloudKit Dashboard, který umožňuje prozkoumání dat, měření aktivity uživatelů a další. \cite{CloudKit}
+
+CloudKit je dostupný pro členy Apple Developer programu. \cite{AppleDeveloperProgram} Tento program stojí ročně v přepočtu 2150 Kč. \cite{AppleDeveloperProgramPrice} 
+
+\subsection{Realm}
+Realm, s oficiální stránkou \url{https://realm.io}, je multiplatformní mobilní databáze, která je připravená pro jazyky Java (Android), Swift, Objective-C, JavaScript a Xamarin. Hlavní myšlenkou je kontejner objektů tzv. Realm. Zde jsou uložena data, na které je možné se dotazovat, tyto data filtrovat a podobné. Na rozdíl od klasických např. SQL databází, zde pracujeme přímo s \uv{živými} objekty, tedy pokud provedeme změnu není nutné ukládat změněný objekt do databáze, ale změna se provede automaticky.
+
+Realm je rozdělený na dvě části mobilní databáze Realm (Realm Mobile Database) a objektový server Realm (Realm Object Server). Jak je již z názvů možné usuzovat mobilní databáze je pouze na mobilním zařízení, jedná se tedy o offline uložení dat. Pokud však chceme data např. sdílet na více zařízení, je možné se připojit na objektový server Realm a s tím se synchronizovat. Realm se řídí strategii \uv{nejprve offine}.
+
+Jedna aplikace může využívat hned několik Realm kontejnerů, a to jak lokální, tak i na vzdálené, kde každý z nich může mít různé oprávnění pro různé uživatele.
+
+Realm Mobile Database je open source, tedy zdarma. \cite{realmOverview}
 
 \chapter{Realizace}
 \label{chap:realizace}

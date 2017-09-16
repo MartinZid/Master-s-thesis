@@ -188,4 +188,49 @@ ReactiveX. \emph{ReactiveX} [online], {[cit. 2017-09-04]}.
 ReactiveX. \emph{ReactiveX} [online], {[cit. 2017-09-04]}.
 \urlprefix\biburl{http://reactivex.io/}
 
+\bibitem{coredata}
+What Is Core Data? \emph{Apple Developer} [online]. California, U.S.: Apple
+  Inc., © 2017, {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/index.html}
+
+\bibitem{CoreDataPersistentTypes}
+Persistent Store Types and Behaviors. \emph{Apple Developer} [online].
+  California, U.S.: Apple Inc., © 2017, {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/PersistentStoreFeatures.html}
+
+\bibitem{CoreDataXcode}
+Creating a Managed Object Model. \emph{Apple Developer} [online]. California,
+  U.S.: Apple Inc., © 2017, {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/CoreData/KeyConcepts.html}
+
+\bibitem{iCloud}
+iCloud. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., © 2017,
+  {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/icloud/}
+
+\bibitem{CloudKitDoc}
+CloudKit. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2017, {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/documentation/cloudkit}
+
+\bibitem{CloudKit}
+CloudKit. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2017, {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/icloud/cloudkit/}
+
+\bibitem{AppleDeveloperProgram}
+Capabilities Available to Developers. \emph{Apple Developer} [online].
+  California, U.S.: Apple Inc., © 2017, {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/support/app-capabilities/}
+
+\bibitem{AppleDeveloperProgramPrice}
+Purchase and Activation. \emph{Apple Developer} [online]. California, U.S.:
+  Apple Inc., © 2017, {[cit. 2017-09-16]}.
+\urlprefix\biburl{https://developer.apple.com/support/purchase-activation/}
+
+\bibitem{realmOverview}
+The Realm Mobile Platform. \emph{Realm} [online]. Realm, © 2014-2017, {[cit.
+  2017-09-16]}.
+\urlprefix\biburl{https://realm.io/docs/get-started/overview/}
+
 \end{thebibliography}
