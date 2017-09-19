@@ -324,8 +324,121 @@ Smart Logbook je poslední analyzovanou aplikací, jedná se o Android aplikaci.
 
 Tato aplikace je zadarmo pouze ve zkušební verzi, následně je nutné aplikaci zakoupit za 300 Kč. Je nutné také platit za zálohování a synchronizaci dat, a to buď 20 Kč za měsíc, nebo 120 Kč za rok. Informace o cenách jsou získány z aplikace Smart Logbook.
 
+\subsubsection{Závěr analýzy}
+Tato analýza posloužila při návrhu funkcionalit iOS aplikace ve formě případů užití, při návrhu uživatelského rozhraní a také při analýze řešení perzistence dat.
+
 \section{Funkční a nefunkční požadavky}
-\section{Případy užití}
+
+\section{Navržená funkcionalita v podobě případů užití}
+Případy užití (use cases) byly využity při návrhu funkcionalit iOS aplikace. Jsou obsaženy přímo v práci z důvodu přehledného zobrazení navržených funkcionalit a možným dovysvětlením u některých z nich.
+
+Diagram případů užití zobrazuje obrázek \ref{fig:UC}
+
+\begin{figure}[]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/UC/UC}
+ \caption[Případy užití]{Případy užití}\label{fig:UC}
+\end{figure}
+
+\subsection{Vytvořit záznam letu}
+Vytvoření leteckého záznam umožňuje uživateli vložit nový záznam letu do aplikace.
+
+Hlavní scénář --
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel evidovat svůj let.
+\item Systém zobrazí formulář umožňující zadat: jméno velícího pilota, datum letu, čas a místo odletu a příletu, letadlo, čas letu, celkový čas letu, počet vzletů a přistání, pilotovu funkci při letu a provozní podmínky.
+\item Uživatel vyplní všechny povinné položky.
+\item Aplikace uloží informace o letu.
+\end{itemize}
+
+Alternativní scénář --
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel evidovat záznam z výcvikového zařízení pro simulaci letu.
+\item Systém zobrazí formulář  umožňující zadat: typ a kvalifikační číslo výcvikového zařízení, datum a čas.
+\item Případ užití pokračuje 3. krokem hlavního scénáře.
+\end{itemize}
+
+Aplikace bude napojena na databázi letišť, pro jednoduché evidování místa odletu a příletu. Nebude však napojena na databázi letadel, protože uživatel u každého letadla musí vyplnit minimálně registrační číslo. Pokud by uživatel musel letadlo najít a zeditovat, je výhodnější pokud si sám letadlo přidá. Dalším důvodem k tomu rozhodnutí je, že pilot létá velmi často pouze s jedním letadlem a proto funkcionalitu přidání letadla nebude používat příliš často.
+
+\subsection{Přidat letadlo}
+Přidání letadla dává uživateli možnost přidat letadlo, které pak může vkládat do záznamů o letu.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel přidat nové letadlo.
+\item Systém zobrazí formulář  umožňující zadat: typ, značku model, variantu, registrační číslo letadla a zda je letadlo jednomotorové nebo vícemotorové.
+\item Uživatel vyplní všechna pole formuláře.
+\item Aplikace uloží letadlo.
+\end{itemize}
+
+\subsection{Zobrazit letecké záznamy}
+Zobrazení leteckých záznamů zobrazuje jednotlivé záznamy v podobě tabulky, kde u každého záznamu jsou vidět základní informace. Mezi tyto informace patří: místo odletu a přílet, datum a čas letu.
+
+\subsection{Vyhledat a filtrovat letecké záznamy}
+Tato funkcionalita umožňuje uživateli vyhledávání a filtrování leteckých záznamů.
+
+\begin{itemize}
+\item Případ užití začíná, pokud chce uživatel vyhledat nebo vyfiltrovat letecké záznamy.
+\item Include (Zobrazit letecké záznamy).
+\item Aplikace zobrazí formulář, který umožňuje: zadat hledaný text, nastavit zda se jedná o záznam letu nebo o záznam z výcvikového zařízení, zvolit letadlo, nastavit délku letu, zvolit datum příletu a odletu, nastavit uživatelovu funkci pilota a zvolit provozní podmínky.
+\item Uživatel vyplní pole, podle kterých chce vyhledávat/filtrovat.
+\item Systém zobrazí pouze záznamy odpovídající zvoleným parametrům.
+\end{itemize}
+
+\subsection{Smazat letecký záznam}
+Smazání leteckého záznamu umožňuje uživateli smazat letecký záznam, který předtím sám vytvořil.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel smazat jeden ze svých leteckých záznamů.
+\item Include (Zobrazit letecké záznamy).
+\item Uživatel si zvolí záznam, který chce smazat.
+\item Aplikace zobrazí potvrzovací dialog.
+\item Uživatel potvrdí smazání.
+\item Aplikace odstraní položku ze seznamu.
+\end{itemize}
+
+\subsection{Upravit letecký záznam}
+Upravení leteckého záznamu umožňuje uživateli upravit všechny položky zvoleného letecké záznamu.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel upravit letecký záznam.
+\item Include (Zobrazit letecké záznamy).
+\item Uživatel si zvolí záznam, který chce upravit.
+\item Scénář pokračuje krokem 2 Vytvořit záznam letu.
+\end{itemize}
+
+\subsection{Zobrazit limity}
+Tato funkcionalita slouží ke zobrazení limitů a kontrole zda jsou všechny limity v normě.
+
+\subsection{Zobrazit certifikáty}
+Tato funkcionalita umožňuje uživateli zobrazit všechny jeho certifikáty, společně s kontrolou platnosti a počtem dní do jejich expirace.
+
+\subsection{Přidat certifikát}
+Tato funkce umožňuje uživateli přidat certifikát a to buď dle šablony pro zdravotní certifikáty (LALP, třídy 1 a třídy 2), nebo vlastní.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel vytvořit nový certifikát.
+\item Include (Zobrazit certifikáty).
+\item Aplikace zobrazí formulář s možností vytvoření vlastního certifikátu nebo dle šablony. Ve formuláři je následně možné zadat: název certifikátu, datum vydání, datum expirace a popis.
+\item Uživatel povinně vyplní název a datum expirace.
+\item Aplikace uloží certifikát.
+\end{itemize}
+
+\subsection{Editovat osobní údaje}
+Editace osobních údajů umožňuje uživateli upravit své osobní informace. Mezi tyto informace patří: jméno a příjmení, adresa a věk.
+
+U osobních údajů je důležitý hlavně věk, který hraje roli u zdravotních certifikátů.
+
+\subsection{Generovat report}
+Generování reportu umožňuje uživateli vygenerovat report ve formátu PDF z nímž zvolených záznamů.
+
+\begin{itemize}
+\item Případ užití začíná, jestliže se uživatel rozhodne vygenerovat report.
+\item Aplikace zobrazí formulář s možným výběrem záznamů, které se v reportu objeví.
+\item Uživatel si zvolí záznamy.
+\item Aplikace vytvoří report ve formátu PDF se zvolenými záznamy letů.
+\end{itemize}
+
+\subsection{Odeslat report emailem}
+Funkcionalita odeslání reportu emailem umožňuje uživateli, poté co vygeneroval report, odeslat tento report přes email.
 
 \section{Návrh uživatelského rozhraní}
 \subsection{Wireframe}
@@ -419,7 +532,7 @@ ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje r�
 \subsubsection{RxSwift}
 RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem, \cite{ReactiveExtensionsDocs} je zde uváděn, a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
 
-\section{Persistence dat}
+\section{Perzistence dat}
 \subsection{Core Data}
 Core Data je Apple framework, který má na starosti model vrstvu aplikace. Stará se o životní cyklus objektů, jejich vztahy (objektový graf) i perzistenci. \cite{coredata}
 

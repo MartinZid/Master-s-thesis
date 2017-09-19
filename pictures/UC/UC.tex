@@ -1,0 +1,102 @@
+\subsection{Vytvořit záznam letu}
+Vytvoření leteckého záznam umožňuje uživateli vložit nový záznam letu do aplikace.
+
+Hlavní scénář --
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel evidovat svůj let.
+\item Systém zobrazí formulář umožňující zadat: jméno velícího pilota, datum letu, čas a místo odletu a příletu, letadlo, čas letu, celkový čas letu, počet vzletů a přistání, svou funkci při letu a provozní podmínky.
+\item Uživatel vyplní všechny povinné položky.
+\item Aplikace uloží informace o letu.
+\end{itemize}
+
+Alternativní scénář --
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel evidovat záznam z výcvikového zařízení pro simulaci letu.
+\item Systém zobrazí formulář  umožňující zadat: typ a kvalifikační číslo výcvikového zařízení, datum a čas.
+\item Připad užití pokračuje 3. krokem hlavního scénáře.
+\end{itemize}
+
+\subsection{Přidat letadlo}
+Přidání letadla davá uživateli možnost přidat letadlo, které pak může vkládat do záznámů o letu.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel přidat nové letadlo.
+\item Systém zobrazí formulář  umožňující zadat: typ, značku model, variantu, registrační číslo letadla a zda je letadlo jednomotorové nebo vícemotorové.
+\item Uživatel vyplní všechna pole formuláře.
+\item Aplikace uloží letadlo.
+\end{itemize}
+
+\subsection{Zobrazit letecké záznamy}
+Zobrazení leteckých záznamů zobrazuje jednotlivé záznamy v podobě tabulky, kde u každého záznamu jsou vidět základní informcace. Mezi tyto informace patří: místo odletu a přílet, datum a čas letu.
+
+\subsection{Vyhledat a filtrovat letecké záznamy}
+Tato funkcionalita umožňuje uživateli vyhledávání a filtrování leteckých záznamů.
+
+\begin{itemize}
+\item Případ užití začíná, pokud chce uživatel vyhledat nebo vyfiltrovat letecké záznamy.
+\item Include (Zobrazit letecké záznamy)
+\item Aplikace zobrazí formůlář, který umožňuje: zadat hledaný text, nastavit zda se jedná o záznam letu nebo o záznam z výcvikového zařízení, zvolit letadlo, nastavit délku letu, zvolit datum příletu a odletu, nastavit uživatelovu funkci pilota a zvolit provozní podmínky.
+\item Uživatel vyplní pole podle, kterých chce vyhledávat/filtrovat.
+\item Systém zobrazí pouze záznamy odpovídající zvoleným parametrům.
+\end{itemize}
+
+\subsection{Smazat letecký záznam}
+Smazání leteckého záznamu umožňuje uživateli smazat letecký záznam, který předtím sám vytvořil.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel smazat jeden ze svých leteckých záznamů.
+\item Include (Zobrazit letecké záznamy).
+\item Uživatel si zvolí záznam, který chce smazat.
+\item Aplikace zobrazí potvrzovací dialog.
+\item Uživatel potvrdí smazání.
+\item Aplikace odsraní položku ze seznamu.
+\end{itemize}
+
+
+\subsection{Upravit letecký záznam}
+Upravení leteckého záznamu umožňuje uživateli upravit všechny položky zvoleného letecké záznamu.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel upravit letecký záznam.
+\item Include (Zobrazit letecké záznamy).
+\item Uživatel si zvolí záznam, který chce upravit.
+\item Scénář pokračuje krokem 2 UC Vytvořit záznam letu.
+\end{itemize}
+
+\subsection{Zobrazit limity}
+Tato funkcionalita slouží ke zobrazení limitů a kontrole zda jsou všechny limity v normě.
+
+\subsection{Zobrazit certifikáty}
+Tato funkcionalita umožňuje uživateli zobrazit všechny jeho certifikáty, společně s kontrolou platnosti a počtem dní do jejich expirace.
+
+
+\subsection{Přidat certifikát}
+Tato funkce umožňuje uživateli přidat certifikát a to buď dle šablony pro zdravotní certifikáty (LALP, třídy 1 a třídy 2), nebo vlastní.
+
+\begin{itemize}
+\item Případ užití začíná, když chce uživatel vytvořit nový certifikát.
+\item Include (Zobrazit certifikáty).
+\item Aplikace zobrazí formůlář s možností vytvoření vlastního certifikátu nebo dle šablony. Ve formuláři je následně možné zadat: název certifikátu, datum vydání a datum expirace a popis.
+\item Uživatel povinně vyplní název a datum expirace.
+\item Aplikace uloží certifikát.
+\end{itemize}
+
+\subsection{Editovat osobní údaje}
+Editace osobních údajů umožňuje uživateli upravit své osobní informace. Mezi tyto informace patří: jméno a příjmení, adresa a věk.
+
+\subsection{Generovat report}
+Generování reportu umožňuje uživateli vygenerovat report ve formátu PDF z nímž zvolených záznamů.
+
+\begin{itemize}
+\item Případ užití začíná, jestliže se uživatel rozhodne vygenerovat report.
+\item Aplikace zobrazí formulář s možným výběrem záznamů, které se v reportu objeví.
+\item Uživatel si zvolí záznamy.
+\item Aplikace vytvoří report ve formátu PDF se zvolenými záznami letů.
+\end{itemize}
+
+
+\subsection{Odeslat report emailem}
+Funkcionalita odeslání reportu emailem umožňuje uživateli, poté co vygeneroval report, odeslat tento report přes email.
+
+
+
