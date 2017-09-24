@@ -327,7 +327,24 @@ Tato aplikace je zadarmo pouze ve zkušební verzi, následně je nutné aplikac
 \subsubsection{Závěr analýzy}
 Tato analýza posloužila při návrhu funkcionalit iOS aplikace ve formě případů užití, při návrhu uživatelského rozhraní a také při analýze řešení perzistence dat.
 
-\section{Funkční a nefunkční požadavky}
+\section{Analýza požadavků}
+\subsection{Funkční požadavky}
+Funkční požadavky jsou uvedeny pouze jmenovitě. Podrobnější popis je uveden v podobě případů užití.
+\begin{enumerate}
+\item Evidování leteckých záznamů.
+\item Vyhledávání v leteckých záznamech.
+\item Kontrola limitů.
+\item Evidence zdravotních certifikátů.
+\item Generování reportů do formátu PDF.
+\end{enumerate}
+\subsection{Nefunkční požadavky}
+\begin{enumerate}
+\item Funkční pro iOS 11 -- aplikace bude dostupná pro verzi operačního systému iOS 11.
+\item Aplikace pro iPhone a iPad -- uživatelské rozhraní bude přizpůsobeno jak telefonům, tak tabletům.
+\item Stejná data na více uživatelových zařízeních -- všechna data budou zálohována online a uživatel k nim bude mít přístup na všech zařízeních s iOS 11 pod svým účtem.
+\item Dostupnost dat offline -- uživatel bude mít přistup ke všem dříve staženým/vytvořeným záznamům. Aplikaci bude možné používat i bez internetového připojení, k synchronizaci dojde až ve chvíli, kdy bude internetové připojení k dispozici.
+\item Aplikace podle EASA -- aplikace se bude řídit předpisy EASA a to přesně: FCL.050 u evidence letů,  ORO.FTL.210 v případě limitů a Part-MED při evidenci zdravotních certifikátů.
+\end{enumerate}
 
 \section{Navržená funkcionalita v podobě případů užití}
 Případy užití (use cases) byly využity při návrhu funkcionalit iOS aplikace. Jsou obsaženy přímo v práci z důvodu přehledného zobrazení navržených funkcionalit a možným dovysvětlením u některých z nich.
@@ -458,18 +475,18 @@ Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponent
 
 Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
 
-Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} a \ref{fig:mvc-apple}.
+Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} (převzato a přeloženo z originálu \cite{mvc-pic}) a \ref{fig:mvc-apple} (převzato a přeloženo z originálu \cite{mvc-apple-pic}).
 
 MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou možností.
 
 \begin{figure}[h]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/architektury/model_view_controller}
- \caption[Model-View-Controller diagram]{Model-View-Controller diagram \cite{mvc-pic}}\label{fig:mvc}
+ \caption[Model-View-Controller diagram]{Model-View-Controller diagram}\label{fig:mvc}
 \end{figure}
 
 \begin{figure}[h]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/architektury/appleMVC}
- \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace \cite{mvc-apple-pic}}\label{fig:mvc-apple}
+ \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace}\label{fig:mvc-apple}
 \end{figure}
 
 \subsection{MVVM}
@@ -488,9 +505,11 @@ Mezi výhody architektury MVVM oproti MVC patří např.:
 \item zlepšuje možnost testovatelnosti aplikace.
 \end{itemize}
 
+Architekturu MVVM zobrazuje obrázek \ref{fig:mvvm} (převzato a přeloženo z originálu \cite{mvvm-pic}).
+
 \begin{figure}[h]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/architektury/MVVM}
- \caption[Model-View-ViewModel architektura]{Model-View-ViewModel architektura \cite{mvvm-pic}}\label{fig:mvvm}
+ \caption[Model-View-ViewModel architektura]{Model-View-ViewModel architektura}\label{fig:mvvm}
 \end{figure}
 
 \subsection{VIPER}
@@ -511,9 +530,11 @@ Mezi výhody architektury VIPER znovu patří např.:
 
 Tato architektura však může být zbytečně složitá pro menší aplikace. \cite{Orlov}
 
+Architekturu VIPER zobrazuje obrázek \ref{fig:viper} (převzato a přeloženo z originálu \cite{viper-pic}).
+
 \begin{figure}[h]\centering
- \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.jpg}
- \caption[VIPER architektura]{VIPER architektura \cite{viper-pic}}\label{fig:viper}
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.png}
+ \caption[VIPER architektura]{VIPER architektura}\label{fig:viper}
 \end{figure}
 
 \section{Funkcionálně reaktivní programování}

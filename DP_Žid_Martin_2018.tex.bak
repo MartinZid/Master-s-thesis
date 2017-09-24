@@ -325,9 +325,26 @@ Smart Logbook je poslední analyzovanou aplikací, jedná se o Android aplikaci.
 Tato aplikace je zadarmo pouze ve zkušební verzi, následně je nutné aplikaci zakoupit za 300 Kč. Je nutné také platit za zálohování a synchronizaci dat, a to buď 20 Kč za měsíc, nebo 120 Kč za rok. Informace o cenách jsou získány z aplikace Smart Logbook.
 
 \subsubsection{Závěr analýzy}
-Tato analýza posloužila jak pro návrh funkcionalit iOS aplikace ve formě případů užití, tak i při návrh uživatelského rozhraní.
+Tato analýza posloužila při návrhu funkcionalit iOS aplikace ve formě případů užití, při návrhu uživatelského rozhraní a také při analýze řešení perzistence dat.
 
-\section{Funkční a nefunkční požadavky}
+\section{Analýza požadavků}
+\subsection{Funkční požadavky}
+Funkční požadavky jsou uvedeny pouze jmenovitě. Podrobnější popis je uveden v podobě případů užití.
+\begin{enumerate}
+\item Evidování leteckých záznamů.
+\item Vyhledávání v leteckých záznamech.
+\item Kontrola limitů.
+\item Evidence zdravotních certifikátů.
+\item Generování reportů do formátu PDF.
+\end{enumerate}
+\subsection{Nefunkční požadavky}
+\begin{enumerate}
+\item Funkční pro iOS 11 -- aplikace bude dostupná pro verzi operačního systému iOS 11.
+\item Aplikace pro iPhone a iPad -- uživatelské rozhraní bude přizpůsobeno jak telefonům, tak tabletům.
+\item Stejná data na více uživatelových zařízeních -- všechna data budou zálohována online a uživatel k nim bude mít přístup na všech zařízeních s iOS 11 pod svým účtem.
+\item Dostupnost dat offline -- uživatel bude mít přistup ke všem dříve staženým/vytvořeným záznamům. Aplikaci bude možné používat i bez internetového připojení, k synchronizaci dojde až ve chvíli, kdy bude internetové připojení k dispozici.
+\item Aplikace podle EASA -- aplikace se bude řídit předpisy EASA a to přesně: FCL.050 u evidence letů,  ORO.FTL.210 v případě limitů a Part-MED při evidenci zdravotních certifikátů.
+\end{enumerate}
 
 \section{Navržená funkcionalita v podobě případů užití}
 Případy užití (use cases) byly využity při návrhu funkcionalit iOS aplikace. Jsou obsaženy přímo v práci z důvodu přehledného zobrazení navržených funkcionalit a možným dovysvětlením u některých z nich.
@@ -458,7 +475,7 @@ Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponent
 
 Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
 
-Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} a \ref{fig:mvc-apple}.
+Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} a \ref{fig:mvc-apple} (převzato a přeloženo z originálu \cite{mvc-apple-pic}).
 
 MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou možností.
 
@@ -469,7 +486,7 @@ MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou mo
 
 \begin{figure}[h]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/architektury/appleMVC}
- \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace \cite{mvc-apple-pic}}\label{fig:mvc-apple}
+ \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace}\label{fig:mvc-apple}
 \end{figure}
 
 \subsection{MVVM}
@@ -488,9 +505,11 @@ Mezi výhody architektury MVVM oproti MVC patří např.:
 \item zlepšuje možnost testovatelnosti aplikace.
 \end{itemize}
 
+Architekturu MVVM zobrazuje obrázek \ref{fig:mvvm} (převzato a přeloženo z originálu \cite{mvvm-pic}).
+
 \begin{figure}[h]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/architektury/MVVM}
- \caption[Model-View-ViewModel architektura]{Model-View-ViewModel architektura \cite{mvvm-pic}}\label{fig:mvvm}
+ \caption[Model-View-ViewModel architektura]{Model-View-ViewModel architektura}\label{fig:mvvm}
 \end{figure}
 
 \subsection{VIPER}
@@ -511,9 +530,11 @@ Mezi výhody architektury VIPER znovu patří např.:
 
 Tato architektura však může být zbytečně složitá pro menší aplikace. \cite{Orlov}
 
+Architekturu VIPER zobrazuje obrázek \ref{fig:viper} (převzato a přeloženo z originálu \cite{viper-pic}).
+
 \begin{figure}[h]\centering
- \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.jpg}
- \caption[VIPER architektura]{VIPER architektura \cite{viper-pic}}\label{fig:viper}
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.png}
+ \caption[VIPER architektura]{VIPER architektura}\label{fig:viper}
 \end{figure}
 
 \section{Funkcionálně reaktivní programování}
@@ -532,7 +553,7 @@ ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje r�
 \subsubsection{RxSwift}
 RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem, \cite{ReactiveExtensionsDocs} je zde uváděn, a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
 
-\section{Persistence dat}
+\section{Perzistence dat}
 \subsection{Core Data}
 Core Data je Apple framework, který má na starosti model vrstvu aplikace. Stará se o životní cyklus objektů, jejich vztahy (objektový graf) i perzistenci. \cite{coredata}
 
