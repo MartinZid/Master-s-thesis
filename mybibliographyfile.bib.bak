@@ -103,7 +103,6 @@
   note = "{[cit. 2017-09-14]}"
 }
 
-
 @misc{appStoreLogTen,
   journal = {ITunes},
   title = {LogTen Pro X},
@@ -162,8 +161,63 @@
   address = {Richmond, Virginia},
   year = {© 2017},
   URL = {http://www.nc-software.com/Logbook-Pro-Flight-Log-Software-for-Pilots},
+  note = "{[cit. 2017-09-08]}"
 }
-
+@misc{nngWireframe,
+  journal = {Nielsen Norman Group},
+  title = {Wireframing and Prototyping},
+  publisher = {Nielsen Norman Group},
+  howpublished = {\emph{Nielsen Norman Group} [online]. California, United States: Nielsen Norman Group},
+  address = {California, United States},
+  year = {© 1998-2017},
+  URL = {https://www.nngroup.com/courses/wireframing-and-prototyping/},
+  note = "{[cit. 2017-09-26]}"
+}
+@misc{exux,
+  journal = {Experienceux},
+  title = {What is wireframing?},
+  publisher = {Experience UX},
+  howpublished = {\emph{Experienceux} [online]. Bournemouth: Experience UX},
+  address = {Bournemouth},
+  year = {© 2017},
+  URL = {http://www.experienceux.co.uk/faqs/what-is-wireframing/},
+  note = "{[cit. 2017-09-26]}"
+}
+@misc{howtoheuristic,
+  author = {Jakob Nielsen},
+  journal = {Nielsen Norman Group},
+  howpublished = {In: \emph{Nielsen Norman Group} [online]. California, United States: Nielsen Norman Group},
+  title = {How to Conduct a Heuristic Evaluation},
+  URL = {https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/},
+  year = {© 1998-2017},
+  note = "{[cit. 2017-09-26]}"
+}
+@misc{10heuristics,
+  author = {Jakob Nielsen},
+  journal = {Nielsen Norman Group},
+  howpublished = {In: \emph{Nielsen Norman Group} [online]. California, United States: Nielsen Norman Group},
+  title = {10 Usability Heuristics for User Interface Design},
+  URL = {https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/},
+  year = {© 1998-2017},
+  note = "{[cit. 2017-09-26]}"
+}
+@article{heur-eval-curve,
+  author = {Jakob Nielsen},
+  journal = {\emph{In:} Nielsen Norman Group \emph{[online]}},
+  title = {Curve showing the proportion of usability problems in an interface found by heuristic evaluation using various numbers of evaluators},
+  year = {© 1998-2017},
+  URL = {https://media.nngroup.com/media/editor/2012/10/30/heur_eval_finding_curve.gif},
+  note = "{[cit. 2017-09-26]}"
+}
+@misc{usabilityTestingNNG,
+  author = {Jakob Nielsen},
+  journal = {Nielsen Norman Group},
+  howpublished = {In: \emph{Nielsen Norman Group} [online]. California, United States: Nielsen Norman Group},
+  title = {How Many Test Users in a Usability Study?},
+  URL = {https://www.nngroup.com/articles/how-many-test-users/},
+  year = {© 1998-2017},
+  note = "{[cit. 2017-09-27]}"
+}
 @misc{MVCGoogle,
   journal = {Google},
   title = {MVC Architecture},
@@ -263,7 +317,15 @@
   URL = {https://gist.github.com/staltz/868e7e9bc2a7b8c1f754},
   note = "{[cit. 2017-09-01]}"
 }
-
+@book{nayebi2016swift,
+  title={Swift 3 Functional Programming},
+  author={Nayebi, F.},
+  isbn={9781785881619},
+  url={https://books.google.cz/books?id=LP9vDQAAQBAJ},
+  year={2016},
+  publisher={Packt Publishing},
+  pages={200--201},
+}
 @misc{technopediaFRP,
   journal = {Technopedia},
   title = {Functional Reactive Programming (FRP)},

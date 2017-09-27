@@ -21,12 +21,13 @@ Warning--to sort, need author or key in appStoreSafeLog
 Warning--to sort, need author or key in googleFlyLogio
 Warning--to sort, need author or key in googleSmartLogbook
 Warning--to sort, need author or key in SafelogPrices
+Warning--to sort, need author or key in nngWireframe
+Warning--to sort, need author or key in exux
 Warning--to sort, need author or key in MVCMozilla
 Warning--to sort, need author or key in MVCGoogle
 Warning--to sort, need author or key in mvc-pic
 Warning--to sort, need author or key in MVVMMicrosoft
 Warning--to sort, need author or key in VIPER
-Warning--to sort, need author or key in technopediaFRP
 Warning--to sort, need author or key in ReactiveSwift
 Warning--to sort, need author or key in ReactiveCocoa
 Warning--to sort, need author or key in RxSwift
@@ -43,45 +44,45 @@ Warning--to sort, need author or key in AppleDeveloperProgram
 Warning--to sort, need author or key in AppleDeveloperProgramPrice
 Warning--to sort, need author or key in realmOverview
 Warning--empty pages in Ztaltz2014
-You've used 45 entries,
+You've used 51 entries,
             3185 wiz_defined-function locations,
-            908 strings with 12582 characters,
-and the built_in function-call counts, 12143 in all, are:
-= -- 832
-> -- 101
+            938 strings with 13623 characters,
+and the built_in function-call counts, 14014 in all, are:
+= -- 955
+> -- 137
 < -- 0
-+ -- 70
-- -- 18
-* -- 586
-:= -- 1029
-add.period$ -- 90
-call.type$ -- 45
-change.case$ -- 101
++ -- 86
+- -- 28
+* -- 680
+:= -- 1242
+add.period$ -- 102
+call.type$ -- 51
+change.case$ -- 118
 chr.to.int$ -- 0
-cite$ -- 84
-duplicate$ -- 1351
-empty$ -- 1522
-format.name$ -- 20
-if$ -- 2762
+cite$ -- 91
+duplicate$ -- 1553
+empty$ -- 1735
+format.name$ -- 30
+if$ -- 3167
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 301
-newline$ -- 189
-num.names$ -- 14
-pop$ -- 807
+int.to.str$ -- 51
+missing$ -- 350
+newline$ -- 213
+num.names$ -- 24
+pop$ -- 916
 preamble$ -- 1
-purify$ -- 99
+purify$ -- 116
 quote$ -- 0
-skip$ -- 540
+skip$ -- 604
 stack$ -- 0
-substring$ -- 310
-swap$ -- 533
+substring$ -- 352
+swap$ -- 619
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 178
-warning$ -- 39
-while$ -- 14
-width$ -- 47
-write$ -- 415
-(There were 39 warnings)
+type$ -- 200
+warning$ -- 40
+while$ -- 24
+width$ -- 53
+write$ -- 476
+(There were 40 warnings)

@@ -92,8 +92,43 @@ Smart Logbook. \emph{Google Play} [online]. Silicon Valley: Google, ©2017,
 
 \bibitem{SafelogPrices}
 Logbook Pro Desktop. \emph{NC Software} [online]. Richmond, Virginia: NC
-  Software, Inc., © 2017.
+  Software, Inc., © 2017, {[cit. 2017-09-08]}.
 \urlprefix\biburl{http://www.nc-software.com/Logbook-Pro-Flight-Log-Software-for-Pilots}
+
+\bibitem{nngWireframe}
+Wireframing and Prototyping. \emph{Nielsen Norman Group} [online]. California,
+  United States: Nielsen Norman Group, © 1998-2017, {[cit. 2017-09-26]}.
+\urlprefix\biburl{https://www.nngroup.com/courses/wireframing-and-prototyping/}
+
+\bibitem{exux}
+What is wireframing? \emph{Experienceux} [online]. Bournemouth: Experience UX,
+  © 2017, {[cit. 2017-09-26]}.
+\urlprefix\biburl{http://www.experienceux.co.uk/faqs/what-is-wireframing/}
+
+\bibitem{howtoheuristic}
+Nielsen, J.: How to Conduct a Heuristic Evaluation. In: \emph{Nielsen Norman
+  Group} [online]. California, United States: Nielsen Norman Group, ©
+  1998-2017, {[cit. 2017-09-26]}.
+\urlprefix\biburl{https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/}
+
+\bibitem{10heuristics}
+Nielsen, J.: 10 Usability Heuristics for User Interface Design. In:
+  \emph{Nielsen Norman Group} [online]. California, United States: Nielsen
+  Norman Group, © 1998-2017, {[cit. 2017-09-26]}.
+\urlprefix\biburl{https://www.nngroup.com/articles/how-to-conduct-a-heuristic-evaluation/}
+
+\bibitem{heur-eval-curve}
+Nielsen, J.: Curve showing the proportion of usability problems in an interface
+  found by heuristic evaluation using various numbers of evaluators.
+  \emph{\emph{In:} Nielsen Norman Group \emph{[online]}}, © 1998-2017, {[cit.
+  2017-09-26]}.
+\urlprefix\biburl{https://media.nngroup.com/media/editor/2012/10/30/heur_eval_finding_curve.gif}
+
+\bibitem{usabilityTestingNNG}
+Nielsen, J.: How Many Test Users in a Usability Study? In: \emph{Nielsen Norman
+  Group} [online]. California, United States: Nielsen Norman Group, ©
+  1998-2017, {[cit. 2017-09-27]}.
+\urlprefix\biburl{https://www.nngroup.com/articles/how-many-test-users/}
 
 \bibitem{MVCMozilla}
 MVC Architecture. \emph{MDN web docs} [online]. Mountain View, California,
@@ -146,10 +181,10 @@ Orlov, B.: VIPER. \emph{\emph{In:} Medium \emph{[online]}}, 2015, {[cit.
   2017-08-30]}.
 \urlprefix\biburl{https://cdn-images-1.medium.com/max/800/1*0pN3BNTXfwKbf08lhwutag.png}
 
-\bibitem{technopediaFRP}
-Functional Reactive Programming (FRP). \emph{Technopedia} [online]. Techopedia
-  Inc., © 2017, {[cit. 2017-09-01]}.
-\urlprefix\biburl{https://www.techopedia.com/definition/29571/functional-reactive-programming-frp}
+\bibitem{nayebi2016swift}
+Nayebi, F.: \emph{Swift 3 Functional Programming}. Packt Publishing, 2016, ISBN
+  9781785881619, 200--201 s.
+\urlprefix\biburl{https://books.google.cz/books?id=LP9vDQAAQBAJ}
 
 \bibitem{Ztaltz2014}
 Staltz, A.: The introduction to Reactive Programming you've been missing. In

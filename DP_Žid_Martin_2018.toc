@@ -39,30 +39,35 @@
 \contentsline {subsection}{\numberline {2.5.10}Editovat osobn\IeC {\'\i } \IeC {\'u}daje}{19}{subsection.2.5.10}
 \contentsline {subsection}{\numberline {2.5.11}Generovat report}{19}{subsection.2.5.11}
 \contentsline {subsection}{\numberline {2.5.12}Odeslat report emailem}{19}{subsection.2.5.12}
-\contentsline {section}{\numberline {2.6}N\IeC {\'a}vrh u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{20}{section.2.6}
+\contentsline {section}{\numberline {2.6}N\IeC {\'a}vrh u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{19}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Wireframe}{20}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{20}{subsection.2.6.2}
-\contentsline {section}{\numberline {2.7}Architektury p\IeC {\v r}i tvorb\IeC {\v e} iOS aplikac\IeC {\'\i }}{20}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}MVC}{20}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}MVVM}{20}{subsection.2.7.2}
-\contentsline {subsection}{\numberline {2.7.3}VIPER}{22}{subsection.2.7.3}
-\contentsline {section}{\numberline {2.8}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{23}{section.2.8}
-\contentsline {subsection}{\numberline {2.8.1}FRP frameworky pro iOS}{24}{subsection.2.8.1}
-\contentsline {subsubsection}{\numberline {2.8.1.1}ReactiveSwift}{24}{subsubsection.2.8.1.1}
-\contentsline {subsubsection}{\numberline {2.8.1.2}ReactiveCocoa}{24}{subsubsection.2.8.1.2}
-\contentsline {subsubsection}{\numberline {2.8.1.3}RxSwift}{24}{subsubsection.2.8.1.3}
-\contentsline {section}{\numberline {2.9}Perzistence dat}{24}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}Core Data}{24}{subsection.2.9.1}
-\contentsline {subsection}{\numberline {2.9.2}iCloud}{24}{subsection.2.9.2}
-\contentsline {subsection}{\numberline {2.9.3}Realm}{25}{subsection.2.9.3}
-\contentsline {chapter}{\chapternumberline {3}Realizace}{27}{chapter.3}
-\contentsline {section}{\numberline {3.1}iOS aplikace a Swift}{27}{section.3.1}
-\contentsline {section}{\numberline {3.2}Unit testy}{27}{section.3.2}
-\contentsline {section}{\numberline {3.3}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{27}{section.3.3}
-\contentsline {section}{\numberline {3.4}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{27}{section.3.4}
-\contentsline {section}{\numberline {3.5}Postupy FRP v aplikaci}{27}{section.3.5}
-\contentsline {section}{\numberline {3.6}Zhodnocen\IeC {\'\i } MVVM a FRP}{27}{section.3.6}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{29}{chapter*.6}
-\contentsline {chapter}{Literatura}{31}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{37}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{39}{appendix.B}
+\contentsline {subsection}{\numberline {2.6.3}U\IeC {\v z}ivatelsk\IeC {\'e} testy}{21}{subsection.2.6.3}
+\contentsline {subsubsection}{\numberline {2.6.3.1}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{22}{subsubsection.2.6.3.1}
+\contentsline {section}{\numberline {2.7}Architektury p\IeC {\v r}i tvorb\IeC {\v e} iOS aplikac\IeC {\'\i }}{22}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}MVC}{23}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}MVVM}{23}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}VIPER}{25}{subsection.2.7.3}
+\contentsline {subsection}{\numberline {2.7.4}Zvolen\IeC {\'a} architektura}{25}{subsection.2.7.4}
+\contentsline {section}{\numberline {2.8}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{26}{section.2.8}
+\contentsline {subsection}{\numberline {2.8.1}FRP frameworky pro iOS}{26}{subsection.2.8.1}
+\contentsline {subsubsection}{\numberline {2.8.1.1}ReactiveSwift}{26}{subsubsection.2.8.1.1}
+\contentsline {subsubsection}{\numberline {2.8.1.2}ReactiveCocoa}{27}{subsubsection.2.8.1.2}
+\contentsline {subsubsection}{\numberline {2.8.1.3}RxSwift}{27}{subsubsection.2.8.1.3}
+\contentsline {subsubsection}{\numberline {2.8.1.4}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{27}{subsubsection.2.8.1.4}
+\contentsline {section}{\numberline {2.9}Perzistence dat}{27}{section.2.9}
+\contentsline {subsection}{\numberline {2.9.1}Core Data}{27}{subsection.2.9.1}
+\contentsline {subsection}{\numberline {2.9.2}iCloud}{27}{subsection.2.9.2}
+\contentsline {subsection}{\numberline {2.9.3}Realm}{28}{subsection.2.9.3}
+\contentsline {subsection}{\numberline {2.9.4}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{28}{subsection.2.9.4}
+\contentsline {chapter}{\chapternumberline {3}Realizace}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}iOS aplikace a Swift}{29}{section.3.1}
+\contentsline {section}{\numberline {3.2}Unit testy}{29}{section.3.2}
+\contentsline {section}{\numberline {3.3}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{29}{section.3.3}
+\contentsline {section}{\numberline {3.4}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{29}{section.3.4}
+\contentsline {section}{\numberline {3.5}Postupy FRP v aplikaci}{29}{section.3.5}
+\contentsline {section}{\numberline {3.6}Zhodnocen\IeC {\'\i } MVVM a FRP}{29}{section.3.6}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{31}{chapter*.6}
+\contentsline {chapter}{Literatura}{33}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{39}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{41}{appendix.B}

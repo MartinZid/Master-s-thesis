@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  24 SEP 2017 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  27 SEP 2017 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1130,7 +1130,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 198.
 
 
-<./pictures/existujiciAplikace/LogTenProX.png, id=288, 1555.8125pt x 1339.0025p
+<./pictures/existujiciAplikace/LogTenProX.png, id=290, 1555.8125pt x 1339.0025p
 t>
 File: ./pictures/existujiciAplikace/LogTenProX.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogTenProX.png>
@@ -1143,7 +1143,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 203.
 
 
-<./pictures/existujiciAplikace/LogbookPro.png, id=290, 1555.8125pt x 1339.0025p
+<./pictures/existujiciAplikace/LogbookPro.png, id=292, 1555.8125pt x 1339.0025p
 t>
 File: ./pictures/existujiciAplikace/LogbookPro.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogbookPro.png>
@@ -1156,7 +1156,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 208.
 
 
-<./pictures/existujiciAplikace/Safelog.png, id=291, 1555.8125pt x 1339.0025pt>
+<./pictures/existujiciAplikace/Safelog.png, id=293, 1555.8125pt x 1339.0025pt>
 File: ./pictures/existujiciAplikace/Safelog.png Graphic file (type png)
 
 <use ./pictures/existujiciAplikace/Safelog.png>
@@ -1168,7 +1168,7 @@ t line 209.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 213.
 
-<./pictures/existujiciAplikace/FlyLogio.png, id=292, 1254.6875pt x 1027.84pt>
+<./pictures/existujiciAplikace/FlyLogio.png, id=294, 1254.6875pt x 1027.84pt>
 File: ./pictures/existujiciAplikace/FlyLogio.png Graphic file (type png)
 
 <use ./pictures/existujiciAplikace/FlyLogio.png>
@@ -1181,7 +1181,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 218.
 
 
-<./pictures/existujiciAplikace/SmartLogbook.png, id=293, 1254.6875pt x 1027.84p
+<./pictures/existujiciAplikace/SmartLogbook.png, id=295, 1254.6875pt x 1027.84p
 t>
 File: ./pictures/existujiciAplikace/SmartLogbook.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/SmartLogbook.png>
@@ -1210,7 +1210,7 @@ Underfull \vbox (badness 6927) has occurred while \output is active []
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 354.
 
-<./pictures/UC/UC.png, id=367, 704.6325pt x 689.57625pt>
+<./pictures/UC/UC.png, id=369, 704.6325pt x 689.57625pt>
 File: ./pictures/UC/UC.png Graphic file (type png)
 
 <use ./pictures/UC/UC.png>
@@ -1218,74 +1218,86 @@ Package pdftex.def Info: ./pictures/UC/UC.png used on input line 355.
 (pdftex.def)             Requested size: 365.31203pt x 357.50845pt.
  [15] [16 <./pictures/UC/UC.png (PNG copy)>] [17]
 [18] [19]
-<./pictures/architektury/model_view_controller.png, id=422, 511.9125pt x 210.78
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 468.
+
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [20]
+<./pictures/heur_eval_finding_curve_trans.png, id=445, 501.875pt x 316.18124pt>
+File: ./pictures/heur_eval_finding_curve_trans.png Graphic file (type png)
+<use ./pictures/heur_eval_finding_curve_trans.png>
+Package pdftex.def Info: ./pictures/heur_eval_finding_curve_trans.png used on i
+nput line 495.
+(pdftex.def)             Requested size: 365.31203pt x 230.15907pt.
+
+
+LaTeX Warning: Reference `tab:heuristics' on page 21 undefined on input line 49
+9.
+
+[21 <./pictures/heur_eval_finding_curve_trans.png>] [22]
+<./pictures/architektury/model_view_controller.png, id=481, 511.9125pt x 210.78
 75pt>
 File: ./pictures/architektury/model_view_controller.png Graphic file (type png)
 
  <use ./pictures/architektury/model_view_controller.png>
 Package pdftex.def Info: ./pictures/architektury/model_view_controller.png used
- on input line 483.
+ on input line 546.
 (pdftex.def)             Requested size: 365.31203pt x 150.42244pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<./pictures/architektury/appleMVC.png, id=423, 511.9125pt x 281.05pt>
+<./pictures/architektury/appleMVC.png, id=482, 511.9125pt x 281.05pt>
 File: ./pictures/architektury/appleMVC.png Graphic file (type png)
 
 <use ./pictures/architektury/appleMVC.png>
 Package pdftex.def Info: ./pictures/architektury/appleMVC.png used on input lin
-e 488.
+e 551.
 (pdftex.def)             Requested size: 365.31203pt x 200.56325pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.5174pt too wide) in paragraph at lines 493--495
+Overfull \hbox (4.5174pt too wide) in paragraph at lines 556--558
 \T1/lmr/m/n/10.95 Architektura MVVM má ob-dobné kon-cepce jako MVC. Jedná se ta
 ké o zkratku,
  []
 
-[20] [21 <./pictures/architektury/model_view_controller.png (PNG copy)> <./pict
-ures/architektury/appleMVC.png (PNG copy)>]
-<./pictures/architektury/MVVM.png, id=450, 652.4375pt x 240.9pt>
+[23 <./pictures/architektury/model_view_controller.png (PNG copy)>]
+<./pictures/architektury/MVVM.png, id=501, 652.4375pt x 240.9pt>
 File: ./pictures/architektury/MVVM.png Graphic file (type png)
 
 <use ./pictures/architektury/MVVM.png>
-Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 51
-1.
+Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 57
+4.
 (pdftex.def)             Requested size: 365.31203pt x 134.88837pt.
 
-Overfull \hbox (20.02321pt too wide) in paragraph at lines 518--519
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24 <./pictures/architektury/appleMVC.png (PNG copy)>]
+Overfull \hbox (20.02321pt too wide) in paragraph at lines 581--582
 []$\OML/lmm/m/it/10.95 View$ \T1/lmr/m/n/10.95 zob-ra-zuje data uºi-va-teli a p
 °e-dává uºi-va-te-lovi vstupy vrstv¥ $\OML/lmm/m/it/10.95 Presenter$\T1/lmr/m/n
 /10.95 . 
  []
 
-[22 <./pictures/architektury/MVVM.png (PNG copy)>]
-<./pictures/architektury/viper.png, id=464, 702.625pt x 431.6125pt>
+<./pictures/architektury/viper.png, id=514, 702.625pt x 431.6125pt>
 File: ./pictures/architektury/viper.png Graphic file (type png)
 
 <use ./pictures/architektury/viper.png>
 Package pdftex.def Info: ./pictures/architektury/viper.png used on input line 5
-36.
+99.
 (pdftex.def)             Requested size: 365.31203pt x 224.41344pt.
 
-Underfull \vbox (badness 2173) has occurred while \output is active []
 
- [23 <./pictures/architektury/viper.png (PNG copy)>] [24]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 572.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+[25 <./pictures/architektury/MVVM.png (PNG copy)>] [26 <./pictures/architektury
+/viper.png (PNG copy)>] [27] [28] [29
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [25] [26
+] [30
 
-] [27]
-[28
-
-] (./DP_ZÌŒid_Martin_2018.bbl [29] [30
+] (./DP_ZÌŒid_Martin_2018.bbl
+[31] [32
 
 ]
 bibitemlist
@@ -1340,7 +1352,7 @@ rce\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / page / Native\OML/lmm/m/it/10.
 _ Hybrid :
  []
 
-[31]
+[33]
 Underfull \hbox (badness 1616) in paragraph at lines 59--61
 \T1/lmr/m/n/10.95 EASA, 2014. Do-stupné z: []$\T1/lmtt/m/n/10.95 http : / / eur
  -[] lex\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 europa\OML/lmm/m/it/10.95 :\T1/
@@ -1392,189 +1404,219 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--77
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--108
+Underfull \hbox (badness 5519) in paragraph at lines 104--107
+[]\T1/lmr/m/n/10.95 What is wi-refra-ming? \T1/lmr/m/it/10.95 Ex-pe-ri-en-ceux 
+\T1/lmr/m/n/10.95 [on-line]. Bour-nemouth: Ex-
+ []
+
+
+Underfull \hbox (badness 4927) in paragraph at lines 104--107
+\T1/lmr/m/n/10.95 pe-ri-ence UX, [] 2017, [cit. 2017-09-26]. Do-stupné z: []$\T
+1/lmtt/m/n/10.95 http : / /
+ []
+
+[34]
+Underfull \hbox (badness 1286) in paragraph at lines 115--119
+[]\T1/lmr/m/n/10.95 Nielsen, J.: 10 Usa-bi-lity Heu-ris-tics for User In-ter-fa
+ce De-sign. In:
+ []
+
+
+Underfull \hbox (badness 3503) in paragraph at lines 115--119
+\T1/lmr/m/it/10.95 Niel-sen Nor-man Group \T1/lmr/m/n/10.95 [on-line]. Ca-li-fo
+r-nia, Uni-ted Sta-tes: Niel-
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 115--119
+\T1/lmr/m/n/10.95 sen Nor-man Group, [] 1998-2017, [cit. 2017-09-26]. Do-stupné
+ z:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--119
+[]$\T1/lmtt/m/n/10.95 https : / / www\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 nn
+group\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / articles / how -[] to -[] co
+nduct -[] a -[] heuristic -[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 \T1/lmtt/m/n/10.95 en -[] US / Apps / Fundamentals / Modern _ web _ app _ archi
 tecture / MVC _
  []
 
-[32]
-Underfull \hbox (badness 10000) in paragraph at lines 115--118
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
 []\T1/lmr/m/n/10.95 Model-View-Controller. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-p
 er \T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--118
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
 \T1/lmr/m/n/10.95 U.S.: Ap-ple Inc., [] 2015, [cit. 2017-08-29]. Do-stupné z:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--118
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
 []$\T1/lmtt/m/n/10.95 https : / / developer\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10
 .95 apple\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / library / content / docu
 mentation /
  []
 
 
-Underfull \hbox (badness 1242) in paragraph at lines 120--123
+Underfull \hbox (badness 1242) in paragraph at lines 155--158
 []\T1/lmr/m/n/10.95 Orlov, B.: Re-a-lis-tic Co-coa MVC. In: \T1/lmr/m/it/10.95 
 Me-dium \T1/lmr/m/n/10.95 [on-line], 2015, [cit.
  []
 
-
-Underfull \hbox (badness 8094) in paragraph at lines 130--133
+[35]
+Underfull \hbox (badness 8094) in paragraph at lines 165--168
 []\T1/lmr/m/n/10.95 Morrison, J.; Schmidt, M.: IOS De-sign Pat-terns: MVC and
  []
 
 
-Underfull \hbox (badness 5607) in paragraph at lines 130--133
+Underfull \hbox (badness 5607) in paragraph at lines 165--168
 \T1/lmr/m/n/10.95 MVVM. \T1/lmr/m/it/10.95 Cap-Tech\T1/lmr/m/n/10.95 , 2014, [c
 it. 2017-08-29]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+Underfull \hbox (badness 10000) in paragraph at lines 165--168
 \T1/lmtt/m/n/10.95 / / www\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 captechconsul
 ting\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / blogs / ios -[] design -[] pa
 tterns -[] mvc -[]
  []
 
 
-Underfull \hbox (badness 7649) in paragraph at lines 135--138
+Underfull \hbox (badness 7649) in paragraph at lines 170--173
 []\T1/lmr/m/n/10.95 Orlov, B.: MVVM. In: \T1/lmr/m/it/10.95 Me-dium \T1/lmr/m/n
 /10.95 [on-line], 2015, [cit. 2017-08-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
 \T1/lmr/m/n/10.95 30]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https : / / cdn -[] i
 mages -[] 1\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 medium\OML/lmm/m/it/10.95 :\
 T1/lmtt/m/n/10.95 com / max / 800 /
  []
 
 
-Underfull \hbox (badness 8170) in paragraph at lines 145--148
+Underfull \hbox (badness 8170) in paragraph at lines 180--183
 []\T1/lmr/m/n/10.95 Orlov, B.: VI-PER. In: \T1/lmr/m/it/10.95 Me-dium \T1/lmr/m
 /n/10.95 [on-line], 2015, [cit. 2017-08-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--148
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 \T1/lmr/m/n/10.95 30]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https : / / cdn -[] i
 mages -[] 1\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 medium\OML/lmm/m/it/10.95 :\
 T1/lmtt/m/n/10.95 com / max / 800 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--153
-[]\T1/lmr/m/n/10.95 Functional Re-active Pro-gra-m-ming (FRP). \T1/lmr/m/it/10.
-95 Tech-no-pe-dia \T1/lmr/m/n/10.95 [on-
+Underfull \hbox (badness 4353) in paragraph at lines 185--188
+[]\T1/lmr/m/n/10.95 Nayebi, F.: \T1/lmr/m/it/10.95 Swift 3 Functi-o-nal Pro-gra
+-m-ming\T1/lmr/m/n/10.95 . Packt Pu-b-lishing,
  []
 
 
-Underfull \hbox (badness 5217) in paragraph at lines 150--153
-\T1/lmr/m/n/10.95 line]. Te-cho-pe-dia Inc., [] 2017, [cit. 2017-09-01]. Do-stu
-pné z:
+Underfull \hbox (badness 6220) in paragraph at lines 185--188
+\T1/lmr/m/n/10.95 2016, ISBN 9781785881619, 200--201 s. Do-stupné z: []$\T1/lmt
+t/m/n/10.95 https : / /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--153
-[]$\T1/lmtt/m/n/10.95 https : / / www\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 te
-chopedia\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / definition / 29571 / func
-tional -[]
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 164--167
-\T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
- / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
- []
-
-[33]
-Underfull \hbox (badness 1052) in paragraph at lines 169--172
+Underfull \hbox (badness 1052) in paragraph at lines 199--202
 \T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
  / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
  []
 
 
-Underfull \hbox (badness 2970) in paragraph at lines 192--195
+Underfull \hbox (badness 1052) in paragraph at lines 204--207
+\T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
+ / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
+ []
+
+[36]
+Underfull \hbox (badness 2970) in paragraph at lines 227--230
 []\T1/lmr/m/n/10.95 What Is Core Data? \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-per \
 T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia, U.S.:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+Underfull \hbox (badness 10000) in paragraph at lines 227--230
 \T1/lmr/m/n/10.95 Ap-ple Inc., [] 2017, [cit. 2017-09-16]. Do-stupné z: []$\T1/
 lmtt/m/n/10.95 https :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+Underfull \hbox (badness 10000) in paragraph at lines 227--230
 \T1/lmtt/m/n/10.95 / / developer\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 apple\O
 ML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / library / content / documentation /
  Cocoa /
  []
 
 
-Underfull \hbox (badness 3209) in paragraph at lines 197--200
+Underfull \hbox (badness 3209) in paragraph at lines 232--235
 []\T1/lmr/m/n/10.95 Persistent Store Ty-pes and Be-ha-vi-ors. \T1/lmr/m/it/10.9
 5 Ap-ple De-ve-lo-per \T1/lmr/m/n/10.95 [on-line].
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 197--200
+Underfull \hbox (badness 1694) in paragraph at lines 232--235
 \T1/lmr/m/n/10.95 Ca-li-for-nia, U.S.: Ap-ple Inc., [] 2017, [cit. 2017-09-16].
  Do-stupné
  []
 
 
-Underfull \hbox (badness 5446) in paragraph at lines 197--200
+Underfull \hbox (badness 5446) in paragraph at lines 232--235
 \T1/lmr/m/n/10.95 z: []$\T1/lmtt/m/n/10.95 https : / / developer\OML/lmm/m/it/1
 0.95 :\T1/lmtt/m/n/10.95 apple\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / lib
 rary / content / documentation /
  []
 
 
-Underfull \hbox (badness 1137) in paragraph at lines 202--205
+Underfull \hbox (badness 1137) in paragraph at lines 237--240
 []\T1/lmr/m/n/10.95 Creating a Ma-naged Ob-ject Mo-del. \T1/lmr/m/it/10.95 Ap-p
 le De-ve-lo-per \T1/lmr/m/n/10.95 [on-line]. Ca-
  []
 
 
-Underfull \hbox (badness 4229) in paragraph at lines 202--205
+Underfull \hbox (badness 4229) in paragraph at lines 237--240
 \T1/lmr/m/n/10.95 li-for-nia, U.S.: Ap-ple Inc., [] 2017, [cit. 2017-09-16]. Do
 -stupné
  []
 
 
-Underfull \hbox (badness 5446) in paragraph at lines 202--205
+Underfull \hbox (badness 5446) in paragraph at lines 237--240
 \T1/lmr/m/n/10.95 z: []$\T1/lmtt/m/n/10.95 https : / / developer\OML/lmm/m/it/1
 0.95 :\T1/lmtt/m/n/10.95 apple\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / lib
 rary / content / documentation /
  []
 
-[34]
-Underfull \hbox (badness 6016) in paragraph at lines 227--230
+
+Underfull \hbox (badness 6016) in paragraph at lines 262--265
 \T1/lmr/m/n/10.95 Ap-ple Inc., [] 2017, [cit. 2017-09-16]. Do-stupné z: []$\T1/
 lmtt/m/n/10.95 https : / /
  []
 
-) [35] [36
+) [37] [38
 
-] [37] [38
+] [39] [40
 
-] [39]
+] [41]
 \tf@toc=\write5
 \openout5 = `DP_ZÌŒid_Martin_2018.toc'.
 
 \tf@lof=\write6
 \openout6 = `DP_ZÌŒid_Martin_2018.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 747.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 747.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 821.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 821.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 747.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 747.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 821.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 821.
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
 (rerunfilecheck)             Checksum: AA9D24118BC2A081DDDE1D5447EB08FC;3770.
 
@@ -1582,20 +1624,23 @@ Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 747.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 821.
  ) 
 Here is how much of TeX's memory you used:
- 13842 strings out of 492995
- 192297 string characters out of 6132704
- 337825 words of memory out of 5000000
- 17026 multiletter control sequences out of 15000+600000
+ 13890 strings out of 492995
+ 193013 string characters out of 6132704
+ 338227 words of memory out of 5000000
+ 17038 multiletter control sequences out of 15000+600000
  82647 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,13n,29p,1104b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/20
+ 37i,13n,32p,1104b,487s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
+cal/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/20
 17/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/local/texlive/2017/texmf-d
 ist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/public/lm/lmbx12.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/publ
@@ -1610,10 +1655,10 @@ mri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (53 pages, 1449526 bytes).
+Output written on DP_ZÌŒid_Martin_2018.pdf (55 pages, 1507335 bytes).
 PDF statistics:
- 774 PDF objects out of 1000 (max. 8388607)
- 681 compressed objects within 7 object streams
- 208 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 848 PDF objects out of 1000 (max. 8388607)
+ 749 compressed objects within 8 object streams
+ 242 named destinations out of 1000 (max. 500000)
+ 245 words of extra memory for PDF output out of 10000 (max. 10000000)
 

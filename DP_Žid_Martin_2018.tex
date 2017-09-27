@@ -458,9 +458,74 @@ Generování reportu umožňuje uživateli vygenerovat report ve formátu PDF z 
 Funkcionalita odeslání reportu emailem umožňuje uživateli, poté co vygeneroval report, odeslat tento report přes email.
 
 \section{Návrh uživatelského rozhraní}
-\subsection{Wireframe}
-\subsection{Heuristická analýza}
+Návrh uživatelského rozhraní přímo navazuje na návrh funkcionalit. Pro tento návrh byl použit wireframe.
 
+\subsection{Wireframe}
+Wireframe je technika, která se používá v brzké fázi vývoje softwaru \cite{nngWireframe} pro rozvržení základních prvků obrazovek a navržení hlavních průchodů aplikací (navigace). Protože se jedná pouze o návrh, nemusí wireframe podporovat dynamicky měnící se obsah nebo např. nemusí zobrazovat chybové hlášky.
+
+Wireframe může posloužit k první heuristické analýze a k uživatelským testům ještě před vývojem dané aplikace. \cite{exux}
+
+Wireframe pro tuto práci byl vytvořen ve webovém nástroji NinjaMock (\url{https://ninjamock.com}). Z tohoto nástroje byl wireframe následně exportován do formátu pdf a je k nalezení v příloze této diplomové práce.
+
+\subsection{Heuristická analýza}
+Heuristická analýze je metoda, která se používá pro hledání problémů použitelnosti (usability problems) v uživatelském rozhraní. \cite{howtoheuristic} Jakob Nielsen vytvořil deset základních principů pro uživatelské rozhraní --
+\begin{enumerate}
+ \item \uv{viditelnost stavu systému,
+ \item spojení systému a reálného světa,
+ \item uživatelská kontrola a volnost,
+ \item konzistence a standardizace,
+ \item předcházení chyb,
+ \item rozpoznání místo vzpomínání,
+ \item flexibilita a efektivita použití,
+ \item estetika a minimalismus,
+ \item pomoci uživatelům rozpoznat, pochopit a vzpamatovat se z~chyb,
+ \item nápověda a dokumentace} \cite{10heuristics} (překlad vlastní).
+\end{enumerate}
+
+Tato pravidla byla následně použita při heuristické analýze vytvořeného wireframe. Však nebyla kontrolována pravidla:
+\begin{itemize}
+\item \uv{předcházení chyb} -- z důvodu, že ve fázi návrhu není možné např. vyplnit formulář a nebo smazat záznam letu;
+\item \uv{pomoci uživatelům rozpoznat, pochopit a vzpamatovat se z~chyb} -- také není možné vyvolat chybu;
+\item \uv{nápověda a dokumentace}.
+\end{itemize}
+
+Článek Jakoba Nielsena \cite{howtoheuristic} doporučuje více hodnotitelů, kteří provedou nezávisle heuristickou analýzu nad daným návrhem uživatelského rozhraní. Počet nalezených problémů v závislosti na počtu hodnotitelů zobrazuje obrázek \ref{fig:heur}. Z grafu je možné usuzovat vhodný počet hodnotitelů pět až šest. Protože se však nyní jedná pouze o návrh, kde není možné testovat všechna pravidla, byli použiti pouze dva hodnotitelé.
+
+\begin{figure}[h]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/heur_eval_finding_curve_trans}
+ \caption[Počet nalezených problémů v závislosti na počtu hodnotitelů]{Počet nalezených problémů v závislosti na počtu hodnotitelů. \cite{heur-eval-curve} (překlad vlastní)}\label{fig:heur}
+\end{figure}
+
+Po provedení heuristické analýzy byla vytvořena tabulka \ref{tab:heuristics} zobrazující nalezené problémy společně s jejich řešením. Byla také vytvořena nová verze wireframe, která je také k nalezení v příloze této práce.
+
+\subsection{Uživatelské testy}
+Uživatelské testy byly provedeny po heuristické analýze (na upraveném wireframe) ještě před samotnou implementací. Testy také nebylo možné provést v plné míře a sloužili převážné k odhalení nejvíce problematických částí návrhu uživatelského rozhraní.
+
+Jakob Nielsen \cite{usabilityTestingNNG} doporučuje pět uživatelů na uživatelské testování. Však ze stejných důvodů jako u heuristické analýzy, byly zvoleni nyní pouze dva uživatelé.
+
+Rozsáhlejší testování a heuristická analýza budou provedeny až po dokončení prototypu aplikace.
+
+Testovaní uživatelé nebyly děleni v této fázi do skupin z důvodu jejich malého počtu. Podmínky na uživatele však kladeny byly -- oba uživatelé museli používat operační systém iOS minimálně po dobu jednoho rok a alespoň jeden z nich se musel pohybovat v leteckém průmyslu.
+
+Pro oba uživatele byly vytvořeny stejné testovací scénáře. Uživateli, který neměl znalosti z letectví, byly nejprve vysvětleny základní pojmy nutné k absolvování scénářů a až poté bylo provedeno testování.
+
+Testovaní uživatelé byli při jednotlivých testech pozorováni, aby bylo zjištěno co a proč dělají špatně. Z čehož byly následně vyvozeny nutné úpravy v uživatelském rozhraní.
+
+\subsubsection{Scénáře}
+\begin{enumerate}
+\item Právě jste dokončil svůj první let z Brna do Prahy. Z Brna jste odlétal v 7:00 a do Prahy jste přiletěl v 8:45, neměl jste žádné mezipřistání. Celou doby jste zastával funkci vedoucího pilota a letěl jste letadlem Boeing.
+\item Zjistil jste, že jste u minulého záznamu chybně zaznamenal čas. Upravte tedy čas příletu do Prahy na 7:45.
+\item Chcete si přidat další záznam, tentokrát z výcvikového zařízení. Zadejte dnešní datum, čas na zařízení dvě hodiny a znovu jste zastával funkci vedoucího pilota.
+\item Aplikaci používáte již delší dobu a máte tedy i více záznamu. Zobrazte si pouze lety, které byly provedeny za poslední týden.
+\item Jeden ze záznamů z minulého kroku smažte.
+\item Zobrazte si svůj profil a zkontrolujte, zda jsou všechny položky vyplněny správně. Pokud ne, opravte chybně vyplněné nebo chybějící pole.
+\item U letadla Boeing z prvního kroku chcete změnit model. Proveďte tuto úpravu.
+\item Za poslední tři týdny jste absolvoval mnoho letů, zkontrolujte, zda jste nepřekročil jeden z limitů.
+\item Dnes Vám vydali zdravotní certifikát třídy jedna (Class 1). Vložte ho do aplikace.
+\item Vytvořte report ze všech záznamů letů i záznamů z výcvikového zařízení za posledních čtrnáct dní.
+\end{enumerate}
+
+\subsubsection{Výsledky testů a provedené úpravy}
 
 \section{Architektury při tvorbě iOS aplikací}
 Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
@@ -537,8 +602,11 @@ Architekturu VIPER zobrazuje obrázek \ref{fig:viper} (převzato a přeloženo z
  \caption[VIPER architektura]{VIPER architektura}\label{fig:viper}
 \end{figure}
 
+\subsection{Zvolená architektura}
+Pro svou práci jsem si na základě navržených funkcionalit zvolil architekturu MVVM. Architektura MVVM eliminuje nevýhodu MVC -- příliš mnoho logiky a kódu ve vrstvě $Controller$, a na druhou stranu není zbytečně složitá (pro navrhovanou funkcionalitu) jako VIPER.
+
 \section{Funkcionálně reaktivní programování}
-Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za nějaký čas. \cite{technopediaFRP}
+Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za nějaký čas. \cite{nayebi2016swift}
 
 Pro vysvětlení, co je reaktivní programování cituji \cite{Ztaltz2014} \uv{reaktivní programování je programování s asynchronními datovými toky}.
 
@@ -546,12 +614,17 @@ Na spojení funkcionální a reaktivního programování může dívat i jako na
 
 \subsection{FRP frameworky pro iOS}
 V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami jsou k nalezení v kapitole \nameref{chap:realizace}.
+
 \subsubsection{ReactiveSwift}
 ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$\ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
+
 \subsubsection{ReactiveCocoa}
 ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje různé aspekty Apple Cocoa frameworku základními prvky frameworku ReactiveSwift. Umožňuje vazbu na prvky uživatelského rozhraní, u interaktivních prvků napojuje $Signal$ a $Action$ pro kontrolu událostí a změn. Dále také umožňuje vytvářet signály na volání metod (např. i pro UIKit třídy). \cite{ReactiveCocoa}
+
 \subsubsection{RxSwift}
 RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem, \cite{ReactiveExtensionsDocs} je zde uváděn, a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
+
+\subsubsection{Zvolené řešení}
 
 \section{Perzistence dat}
 \subsection{Core Data}
@@ -576,6 +649,9 @@ Realm je rozdělený na dvě části mobilní databáze Realm (Realm Mobile Data
 Jedna aplikace může využívat hned několik Realm kontejnerů, a to jak lokální, tak i na vzdálené, kde každý z nich může mít různá oprávnění pro různé uživatele.
 
 Realm Mobile Database je open source, tedy zdarma. \cite{realmOverview}
+
+\subsection{Zvolené řešení}
+Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat pomocí Realm. Prvním z důvodů této volby je podpora online i offline uložení dat. To umožňuje uživateli mít stejná data na více zařízeních, však i společně s možností používat aplikaci offline. Dalším důvodem bylo to, že je Realm zcela zdarma, což mu dává výhodu oproti iCloud -- Apple řešení.
 
 \chapter{Realizace}
 \label{chap:realizace}
