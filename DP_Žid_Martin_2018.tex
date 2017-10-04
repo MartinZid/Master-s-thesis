@@ -1,4 +1,4 @@
-% options:
+ % options:
 % thesis=B bachelor's thesis
 % thesis=M master's thesis
 % czech thesis in Czech language
@@ -465,7 +465,9 @@ Wireframe je technika, která se používá v brzké fázi vývoje softwaru \cit
 
 Wireframe může posloužit k první heuristické analýze a k uživatelským testům ještě před vývojem dané aplikace. \cite{exux}
 
-Wireframe pro tuto práci byl vytvořen ve webovém nástroji NinjaMock (\url{https://ninjamock.com}). Z tohoto nástroje byl wireframe následně exportován do formátu pdf a je k nalezení v příloze této diplomové práce.
+Wireframe pro tuto práci byl vytvořen ve webovém nástroji NinjaMock (\url{https://ninjamock.com}). Z tohoto nástroje byl wireframe následně exportován do formátu pdf a ninjamock package. Tyto exporty jsou k nalezení v příloze této diplomové práce. 
+
+Exportovaný wireframe ve formátu pdf je uložený vždy ve dvou provedeních: se zobrazeným mobilním zařízením a bez něj, je tomu tak, protože ve verzi se zobrazeným mobilním zařízením u obrazovek s více položkami (např. přidání záznamu letu) nejsou všechny položky vidět. U provedení bez zobrazeného mobilního zařízení jsou vždy všechny položky vidět, ale wireframe působí neúplným dojmem. Pro úplnost je přidána verze ninjamock package, kterou je možné importovat do webového nástroje NinjaMock. V této verzi jsou funkční i odkazy mezi jednotlivými obrazovkami. 
 
 \subsection{Heuristická analýza}
 Heuristická analýze je metoda, která se používá pro hledání problémů použitelnosti (usability problems) v uživatelském rozhraní. \cite{howtoheuristic} Jakob Nielsen vytvořil deset základních principů pro uživatelské rozhraní --
@@ -496,7 +498,22 @@ Tato pravidla byla následně použita při heuristické analýze vytvořeného 
  \caption[Počet nalezených problémů v závislosti na počtu hodnotitelů]{Počet nalezených problémů v závislosti na počtu hodnotitelů. \cite{heur-eval-curve} (překlad vlastní)}\label{fig:heur}
 \end{figure}
 
-Po provedení heuristické analýzy byla vytvořena tabulka \ref{tab:heuristics} zobrazující nalezené problémy společně s jejich řešením. Byla také vytvořena nová verze wireframe, která je také k nalezení v příloze této práce.
+Po provedení heuristické analýzy byla vytvořena tabulka \ref{tab:heuristics} zobrazující nalezené problémy společně s jejich řešením a ohodnocením 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. Byla také vytvořena nová verze wireframe, která je také k nalezení v příloze této práce.
+
+\begin{table}
+\begin{tabular}{ c | c | p{9cm} }
+Problém & Závažnost & Provedená úprava \\
+\hline
+1 & 3 & Při přidávání nového záznamu se bude měnit nadpis (title) podle toho zda je přidáván záznam o letu nebo ze simulátoru. \\
+2 & 2 & Tlačítko \uv{Zavřít} bude přejmenováno na \uv{Zrušit}. Tato změna se týká obrazovek -- přidat záznam, přidat letadlo a přidat certifikát.\\
+2 & 3 & U nastavení hledání bude tlačítko \uv{Zpět} přejmenováno na \uv{Zrušit}.\\
+2 & 4 & Přejmenování záložky \uv{Nastavení} na \uv{Profil} a změnění ikonky.\\
+2 & 4 & Přejmenování \uv{Můj profil} (v bývalé záložce \uv{Nastavení}) na \uv{Osobní informace}.\\
+2 & 2 & Doplnění \uv{Certifikáty} na \uv{Zdravotní certifikáty}.\\
+8 & 2 & U zobrazení všech záznamů jsou zredukovány zobrazené informace na datum, čas, místo a letadlo. \\
+\end{tabular}
+\caption[Nalezené problémy použitelnosti]{Nalezené problémy použitelnosti}\label{tab:heuristics}
+\end{table}
 
 \subsection{Uživatelské testy}
 Uživatelské testy byly provedeny po heuristické analýze (na upraveném wireframe) ještě před samotnou implementací. Testy také nebylo možné provést v plné míře a sloužili převážné k odhalení nejvíce problematických částí návrhu uživatelského rozhraní.
