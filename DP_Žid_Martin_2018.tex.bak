@@ -95,9 +95,9 @@ Dále bude aplikace podrobena uživatelským testům, podle kterých bude vhodn�
 V poslední části budu popisovat výhody a nevýhody, které přinesly postupy FRP. Budu také hodnotit časovou a implementační náročnost oproti standardním postupům a architektuře MVC. 
 
 
-\chapter{Analýza a návrh}
+\chapter{Tvorba iOS aplikací}
 
-\section{Tvorba iOS aplikací}
+\section{Možnosti vývoje}
 Vývoj iOS aplikace je možný hned několika způsoby, každý má své výhody a nevýhody, právě ty bych rád v této kapitole rozebral. Mezi možné způsoby vývoje bych rád zmínil nativní aplikace, hybridní aplikace a mobilní webové aplikace.
 
 \subsection{Nativní aplikace}
@@ -122,6 +122,132 @@ Však tento postup má i své nevýhody. Jak již bylo zmíněno dříve, aplika
 \subsection{Zvolené řešení}
 Pro svou práci jsem si zvolil možnost nativní mobilní aplikace z důvodu zaměření pouze na platformu iOS. Bude se tedy jednat pouze o jednu aplikaci, která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
 
+\section{Architektury při tvorbě iOS aplikací}
+Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
+
+\subsection{MVC}
+Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o softwarovou architekturu, které se velice často používá při tvorbě aplikací s uživatelským rozhraním. \cite{MVCMozilla}
+\begin{itemize}
+\item $Model$ definuje jaká data aplikace obsahuje, a pokud dojde k jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
+\item $View$ vrstva je prezentována samotnému uživateli. Tedy jsou zde zobrazena aplikační data a je zachycována uživatelova práce s aplikací.\cite{MVCMozilla}
+\item $Controller$ je vrstva mezi $View$ a $Model$ zabezpečující logiku aplikace. Stará se o promítnutí změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Model$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
+\end{itemize}
+
+Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
+
+Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} (převzato a přeloženo z originálu \cite{mvc-pic}) a \ref{fig:mvc-apple} (převzato a přeloženo z originálu \cite{mvc-apple-pic}).
+
+MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou možností.
+
+\begin{figure}[h]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/model_view_controller}
+ \caption[Model-View-Controller diagram]{Model-View-Controller diagram}\label{fig:mvc}
+\end{figure}
+
+\begin{figure}[h]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/appleMVC}
+ \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace}\label{fig:mvc-apple}
+\end{figure}
+
+\subsection{MVVM}
+Architektura MVVM má obdobné koncepce jako MVC. Jedná se také o zkratku, tentokrát \uv{Model-View-ViewModel}. \cite{MVVMMicrosoft}
+\begin{itemize}
+\item $Model$ je totožný s $Model$ vrstvou architektury MVC, jedná se tedy o datovou část aplikace.
+\item $View$ prezentuje aplikační data uživateli a monitoruje jeho akce. Však, jak již bylo zmíněno dříve, u iOS aplikací se jedná spíše o vrstvu\\ $View/View$ $controller$. Tato vrstva obsahuje pouze minimum logiky aplikace a reaguje hlavně na $ViewModel$.  \cite{Morrison}
+\item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s  $Model$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele např.: kliknutí na tlačítko. \cite{MVVMMicrosoft}
+\end{itemize}
+
+Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/View$ $controller$ a $Model$. Když potom uvažujeme architekturu MVVM ,$View/View$ $controller$  je opravdu pouze jednou vrstvou a mezi ní a $Model$ je vložena nová vrstva  $ViewModel$, která je spojuje, a do které je přesunuta i většina aplikační logiky.
+
+Mezi výhody architektury MVVM oproti MVC patří např.:
+\begin{itemize}
+\item poskytuje návrhový princip tzv. separation of concerns, neboli oddělení zájmů;
+\item zlepšuje možnost testovatelnosti aplikace.
+\end{itemize}
+
+Architekturu MVVM zobrazuje obrázek \ref{fig:mvvm} (převzato a přeloženo z originálu \cite{mvvm-pic}).
+
+\begin{figure}[h]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/MVVM}
+ \caption[Model-View-ViewModel architektura]{Model-View-ViewModel architektura}\label{fig:mvvm}
+\end{figure}
+
+\subsection{VIPER}
+VIPER je poslední rozebíranou možností, co se týče architektur. I zde je název složen z prvních písmen jednotlivých vrstev architektury, tedy \uv{View, Interactor, Presenter, Entity, Router}.
+\begin{itemize}
+\item $View$  zobrazuje data uživateli a předává uživatelovi vstupy vrstvě $Presenter$.
+\item $Interactor$ obsahuje logiku aplikace spojenou s daty ($Entity$).
+\item $Presenter$ vrstva má na starosti $View$ logiku.  Reaguje tedy na uživatelovy akce a komunikuje s vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
+\item $Entity$ jsou datové objekty aplikace přístupné pouze části $Interactor$.
+\item $Routing$ obsahuje navigační logiku. \cite{VIPER}
+\end{itemize}
+
+Mezi výhody architektury VIPER znovu patří např.:
+\begin{itemize}
+\item dobře rozděluje odpovědnosti;
+\item zlepšuje možnost testovatelnosti aplikace. \cite{Orlov}
+\end{itemize}
+
+Tato architektura však může být zbytečně složitá pro menší aplikace. \cite{Orlov}
+
+Architekturu VIPER zobrazuje obrázek \ref{fig:viper} (převzato a přeloženo z originálu \cite{viper-pic}).
+
+\begin{figure}[h]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.png}
+ \caption[VIPER architektura]{VIPER architektura}\label{fig:viper}
+\end{figure}
+
+\section{Funkcionálně reaktivní programování}
+Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za daný čas. \cite{nayebi2016swift}
+
+Pro vysvětlení, co je reaktivní programování cituji André Staltze: \uv{reaktivní programování je programování s asynchronními datovými toky}. \cite{Ztaltz2014}
+
+Na spojení funkcionální a reaktivního programování může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko nebo i dotaz na server a jsme informování o každé změně v podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Je tedy možné toky:
+\begin{itemize}
+\item spojovat ($merge$),
+\item filtrovat ($filter$) např. pouze události, které nás zajímají,
+\item mapovat ($map$) jeden tok na nový, a další. \cite{Ztaltz2014}
+\end{itemize}
+
+\subsection{FRP frameworky pro iOS}
+V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami jsou k nalezení v kapitole \nameref{chap:realizace}.
+
+\subsubsection{ReactiveSwift}
+ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$\ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
+
+\subsubsection{ReactiveCocoa}
+ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje různé aspekty Apple Cocoa frameworku základními prvky frameworku ReactiveSwift. Umožňuje vazbu na prvky uživatelského rozhraní, u interaktivních prvků napojuje $Signal$ a $Action$ pro kontrolu událostí a změn. Dále také umožňuje vytvářet signály na volání metod (např. i pro UIKit třídy). \cite{ReactiveCocoa}
+
+\subsubsection{RxSwift}
+RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem, \cite{ReactiveExtensionsDocs} je zde uváděn, a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
+
+\section{Perzistence dat}
+Perzistence dat, neboli jejich uchování a uložení, je velice důležitou funkcionalitou většiny aplikací. V této kapitole jsou rozebírány tři možnosti zajišťující perzistenci dat iOS aplikací -- Core Data, iCloud a Realm.
+
+\subsection{Core Data}
+Core Data je Apple framework, který má na starosti model vrstvu aplikace. Stará se o životní cyklus objektů, jejich vztahy (objektový graf) i perzistenci. \cite{coredata}
+
+Core Data má více možností na způsob uložení např. SQLite a XML. Jedná se tedy o uložení dat na disku daného zařízení.  \cite{CoreDataPersistentTypes}
+
+Výhodou tohoto frameworku je to, že je zcela zdarma a má podporu přímo v Xcode. \cite{CoreDataXcode}
+
+\subsection{iCloud}
+iCloud je cloudové úložiště od společnosti Apple. Umožňuje ukládat aplikační data i dokumenty a přistupovat k nim na všech Apple zařízeních a na webu. \cite{iCloud}
+
+Při vývoji iOS aplikací se pro využití iCloud používá framework CloudKit. CloudKit zajišťuje rozhraní pro komunikaci dané aplikace a iCloud. \cite{CloudKitDoc} Poskytuje ověření uživatele, tři druhy databáze -- soukromou, veřejnou a sdílenou, dále také analytický nástroj CloudKit Dashboard, který umožňuje prozkoumání dat, měření aktivity uživatelů a další. \cite{CloudKit}
+
+CloudKit je dostupný pro členy Apple Developer programu. \cite{AppleDeveloperProgram} Tento program stojí ročně v přepočtu 2150 Kč. \cite{AppleDeveloperProgramPrice} 
+
+\subsection{Realm}
+Realm, s oficiální stránkou \url{https://realm.io}, je multiplatformní mobilní databáze, která je připravená pro jazyky Java (Android), Swift, Objective-C, JavaScript a Xamarin. Hlavní myšlenkou je kontejner objektů tzv. Realm. V těchto kontejnerech jsou uložena data, na které je možné se dotazovat, tyto data filtrovat a podobně. Na rozdíl od klasických např. SQL databází, zde pracujeme přímo s \uv{živými} objekty, tedy pokud provedeme změnu není nutné ukládat změněný objekt do databáze, ale změna se provede automaticky.
+
+Realm je rozdělený na dvě části -- mobilní databáze Realm (Realm Mobile Database) a objektový server Realm (Realm Object Server). Jak je již z názvů možné usuzovat mobilní databáze je pouze na mobilním zařízení, jedná se tedy o offline uložení dat. Pokud však chceme data např. sdílet na více zařízení, je možné se připojit na objektový server Realm a s tím se synchronizovat. Realm se řídí strategii \uv{nejprve offine} -- čtení a zápis probíhá nejprve lokálně a až poté probíhá synchronizace se serverem.
+
+Jedna aplikace může využívat hned několik Realm kontejnerů, a to jak lokální, tak i vzdálené, kde každý z nich může mít různá oprávnění pro různé uživatele.
+
+Realm Mobile Database je open source, tedy zdarma. \cite{realmOverview}
+
+\chapter{Analýza}
 \section{EASA}
 EASA, neboli European Aviation Safety Agency, je agentura spadající pod Evropskou Unii, která má na starosti technické přepisy, bezpečnost, regulace a certifikace v oboru letectví. \cite{EU} 
 
@@ -325,7 +451,7 @@ Smart Logbook je poslední analyzovanou aplikací, jedná se o Android aplikaci.
 Tato aplikace je zadarmo pouze ve zkušební verzi, následně je nutné aplikaci zakoupit za 300 Kč. Je nutné také platit za zálohování a synchronizaci dat, a to buď 20 Kč za měsíc, nebo 120 Kč za rok. Informace o cenách jsou získány z aplikace Smart Logbook.
 
 \subsubsection{Závěr analýzy}
-Tato analýza posloužila při návrhu funkcionalit iOS aplikace ve formě případů užití, při návrhu uživatelského rozhraní a také při analýze řešení perzistence dat.
+Tato analýza posloužila při návrhu funkcionalit iOS aplikace ve formě případů užití, při návrhu uživatelského rozhraní a také při výběru vhodného nástroje na perzistenci dat.
 
 \section{Analýza požadavků}
 \subsection{Funkční požadavky}
@@ -346,8 +472,9 @@ Funkční požadavky jsou uvedeny pouze jmenovitě. Podrobnější popis je uved
 \item Aplikace podle EASA -- aplikace se bude řídit předpisy EASA a to přesně: FCL.050 u evidence letů,  ORO.FTL.210 v případě limitů a Part-MED při evidenci zdravotních certifikátů.
 \end{enumerate}
 
+\chapter{Návrh}
 \section{Navržená funkcionalita v podobě případů užití}
-Případy užití (use cases) byly využity při návrhu funkcionalit iOS aplikace. Jsou obsaženy přímo v práci z důvodu přehledného zobrazení navržených funkcionalit a možným dovysvětlením u některých z nich.
+Případy užití (use cases) byly využity při návrhu funkcionalit iOS aplikace. Jsou obsaženy přímo v práci z důvodu přehledného zobrazení navržených funkcionalit a možnosti dovysvětlením u některých z nich.
 
 Diagram případů užití zobrazuje obrázek \ref{fig:UC}
 
@@ -484,7 +611,7 @@ Heuristická analýze je metoda, která se používá pro hledání problémů p
  \item nápověda a dokumentace} \cite{10heuristics} (překlad vlastní).
 \end{enumerate}
 
-Tato pravidla byla následně použita při heuristické analýze vytvořeného wireframe. Však nebyla kontrolována pravidla:
+Tato pravidla byla použita při heuristické analýze vytvořeného wireframe. Však nebyla kontrolována pravidla:
 \begin{itemize}
 \item \uv{předcházení chyb} -- z důvodu, že ve fázi návrhu není možné např. vyplnit formulář a nebo smazat záznam letu;
 \item \uv{pomoci uživatelům rozpoznat, pochopit a vzpamatovat se z~chyb} -- také není možné vyvolat chybu;
@@ -544,131 +671,17 @@ Testovaní uživatelé byli při jednotlivých testech pozorováni, aby bylo zji
 
 \subsubsection{Výsledky testů a provedené úpravy}
 
-\section{Architektury při tvorbě iOS aplikací}
-Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
+\section{Zvolená řešení}
+Tato kapitola popisuje a zdůvodňuje zvolená řešení architektury, perzistence dat a FRP framework.
 
-\subsection{MVC}
-Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o softwarovou architekturu, které se velice často používá při tvorbě aplikací s uživatelským rozhraním. \cite{MVCMozilla}
-\begin{itemize}
-\item $Model$ definuje jaká data aplikace obsahuje, a pokud dojde k jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
-\item $View$ vrstva je prezentována samotnému uživateli. Tedy jsou zde zobrazena aplikační data a je zachycována uživatelova práce s aplikací.\cite{MVCMozilla}
-\item $Controller$ je vrstva mezi $View$ a $Model$ zabezpečující logiku aplikace. Stará se o promítnutí změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Model$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
-\end{itemize}
-
-Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
-
-Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} (převzato a přeloženo z originálu \cite{mvc-pic}) a \ref{fig:mvc-apple} (převzato a přeloženo z originálu \cite{mvc-apple-pic}).
-
-MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou možností.
-
-\begin{figure}[h]\centering
- \includegraphics[width=0.99\textwidth]{./pictures/architektury/model_view_controller}
- \caption[Model-View-Controller diagram]{Model-View-Controller diagram}\label{fig:mvc}
-\end{figure}
-
-\begin{figure}[h]\centering
- \includegraphics[width=0.99\textwidth]{./pictures/architektury/appleMVC}
- \caption[Model-View-Controller při vývoji iOS aplikace]{Model-View-Controller při vývoji iOS aplikace}\label{fig:mvc-apple}
-\end{figure}
-
-\subsection{MVVM}
-Architektura MVVM má obdobné koncepce jako MVC. Jedná se také o zkratku, tentokrát \uv{Model-View-ViewModel}. \cite{MVVMMicrosoft}
-\begin{itemize}
-\item $Model$ je totožný s $Model$ vrstvou architektury MVC, jedná se tedy o datovou část aplikace.
-\item $View$ prezentuje aplikační data uživateli a monitoruje jeho akce. Však, jak již bylo zmíněno dříve, u iOS aplikací se jedná spíše o vrstvu\\ $View/View controller$. Tato vrstva obsahuje pouze minimum logiky aplikace a reaguje hlavně na $ViewModel$.  \cite{Morrison}
-\item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s  $Model$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele např.: kliknutí na tlačítko. \cite{MVVMMicrosoft}
-\end{itemize}
-
-Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/View controller$ a $Model$. Když potom uvažujeme architekturu MVVM ,$View/View controller$  je opravdu pouze jednou vrstvou a mezi ní a $Model$ je vložena nová vrstva  $ViewModel$, která je spojuje, a do které je přesunuta i většina aplikační logiky.
-
-Mezi výhody architektury MVVM oproti MVC patří např.:
-\begin{itemize}
-\item poskytuje návrhový princip tzv. separation of concerns, neboli oddělení zájmů;
-\item zlepšuje možnost testovatelnosti aplikace.
-\end{itemize}
-
-Architekturu MVVM zobrazuje obrázek \ref{fig:mvvm} (převzato a přeloženo z originálu \cite{mvvm-pic}).
-
-\begin{figure}[h]\centering
- \includegraphics[width=0.99\textwidth]{./pictures/architektury/MVVM}
- \caption[Model-View-ViewModel architektura]{Model-View-ViewModel architektura}\label{fig:mvvm}
-\end{figure}
-
-\subsection{VIPER}
-VIPER je poslední rozebíranou možností, co se týče architektur. I zde je název složen z prvních písmen jednotlivých vrstev architektury, tedy \uv{View, Interactor, Presenter, Entity, Router}.
-\begin{itemize}
-\item $View$  zobrazuje data uživateli a předává uživatelovi vstupy vrstvě $Presenter$.
-\item $Interactor$ obsahuje logiku aplikace spojenou s daty ($Entity$).
-\item $Presenter$ vrstva má na starosti $View$ logiku.  Reaguje tedy na uživatelovy akce a komunikuje s vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
-\item $Entity$ jsou datové objekty aplikace přístupné pouze části $Interactor$.
-\item $Routing$ obsahuje navigační logiku. \cite{VIPER}
-\end{itemize}
-
-Mezi výhody architektury VIPER znovu patří např.:
-\begin{itemize}
-\item dobře rozděluje odpovědnosti;
-\item zlepšuje možnost testovatelnosti aplikace. \cite{Orlov}
-\end{itemize}
-
-Tato architektura však může být zbytečně složitá pro menší aplikace. \cite{Orlov}
-
-Architekturu VIPER zobrazuje obrázek \ref{fig:viper} (převzato a přeloženo z originálu \cite{viper-pic}).
-
-\begin{figure}[h]\centering
- \includegraphics[width=0.99\textwidth]{./pictures/architektury/viper.png}
- \caption[VIPER architektura]{VIPER architektura}\label{fig:viper}
-\end{figure}
-
-\subsection{Zvolená architektura}
+\subsection{Architektura}
 Pro svou práci jsem si na základě navržených funkcionalit zvolil architekturu MVVM. Architektura MVVM eliminuje nevýhodu MVC -- příliš mnoho logiky a kódu ve vrstvě $Controller$, a na druhou stranu není zbytečně složitá (pro navrhovanou funkcionalitu) jako VIPER.
 
-\section{Funkcionálně reaktivní programování}
-Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za nějaký čas. \cite{nayebi2016swift}
-
-Pro vysvětlení, co je reaktivní programování cituji \cite{Ztaltz2014} \uv{reaktivní programování je programování s asynchronními datovými toky}.
-
-Na spojení funkcionální a reaktivního programování může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko nebo i dotaz na server a jsme informování o každé změně v podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Je tedy možné toky spojovat ($merge$), filtrovat ($filter$) pouze události, které nás zajímají,  mapovat ($map$) jeden tok na nový a další. \cite{Ztaltz2014}
-
-\subsection{FRP frameworky pro iOS}
-V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami jsou k nalezení v kapitole \nameref{chap:realizace}.
-
-\subsubsection{ReactiveSwift}
-ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$\ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
-
-\subsubsection{ReactiveCocoa}
-ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje různé aspekty Apple Cocoa frameworku základními prvky frameworku ReactiveSwift. Umožňuje vazbu na prvky uživatelského rozhraní, u interaktivních prvků napojuje $Signal$ a $Action$ pro kontrolu událostí a změn. Dále také umožňuje vytvářet signály na volání metod (např. i pro UIKit třídy). \cite{ReactiveCocoa}
-
-\subsubsection{RxSwift}
-RxSwift je Swift verzí knihovny Reactive Extensions (Rx). \cite{RxSwift} Tato knihovna umožňuje vytvářet aplikace založené na událostech a asynchronních datových tocích pomocí tzv. Observables. \cite{RxNET} I přesto, že RxSwift není striktně FRP frameworkem, \cite{ReactiveExtensionsDocs} je zde uváděn, a to z důvodu velkého využití knihovny Reactive Extensions i na jiných platformách např.: JavaScript, C\#, Python. \cite{ReactiveExtensions}
-
-\subsubsection{Zvolené řešení}
-
-\section{Perzistence dat}
-\subsection{Core Data}
-Core Data je Apple framework, který má na starosti model vrstvu aplikace. Stará se o životní cyklus objektů, jejich vztahy (objektový graf) i perzistenci. \cite{coredata}
-
-Core Data má více možností na způsob uložení např. SQLite a XML. Jedná se tedy o uložení dat na disku daného zařízení.  \cite{CoreDataPersistentTypes}
-
-Výhodou tohoto frameworku je to, že je zcela zdarma a má podporu přímo v Xcode. \cite{CoreDataXcode}
-
-\subsection{iCloud}
-iCloud je cloudové úložiště od společnosti Apple. Umožňuje ukládat aplikační data i dokumenty a přistupovat k nim na všech Apple zařízeních a na webu. \cite{iCloud}
-
-Při vývoji iOS aplikací se pro využití iCloud používá framework CloudKit. CloudKit zajišťuje rozhraní pro komunikaci dané aplikace a iCloud. \cite{CloudKitDoc} Poskytuje ověření uživatele, tři druhy databáze -- soukromou, veřejnou a sdílenou, dále také analytický nástroj CloudKit Dashboard, který umožňuje prozkoumání dat, měření aktivity uživatelů a další. \cite{CloudKit}
-
-CloudKit je dostupný pro členy Apple Developer programu. \cite{AppleDeveloperProgram} Tento program stojí ročně v přepočtu 2150 Kč. \cite{AppleDeveloperProgramPrice} 
-
-\subsection{Realm}
-Realm, s oficiální stránkou \url{https://realm.io}, je multiplatformní mobilní databáze, která je připravená pro jazyky Java (Android), Swift, Objective-C, JavaScript a Xamarin. Hlavní myšlenkou je kontejner objektů tzv. Realm. Zde jsou uložena data, na které je možné se dotazovat, tyto data filtrovat a podobné. Na rozdíl od klasických např. SQL databází, zde pracujeme přímo s \uv{živými} objekty, tedy pokud provedeme změnu není nutné ukládat změněný objekt do databáze, ale změna se provede automaticky.
-
-Realm je rozdělený na dvě části mobilní databáze Realm (Realm Mobile Database) a objektový server Realm (Realm Object Server). Jak je již z názvů možné usuzovat mobilní databáze je pouze na mobilním zařízení, jedná se tedy o offline uložení dat. Pokud však chceme data např. sdílet na více zařízení, je možné se připojit na objektový server Realm a s tím se synchronizovat. Realm se řídí strategii \uv{nejprve offine} -- čtení a zápis probíhá nejprve lokálně a až poté probíhá synchronizace se serverem.
-
-Jedna aplikace může využívat hned několik Realm kontejnerů, a to jak lokální, tak i na vzdálené, kde každý z nich může mít různá oprávnění pro různé uživatele.
-
-Realm Mobile Database je open source, tedy zdarma. \cite{realmOverview}
-
-\subsection{Zvolené řešení}
+\subsection{Perzistence dat}
 Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat pomocí Realm. Prvním z důvodů této volby je podpora online i offline uložení dat. To umožňuje uživateli mít stejná data na více zařízeních, však i společně s možností používat aplikaci offline. Dalším důvodem bylo to, že je Realm zcela zdarma, což mu dává výhodu oproti iCloud -- Apple řešení.
+
+\subsection{FRP framework}
+
 
 \chapter{Realizace}
 \label{chap:realizace}
