@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  4 OCT 2017 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  5 OCT 2017 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1267,50 +1267,49 @@ Underfull \vbox (badness 10000) detected at line 411
 [16 <./pictures/existujiciAplikace/LogTenProX.png>] [17] [18 <./pictures/existu
 jiciAplikace/LogbookPro.png>] [19 <./pictures/existujiciAplikace/Safelog.png>]
 [20 <./pictures/existujiciAplikace/FlyLogio.png>] [21 <./pictures/existujiciApl
-ikace/SmartLogbook.png>] [22]
+ikace/SmartLogbook.png>] [22
+
+] [23]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 481.
+               Default added (so using `tbp') on input line 482.
 
-<./pictures/UC/UC.png, id=528, 704.6325pt x 689.57625pt>
+<./pictures/UC/UC.png, id=531, 733.74126pt x 742.775pt>
 File: ./pictures/UC/UC.png Graphic file (type png)
 
 <use ./pictures/UC/UC.png>
-Package pdftex.def Info: ./pictures/UC/UC.png used on input line 482.
-(pdftex.def)             Requested size: 365.31203pt x 357.50845pt.
- [23
+Package pdftex.def Info: ./pictures/UC/UC.png used on input line 483.
+(pdftex.def)             Requested size: 365.31203pt x 369.81119pt.
 
-] [24 <./pictures/UC/UC.png (PNG copy)>] [25]
-[26] [27]
-<./pictures/heur_eval_finding_curve_trans.png, id=572, 501.875pt x 316.18124pt>
+Underfull \vbox (badness 6428) has occurred while \output is active []
+
+ [24 <./pictures/UC/UC.png (PNG copy)>] [25] [26] [27] [28]
+<./pictures/heur_eval_finding_curve_trans.png, id=578, 501.875pt x 316.18124pt>
 File: ./pictures/heur_eval_finding_curve_trans.png Graphic file (type png)
 <use ./pictures/heur_eval_finding_curve_trans.png>
 Package pdftex.def Info: ./pictures/heur_eval_finding_curve_trans.png used on i
-nput line 624.
+nput line 632.
 (pdftex.def)             Requested size: 365.31203pt x 230.15907pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 646--647
 []|\T1/lmr/m/n/10.95 P°ejmenování ^^RM·j pro-fil^^P (v bý-valé zá-loºce
  []
 
 
-Overfull \hbox (11.7178pt too wide) in paragraph at lines 631--642
+Overfull \hbox (11.7178pt too wide) in paragraph at lines 639--650
 [][] 
  []
 
-[28]
-Underfull \vbox (badness 3354) has occurred while \output is active []
-
- [29 <./pictures/heur_eval_finding_curve_trans.png>] [30] [31] [32
-
-] [33] [34
+[30 <./pictures/heur_eval_finding_curve_trans.png>] [31] [32] [33] [34
 
 ]
-(./DP_ZÌŒid_Martin_2018.bbl [35] [36
+[35] [36
+
+] (./DP_ZÌŒid_Martin_2018.bbl [37] [38
 
 ]
 bibitemlist
@@ -1371,7 +1370,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
 tecture / MVC _
  []
 
-[37]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 61--64
 []\T1/lmr/m/n/10.95 Model-View-Controller. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-p
 er \T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia,
@@ -1457,7 +1456,7 @@ Underfull \hbox (badness 1052) in paragraph at lines 110--113
  / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
  []
 
-[38]
+[40]
 Underfull \hbox (badness 1052) in paragraph at lines 115--118
 \T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
  / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
@@ -1520,7 +1519,7 @@ Underfull \hbox (badness 5446) in paragraph at lines 148--151
 rary / content / documentation /
  []
 
-[39]
+[41]
 Underfull \hbox (badness 6016) in paragraph at lines 173--176
 \T1/lmr/m/n/10.95 Ap-ple Inc., [] 2017, [cit. 2017-09-16]. Do-stupné z: []$\T1/
 lmtt/m/n/10.95 https : / /
@@ -1577,7 +1576,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--215
 -[] aviation -[] flight -[]
  []
 
-[40]
+[42]
 Underfull \hbox (badness 5519) in paragraph at lines 242--245
 []\T1/lmr/m/n/10.95 What is wi-refra-ming? \T1/lmr/m/it/10.95 Ex-pe-ri-en-ceux 
 \T1/lmr/m/n/10.95 [on-line]. Bour-nemouth: Ex-
@@ -1614,11 +1613,11 @@ group\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / articles / how -[] to -[] co
 nduct -[] a -[] heuristic -[]
  []
 
-) [41] [42
+) [43] [44
 
-] [43] [44
+] [45] [46
 
-] [45]
+] [47]
 \tf@toc=\write5
 \openout5 = `DP_ZÌŒid_Martin_2018.toc'.
 
@@ -1628,13 +1627,13 @@ nduct -[] a -[] heuristic -[]
 \tf@lot=\write7
 \openout7 = `DP_ZÌŒid_Martin_2018.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 853.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 853.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 877.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 877.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 853.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 853.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 877.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 877.
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
-(rerunfilecheck)             Checksum: 932EE73274277A99A4D0BD32BF973C4D;4061.
+(rerunfilecheck)             Checksum: 6F1EAE11E4947AE9A80CF8CFD7C00F6F;4329.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1642,11 +1641,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 853.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 877.
  ) 
 Here is how much of TeX's memory you used:
- 13910 strings out of 492995
- 193236 string characters out of 6132704
+ 13919 strings out of 492995
+ 193319 string characters out of 6132704
  338419 words of memory out of 5000000
  17044 multiletter control sequences out of 15000+600000
  82647 words of font info for 55 fonts, out of 8000000 for 9000
@@ -1668,10 +1667,10 @@ mri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (61 pages, 1513765 bytes).
+Output written on DP_ZÌŒid_Martin_2018.pdf (63 pages, 1528930 bytes).
 PDF statistics:
- 897 PDF objects out of 1000 (max. 8388607)
- 792 compressed objects within 8 object streams
- 253 named destinations out of 1000 (max. 500000)
+ 914 PDF objects out of 1000 (max. 8388607)
+ 806 compressed objects within 9 object streams
+ 262 named destinations out of 1000 (max. 500000)
  269 words of extra memory for PDF output out of 10000 (max. 10000000)
 
