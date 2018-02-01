@@ -567,6 +567,13 @@ Tato funkce umožňuje uživateli přidat certifikát a to buď dle šablony pro
 \item Aplikace uloží certifikát.
 \end{itemize}
 
+\subsection{Zobrazit statistiky}
+Zobrazení statistik zobrazuje nalétané hodiny (celkově, v noci, podle přístrojů a v různých pilotových funkcích).
+
+\subsection{Specifikovat data statistik}
+Tato funkcionalita umožňuje specifikovat data, ze kterých jsou zobrazeny statistiky.
+Je možné specifikovat: text, zda jsou ve statistikách zobrazeny záznamy letů a/nebo záznamy ze simulátoru, typ letadla nebo přesné letadlo a období.
+
 \subsection{Editovat osobní údaje}
 Editace osobních údajů umožňuje uživateli upravit své osobní informace. Mezi tyto informace patří: jméno a příjmení, adresa a věk.
 
@@ -656,14 +663,14 @@ Pro oba uživatele byly vytvořeny stejné testovací scénáře. Uživateli, kt
 
 \subsubsection{Scénáře}
 \begin{enumerate}
-\item Právě jste dokončil svůj první let z Brna do Prahy. Z Brna jste odlétal v 7:00 a do Prahy jste přiletěl v 8:45, neměl jste žádné mezipřistání. Celou doby jste zastával funkci vedoucího pilota a letěl jste letadlem Boeing.
-\item Zjistil jste, že jste u minulého záznamu chybně zaznamenal čas. Upravte tedy čas příletu do Prahy na 7:45.
-\item Chcete si přidat další záznam, tentokrát z výcvikového zařízení. Zadejte dnešní datum, čas na zařízení dvě hodiny a znovu jste zastával funkci vedoucího pilota.
+\item Právě jste dokončil(a) svůj první let z Brna do Prahy. Z Brna jste odlétal(a) v 7:00 a do Prahy jste přiletěl(a) v 8:45, neměl jste žádné mezipřistání. Celou doby jste zastával(a) funkci vedoucího pilota a letěl(a) jste letadlem Boeing. Zaznamenejte svůj let.
+\item Zjistil(a) jste, že jste u minulého záznamu chybně zaznamenal(a) čas. Upravte tedy čas příletu do Prahy na 7:45.
+\item Chcete si přidat další záznam, tentokrát z výcvikového zařízení. Zadejte dnešní datum, čas na zařízení dvě hodiny a znovu jste zastával(a) funkci vedoucího pilota.
 \item Aplikaci používáte již delší dobu a máte tedy i více záznamu. Zobrazte si pouze lety, které byly provedeny za poslední týden.
 \item Jeden ze záznamů z minulého kroku smažte.
 \item Zobrazte si svůj profil a zkontrolujte, zda jsou všechny položky vyplněny správně. Pokud ne, opravte chybně vyplněné nebo chybějící pole.
 \item U letadla Boeing z prvního kroku chcete změnit model. Proveďte tuto úpravu.
-\item Za poslední tři týdny jste absolvoval mnoho letů, zkontrolujte, zda jste nepřekročil jeden z limitů.
+\item Za poslední tři týdny jste absolvoval(a) mnoho letů, zkontrolujte, zda jste nepřekročil jeden z limitů.
 \item Dnes Vám vydali zdravotní certifikát třídy jedna (Class 1). Vložte ho do aplikace.
 \item Vytvořte report ze všech záznamů letů i záznamů z výcvikového zařízení za posledních čtrnáct dní.
 \end{enumerate}
@@ -686,7 +693,7 @@ Po provedení testování s pilotem byla diskutována navržená funkcionalita. 
 \item záznamy letů budou zobrazovat nyní registrační číslo letadla místo jeho modelu, typu a varianty.
 \end{itemize}
 
-Případy užití zobrazené v této práci již zahrnují tuto přidanou a upravenou funkcionalitu. Po uživatelských testech a diskuzi byla i vytvořena poslední verze wireframe, také k nalezení v příloze této diplomové práce.
+Případy užití zobrazené v této práci již zahrnují tuto přidanou a upravenou funkcionalitu. Po uživatelských testech a diskuzi byla vytvořena i poslední verze wireframe, také k nalezení v příloze této diplomové práce.
 
 \section{Navržená řešení pro tvorbu aplikace}
 Tato kapitola popisuje a zdůvodňuje zvolená řešení architektury, perzistence dat a FRP framework.
@@ -703,10 +710,115 @@ Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat po
 \chapter{Realizace}
 \label{chap:realizace}
 
-\section{iOS aplikace a Swift}
+\section{Programovací jazyk Swift}
+Swift je programovací jazyk vytvořený společností Apple. Jedná se o nástupce jazyku C a Objective-C a používá se pro tvorbu iOS, macOS, watchOS a tvOS aplikací.
+
+Swift je objektově orientovaný open-source jazyk. Mezi jeho hlavní přednosti patří: 
+\begin{itemize}
+\item automaticky spravovaná paměť,
+\item podpora i funkcionálního programování (filter, map, reduce),
+\item možnost vracení  více  hodnot z funkcí,
+\item podpora tzv. generics,
+\item nativní zpracovávání chyb pomocí try, cache, trow,
+\item podpora protokolů a tzv. extension (rozšíření již existujících tříd). \cite{swift}
+\end{itemize}
+
+Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku 2014 a nyní je nejnovější verzí Swift 4. Právě v této verzi byla implementována aplikace v rámci této magisterské práce.\cite{swift2}
+
+	\subsection{Optional}
+
+	\subsection{Extension}
+	
+	\subsection{Protocoly}
+	
+\section{Tvorba UI}
+
+\section{Reactive Cocoa}
+
+\section{Realm}
+
+	\subsection{Přihlašování}
+
 \section{Unit testy}
+
+\section{Překlady}
+
+\section{Generování PDF}
+
 \section{Použité nástroje při vývoji}
+
+\section{Heuristická analýza}
+Heuristická analýza byla provedena znovu poté, co byla aplikace implementována do stavu tzv. beta verze. I tato heuristická analýze byla prováděna podle pravidel Jakoba Nielsena a nyní již bylo zohledněno všech deset pravidel. Všechny nalezené chyby byly, stejně jako u předchozí heuristické analýzy, ohodnoceny na stupnici 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. U všech nalezených problémů je také uvedeno řešení, pomocí kterého byly chyby opraveny. Nakonec tabulka \ref{tab:heu_eval_2} zobrazuje u každého pravidla zda bylo porušeno a jaká byla maximální závažnost porušení tohoto pravidla.
+
+\begin{enumerate}
+ \item Viditelnost stavu systému -- 
+ \item Spojení systému a reálného světa -- 
+ \item Uživatelská kontrola a volnost -- 
+ \item Konzistence a standardizace -- 
+ \item Předcházení chyb -- 
+ \item Rozpoznání místo vzpomínání -- 
+ \item Flexibilita a efektivita použití -- 
+ \item Estetika a minimalismus -- 
+ \item Pomoci uživatelům rozpoznat, pochopit a vzpamatovat se z~chyb -- 
+ \item Nápověda a dokumentace -- 
+\end{enumerate}
+
+\begin{table}[h] \centering
+\begin{tabular}{ l | c | c |}
+ Bod & Rozpor & Max. závažnost\\
+\hline
+ 1 & \NOK & - \\
+ 2 & \NOK   & - \\
+ 3 & \NOK & - \\
+ 4 & \NOK & - \\
+ 5 & \NOK & - \\
+ 6 & \NOK & - \\
+ 7 & \NOK & - \\
+ 8 & \NOK & - \\
+ 9 & \NOK & - \\
+ 10 & \NOK & - \\
+\end{tabular}
+\caption[Závažnosti prorušení pravidel]{Závažnosti prorušení pravidel}\label{tab:heu_eval_2}
+\end{table}
+
 \section{Uživatelské testování}
+Uživatelské testování proběhlo ihned po heuristické analýze. Testováni byli celkem čtyři uživatelé, kteří byly rozděleni na dvě skupiny -- ti, co mají znalosti v oboru letectví a ostatní. U všech uživatelů bylo podmínkou používání operačního systému iOS po dobu alespoň dvou let. Všichni uživatelé dostaly stejné otázky před začátkem testování, stejné scénáře a stejný závěrečný dotazník. Skupině uživatelů, která neměla znalosti v leteckém oboru, byly nejprve vysvětleny základní informace nutné k plynulému absolvování testů.
+
+Všechny testy byly nahrávány z důvodu možné zpětné analýzy nedostatků aplikace. Všechny nahrávky testů jsou k nalezení v příloze této magisterské práce.
+
+Před samotným testováním byli uživatelé seznámeni s testovacími scénáři (z důvodu vysvětlení nejasností) a odpovídali na několik otázek. Dále byli vyzvání ke komentování svých myšlenek v průběhu testování a také byli ujištěni o tom, že pokud cokoliv nepůjde, tak to není jejich chyba, ale chyba aplikace.
+
+\subsection{Základní otázky na testované uživatele}
+\begin{enumerate}
+\item Jak dlouho používáte iOS?
+\item Jaké zařízeni od Applu máte?
+\item Jste právě teď přihlášeni do účtu iCloud?
+\item Je toto Vaše první uživatelské testování?
+\end{enumerate}
+
+\subsection{Scénáře}
+Testovací scénáře byly lehce upraveny a rozšířeny oproti scénářům použitým na otestování návrhu uživatelského rozhraní.
+
+\begin{enumerate}
+\item Právě jste dokončil(a) svůj první let z Brna do Prahy. Z Brna jste odlétal(a) v 7:00 a do Prahy jste přiletěl(a) v 8:45, neměl(a) jste žádné mezipřistání. Celou doby jste zastával(a) funkci vedoucího pilota a letěl(a) jste letadlem Boeing. Zaznamenejte svůj let.
+\item Zjistil(a) jste, že jste u minulého záznamu chybně zaznamenal(a) čas. Upravte tedy čas příletu do Prahy na 7:45.
+\item Chcete si přidat další záznam, tentokrát z výcvikového zařízení. Zadejte dnešní datum, čas na zařízení dvě hodiny.
+\item Zadejte do aplikace další dva záznamy. Vyplňované hodnoty jsou na Vás, pouze datum specifikujte na minulý týden.
+\item Pokuste se vyfiltrovat záznamy tak, aby se Vám zobrazovaly pouze záznamy letů z minulého týdne.
+\item Jeden ze záznamů z minulého kroku smažte.
+\item Vyplňte si osobní informace (nemusí být pravdivé).
+\item U letadla Boeing z prvního kroku chcete změnit model. Proveďte tuto úpravu.
+\item Za poslední tři týdny jste absolvoval(a) mnoho letů, zkontrolujte, zda jste nepřekročil(a) jeden z limitů.
+\item Zjistěte kolik jste celkově nalétal(a) s Vaším letadlem Boeing.
+\item Dnes Vám vydali zdravotní certifikát třídy jedna (Class 1). Vložte ho do aplikace.
+\item Vytvořte report ze všech záznamů letů i záznamů z výcvikového zařízení za posledních čtrnáct dní a odešlete si tento report na email.
+\end{enumerate}
+
+\subsection{Závěrečný dotazník}
+%seq + sus
+%vlastni hodnoceni kazdeho scenare kazdeho uzivatele (1-5)
+
+\subsection{Výsledky testů}
 
 \section{Postupy FRP v aplikaci}
 \section{Zhodnocení MVVM a FRP}
