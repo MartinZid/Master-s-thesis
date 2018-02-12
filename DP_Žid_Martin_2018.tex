@@ -29,6 +29,40 @@
 \newcommand{\tg}{\mathop{\mathrm{tg}}} %cesky tangens
 \newcommand{\cotg}{\mathop{\mathrm{cotg}}} %cesky cotangens
 
+\usepackage{xcolor}
+\usepackage{listings}
+\lstdefinelanguage{swift}
+{
+  morekeywords={
+    func,if,then,else,for,in,while,do,switch,case,default,where,break,continue,fallthrough,return,
+    typealias,struct,class,enum,protocol,var,func,let,get,set,willSet,didSet,inout,init,deinit,extension,
+    subscript,prefix,operator,infix,postfix,precedence,associativity,left,right,none,convenience,dynamic,
+    final,lazy,mutating,nonmutating,optional,override,required,static,unowned,safe,weak,internal,
+    private,public,is,as,self,unsafe,dynamicType,true,false,nil,Type,Protocol,
+  },
+  morecomment=[l]{//}, % l is for line comment
+  morecomment=[s]{/*}{*/}, % s is for start and end delimiter
+  morestring=[b]" % defines that strings are enclosed in double quotes
+}
+
+\definecolor{keyword}{HTML}{BA2CA3}
+\definecolor{string}{HTML}{D12F1B}
+\definecolor{comment}{HTML}{008400}
+
+\lstset{
+  language=swift,
+  basicstyle=\ttfamily,
+  showstringspaces=false, % lets spaces in strings appear as real spaces
+  columns=fixed,
+  keepspaces=true,
+  keywordstyle=\color{keyword},
+  stringstyle=\color{string},
+  commentstyle=\color{comment},
+}
+
+
+
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % ODTUD DAL VSE ZMENTE
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -722,9 +756,36 @@ Swift je objektově orientovaný open-source jazyk. Mezi jeho hlavní přednosti
 \item podpora protokolů a tzv. extension (rozšíření již existujících tříd). \cite{swift}
 \end{itemize}
 
-Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku 2014 a nyní je nejnovější verzí Swift 4. Právě v této verzi byla implementována aplikace v rámci této magisterské práce.\cite{swift2}
+Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku 2014 a nyní je nejnovější verzí Swift 4. Právě v této verzi byla implementována aplikace v rámci této magisterské práce. \cite{swift2}
 
-	\subsection{Optional}
+V této kapitole jsou dále rozebírány některé funkcionality a vlastnosti jazyka Swift společně s ukázkami kódu z vytvářené aplikace.
+
+\subsection{Optional}
+Swift je tzv. typově bezpečný jazyk, což zaručuje to, že daná proměnná bude mít vždy stejný typ. Tedy např. pokud náš kód vyžaduje $String$ není možné zadat $Int$. 
+Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné musí být vždy inicializované před použitím a objekty nikdy nemohou být $nil$. Pro práci s hodnotami jsou ve Swiftu zavedeny tzv. $Optinals$.
+
+$Optinal$ je jakýsi obal (wrapper) klasických typů ($String$, $Int$, $Double$ apod.), který reprezentuje dvě možnosti: hodnota je nastavena a je tedy možné tzv. $unwrap$ $optinal$ a tím získat danou hodnotu, nebo hodnota není nastavena (jedná se o $nil$).
+
+Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné, kde otazník indikuje $optinal$ hodnotu uvnitř proměnné. Následně je ve funkci $save$ použito pro $unwrap$ proměnné tzv. $optional$ $binding$. To zpřístupní hodnotu $optional$ proměnné (pokud byla hodnota nastavena) v podobě dočasné konstanty. V případě, že je hodnota předána dočasné proměnné, můžeme k ní přistupovat klasicky a v našem případě delegovat funkci $save$.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Příklad práce s Optinal},label={lst:optinal}]
+// optinal variable initialization
+var delegate: NoteViewControllerDelegate? = nil
+...
+private func save(note: String) {
+   // optional variable unwarpping using optional binding
+   if let unwappedDelegate = delegate {
+      unwappedDelegate.save(note: note)
+   }
+   ...
+}
+
+\end{lstlisting}
+\end{minipage}
+\end{figure}
+
 
 	\subsection{Extension}
 	
@@ -737,6 +798,8 @@ Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku
 \section{Realm}
 
 	\subsection{Přihlašování}
+	
+	\subsection{Model}
 
 \section{Unit testy}
 
