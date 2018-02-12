@@ -273,4 +273,9 @@ Welcome to Swift.org. \emph{Swift} [online]. California, U.S.: Apple Inc., ©
   2018, {[cit. 2018-02-01]}.
 \urlprefix\biburl{https://swift.org/}
 
+\bibitem{sus}
+Measuring Usability With The System Usability Scale (SUS). \emph{MeasuringU}
+  [online]. Measuring Usability LLC, © 2004-2017, {[cit. 2018-02-12]}.
+\urlprefix\biburl{https://measuringu.com/sus/}
+
 \end{thebibliography}

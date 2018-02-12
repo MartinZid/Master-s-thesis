@@ -80,13 +80,14 @@
 \contentsline {section}{\numberline {5.7}Generov\IeC {\'a}n\IeC {\'\i } PDF}{36}{section.5.7}
 \contentsline {section}{\numberline {5.8}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{36}{section.5.8}
 \contentsline {section}{\numberline {5.9}Heuristick\IeC {\'a} anal\IeC {\'y}za}{36}{section.5.9}
-\contentsline {section}{\numberline {5.10}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{37}{section.5.10}
-\contentsline {subsection}{\numberline {5.10.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{37}{subsection.5.10.1}
-\contentsline {subsection}{\numberline {5.10.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{38}{subsection.5.10.2}
-\contentsline {subsection}{\numberline {5.10.3}Proveden\IeC {\'e} zm\IeC {\v e}ny}{38}{subsection.5.10.3}
-\contentsline {section}{\numberline {5.11}Postupy FRP v aplikaci}{38}{section.5.11}
-\contentsline {section}{\numberline {5.12}Zhodnocen\IeC {\'\i } MVVM a FRP}{38}{section.5.12}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{39}{chapter*.6}
-\contentsline {chapter}{Literatura}{41}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{47}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{49}{appendix.B}
+\contentsline {section}{\numberline {5.10}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{38}{section.5.10}
+\contentsline {subsection}{\numberline {5.10.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{39}{subsection.5.10.1}
+\contentsline {subsection}{\numberline {5.10.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{39}{subsection.5.10.2}
+\contentsline {subsection}{\numberline {5.10.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{40}{subsection.5.10.3}
+\contentsline {subsection}{\numberline {5.10.4}V\IeC {\'y}sledky test\IeC {\r u}}{41}{subsection.5.10.4}
+\contentsline {section}{\numberline {5.11}Postupy FRP v aplikaci}{41}{section.5.11}
+\contentsline {section}{\numberline {5.12}Zhodnocen\IeC {\'\i } MVVM a FRP}{41}{section.5.12}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{43}{chapter*.6}
+\contentsline {chapter}{Literatura}{45}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{51}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{53}{appendix.B}

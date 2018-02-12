@@ -286,8 +286,7 @@ Každý záznam letů by měl obsahovat minimálně tyto informace:
 \subsection{Limity}
 Limity letového času a času ve službě obsahuje předpis ORO.FTL.210.
 
-\uv{
-Celková doba služby, na kterou může být člen posádky přidělen, nesmí překročit:
+\uv{Celková doba služby, na kterou může být člen posádky přidělen, nesmí překročit:
 \begin{enumerate}
 \item 60 hodin služby za 7 po sobě jdoucích dnů;
 \item 110 hodin služby za 14 po sobě jdoucích dnů; a 
@@ -748,34 +747,124 @@ Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku
 \section{Použité nástroje při vývoji}
 
 \section{Heuristická analýza}
-Heuristická analýza byla provedena znovu poté, co byla aplikace implementována do stavu tzv. beta verze. I tato heuristická analýze byla prováděna podle pravidel Jakoba Nielsena a nyní již bylo zohledněno všech deset pravidel. Všechny nalezené chyby byly, stejně jako u předchozí heuristické analýzy, ohodnoceny na stupnici 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. U všech nalezených problémů je také uvedeno řešení, pomocí kterého byly chyby opraveny. Nakonec tabulka \ref{tab:heu_eval_2} zobrazuje u každého pravidla zda bylo porušeno a jaká byla maximální závažnost porušení tohoto pravidla.
+Heuristická analýza byla provedena znovu poté, co byla aplikace implementována do stavu tzv. beta verze aplikace. I tato heuristická analýze byla prováděna podle pravidel Jakoba Nielsena a nyní již bylo zohledněno všech deset pravidel. Všechny nalezené chyby, stejně jako u předchozí heuristické analýzy, byly ohodnoceny na stupnici 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. U všech nalezených problémů je také uvedeno řešení, pomocí kterého byly chyby opraveny. Nakonec tabulka \ref{tab:heu_eval_2} zobrazuje u každého pravidla, zda bylo porušeno a jaká byla maximální závažnost porušení tohoto pravidla.
 
 \begin{enumerate}
- \item Viditelnost stavu systému -- 
- \item Spojení systému a reálného světa -- 
- \item Uživatelská kontrola a volnost -- 
- \item Konzistence a standardizace -- 
- \item Předcházení chyb -- 
- \item Rozpoznání místo vzpomínání -- 
- \item Flexibilita a efektivita použití -- 
- \item Estetika a minimalismus -- 
- \item Pomoci uživatelům rozpoznat, pochopit a vzpamatovat se z~chyb -- 
- \item Nápověda a dokumentace -- 
+
+\item Viditelnost stavu systému -- 
+\begin{itemize}
+	\item Uživatel není explicitně informován o tom, že jsou záznamy filtrovány.
+ 	\begin{itemize}
+ 		\item Závažnost problému -- 4.
+ 		\item Řešení -- přidání informující záložky, která umožňuje i zrušení filtrování.
+ 	\end{itemize}
+ 	\item Pokud neexistují žádné záznamy letů (ze simulátoru) nebo letadel, uživateli je zobrazena pouze prázdná tabulka.
+ 	\begin{itemize}
+ 		\item Závažnost problému -- 3.
+ 		\item Řešení -- přidání zprávy, která bude informovat uživatele, že žádné záznamy (letů, ze simulátoru a letadel) neexistují.
+ 	\end{itemize}
+ 	\item Pokud parametrům filtrování neodpovídají žádné záznamy, je uživateli zobrazena prázdná tabulka.
+ 	\begin{itemize}
+ 		\item Závažnost problému -- 2.
+ 		\item Řešení -- přidání zprávy informující uživatele o tom, že parametrům filtrování neodpovídají žádné záznamy. 	
+ 	\end{itemize}
+ 	\item Uživatel není informován o úspěšném přidání záznamu/letadla.
+ 	\begin{itemize}
+ 		\item Závažnost -- 2.
+ 		\item Řešení -- po přidání záznamu/letadla bude uživateli zobrazena hláška o úspěšném přidání.
+ 	\end{itemize}
+ 	\item Prvotní přihlášení uživatele a generování PDF může trvat delší dobu.
+ 	\begin{itemize}
+ 		\item Závažnost -- 3.
+ 		\item Řešení -- uživatel je informován o tom, že aplikace pracuje pomocí tzv. spinner. 
+ 	\end{itemize}
+\end{itemize}
+ 
+\item Spojení systému a reálného světa -- 
+\begin{itemize}
+ 	\item Název \uv{Limity} je příliš obecný.
+ 	\begin{itemize}
+ 		\item Závažnost -- 1.
+ 		\item Řešení -- přejmenování \uv{Limity} na \uv{Limity nalétaných hodin}.
+ 	\end{itemize}
+ 	\item Popis \uv{Typ} při přidávání/upravě záznamu ze simulátoru nemusí jasně specifikovat, že se má jednat o typ simulátoru (zařízení).
+ 	\begin{itemize}
+ 		\item Závažnost -- 2.
+ 		\item Řešení -- přejmenování popisu \uv{Typ} na \uv{Typ zařízení}.
+ 	\end{itemize}
+\end{itemize}
+ 
+ 
+\item Uživatelská kontrola a volnost -- 
+\begin{itemize}
+	\item Smazání záznamu nebo letadla je definitivní.
+	\begin{itemize}
+		\item Závažnost problému -- 4.
+		\item Řešení -- podpora funkce vrácení zpět (tzv. undo).
+	\end{itemize}
+\end{itemize}
+ 
+\item Konzistence a standardizace -- 
+\begin{itemize}
+ 	\item Nebyl nalezen problém.
+\end{itemize}
+ 
+\item Předcházení chyb -- 
+\begin{itemize}
+ 	\item Uživatel může omylem smazat záznam nebo letadlo.
+ 	\begin{itemize}
+ 		\item Závažnost -- 4.
+ 		\item Řešení -- zobrazení dialogového okna s potvrzením uživatelovi akce.
+ 	\end{itemize}
+\end{itemize}
+ 
+\item Rozpoznání místo vzpomínání -- 
+\begin{itemize}
+ 	\item Nebyl nalezen problém.
+\end{itemize}
+ 
+\item Flexibilita a efektivita použití -- 
+\begin{itemize}
+ 	\item Nebyl nalezen problém.
+\end{itemize}
+ 
+\item Estetika a minimalismus --
+\begin{itemize}
+\item Při nastavování filtrování se uživateli zbytečně zobrazují položky \uv{Typ letadla} a \uv{Letadlo} pokud uživatel vyhledává pouze záznamy ze simulátoru.
+\begin{itemize}
+	\item Závažnost -- 3.
+	\item Řešení -- skrývání zbytečných položek při specifickém nastavení filtrování.
+\end{itemize}
+\end{itemize}  
+  
+\item Pomoci uživatelům rozpoznat, pochopit a vzpamatovat se z~chyb -- 
+\begin{itemize}
+\item Uživatel není informován o tom, že se nepodařilo přihlásit pomocí jeho iCloud účtu.
+\begin{itemize}
+	\item Závažnost -- 4.
+	\item Řešení -- zobrazení chybové hlášky informující uživatele o chybě a poskytující informace dostatečné  k tomu, aby se uživatel z chyby vzpamatoval.
+\end{itemize}
+\end{itemize}
+
+\item Nápověda a dokumentace -- 
+\begin{itemize}
+ 	\item Nebyl nalezen problém při zohlednění cílové skupiny uživatelů.
+\end{itemize}
 \end{enumerate}
 
 \begin{table}[h] \centering
 \begin{tabular}{ l | c | c |}
  Bod & Rozpor & Max. závažnost\\
 \hline
- 1 & \NOK & - \\
- 2 & \NOK   & - \\
- 3 & \NOK & - \\
+ 1 & \OK & 4 \\
+ 2 & \OK & 2 \\
+ 3 & \OK & 4 \\
  4 & \NOK & - \\
- 5 & \NOK & - \\
+ 5 & \OK & 4 \\
  6 & \NOK & - \\
  7 & \NOK & - \\
- 8 & \NOK & - \\
- 9 & \NOK & - \\
+ 8 & \OK & 3 \\
+ 9 & \OK & 4 \\
  10 & \NOK & - \\
 \end{tabular}
 \caption[Závažnosti prorušení pravidel]{Závažnosti prorušení pravidel}\label{tab:heu_eval_2}
@@ -784,7 +873,7 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
 \section{Uživatelské testování}
 Uživatelské testování proběhlo ihned po heuristické analýze. Testováni byli celkem čtyři uživatelé, kteří byly rozděleni na dvě skupiny -- ti, co mají znalosti v oboru letectví a ostatní. U všech uživatelů bylo podmínkou používání operačního systému iOS po dobu alespoň dvou let. Všichni uživatelé dostaly stejné otázky před začátkem testování, stejné scénáře a stejný závěrečný dotazník. Skupině uživatelů, která neměla znalosti v leteckém oboru, byly nejprve vysvětleny základní informace nutné k plynulému absolvování testů.
 
-Všechny testy byly nahrávány z důvodu možné zpětné analýzy nedostatků aplikace. Všechny nahrávky testů jsou k nalezení v příloze této magisterské práce.
+Všechny testy byly nahrávány z důvodu možné zpětné analýzy nedostatků aplikace. Všechny nahrávky testů společně s vyplněnými dotazníky jsou k nalezení v příloze této magisterské práce.
 
 Před samotným testováním byli uživatelé seznámeni s testovacími scénáři (z důvodu vysvětlení nejasností) a odpovídali na několik otázek. Dále byli vyzvání ke komentování svých myšlenek v průběhu testování a také byli ujištěni o tom, že pokud cokoliv nepůjde, tak to není jejich chyba, ale chyba aplikace.
 
@@ -815,10 +904,47 @@ Testovací scénáře byly lehce upraveny a rozšířeny oproti scénářům pou
 \end{enumerate}
 
 \subsection{Závěrečný dotazník}
-%seq + sus
-%vlastni hodnoceni kazdeho scenare kazdeho uzivatele (1-5)
+Jako závěrečný dotazník byl zvolen SUS -- \uv{System Usability Scale}, který se používá pro měření uživatelského vnímání použitelnosti produktu. SUS obsahuje deset otázek:
+\begin{enumerate}
+ \item \uv{rád bych používal systém opakovaně,
+ \item systém je zbytečně složitý,
+ \item systém se snadno používá,
+ \item potřeboval bych pomoc od člověka z~technické podpory, abych mohl systém používat,
+ \item různé funkce systému jsou dobře zakomponované,
+ \item systém je nekonzistentní,
+ \item myslím si, že se většina lidí se se systémem rychle naučí,
+ \item systém se těžko ovládá,
+ \item jsem si jistý(á) při používání tohoto systému,
+ \item potřebuji se naučit mnoho věcí, než začnu používat tento systém} (překlad vlastní).
+\end{enumerate}
+Ke každé otázce je odpověď s~výběrem z~pěti možností. Odpovědi jsou ohodnoceny 1--5, kde 1 představuje silný nesouhlas a 5 silný souhlas. \cite{sus}
 
 \subsection{Výsledky testů}
+Tabulka \ref{tab:ut_eval} zobrazuje hodnocení splnění scénářů u jednotlivých uživatelů. Hodnocení bylo znovu v rozsahu 1 až 5, kde 1 představuje bezproblémové splnění a 5 nedokončení scénáře.
+%z tabulky je mozne videt, ze
+%provedene upravy
+
+\begin{table}\centering
+ \begin{tabular}{ c | c | c | c | c |}
+ 	 & Uživatel 1 & Uživatel 2 & Uživatel 3 & Uživatel 4 \\
+ 	\hline
+ 	Úloha 1  & - & - & - & -\\
+ 	Úloha 2  & - & - & - & - \\
+ 	Úloha 3  & - & - & - & -\\
+ 	Úloha 4  & - & - & - & -\\
+ 	Úloha 5  & - & - & - & -\\
+ 	Úloha 6  & - & - & - & -\\
+ 	Úloha 7  & - & - & - & -\\
+ 	Úloha 8  & - & - & - & -\\
+ 	Úloha 9  & - & - & - & -\\
+ 	Úloha 10 & - & - & - & -\\
+ 	Úloha 11 & - & - & - & -\\
+ 	Úloha 12 & - & - & - & -\\
+ 	Úloha 13 & - & - & - & -\\
+ \end{tabular}
+ \caption[Hodnocení splnění jednotlivých scénářů]{Hodnocení splnění jednotlivých scénářů}\label{tab:ut_eval}
+\end{table}
+
 
 \section{Postupy FRP v aplikaci}
 \section{Zhodnocení MVVM a FRP}
@@ -853,6 +979,7 @@ Testovací scénáře byly lehce upraveny a rozšířeny oproti scénářům pou
 	\item[SPL] Sailplane Pilot Licence
 	\item[BPL] Balloon Pilot Licence
 	\item[PPL] Private Pilot Licence
+	\item[SUS] System Usability Scale
 \end{description}
 
 
