@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  12 FEB 2018 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  16 FEB 2018 20:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1360,17 +1360,28 @@ Overfull \hbox (24.2179pt too wide) in paragraph at lines 778--779
 ][][][][][] 
  []
 
+[36]
+Overfull \hbox (44.91357pt too wide) in paragraph at lines 809--810
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 817--818
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 826--827
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36]
-[37] [38]
+ [37]
+[38] [39] [40] [41] [42] [43] [44
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[39] [40] [41] [42] (./DP_Žid_Martin_2018.bbl [43
-
-] [44
+] (./DP_Žid_Martin_2018.bbl [45] [46
 
 ]
 bibitemlist
@@ -1431,7 +1442,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
 tecture / MVC _
  []
 
-[45]
+[47]
 Underfull \hbox (badness 10000) in paragraph at lines 61--64
 []\T1/lmr/m/n/10.95 Model-View-Controller. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-p
 er \T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia,
@@ -1517,7 +1528,7 @@ Underfull \hbox (badness 1052) in paragraph at lines 110--113
  / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
  []
 
-[46]
+[48]
 Underfull \hbox (badness 1052) in paragraph at lines 115--118
 \T1/lmr/m/n/10.95 [cit. 2017-09-01]. Do-stupn� z: []$\T1/lmtt/m/n/10.95 https :
  / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
@@ -1580,7 +1591,7 @@ Underfull \hbox (badness 5446) in paragraph at lines 148--151
 rary / content / documentation /
  []
 
-[47]
+[49]
 Underfull \hbox (badness 6016) in paragraph at lines 173--176
 \T1/lmr/m/n/10.95 Ap-ple Inc., [] 2017, [cit. 2017-09-16]. Do-stupn� z: []$\T1/
 lmtt/m/n/10.95 https : / /
@@ -1637,7 +1648,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--215
 -[] aviation -[] flight -[]
  []
 
-[48]
+[50]
 Underfull \hbox (badness 5519) in paragraph at lines 242--245
 []\T1/lmr/m/n/10.95 What is wi-refra-ming? \T1/lmr/m/it/10.95 Ex-pe-ri-en-ceux 
 \T1/lmr/m/n/10.95 [on-line]. Bour-nemouth: Ex-
@@ -1674,11 +1685,29 @@ group\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / articles / how -[] to -[] co
 nduct -[] a -[] heuristic -[]
  []
 
-[49]) [50] [51
 
-] [52
+Underfull \hbox (badness 10000) in paragraph at lines 277--280
+\T1/lmtt/m/n/10.95 library / content / documentation / Swift / Conceptual / Swi
+ft _
+ []
 
-] [53]
+[51]
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
+\T1/lmtt/m/n/10.95 library / content / documentation / Swift / Conceptual / Swi
+ft _
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--290
+\T1/lmtt/m/n/10.95 library / content / documentation / Swift / Conceptual / Swi
+ft _
+ []
+
+) [52] [53
+
+] [54
+
+] [55]
 \tf@toc=\write5
 \openout5 = `DP_Žid_Martin_2018.toc'.
 
@@ -1688,11 +1717,11 @@ nduct -[] a -[] heuristic -[]
 \tf@lot=\write7
 \openout7 = `DP_Žid_Martin_2018.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1172.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1172.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1220.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1220.
  (./DP_Žid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1172.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1172.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1220.
 
 Package rerunfilecheck Info: File `DP_Žid_Martin_2018.out' has not changed.
 (rerunfilecheck)             Checksum: C9879F9657323DC262BA00DD6EEA99C9;5054.
@@ -1703,13 +1732,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1172.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1220.
  ) 
 Here is how much of TeX's memory you used:
- 16124 strings out of 492995
- 221185 string characters out of 6132704
- 371078 words of memory out of 5000000
- 19159 multiletter control sequences out of 15000+600000
+ 16197 strings out of 492995
+ 222231 string characters out of 6132704
+ 381240 words of memory out of 5000000
+ 19197 multiletter control sequences out of 15000+600000
  82647 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,40p,1104b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1729,10 +1758,10 @@ mri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pf
 b></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
 cal/texlive/2017/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
 e/2017/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_Žid_Martin_2018.pdf (69 pages, 1549133 bytes).
+Output written on DP_Žid_Martin_2018.pdf (71 pages, 1555703 bytes).
 PDF statistics:
- 1054 PDF objects out of 1200 (max. 8388607)
- 939 compressed objects within 10 object streams
- 334 named destinations out of 1000 (max. 500000)
+ 1115 PDF objects out of 1200 (max. 8388607)
+ 998 compressed objects within 10 object streams
+ 369 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -764,7 +764,7 @@ V této kapitole jsou dále rozebírány některé funkcionality a vlastnosti ja
 Swift je tzv. typově bezpečný jazyk, což zaručuje to, že daná proměnná bude mít vždy stejný typ. Tedy např. pokud náš kód vyžaduje $String$ není možné zadat $Int$. 
 Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné musí být vždy inicializované před použitím a objekty nikdy nemohou být $nil$. Pro práci s hodnotami jsou ve Swiftu zavedeny tzv. $Optinals$.
 
-$Optinal$ je jakýsi obal (wrapper) klasických typů ($String$, $Int$, $Double$ apod.), který reprezentuje dvě možnosti: hodnota je nastavena a je tedy možné tzv. $unwrap$ $optinal$ a tím získat danou hodnotu, nebo hodnota není nastavena (jedná se o $nil$).
+$Optinal$ je jakýsi obal (wrapper) klasických typů ($String$, $Int$, $Double$ apod.), který reprezentuje dvě možnosti: hodnota je nastavena a je tedy možné tzv. $unwrap$ $optinal$ a tím získat danou hodnotu, nebo hodnota není nastavena (jedná se o $nil$). \cite{devBasics}
 
 Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné, kde otazník indikuje $optinal$ hodnotu uvnitř proměnné. Následně je ve funkci $save$ použito pro $unwrap$ proměnné tzv. $optional$ $binding$. To zpřístupní hodnotu $optional$ proměnné (pokud byla hodnota nastavena) v podobě dočasné konstanty. V případě, že je hodnota předána dočasné proměnné, můžeme k ní přistupovat klasicky a v našem případě delegovat funkci $save$.
 
@@ -787,9 +787,58 @@ private func save(note: String) {
 \end{figure}
 
 
-	\subsection{Extension}
+\subsection{Extensions}
+Extension, neboli rozšíření, je klíčové slovo v jazyce Swift, které umožňuje přidat novou funkcionalitu nebo atributy k již existující třídě, struktuře, protokolu apod. Toto zahrnuje i třídy, u kterých není možné upravit jejich zdrojový kód, tedy např. třídy UIKit.
+
+Extensions umožňují: 
+\begin{itemize}
+	\item definovat nové metody,
+	\item přidat konstruktory, 
+	\item upravit typ tak, aby splňoval daný protokol a další. \cite{devExtensions}
+\end{itemize}
+
+Ukázka \ref{lst:extension} předvádí rozšíření třídy $UITableViewController$ o novou generickou metodu. Tato metoda je použita u dynamických tabulek zobrazujících data z Realmu. Díky principů FRP může tabulka jednoduše podporovat např. smazání záznamu, protože je neustále pozorován $Signal$ se změnami a podle změn jsou následně provedeny vhodné animace na straně $UITableView$.
+
+Dalšího klíčového slova, kterého je možné si v ukázce všimnout je $guard$. $Guard$ je možné vnímat podobně jako tzv. assert. Tedy zadáváme podmínku, u které chce aby byla splněna, pokud splněna není dostáváme se do povinné $else$ větve. Klíčové slovo $guard$ je jednou z možností pro $unwrap$ $optional$ proměnné a také zamezuje několikanásobné podmínce $if-else$ (ve složitějších případech), čímž dochází k zpřehlednění kódu. \cite{devGuard}
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka Extension},label={lst:extension}]
+extension UITableViewController {
+    func observeSignalForTableDataChanges<T>(
+      with signal: Signal<RealmCollectionChange<Results<T>>,
+      NoError>) {
+      signal.observeValues{ [weak self] changes in
+         guard let tableView = self?.tableView
+            else { return }
+         switch changes {
+         case .initial:
+            tableView.reloadData()
+         case .update(_, let deletions, let insertions,
+                     let modifications):
+            tableView.beginUpdates()
+            tableView.insertRows(at: insertions.map
+               ({ IndexPath(row: $0, section: 0) }),
+               with: .automatic)
+            tableView.deleteRows(at: deletions.map
+               ({ IndexPath(row: $0, section: 0)}),
+               with: .automatic)
+            tableView.reloadRows(at: modifications.map
+               ({ IndexPath(row: $0, section: 0) }),
+               with: .automatic)
+            tableView.endUpdates()
+         case .error(let error):
+            fatalError("\(error)")
+         }
+      }
+   }
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}
 	
 	\subsection{Protocoly}
+	\subsection{Closures}
 	
 \section{Tvorba UI}
 

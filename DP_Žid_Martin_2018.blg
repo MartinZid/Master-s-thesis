@@ -44,47 +44,50 @@ Warning--to sort, need author or key in SafelogPrices
 Warning--to sort, need author or key in nngWireframe
 Warning--to sort, need author or key in exux
 Warning--to sort, need author or key in swift2
+Warning--to sort, need author or key in devBasics
+Warning--to sort, need author or key in devExtensions
+Warning--to sort, need author or key in devGuard
 Warning--to sort, need author or key in sus
 Warning--empty pages in Ztaltz2014
-You've used 53 entries,
+You've used 56 entries,
             3185 wiz_defined-function locations,
-            952 strings with 13946 characters,
-and the built_in function-call counts, 14520 in all, are:
-= -- 991
-> -- 139
+            966 strings with 14420 characters,
+and the built_in function-call counts, 15281 in all, are:
+= -- 1045
+> -- 142
 < -- 0
-+ -- 88
++ -- 92
 - -- 28
-* -- 704
-:= -- 1280
-add.period$ -- 106
-call.type$ -- 53
-change.case$ -- 122
+* -- 740
+:= -- 1337
+add.period$ -- 112
+call.type$ -- 56
+change.case$ -- 128
 chr.to.int$ -- 0
-cite$ -- 95
-duplicate$ -- 1609
-empty$ -- 1801
+cite$ -- 101
+duplicate$ -- 1693
+empty$ -- 1900
 format.name$ -- 30
-if$ -- 3285
+if$ -- 3462
 int.to.chr$ -- 0
-int.to.str$ -- 53
-missing$ -- 362
-newline$ -- 221
+int.to.str$ -- 56
+missing$ -- 380
+newline$ -- 233
 num.names$ -- 24
-pop$ -- 950
+pop$ -- 1001
 preamble$ -- 1
-purify$ -- 120
+purify$ -- 126
 quote$ -- 0
-skip$ -- 628
+skip$ -- 664
 stack$ -- 0
-substring$ -- 366
-swap$ -- 641
+substring$ -- 388
+swap$ -- 674
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 208
-warning$ -- 42
+type$ -- 220
+warning$ -- 45
 while$ -- 24
-width$ -- 55
-write$ -- 494
-(There were 42 warnings)
+width$ -- 58
+write$ -- 521
+(There were 45 warnings)

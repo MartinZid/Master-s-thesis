@@ -507,6 +507,44 @@
   URL = {https://measuringu.com/sus/},
   note = "{[cit. 2018-02-12]}"
 }
+@misc{devBasics,
+  journal = {Apple Developer},
+  title = {The Basics},
+  publisher = {Apple Inc.},
+  howpublished = {\emph{Apple Developer} [online]. California, U.S.: Apple Inc.},
+  address = {California, U.S},
+  year = {© 2018},
+  medium = {online},
+  accessed = {2018-02-16},
+  URL = {https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/TheBasics.html},
+  note = "{[cit. 2018-02-16]}"
+}
+@misc{devExtensions,
+  journal = {Apple Developer},
+  title = {Extensions},
+  publisher = {Apple Inc.},
+  howpublished = {\emph{Apple Developer} [online]. California, U.S.: Apple Inc.},
+  address = {California, U.S},
+  year = {© 2018},
+  medium = {online},
+  accessed = {2018-02-16},
+  URL = {https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Extensions.html},
+  note = "{[cit. 2018-02-16]}"
+}
+@misc{devGuard,
+  journal = {Apple Developer},
+  title = {Statements},
+  publisher = {Apple Inc.},
+  howpublished = {\emph{Apple Developer} [online]. California, U.S.: Apple Inc.},
+  address = {California, U.S},
+  year = {© 2018},
+  medium = {online},
+  accessed = {2018-02-16},
+  URL = {https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Statements.html},
+  note = "{[cit. 2018-02-16]}"
+}
+
+
 
 
 
