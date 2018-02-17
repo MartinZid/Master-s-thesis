@@ -837,7 +837,71 @@ extension UITableViewController {
 \end{minipage}
 \end{figure}
 	
-	\subsection{Protocoly}
+\subsection{Protokoly}
+Protokoly představují ve Swiftu předpis metod, vlastností a dalších náležitostí, které jsou nutné pro splnění daných úloh. Podmínky protokolu mohou splňovat třídy, struktury a další tím, že poskytnou implementaci všech požadavků. \cite{devProtocol}
+
+V rámci implementace aplikace bylo definováno několik protokolů. Například v ukázce \ref{lst:optinal}, musel $delegate$ odpovídat protokolu\\ $NoteViewControllerDelegate$ a tedy mít implementovanou metodu $save$ (ukázka definování protokolu viz. \ref{lst:protocol}). Jak je možné vidět, protokol neurčuje jak má být metoda implementována, pouze určuje její definici.
+
+Princip delegování je v jazyce Swift velice častý. I mnoho tříd např. z UIKit vyžaduje pro podporu určitých funkcionalit splnění daného protokolu. Ukázka \ref{lst:pickerdelegate} ukazuje implementaci protokolu $UIPickerViewDelegate$\\ a $UIPickerViewDataSource$. Kdy po implementaci příslušných metod a nastavení $UITableViewController$ jako delegáta, je možné ve $View$ pracovat s komponentou $UIPickerView$.
+	
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Definice protokolu},label={lst:protocol}]
+protocol NoteViewControllerDelegate {
+   func save(note: String)
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}	
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Implementace protokolu},label={lst:pickerdelegate}]
+class AddMedicalCertificateViewController: 
+RecordTableViewController, 
+UIPickerViewDelegate, 
+UIPickerViewDataSource {
+
+   private let picker = UIPickerView()
+
+   override func viewDidLoad() {
+      picker.delegate = self
+   }
+
+   // MARK: - UIPickerViewDataSource
+
+   func numberOfComponents(in pickerView: UIPickerView) 
+       -> Int {
+      return 1
+   }
+
+   func pickerView(_ pickerView: UIPickerView, 
+         numberOfRowsInComponent component: Int) -> Int {
+      return viewModel.getTypesCount()
+   }
+
+   func pickerView(_ pickerView: UIPickerView, 
+         titleForRow row: Int, forComponent component: Int)
+       -> String? {
+      return viewModel.getType(for: row)
+   }
+
+   func pickerView(_ pickerView: UIPickerView, 
+         didSelectRow row: Int, 
+         inComponent component: Int) {
+      typeTextField.text = viewModel.getType(for: row)
+      viewModel.typeString.value = 
+         viewModel.getType(for: row)
+   }
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}	
+	
+\subsection{Automatické počítání referencí}
+Automatická správa paměti, jak už je řečeno dříve, je jednou z předností Swiftu. Tato správa je zajištěna metodou automatického počítání referencí. Toto počítání zajišťuje udržení reference dané instance pouze po dobu, co je opravdu potřebná. V době, kdy instanci není nutné udržovat (již neexistují žádné reference), dojde k uvolnění předem alokované paměti.
+
+Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, které zaručuje, že instance, na kterou reference ukazuje, nebude dealokována dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá pokud má instance v referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
 	
 \section{Tvorba UI}
 

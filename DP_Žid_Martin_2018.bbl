@@ -288,6 +288,16 @@ Statements. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
   2018, {[cit. 2018-02-16]}.
 \urlprefix\biburl{https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Statements.html}
 
+\bibitem{devProtocol}
+Protocols. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2018, {[cit. 2018-02-17]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Protocols.html}
+
+\bibitem{devMemory}
+Automatic Reference Counting. \emph{Apple Developer} [online]. California,
+  U.S.: Apple Inc., © 2018, {[cit. 2018-02-17]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html}
+
 \bibitem{sus}
 Measuring Usability With The System Usability Scale (SUS). \emph{MeasuringU}
   [online]. Measuring Usability LLC, © 2004-2017, {[cit. 2018-02-12]}.
