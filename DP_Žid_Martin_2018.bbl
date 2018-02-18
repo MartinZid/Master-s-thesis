@@ -92,6 +92,23 @@ Orlov, B.: VIPER. \emph{\emph{In:} Medium \emph{[online]}}, 2015, {[cit.
   2017-08-30]}.
 \urlprefix\biburl{https://cdn-images-1.medium.com/max/800/1*0pN3BNTXfwKbf08lhwutag.png}
 
+\bibitem{iOSUI}
+Bello, A.: IOS User Interfaces: Storyboards vs. NIBs vs. Custom Code.
+  \emph{Toptal Developers} [online]. Toptal, © 2010 - 2018, {[cit.
+  2018-02-18]}.
+\urlprefix\biburl{https://www.toptal.com/ios/ios-user-interfaces-storyboards-vs-nibs-vs-custom-code}
+
+\bibitem{SB}
+Storyboard. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2018, {[cit. 2018-02-18]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/General/Conceptual/Devpedia-CocoaApp/Storyboard.html}
+
+\bibitem{dominik}
+Veselý, D.: Programování uživatelského rozhraní na iOS v Ackee
+  (Storyboards vs. Xib vs. kód). \emph{Ackee} [online]. Praha: Ackee s. r. o.,
+  © 2018, {[cit. 2018-02-18]}.
+\urlprefix\biburl{https://www.ackee.cz/blog/programovani-uzivatelskeho-rozhrani-na-ios-v-ackee-storyboards-vs-xib-vs-kod/}
+
 \bibitem{nayebi2016swift}
 Nayebi, F.: \emph{Swift 3 Functional Programming}. Packt Publishing, 2016, ISBN
   9781785881619, 200--201 s.

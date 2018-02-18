@@ -231,6 +231,24 @@ Architekturu VIPER zobrazuje obrázek \ref{fig:viper} (převzato a přeloženo z
  \caption[VIPER architektura]{VIPER architektura}\label{fig:viper}
 \end{figure}
 
+\section{Tvorba UI}
+Při vývoji iOS aplikace existují tři možnosti, jak vytvořit uživatelské rozhraní -- $storyboard$, $Xib$ a kód. Každá z těchto možností má své výhody a nevýhody. \cite{iOSUI}
+
+\subsection{Storyboard}
+$Storyboard$ představuje grafickou reprezentaci uživatelského rozhraní -- zobrazuje jednotlivé obrazovky, jejich obsah a propojení těchto obrazovek. Xcode mají zabudovaný editor pro tvorbu a úpravu $storyboardu$ (viz. obrázek \ref{fig:SB}). Jednotlivé prvky jsou vkládány jednoduchým přetažením a je u nich možné upravit obsah, velikost, barvu a podobně, ihned v editoru. Tento editor také umožňuje propojení jednotlivých prvků a jejich akcí s kódem aplikace. \cite{SB}
+
+Mezi výhody $storyboarů$ patří rychlost tvorby uživatelské rozhraní, což zahrnuje i rychlou tvorbu prototypů aplikace. Dále vizuální zobrazení, nejen prvků, ale také propojení jednotlivých obrazovek, a to bez nutnosti kompilování aplikace. 
+
+Nevýhodou $storyboardů$ může být výkon při více nebo složitějších obrazovkách. Tento problém se však dá zredukovat rozdělením obrazovek do více $storyboard$ souborů. Další nevýhodou je problematické znovupoužití jednotlivých prvků (obrazovek) nebo komplikovaná práce v týmu způsobená složitým spojením změn při verzování (i tento problém řeší z části více souborů se $storyboardy$). \cite{iOSUI} \cite{dominik}
+
+\subsection{Xib}
+$Xib$ je starším přístupem pro tvorbu uživatelského rozhraní iOS aplikací než $storyboardy$, starší však neznamená zastaralý. Vytváří se jednoduché $view$ elementy stejným způsobem jako o $storyboardů$. Právě tato skutečnost přináší stejné výhody i problémy s tím rozdílem, že se jedná o drobnější prvky, což ulehčuje např. verzování, znovupoužitelnost nebo nezpůsobuje zpomalovaní Xcode. \cite{iOSUI} \cite{dominik}
+
+\begin{figure}[]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/storyboard}
+ \caption[Storyboard]{Storyboard (pouze ilustrační)}\label{fig:SB}
+\end{figure}
+
 \section{Funkcionálně reaktivní programování}
 Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za daný čas. \cite{nayebi2016swift}
 
@@ -902,8 +920,6 @@ UIPickerViewDataSource {
 Automatická správa paměti, jak už je řečeno dříve, je jednou z předností Swiftu. Tato správa je zajištěna metodou automatického počítání referencí. Toto počítání zajišťuje udržení reference dané instance pouze po dobu, co je opravdu potřebná. V době, kdy instanci není nutné udržovat (již neexistují žádné reference), dojde k uvolnění předem alokované paměti.
 
 Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, které zaručuje, že instance, na kterou reference ukazuje, nebude dealokována dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá pokud má instance v referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
-	
-\section{Tvorba UI}
 
 \section{Reactive Cocoa}
 
