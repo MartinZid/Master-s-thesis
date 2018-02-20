@@ -315,6 +315,18 @@ Automatic Reference Counting. \emph{Apple Developer} [online]. California,
   U.S.: Apple Inc., © 2018, {[cit. 2018-02-17]}.
 \urlprefix\biburl{https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html}
 
+\bibitem{signal}
+Signal. © 2018.
+\urlprefix\biburl{http://reactivecocoa.io/reactiveswift/docs/latest/Classes/Signal.html}
+
+\bibitem{signalProducer}
+SignalProducer. © 2018.
+\urlprefix\biburl{http://reactivecocoa.io/reactiveswift/docs/latest/Structs/SignalProducer.html}
+
+\bibitem{property}
+MutableProperty. © 2018.
+\urlprefix\biburl{http://reactivecocoa.io/reactiveswift/docs/latest/Classes/MutableProperty.html}
+
 \bibitem{sus}
 Measuring Usability With The System Usability Scale (SUS). \emph{MeasuringU}
   [online]. Measuring Usability LLC, © 2004-2017, {[cit. 2018-02-12]}.

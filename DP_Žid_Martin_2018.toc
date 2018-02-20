@@ -16,16 +16,17 @@
 \contentsline {section}{\numberline {2.3}Tvorba u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{9}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Storyboard}{10}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Xib}{10}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } v k\IeC {\'o}du}{10}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{10}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.3}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } v k\IeC {\'o}du}{11}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{11}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{11}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}FRP frameworky pro iOS}{11}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}ReactiveSwift}{11}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {2.4.1.2}ReactiveCocoa}{11}{subsubsection.2.4.1.2}
-\contentsline {subsubsection}{\numberline {2.4.1.3}RxSwift}{11}{subsubsection.2.4.1.3}
+\contentsline {subsubsection}{\numberline {2.4.1.1}ReactiveSwift}{12}{subsubsection.2.4.1.1}
+\contentsline {subsubsection}{\numberline {2.4.1.2}ReactiveCocoa}{12}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {2.4.1.3}RxSwift}{12}{subsubsection.2.4.1.3}
 \contentsline {section}{\numberline {2.5}Perzistence dat}{12}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Core Data}{12}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}iCloud}{12}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Realm}{12}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.3}Realm}{13}{subsection.2.5.3}
 \contentsline {chapter}{\chapternumberline {3}Anal\IeC {\'y}za evidence let\IeC {\r u}}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}EASA}{15}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Pokyny pro evidenci let\IeC {\r u}}{15}{subsection.3.1.1}
@@ -76,23 +77,29 @@
 \contentsline {subsection}{\numberline {5.1.2}Extensions}{38}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Protokoly}{39}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Automatick\IeC {\'e} po\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } referenc\IeC {\'\i }}{40}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}Reactive Cocoa}{42}{section.5.2}
-\contentsline {section}{\numberline {5.3}Realm}{42}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i }}{42}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Model}{42}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Unit testy}{42}{section.5.4}
-\contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{42}{section.5.5}
-\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{42}{section.5.6}
-\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{42}{section.5.7}
-\contentsline {section}{\numberline {5.8}Heuristick\IeC {\'a} anal\IeC {\'y}za}{42}{section.5.8}
-\contentsline {section}{\numberline {5.9}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{45}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{45}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{45}{subsection.5.9.2}
-\contentsline {subsection}{\numberline {5.9.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{46}{subsection.5.9.3}
-\contentsline {subsection}{\numberline {5.9.4}V\IeC {\'y}sledky test\IeC {\r u}}{47}{subsection.5.9.4}
-\contentsline {section}{\numberline {5.10}Postupy FRP v aplikaci}{47}{section.5.10}
-\contentsline {section}{\numberline {5.11}Zhodnocen\IeC {\'\i } MVVM a FRP}{47}{section.5.11}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{49}{chapter*.6}
-\contentsline {chapter}{Literatura}{51}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{57}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{59}{appendix.B}
+\contentsline {section}{\numberline {5.2}Reactive Cocoa}{40}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Signal}{42}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}SignalProducer}{42}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}MutableProperty}{43}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Action}{43}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Binding oper\IeC {\'a}tor}{46}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Z\IeC {\'a}kladn\IeC {\'\i } oper\IeC {\'a}tory}{46}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Realm}{46}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i }}{46}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Model}{46}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Unit testy}{46}{section.5.4}
+\contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{46}{section.5.5}
+\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{46}{section.5.6}
+\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{46}{section.5.7}
+\contentsline {section}{\numberline {5.8}Heuristick\IeC {\'a} anal\IeC {\'y}za}{46}{section.5.8}
+\contentsline {section}{\numberline {5.9}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{49}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{49}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{49}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{50}{subsection.5.9.3}
+\contentsline {subsection}{\numberline {5.9.4}V\IeC {\'y}sledky test\IeC {\r u}}{51}{subsection.5.9.4}
+\contentsline {section}{\numberline {5.10}Postupy FRP v aplikaci}{51}{section.5.10}
+\contentsline {section}{\numberline {5.11}Zhodnocen\IeC {\'\i } MVVM a FRP}{51}{section.5.11}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{53}{chapter*.6}
+\contentsline {chapter}{Literatura}{55}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{63}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{65}{appendix.B}

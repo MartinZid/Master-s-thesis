@@ -235,22 +235,30 @@ Architekturu VIPER zobrazuje obrázek \ref{fig:viper} (převzato a přeloženo z
 Při vývoji iOS aplikace existují tři možnosti, jak vytvořit uživatelské rozhraní -- $storyboard$, $Xib$ a kód. Každá z těchto možností má své výhody a nevýhody. \cite{iOSUI}
 
 \subsection{Storyboard}
-$Storyboard$ představuje grafickou reprezentaci uživatelského rozhraní -- zobrazuje jednotlivé obrazovky, jejich obsah a propojení těchto obrazovek. Xcode mají zabudovaný editor pro tvorbu a úpravu $storyboardu$ (viz. obrázek \ref{fig:SB}). Jednotlivé prvky jsou vkládány jednoduchým přetažením a je u nich možné upravit obsah, velikost, barvu a podobně, ihned v editoru. Tento editor také umožňuje propojení jednotlivých prvků a jejich akcí s kódem aplikace. \cite{SB}
-
-Mezi výhody $storyboarů$ patří rychlost tvorby uživatelské rozhraní, což zahrnuje i rychlou tvorbu prototypů aplikace. Dále vizuální zobrazení, nejen prvků, ale také propojení jednotlivých obrazovek, a to bez nutnosti kompilování aplikace. 
-
-Nevýhodou $storyboardů$ může být výkon při více nebo složitějších obrazovkách. Tento problém se však dá zredukovat rozdělením obrazovek do více $storyboard$ souborů. Další nevýhodou je problematické znovupoužití jednotlivých prvků (obrazovek) nebo komplikovaná práce v týmu způsobená složitým spojením změn při verzování (i tento problém řeší z části více souborů se $storyboardy$). \cite{iOSUI} \cite{dominik}
-
-\subsection{Xib}
-$Xib$ je starším přístupem pro tvorbu uživatelského rozhraní iOS aplikací než $storyboard$, starší však neznamená zastaralý. Vytváří se jednoduché $view$ elementy stejným způsobem jako o $storyboardů$. Právě tato skutečnost přináší stejné výhody i problémy s tím rozdílem, že se jedná o drobnější prvky, což ulehčuje např. verzování, znovupoužitelnost nebo nezpůsobuje zpomalovaní Xcode. \cite{iOSUI} \cite{dominik}
-
-\subsection{Uživatelské rozhraní v kódu}
-
 
 \begin{figure}[]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/storyboard}
  \caption[Storyboard]{Storyboard (pouze ilustrační)}\label{fig:SB}
 \end{figure}
+
+$Storyboard$ představuje grafickou reprezentaci uživatelského rozhraní -- zobrazuje jednotlivé obrazovky, jejich obsah a propojení těchto obrazovek. Xcode mají zabudovaný editor pro tvorbu a úpravu $storyboardu$ (viz. obrázek \ref{fig:SB}). Jednotlivé prvky jsou vkládány jednoduchým přetažením a je u nich možné upravit obsah, velikost, barvu a podobně, ihned v editoru. Tento editor také umožňuje propojení jednotlivých prvků a jejich akcí s kódem aplikace. \cite{SB}
+
+Mezi výhody $storyboarů$ patří rychlost tvorby uživatelské rozhraní, což zahrnuje i rychlou tvorbu prototypů aplikace. Dále vizuální zobrazení, nejen prvků, ale také propojení jednotlivých obrazovek, a to bez nutnosti kompilování aplikace. 
+
+Nevýhodou $storyboardů$ může být výkon při více nebo složitějších obrazovkách. Tento problém se však dá zredukovat rozdělením obrazovek do více $storyboard$ souborů. Další nevýhodou je problematické znovupoužití jednotlivých prvků (obrazovek) nebo komplikovaná práce v týmu způsobená složitým spojením změn při verzování (i tento problém řeší z části více souborů se $storyboardy$). Posledním nedostatkem je to, že ne vše se dá vytvořit ve $storyboardu$ (hlavně dynamické prvky) a z toho důvodu dochází k tomu, že část uživatelského rozhraní je v kódu a část ve $storyboardu$. \cite{iOSUI} \cite{dominik}
+
+\subsection{Xib}
+$Xib$ je starším přístupem pro tvorbu uživatelského rozhraní iOS aplikací než $storyboard$, starší však neznamená zastaralý. Vytváří se jednoduché $view$ elementy stejným způsobem jako o $storyboardů$. Právě tato skutečnost přináší stejné výhody i problémy s tím rozdílem, že se jedná o drobnější prvky, což ulehčuje např. verzování, znovupoužitelnost nebo nezpůsobuje zpomalovaní Xcode. \cite{iOSUI} \cite{dominik}
+
+\subsection{Uživatelské rozhraní v kódu}
+Poslední možností jak tvořit uživatelské rozhraní je vlastní kód. Tento způsob přináší mnoho výhod (hlavně tím, že redukuje nedostatky $storyboardů$ a $Xib$), ale má i své nevýhody.
+
+Mezi výhody vlastního kód patří: znovupoužitelnost, bezproblémová práce ve více lidech (verzování) a to, že se vše nachází na jedno místě. 
+
+Nevýhodou vytváření uživatelské rozhraní v kódu je rychlost tvorby bez možnosti svižného vytvoření prototypu aplikace. Dále také tento přístup postrádá vizuálnost a vyžaduje kompilaci. \cite{iOSUI} \cite{dominik}
+
+\subsection{Zvolené řešení}
+Pro tvorbu aplikace vytvářené v rámci této magisterské práce, jsem si zvolil možnost tvorby uživatelského rozhraní pomocí $storyboardů$. Tato volba vyplývá z výše zmíněných výhod $storyboardů$ a z toho důvodu, že aplikaci budu vytvářet sám.
 
 \section{Funkcionálně reaktivní programování}
 Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za daný čas. \cite{nayebi2016swift}
@@ -925,6 +933,144 @@ Automatická správa paměti, jak už je řečeno dříve, je jednou z přednost
 Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, které zaručuje, že instance, na kterou reference ukazuje, nebude dealokována dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá pokud má instance v referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
 
 \section{Reactive Cocoa}
+Tato kapitola se zabývá jednotlivými prvky frameworků Reactive Cocoa a Reactive Swift, společně s ukázkami a vysvětlením jak byly v aplikaci použity.
+
+\subsection{Signal}
+Prvním základním prvkem frameworku Reactive Swift je $Signal$. Jedná se datový tok, který posílá v průběhu svého života události (Events) -- hodnoty (Value) nebo chyby (Error). Všichni pozorovatelé daného $Signalu$ dostávají stejné události ve stejný čas a nejsou schopni $Signal$ svou činností ovlivnit. \cite{signal}
+
+Příklad \ref{lst:signal} zobrazuje použití prvku $Signal$. Společně se $Signalem$ je vytvořen ještě $Observer$. Tato dvoji následně pracuje spolu -- všechny události odeslané $Observeru$ jsou možné pozorovat na $Signalu$. $Signal$ zobrazený v ukázce se stará o informování o změnách v kolekci Realm objektů. Tento druh $Signalu$ je ten, který následně zpracovává příslušný $UITableViewController$ pomocí rozšíření (extension) zobrazené na příkladu \ref{lst:extension}.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka použití prvku Signal},label={lst:signal}]
+class RealmTableViewModel<T: Object>: RealmViewModel {
+   ...
+   internal var collection: Results<T>?
+   let collectionChangedSignal: 
+      Signal<RealmCollectionChange<Results<T>>, NoError>
+   private let collectionChangedObserver: Signal
+      <RealmCollectionChange<Results<T>>, NoError>.Observer
+
+   override init() {
+      let (arrayChangedSignal, arrayChangedObserver) = 
+         Signal<RealmCollectionChange<Results<T>>, NoError>
+         .pipe()
+      self.collectionChangedSignal = arrayChangedSignal
+      self.collectionChangedObserver = arrayChangedObserver
+      super.init()
+   }
+    ...
+   internal func collectionChangedNotificationBlock(
+      changes: RealmCollectionChange<Results<T>>) {
+      collectionChangedObserver.send(value: changes)
+   }
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}	
+
+\subsection{SignalProducer}
+Dalším prvkem je $SignalProducer$. $SignalProducer$ vytváří $Signal$ a je využíván společně s $Action$. $Signal$ je vytvářen pomocí funkce $start()$. Tato funkce vytvoří vždy nový $Signal$ a z toho důvodu různé $Signaly$ mohou mít různé verze událostí nebo se mohou úplně lišit. \cite{signalProducer}
+
+$SignalProducer$ je zobrazen v ukázce \ref{lst:action} společně s prvkem $Action$.
+
+\subsection{MutableProperty}
+$MutableProperty$ je dalším prvkem frameworku Reactive Swift. $MutableProperty$ obsahuje hodnotu, u které je možné pozorovat její změny. Tento prvek také obsahuje vlastní prvky typu $Signal$ a $SignalProducer$. \cite{property}
+
+$MutableProperty$ v aplikaci představuje nejčastější způsob namapování $View$ na $ViewModel$. Ukázka \ref{lst:property} zobrazuje hned několik propojení jednotlivých vrstev architektury. První propojení přestavuje proměnná $fromTextField$, která je označená jako $@IBOutlet$. Právě toto označení se používá při spojení prvků ze $storyboardu$ s kódem. Další propojení, tentokrát již vrstev $View$ a $ViewModel$, je zobrazeno ve funkci $bindViewModel$, kde dojde nejprve k nastavení výchozí hodnoty pole $UITextField$ a následně jsou pozorovány všechny změny. Toto pozorování umožňuje framework Reactive Cocoa, který přidává UI prvkům vlastnost $reactive$.
+
+Při nastavování výchozí hodnoty $UITextFieldu$ závisí na tom zda se jedná o vytváření nového záznamu letu nebo o úpravu již existujícího. Podle toho je vytvořen $ViewModel$ (se záznamem letu nebo s hodnotou $nil$) i $MutableProperty$.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka propojení $View$ a $ViewModel$},label={lst:property}]
+// View
+class AddFlightRecordTableViewController: 
+RecordTableViewController {
+   @IBOutlet weak var fromTextField: UITextField!
+
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      ...
+      bindViewModel()
+   }
+
+   private func bindViewModel() {
+      fromTextField.text = viewModel.from.value
+      viewModel.from <~ toTextField.reactive
+         .continuousTextValues.filterMap{ $0 }
+      ...
+   }
+}
+
+// ViewModel
+class AddFlightRecordViewModel: RealmViewModel {
+
+   let from: MutableProperty<String?>
+   ...
+   init(with record: Record?) {
+      from = MutableProperty(record?.from ?? nil)
+      ...
+   }
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}	
+
+\subsection{Action}
+$Action$ je posledním použitým prvkem frameworku Reactive Swift. Hlavní částí prvku $Action$ je tzv. $execute$ reprezentovaný $SignalProducerem$. Tento $execute$ je zadán ve formě closure. $Action$ může obsahovat podmínku $enabledIf$, která určuje zda je umožněno akci provést.
+
+Použití prvku $Action$ je zobrazeno v ukázce \ref{lst:action}. Akce je znovu napojena pomocí vlastnosti $reactive$ frameworku Reactive Cocoa. Samotná akce pouze odesílá na stisknutí tlačítka proměnnou $note$, která je následně delegována do jiného $Controlleru$. Tato akce je však proveditelná pouze pokud je splněna podmínka v části $enabledIf$, tedy $note$ nemá nulovou délku. Díky propojení s tlačítkem ve $View$ se proveditelnost akce promítá i do vlastností tlačítka $UIBarButtonItem$. Po provedení akce je informován $observer$ ve $View$, který pozoruje $Signal$ vytvářený $SignalProducerem$ akce.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka použití Action},label={lst:action}]
+// View
+class NoteViewController: UIViewController {
+   @IBOutlet weak var saveBtn: UIBarButtonItem!
+   ...
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      ...
+      bindViewModel()
+   }
+   
+   private func bindViewModel() {
+      saveBtn.reactive.pressed = CocoaAction(viewModel.saveAction)
+      viewModel.saveAction.values.observeValues(save)
+      ...
+   }  
+} 
+
+// ViewModel
+class NoteViewModel {
+    
+   var note: MutableProperty<String?>
+   let saveAction: Action<(), String, NoError>
+   
+   init(note: String?) {
+      self.note = MutableProperty(note)
+      saveAction = Action<(), String, NoError>(
+         state: self.note, enabledIf: {
+         if let note = $0 {
+            return note.count > 0
+         }
+         return false
+      }) { note, _ in
+         return SignalProducer<String, NoError> { 
+            observer, _ in
+            observer.send(value: note!)
+         }
+      }
+   }
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}	
+
+	\subsection{Binding operátor}
+
+	\subsection{Základní operátory}
 
 \section{Realm}
 
