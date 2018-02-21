@@ -302,7 +302,7 @@ Při vývoji iOS aplikací se pro využití iCloud používá framework CloudKit
 CloudKit je dostupný pro členy Apple Developer programu. \cite{AppleDeveloperProgram} Tento program stojí ročně v přepočtu 2150 Kč. \cite{AppleDeveloperProgramPrice} 
 
 \subsection{Realm}
-Realm, s oficiální stránkou \url{https://realm.io}, je multiplatformní mobilní databáze, která je připravená pro jazyky Java (Android), Swift, Objective-C, JavaScript a Xamarin. Hlavní myšlenkou je kontejner objektů tzv. Realm. V těchto kontejnerech jsou uložena data, na které je možné se dotazovat, tyto data filtrovat a podobně. Na rozdíl od klasických např. SQL databází, zde pracujeme přímo s \uv{živými} objekty, tedy pokud provedeme změnu není nutné ukládat změněný objekt do databáze, ale změna se provede automaticky.
+Realm, s oficiální stránkou \url{https://realm.io}, je multiplatformní mobilní databáze, která je připravená pro jazyky Java (Android), Swift, Objective-C, JavaScript a Xamarin. Hlavní myšlenkou je kontejner objektů tzv. Realm. V těchto kontejnerech jsou uložena data, na které je možné se dotazovat, tyto data filtrovat a podobně. Na rozdíl od klasických např. SQL databází, zde pracujeme přímo s \uv{živými} objekty, tedy pokud máme instanci Realm objektu a cokoliv v aplikaci tuto instanci změní, tato změna je ihned viditelná.
 
 Realm je rozdělený na dvě části -- mobilní databáze Realm (Realm Mobile Database) a objektový server Realm (Realm Object Server). Jak je již z názvů možné usuzovat mobilní databáze je pouze na mobilním zařízení, jedná se tedy o offline uložení dat. Pokud však chceme data např. sdílet na více zařízení, je možné se připojit na objektový server Realm a s tím se synchronizovat. Realm se řídí strategii \uv{nejprve offine} -- čtení a zápis probíhá nejprve lokálně a až poté probíhá synchronizace se serverem.
 
@@ -791,7 +791,7 @@ V této kapitole jsou dále rozebírány některé funkcionality a vlastnosti ja
 
 \subsection{Optional}
 Swift je tzv. typově bezpečný jazyk, což zaručuje to, že daná proměnná bude mít vždy stejný typ. Tedy např. pokud náš kód vyžaduje $String$ není možné zadat $Int$. 
-Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné musí být vždy inicializované před použitím a objekty nikdy nemohou být $nil$. Pro práci s hodnotami jsou ve Swiftu zavedeny tzv. $Optinals$.
+Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné musí být vždy inicializované před použitím a objekty nikdy nemohou být $nil$. Pro práci s hodnotami $nil$ jsou ve Swiftu zavedeny tzv. $Optinals$.
 
 $Optinal$ je jakýsi obal (wrapper) klasických typů ($String$, $Int$, $Double$ apod.), který reprezentuje dvě možnosti: hodnota je nastavena a je tedy možné tzv. $unwrap$ $optinal$ a tím získat danou hodnotu, nebo hodnota není nastavena (jedná se o $nil$). \cite{devBasics}
 
@@ -800,9 +800,11 @@ Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné
 \begin{figure}
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[caption={Příklad práce s Optinal},label={lst:optinal}]
+// optinal variable initialization
 var delegate: NoteViewControllerDelegate? = nil
 ...
 private func save(note: String) {
+   // optional variable unwarpping using optional binding
    if let unwappedDelegate = delegate {
       unwappedDelegate.save(note: note)
    }
@@ -826,7 +828,7 @@ Extensions umožňují:
 
 Ukázka \ref{lst:extension} předvádí rozšíření třídy $UITableViewController$ o novou generickou metodu. Tato metoda je použita u dynamických tabulek zobrazujících data z Realmu. Díky principů FRP může tabulka jednoduše podporovat např. smazání záznamu, protože je neustále pozorován $Signal$ se změnami a podle změn jsou následně provedeny vhodné animace na straně $UITableView$.
 
-Dalšího klíčového slova, kterého je možné si v ukázce všimnout je $guard$. $Guard$ je možné vnímat podobně jako tzv. assert. Tedy zadáváme podmínku, u které chce aby byla splněna, pokud splněna není dostáváme se do povinné $else$ větve. Klíčové slovo $guard$ je jednou z možností pro $unwrap$ $optional$ proměnné a také zamezuje několikanásobné podmínce $if-else$ (ve složitějších případech), čímž dochází k zpřehlednění kódu. \cite{devGuard}
+Dalšího klíčového slova, kterého je možné si v ukázce všimnout je $guard$. $Guard$ je možné vnímat podobně jako tzv. assert. Tedy zadáváme podmínku, u které chceme aby byla splněna, pokud splněna není dostáváme se do povinné $else$ větve. Klíčové slovo $guard$ je jednou z možností pro $unwrap$ $optional$ proměnné a také zamezuje několikanásobné podmínce $if-else$ (ve složitějších případech), čímž dochází k zpřehlednění kódu. \cite{devGuard}
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -835,9 +837,11 @@ extension UITableViewController {
     func observeSignalForTableDataChanges<T>(
       with signal: Signal<RealmCollectionChange<Results<T>>,
       NoError>) {
+      // observing input signal
       signal.observeValues{ [weak self] changes in
          guard let tableView = self?.tableView
             else { return }
+         // switch on changes type   
          switch changes {
          case .initial:
             tableView.reloadData()
@@ -892,6 +896,7 @@ UIPickerViewDataSource {
    private let picker = UIPickerView()
 
    override func viewDidLoad() {
+      // setting self as delegate
       picker.delegate = self
    }
 
@@ -943,6 +948,7 @@ Příklad \ref{lst:signal} zobrazuje použití prvku $Signal$. Společně se $Si
 \begin{lstlisting}[caption={Ukázka použití prvku Signal},label={lst:signal}]
 class RealmTableViewModel<T: Object>: RealmViewModel {
    ...
+   // observed collection (using Realm notifications)
    internal var collection: Results<T>?
    let collectionChangedSignal: 
       Signal<RealmCollectionChange<Results<T>>, NoError>
@@ -950,6 +956,7 @@ class RealmTableViewModel<T: Object>: RealmViewModel {
       <RealmCollectionChange<Results<T>>, NoError>.Observer
 
    override init() {
+      // signal and observer initialization
       let (arrayChangedSignal, arrayChangedObserver) = 
          Signal<RealmCollectionChange<Results<T>>, NoError>
          .pipe()
@@ -975,7 +982,7 @@ $SignalProducer$ je zobrazen v ukázce \ref{lst:action} společně s prvkem $Act
 \subsection{MutableProperty}
 $MutableProperty$ je dalším prvkem frameworku Reactive Swift. $MutableProperty$ obsahuje hodnotu, u které je možné pozorovat její změny. Tento prvek také obsahuje vlastní prvky typu $Signal$ a $SignalProducer$. \cite{property}
 
-$MutableProperty$ v aplikaci představuje nejčastější způsob namapování $View$ na $ViewModel$. Ukázka \ref{lst:property} zobrazuje hned několik propojení jednotlivých vrstev architektury. První propojení přestavuje proměnná $fromTextField$, která je označená jako $@IBOutlet$. Právě toto označení se používá při spojení prvků ze $storyboardu$ s kódem. Další propojení, tentokrát již vrstev $View$ a $ViewModel$, je zobrazeno ve funkci $bindViewModel$, kde dojde nejprve k nastavení výchozí hodnoty pole $UITextField$ a následně jsou pozorovány všechny změny. Toto pozorování umožňuje framework Reactive Cocoa, který přidává UI prvkům vlastnost $reactive$.
+$MutableProperty$ v aplikaci představuje nejčastější způsob namapování $View$ na $ViewModel$. Ukázka \ref{lst:property} zobrazuje hned několik propojení jednotlivých vrstev architektury. První propojení přestavuje proměnná $fromTextField$, která je označená jako $@IBOutlet$. Právě toto označení se používá při spojení prvků $storyboardu$ s kódem. Další propojení, tentokrát již vrstev $View$ a $ViewModel$, je zobrazeno ve funkci $bindViewModel$, kde dojde nejprve k nastavení výchozí hodnoty pole $UITextField$ a následně jsou pozorovány všechny změny. Toto pozorování umožňuje framework Reactive Cocoa, který přidává UI prvkům vlastnost $reactive$.
 
 Při nastavování výchozí hodnoty $UITextFieldu$ závisí na tom zda se jedná o vytváření nového záznamu letu nebo o úpravu již existujícího. Podle toho je vytvořen $ViewModel$ (se záznamem letu nebo s hodnotou $nil$) i $MutableProperty$.
 
@@ -985,6 +992,7 @@ Při nastavování výchozí hodnoty $UITextFieldu$ závisí na tom zda se jedn�
 // View
 class AddFlightRecordTableViewController: 
 RecordTableViewController {
+   // storyboard reference
    @IBOutlet weak var fromTextField: UITextField!
 
    override func viewDidLoad() {
@@ -994,7 +1002,9 @@ RecordTableViewController {
    }
 
    private func bindViewModel() {
+      // setting default value
       fromTextField.text = viewModel.from.value
+      // bind UITextField to MutableProperty
       viewModel.from <~ toTextField.reactive
          .continuousTextValues.filterMap{ $0 }
       ...
@@ -1003,7 +1013,6 @@ RecordTableViewController {
 
 // ViewModel
 class AddFlightRecordViewModel: RealmViewModel {
-
    let from: MutableProperty<String?>
    ...
    init(with record: Record?) {
@@ -1034,7 +1043,10 @@ class NoteViewController: UIViewController {
    }
    
    private func bindViewModel() {
-      saveBtn.reactive.pressed = CocoaAction(viewModel.saveAction)
+      // binding action to button
+      saveBtn.reactive.pressed = 
+         CocoaAction(viewModel.saveAction)
+      // observing action values
       viewModel.saveAction.values.observeValues(save)
       ...
    }  
@@ -1042,12 +1054,12 @@ class NoteViewController: UIViewController {
 
 // ViewModel
 class NoteViewModel {
-    
    var note: MutableProperty<String?>
    let saveAction: Action<(), String, NoError>
    
    init(note: String?) {
       self.note = MutableProperty(note)
+      // action definition
       saveAction = Action<(), String, NoError>(
          state: self.note, enabledIf: {
          if let note = $0 {
@@ -1078,7 +1090,7 @@ V aplikaci byl operátor $map$ velice užitečný. Byl použit hlavně pro spoje
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[caption={Ukázka použití Map},label={lst:map}]
 extension DateFormatter {
-   struct Format{
+   struct Format {
        static let date = "dd.MM.yyyy"
    }
    func dateToString(from date: Date) -> String {
@@ -1103,7 +1115,7 @@ class PersonalInformationsViewModel: RealmViewModel {
 \subsubsection{Reduce}
 Operátor $reduce$ je další ze základních operátorů funkcionálního programování. Používá se pro spojení hodnot datového toku (popř. pole hodnot) do jedné. \cite{operators}
 
-Operátor $reduce$ byl použit např. při generování PDF souboru se záznamy letů pro výpočet jednotlivých součtů odletů, příletů apod. V ukázce je vidět použití closure (pro součet je zbytečné vytvářet speciální funkci), který používá zkrácený zápis argumentů -- \$1 a \$2. Tento zápis velice zpřehledňuje a zkracuje kód jednoduchých closurů.
+Operátor $reduce$ byl použit např. při generování PDF souboru se záznamy letů pro výpočet jednotlivých součtů odletů, příletů apod. V ukázce \ref{lst:reduce} je vidět použití closure (pro součet je zbytečné vytvářet speciální funkci), který používá zkrácený zápis argumentů -- \$1 a \$2. Tento zápis velice zpřehledňuje a zkracuje kód jednoduchých closurů.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1124,11 +1136,15 @@ Posledním ze základních operátorů je $filter$. Tento operátor zajišťuje 
 \subsubsection{Spojování datových toků}
 Z operátorů pro spojování datových toků byl použit operátor $combineLatest$. Tento operátor spojuje dva a více datových toků a odesílá hodnotu až poté, co všechny datové toky odeslaly alespoň jednu hodnotu. Následně je odeslána hodnota při jakékoliv změně kteréhokoliv ze spojovaných datových toků. \cite{operators}
 
-Operátor $combineLatest$ byl využit pro výpočet celkového času letu, který je vypočten ze dvou vstupních hodnot -- z času odletu a času příletu. Vypočtená hodnota je přepočítána vždy při úpravě jakékoliv z těchto vstupních hodnot.
+Operátor $combineLatest$ byl využit pro výpočet celkového času letu, který je vypočten ze dvou vstupních hodnot -- z času odletu a času příletu. Vypočtená hodnota je přepočítána vždy při úpravě jakékoliv z těchto vstupních hodnot. Použití operátoru $combineLatest$ je zobrazeno na ukázce \ref{lst:combine}.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
-\begin{lstlisting}[caption={Ukázka použití spojení dvou datových toků},label={lst:reduce}]
+\begin{lstlisting}[caption={Ukázka použití spojení dvou datových toků},label={lst:combine}]
+let timeTKO: MutableProperty<Date>
+let timeLDG: MutableProperty<Date>
+let totalTime = MutableProperty<String>("")
+
 totalTime <~ SignalProducer
    .combineLatest(timeTKO.signal, timeLDG.signal)
    .map(countTotalTime)
@@ -1140,13 +1156,87 @@ totalTime <~ SignalProducer
 \subsubsection{Binding operátor}
 $Binding$ operátor umožňuje spojení jakýchkoliv datových toků. Je zapisován symboly $<\sim$  a Reactive Cocoa přidává vlastnost i pro prvky UI, která umožňuje použití tohoto operátoru. \cite{ReactiveCocoa}
 
-Použití tohoto operátoru je zobrazeno např. v ukázce \ref{lst:property}. Kdy dochází k napojení vstupního textového pole s $MutableProperty$. $Binding$ operátor je jedno z nejčastějších možností propojení $View$ a $ViewModelu$.
+Použití tohoto operátoru je zobrazeno např. v ukázce \ref{lst:property}. Kdy dochází k napojení vstupního textového pole s $MutableProperty$. $Binding$ operátor je jedna z nejčastějších možností propojení $View$ a $ViewModelu$.
 
 \section{Realm}
+Realm byl ve vytvářené aplikaci použit pro ukládání dat a to jak pro lokální uložení, tak i pro synchronizaci s Realm Object Serverem. 
 
-	\subsection{Přihlašování}
+Uživatel je do Realmu přihlašován pomocí svého iCloud účtu (popsáno dále) a inicializaci Realmu zpracovává v aplikaci třída $RealmViewModel$.
 	
-	\subsection{Model}
+\subsection{Model}
+Objekty uložené v Realmu jsou definované jako klasické třídy ve Swiftu s nutností dědičnosti od třídy $Object$. Tyto objekty se chovají převážně jako klasické Swift objekty, je tedy možné aby splňovaly protokoly nebo měly vlastní metody. Tyto objekty mohou mít také definovány primární klíče nebo indexy. 
+
+Ukázka třídy $Plane$ definující Realm objekt je zobrazena v kódu \ref{lst:realmObject}. V aplikaci byly takto definovány třídy pro záznam letu nebo ze simulátoru, letadlo, osobní informace a zdravotní certifikáty.
+
+Nevýhodou objektů v Realmu je nedokonalá dědičnost. Dědičnost Realm objektů nedovoluje: konverzi typu polymorfních tříd, dotazování se na více tříd najednou a více-třídní kontejnery. \cite{realmDocs} Z důvodů těchto nedostatků nemohla být třída definující záznam letu a záznam simulátoru rozdělena do dvou (nebylo by možné nad záznamy vytvářet společný dotaz nebo je zobrazovat v jedné tabulce). Bylo tedy nutné mít jednu třídu pro oba typy záznamů a mezi nimi rozlišovat pomocí příznaku $type$.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka Realm objektu},label={lst:realmObject}]
+final class Plane: Object {
+   @objc dynamic var type: String?
+   @objc dynamic var model: String?
+   @objc dynamic var variant: String?
+   @objc dynamic var registrationNumber: String?
+   @objc dynamic var engine: Engine = .single
+    
+   @objc enum Engine: Int {
+      case single = 0
+      case multi = 1
+   }
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}
+
+\subsection{Dotazy}
+Dotaz v Realmu vrací kolekci $Results$, která obsahuje jednotlivé objekty. Všechny dotazy jsou tzv. lazy, dochází ke čtení až v okamžiku, kdy jsou data vyžádána (jsou např. čtena). \cite{realmDocs} Základní dotaz je zobrazen na příkladu \ref{lst:realm}.
+
+Poté, co je získána kolekce $Results$, je možné výsledky filtrovat a řadit. Filtrování je možné pomocí $NSPredicate$. \cite{realmDocs} $NSPredicate$ je třída obsažená v knihovně $Foundation$ (oficiální knihovna Apple), která představuje podmínku, jenž může být použita pro filtrování nad kolekcemi objektů. $NSPredicate$ může obsahovat klíčová slova -- like, between, contains, and, or a mnohé další. \cite{predicate}
+
+U kolekce $Results$ je také možné se registrovat a tím získávat oznámení (notifications) o všech změnách. Tato registrace je možná jak pro kolekce, tak i pro celý Realm. \cite{realmDocs} V aplikaci byly notifikace předávány pomocí $Signalu$ do $View$, kde byly následně zobrazeny vhodné animace (zobrazeno na příkladech \ref{lst:signal} a \ref{lst:extension}).
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka dotazu v Realmu},label={lst:realm}]
+// Realm query
+collection = realm.objects(Record.self)
+let type = "Boeing"
+// filter Results using NSPredicate and sort
+collection = collection?
+   .filter("plane.type contains[c] %@", type)
+   .sorted(byKeyPath: "date", ascending: false)
+// collection notifications initialization
+notificationsToken = collection?.observe {
+   // closure handling notifications
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}
+
+\subsection{Ukládání a upravování objektů}
+Ukládání a upravování Realm objektů musí být prováděno v transakci $write$. Pro uložení objektu musí být objekt nejprve vytvořen (konstruktorem) a poté vložen do Realm v transakci $write$ pomocí funkce $add$. Po uložení je možné objekt nadále používat i upravovat (znovu v transakci $write$).
+
+Ukázka \ref{lst:realmWrite} zobrazuje uložení (upravení) objektu $Plane$ do Realmu. Pokud již proměnná $plane$ obsahovala objekt $Plane$, dojde k upravení (update) v Realmu. Pokud byla proměnná $
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka zápisu/úpravy Realm objektu},label={lst:realmWrite}]
+// plane is set or create new one
+let plane = self.plane ?? Plane()
+try! realm.write {
+   plane.type = type.value
+   plane.model = model.value
+   plane.variant = variant.value
+   plane.registrationNumber = registrationNumber.value
+   plane.engine = engine.value
+   // insert/update plane      
+   realm.add(plane)
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}
+	\subsection{Přihlašování}
 
 \section{Unit testy}
 

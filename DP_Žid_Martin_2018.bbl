@@ -332,6 +332,16 @@ Basic Operators. \emph{GitHub} [online]. California, US.: GitHub Inc., © 2018,
   {[cit. 2018-02-20]}.
 \urlprefix\biburl{https://github.com/ReactiveCocoa/ReactiveSwift/blob/master/Documentation/BasicOperators.md}
 
+\bibitem{realmDocs}
+The Realm Mobile Platform. \emph{Realm} [online]. Realm, © 2014-2017, {[cit.
+  2018-02-21]}.
+\urlprefix\biburl{https://realm.io/docs/swift/latest/}
+
+\bibitem{predicate}
+NSPredicate. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2018, {[cit. 2018-02-21]}.
+\urlprefix\biburl{https://developer.apple.com/documentation/foundation/nspredicate}
+
 \bibitem{sus}
 Measuring Usability With The System Usability Scale (SUS). \emph{MeasuringU}
   [online]. Measuring Usability LLC, © 2004-2017, {[cit. 2018-02-12]}.

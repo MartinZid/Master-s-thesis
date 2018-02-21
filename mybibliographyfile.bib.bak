@@ -636,6 +636,27 @@
   URL = {https://github.com/ReactiveCocoa/ReactiveSwift/blob/master/Documentation/BasicOperators.md},
   note = "{[cit. 2018-02-20]}"
 }
+@misc{realmDocs,
+  journal = {Realm},
+  title = {The Realm Mobile Platform},
+  howpublished = {\emph{Realm} [online]. Realm},
+  publisher = {Realm},
+  year = {© 2014-2017},
+  URL = {https://realm.io/docs/swift/latest/},
+  note = "{[cit. 2018-02-21]}"
+}
+@misc{predicate,
+  journal = {Apple Developer},
+  title = {NSPredicate},
+  publisher = {Apple Inc.},
+  howpublished = {\emph{Apple Developer} [online]. California, U.S.: Apple Inc.},
+  address = {California, U.S},
+  year = {© 2018},
+  medium = {online},
+  URL = {https://developer.apple.com/documentation/foundation/nspredicate},
+  note = "{[cit. 2018-02-21]}"
+}
+
 
 
 

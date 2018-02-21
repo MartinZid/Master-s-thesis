@@ -54,47 +54,49 @@ Warning--to sort, need author or key in signal
 Warning--to sort, need author or key in signalProducer
 Warning--to sort, need author or key in property
 Warning--to sort, need author or key in operators
+Warning--to sort, need author or key in realmDocs
+Warning--to sort, need author or key in predicate
 Warning--to sort, need author or key in sus
 Warning--empty pages in Ztaltz2014
-You've used 65 entries,
+You've used 67 entries,
             3185 wiz_defined-function locations,
-            1012 strings with 15878 characters,
-and the built_in function-call counts, 17575 in all, are:
-= -- 1204
-> -- 163
+            1019 strings with 16034 characters,
+and the built_in function-call counts, 18083 in all, are:
+= -- 1240
+> -- 165
 < -- 0
-+ -- 105
++ -- 108
 - -- 32
-* -- 843
-:= -- 1538
-add.period$ -- 130
-call.type$ -- 65
-change.case$ -- 148
+* -- 867
+:= -- 1576
+add.period$ -- 134
+call.type$ -- 67
+change.case$ -- 152
 chr.to.int$ -- 0
-cite$ -- 117
-duplicate$ -- 1937
-empty$ -- 2191
+cite$ -- 121
+duplicate$ -- 1993
+empty$ -- 2257
 format.name$ -- 34
-if$ -- 3987
+if$ -- 4105
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 433
-newline$ -- 269
+int.to.str$ -- 67
+missing$ -- 445
+newline$ -- 277
 num.names$ -- 28
-pop$ -- 1157
+pop$ -- 1191
 preamble$ -- 1
-purify$ -- 146
+purify$ -- 150
 quote$ -- 0
-skip$ -- 768
+skip$ -- 792
 stack$ -- 0
-substring$ -- 445
-swap$ -- 768
+substring$ -- 460
+swap$ -- 790
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
-warning$ -- 52
+type$ -- 264
+warning$ -- 54
 while$ -- 28
-width$ -- 67
-write$ -- 598
-(There were 52 warnings)
+width$ -- 69
+write$ -- 616
+(There were 54 warnings)
