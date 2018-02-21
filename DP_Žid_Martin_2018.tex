@@ -800,11 +800,9 @@ Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné
 \begin{figure}
 \begin{minipage}{\linewidth}
 \begin{lstlisting}[caption={Příklad práce s Optinal},label={lst:optinal}]
-// optinal variable initialization
 var delegate: NoteViewControllerDelegate? = nil
 ...
 private func save(note: String) {
-   // optional variable unwarpping using optional binding
    if let unwappedDelegate = delegate {
       unwappedDelegate.save(note: note)
    }
@@ -933,7 +931,7 @@ Automatická správa paměti, jak už je řečeno dříve, je jednou z přednost
 Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, které zaručuje, že instance, na kterou reference ukazuje, nebude dealokována dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá pokud má instance v referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
 
 \section{Reactive Cocoa}
-Tato kapitola se zabývá jednotlivými prvky frameworků Reactive Cocoa a Reactive Swift, společně s ukázkami a vysvětlením jak byly v aplikaci použity.
+Tato kapitola se zabývá jednotlivými prvky frameworků Reactive Cocoa a Reactive Swift, společně s ukázkami a vysvětlením jak byly v aplikaci použity. Na ukázkách je také znázorněno, jak principy FRP fungovaly s MVVM architekturou.
 
 \subsection{Signal}
 Prvním základním prvkem frameworku Reactive Swift je $Signal$. Jedná se datový tok, který posílá v průběhu svého života události (Events) -- hodnoty (Value) nebo chyby (Error). Všichni pozorovatelé daného $Signalu$ dostávají stejné události ve stejný čas a nejsou schopni $Signal$ svou činností ovlivnit. \cite{signal}
@@ -1068,9 +1066,85 @@ class NoteViewModel {
 \end{minipage}
 \end{figure}	
 
-	\subsection{Binding operátor}
+\subsection{Použité základní operátory}
+Reactive Swift obsahuje mnoho operátorů, které umí nějakým způsobem upravovat pozorované toky dat. Tato kapitola se zabývá jednotlivými použitými operátory společně s ukázkami jejich použití v aplikaci.
 
-	\subsection{Základní operátory}
+\subsubsection{Map}
+Operátor $map$ je jeden z nejzákladnějších operátorů funkcionálního programování. V případě Reactive Swift přetváří hodnoty jednoho datového toku na jiný datový tok. \cite{operators}
+
+V aplikaci byl operátor $map$ velice užitečný. Byl použit hlavně pro spojení dvou $MutableProperty$ s odlišnými typy. Toto spojení probíhalo např. při práci s $UIDatePicker$ (výběr datu), kdy jedna $MutableProperty$ získává uživatelovi vstupy ve formátu $Date$ a tento tok hodnot je průběžné transformován jako $String$ do druhé $MutableProperty$. Ukázka je zobrazena v kódu \ref{lst:map}. V ukázce je možné vidět, že přepis transformace je zadán jako již existující funkce, stejného výsledku je však možné dosáhnout i při zadání přepisu ve formě closure.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka použití Map},label={lst:map}]
+extension DateFormatter {
+   struct Format{
+       static let date = "dd.MM.yyyy"
+   }
+   func dateToString(from date: Date) -> String {
+      dateFormat = Format.date
+      return string(from: date)
+   }
+}
+class PersonalInformationsViewModel: RealmViewModel {
+   private let dateFormatter = DateFormatter()
+   let birthDay = MutableProperty<Date?>
+   let birthDayString = MutableProperty<String?>
+   ...
+   override init() {
+      birthDayString <~ birthDay.producer
+         .map(dateFormatter.optinalDateToString)
+   }
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}	
+
+\subsubsection{Reduce}
+Operátor $reduce$ je další ze základních operátorů funkcionálního programování. Používá se pro spojení hodnot datového toku (popř. pole hodnot) do jedné. \cite{operators}
+
+Operátor $reduce$ byl použit např. při generování PDF souboru se záznamy letů pro výpočet jednotlivých součtů odletů, příletů apod. V ukázce \ref{lst:reduce} je vidět použití closure (pro součet je zbytečné vytvářet speciální funkci), který používá zkrácený zápis argumentů -- \$1 a \$2. Tento zápis velice zpřehledňuje a zkracuje kód jednoduchých closurů.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka použití Reduce},label={lst:reduce}]
+private func reduceSumToString(from values: [Int])
+ -> String {
+      return String(values.reduce(0) { $0 + $1 })
+}
+let sumString = reduceSumToString(from: records!
+   .map{ Int($0.tkoNight) })
+\end{lstlisting}
+\end{minipage}
+\end{figure}
+
+\subsubsection{Filter}
+Posledním ze základních operátorů je $filter$. Tento operátor zajišťuje ponechání hodnot v datovém toku, ale pouze těch které splňují zadanou podmínku.\cite{operators}
+
+\subsubsection{Spojování datových toků}
+Z operátorů pro spojování datových toků byl použit operátor $combineLatest$. Tento operátor spojuje dva a více datových toků a odesílá hodnotu až poté, co všechny datové toky odeslaly alespoň jednu hodnotu. Následně je odeslána hodnota při jakékoliv změně kteréhokoliv ze spojovaných datových toků. \cite{operators}
+
+Operátor $combineLatest$ byl využit pro výpočet celkového času letu, který je vypočten ze dvou vstupních hodnot -- z času odletu a času příletu. Vypočtená hodnota je přepočítána vždy při úpravě jakékoliv z těchto vstupních hodnot. Použití operátoru $combineLatest$ je zobrazeno na ukázce \ref{lst:combine}.
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka použití spojení dvou datových toků},label={lst:combine}]
+let timeTKO: MutableProperty<Date>
+let timeLDG: MutableProperty<Date>
+let totalTime = MutableProperty<String>("")
+
+totalTime <~ SignalProducer
+   .combineLatest(timeTKO.signal, timeLDG.signal)
+   .map(countTotalTime)
+   .map(dateFormatter.timeToString)
+\end{lstlisting}
+\end{minipage}
+\end{figure}
+
+\subsubsection{Binding operátor}
+$Binding$ operátor umožňuje spojení jakýchkoliv datových toků. Je zapisován symboly $<\sim$  a Reactive Cocoa přidává vlastnost i pro prvky UI, která umožňuje použití tohoto operátoru. \cite{ReactiveCocoa}
+
+Použití tohoto operátoru je zobrazeno např. v ukázce \ref{lst:property}. Kdy dochází k napojení vstupního textového pole s $MutableProperty$. $Binding$ operátor je jedno z nejčastějších možností propojení $View$ a $ViewModelu$.
 
 \section{Realm}
 

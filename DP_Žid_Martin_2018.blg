@@ -53,47 +53,48 @@ Warning--to sort, need author or key in devMemory
 Warning--to sort, need author or key in signal
 Warning--to sort, need author or key in signalProducer
 Warning--to sort, need author or key in property
+Warning--to sort, need author or key in operators
 Warning--to sort, need author or key in sus
 Warning--empty pages in Ztaltz2014
-You've used 64 entries,
+You've used 65 entries,
             3185 wiz_defined-function locations,
-            1008 strings with 15745 characters,
-and the built_in function-call counts, 17322 in all, are:
-= -- 1186
-> -- 162
+            1012 strings with 15878 characters,
+and the built_in function-call counts, 17575 in all, are:
+= -- 1204
+> -- 163
 < -- 0
-+ -- 104
++ -- 105
 - -- 32
-* -- 831
-:= -- 1519
-add.period$ -- 128
-call.type$ -- 64
-change.case$ -- 146
+* -- 843
+:= -- 1538
+add.period$ -- 130
+call.type$ -- 65
+change.case$ -- 148
 chr.to.int$ -- 0
-cite$ -- 115
-duplicate$ -- 1909
-empty$ -- 2158
+cite$ -- 117
+duplicate$ -- 1937
+empty$ -- 2191
 format.name$ -- 34
-if$ -- 3928
+if$ -- 3987
 int.to.chr$ -- 0
-int.to.str$ -- 64
-missing$ -- 427
-newline$ -- 265
+int.to.str$ -- 65
+missing$ -- 433
+newline$ -- 269
 num.names$ -- 28
-pop$ -- 1140
+pop$ -- 1157
 preamble$ -- 1
-purify$ -- 144
+purify$ -- 146
 quote$ -- 0
-skip$ -- 756
+skip$ -- 768
 stack$ -- 0
-substring$ -- 438
-swap$ -- 757
+substring$ -- 445
+swap$ -- 768
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 252
-warning$ -- 51
+type$ -- 256
+warning$ -- 52
 while$ -- 28
-width$ -- 66
-write$ -- 589
-(There were 51 warnings)
+width$ -- 67
+write$ -- 598
+(There were 52 warnings)

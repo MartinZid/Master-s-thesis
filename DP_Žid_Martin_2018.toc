@@ -82,24 +82,28 @@
 \contentsline {subsection}{\numberline {5.2.2}SignalProducer}{42}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}MutableProperty}{43}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Action}{43}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Binding oper\IeC {\'a}tor}{46}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Z\IeC {\'a}kladn\IeC {\'\i } oper\IeC {\'a}tory}{46}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}Realm}{46}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i }}{46}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Model}{46}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Unit testy}{46}{section.5.4}
-\contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{46}{section.5.5}
-\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{46}{section.5.6}
-\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{46}{section.5.7}
-\contentsline {section}{\numberline {5.8}Heuristick\IeC {\'a} anal\IeC {\'y}za}{46}{section.5.8}
-\contentsline {section}{\numberline {5.9}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{49}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{49}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{49}{subsection.5.9.2}
-\contentsline {subsection}{\numberline {5.9.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{50}{subsection.5.9.3}
-\contentsline {subsection}{\numberline {5.9.4}V\IeC {\'y}sledky test\IeC {\r u}}{51}{subsection.5.9.4}
-\contentsline {section}{\numberline {5.10}Postupy FRP v aplikaci}{51}{section.5.10}
-\contentsline {section}{\numberline {5.11}Zhodnocen\IeC {\'\i } MVVM a FRP}{51}{section.5.11}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{53}{chapter*.6}
-\contentsline {chapter}{Literatura}{55}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{63}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{65}{appendix.B}
+\contentsline {subsection}{\numberline {5.2.5}Pou\IeC {\v z}it\IeC {\'e} z\IeC {\'a}kladn\IeC {\'\i } oper\IeC {\'a}tory}{43}{subsection.5.2.5}
+\contentsline {subsubsection}{\numberline {5.2.5.1}Map}{46}{subsubsection.5.2.5.1}
+\contentsline {subsubsection}{\numberline {5.2.5.2}Reduce}{46}{subsubsection.5.2.5.2}
+\contentsline {subsubsection}{\numberline {5.2.5.3}Filter}{47}{subsubsection.5.2.5.3}
+\contentsline {subsubsection}{\numberline {5.2.5.4}Spojov\IeC {\'a}n\IeC {\'\i } datov\IeC {\'y}ch tok\IeC {\r u}}{47}{subsubsection.5.2.5.4}
+\contentsline {subsubsection}{\numberline {5.2.5.5}Binding oper\IeC {\'a}tor}{47}{subsubsection.5.2.5.5}
+\contentsline {section}{\numberline {5.3}Realm}{48}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i }}{48}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Model}{48}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Unit testy}{48}{section.5.4}
+\contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{48}{section.5.5}
+\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{48}{section.5.6}
+\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{48}{section.5.7}
+\contentsline {section}{\numberline {5.8}Heuristick\IeC {\'a} anal\IeC {\'y}za}{48}{section.5.8}
+\contentsline {section}{\numberline {5.9}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{51}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{51}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{51}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{52}{subsection.5.9.3}
+\contentsline {subsection}{\numberline {5.9.4}V\IeC {\'y}sledky test\IeC {\r u}}{53}{subsection.5.9.4}
+\contentsline {section}{\numberline {5.10}Postupy FRP v aplikaci}{53}{section.5.10}
+\contentsline {section}{\numberline {5.11}Zhodnocen\IeC {\'\i } MVVM a FRP}{53}{section.5.11}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{55}{chapter*.6}
+\contentsline {chapter}{Literatura}{57}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{65}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{67}{appendix.B}

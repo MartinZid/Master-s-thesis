@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  20 FEB 2018 14:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  21 FEB 2018 09:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1384,128 +1384,124 @@ Overfull \hbox (11.7178pt too wide) in paragraph at lines 701--712
 [37]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 802.
-
-Overfull \hbox (24.2179pt too wide) in paragraph at lines 807--808
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][] 
- []
-
-[38]
-Overfull \hbox (44.91357pt too wide) in paragraph at lines 838--839
+ [38]
+Overfull \hbox (44.91357pt too wide) in paragraph at lines 836--837
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.42078pt too wide) in paragraph at lines 846--847
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 844--845
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 855--856
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 853--854
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (16.18748pt too wide) in paragraph at lines 872--873
+Overfull \hbox (16.18748pt too wide) in paragraph at lines 870--871
 \OML/lmm/m/it/10.95 NoteViewControllerDelegate$ \T1/lmr/m/n/10.95 a tedy mít im
 -ple-men-to-va-nou me-todu $\OML/lmm/m/it/10.95 save$ \T1/lmr/m/n/10.95 (ukázka
 
  []
 
 [39]
-Overfull \hbox (10.42078pt too wide) in paragraph at lines 902--903
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 900--901
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (24.2179pt too wide) in paragraph at lines 908--909
+Overfull \hbox (24.2179pt too wide) in paragraph at lines 906--907
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 913--914
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 911--912
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 921--922
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 919--920
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [40] [41]
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 946--947
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 944--945
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (17.31934pt too wide) in paragraph at lines 950--951
+Overfull \hbox (17.31934pt too wide) in paragraph at lines 948--949
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 952--954
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 950--952
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 955--956
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 953--954
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 956--957
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 954--955
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.42078pt too wide) in paragraph at lines 958--959
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 956--957
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 959--960
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 957--958
 [][][][][][][][][][][][][][][][][][] 
  []
 
 [42]
-Overfull \hbox (19.42778pt too wide) in paragraph at lines 978--979
+Overfull \hbox (19.42778pt too wide) in paragraph at lines 976--977
 $\OML/lmm/m/it/10.95 MutableProperty$ \T1/lmr/m/n/10.95 je dal-²ím prv-kem fra-
 meworku Re-active Swift. $\OML/lmm/m/it/10.95 MutableProperty$
  []
 
 
-Overfull \hbox (8.5565pt too wide) in paragraph at lines 980--981
+Overfull \hbox (8.5565pt too wide) in paragraph at lines 978--979
 \T1/lmr/m/n/10.95 vých vrs-tev ar-chi-tek-tury. První pro-po-jení p°e-sta-vuje 
 pro-m¥nná $\OML/lmm/m/it/10.95 fromTextField$\T1/lmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (18.5483pt too wide) in paragraph at lines 982--983
+Overfull \hbox (18.5483pt too wide) in paragraph at lines 980--981
 \T1/lmr/m/n/10.95 vy-tvo-°en $\OML/lmm/m/it/10.95 ViewModel$ \T1/lmr/m/n/10.95 
 (se zá-zna-mem letu nebo s hod-no-tou $\OML/lmm/m/it/10.95 nil$\T1/lmr/m/n/10.9
 5 ) i $\OML/lmm/m/it/10.95 MutableProperty$\T1/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (6.2315pt too wide) in paragraph at lines 1021--1022
+Overfull \hbox (6.2315pt too wide) in paragraph at lines 1019--1020
 \OML/lmm/m/it/10.95 execute$ \T1/lmr/m/n/10.95 je za-dán ve form¥ clo-sure. $\O
 ML/lmm/m/it/10.95 Action$ \T1/lmr/m/n/10.95 m·ºe ob-sa-ho-vat pod-mínku $\OML/l
 mm/m/it/10.95 enabledIf$\T1/lmr/m/n/10.95 ,
  []
 
 
-Overfull \hbox (86.30493pt too wide) in paragraph at lines 1039--1040
+Overfull \hbox (86.30493pt too wide) in paragraph at lines 1037--1038
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
+[43] [44] [45] [46]
+Overfull \hbox (12.21165pt too wide) in paragraph at lines 1122--1123
+\T1/lmr/m/n/10.95 chání hod-not v da-to-vém toku, ale pouze t¥ch které spl-¬ují
+ za-da-nou podmínku.[[]] 
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[47] [48] [49] [50] [51] [52] [53] [54
 
- [43]
-[44] [45] [46] [47] [48] [49] [50] [51] [52
-
-] (./DP_ZÌŒid_Martin_2018.bbl
-[53] [54
+] (./DP_ZÌŒid_Martin_2018.bbl [55]
+[56
 
 ]
 bibitemlist
@@ -1566,7 +1562,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
 tecture / MVC _
  []
 
-[55]
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 61--64
 []\T1/lmr/m/n/10.95 Model-View-Controller. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-p
 er \T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia,
@@ -1671,7 +1667,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--111
 rozhrani -[]
  []
 
-[56]
+[58]
 Underfull \hbox (badness 4353) in paragraph at lines 113--116
 []\T1/lmr/m/n/10.95 Nayebi, F.: \T1/lmr/m/it/10.95 Swift 3 Functi-o-nal Pro-gra
 -m-ming\T1/lmr/m/n/10.95 . Packt Pu-b-lishing,
@@ -1752,7 +1748,7 @@ Underfull \hbox (badness 5446) in paragraph at lines 165--168
 rary / content / documentation /
  []
 
-[57]
+[59]
 Underfull \hbox (badness 6016) in paragraph at lines 190--193
 \T1/lmr/m/n/10.95 Ap-ple Inc., [] 2017, [cit. 2017-09-16]. Do-stupné z: []$\T1/
 lmtt/m/n/10.95 https : / /
@@ -1790,7 +1786,7 @@ a\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 co\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10
 .95 uk / General -[] aviation / Pilot -[] licences / EASA -[]
  []
 
-[58]
+[60]
 Underfull \hbox (badness 1127) in paragraph at lines 229--232
 []\T1/lmr/m/n/10.95 Logbook Pro Avi-ation Fli-ght Log for Pi-lots. \T1/lmr/m/it
 /10.95 ITu-nes \T1/lmr/m/n/10.95 [on-line]. Ca-
@@ -1846,7 +1842,7 @@ group\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / articles / how -[] to -[] co
 nduct -[] a -[] heuristic -[]
  []
 
-[59]
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 294--297
 \T1/lmtt/m/n/10.95 library / content / documentation / Swift / Conceptual / Swi
 ft _
@@ -1907,11 +1903,17 @@ Underfull \hbox (badness 2790) in paragraph at lines 323--325
  http : / / reactivecocoa\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 io /
  []
 
-) [60] [61] [62
 
-] [63] [64
+Underfull \hbox (badness 1052) in paragraph at lines 331--334
+\T1/lmr/m/n/10.95 [cit. 2018-02-20]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
+ / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
+ []
 
-] [65]
+[62]) [63] [64
+
+] [65] [66
+
+] [67]
 \tf@toc=\write5
 \openout5 = `DP_ZÌŒid_Martin_2018.toc'.
 
@@ -1921,11 +1923,11 @@ Underfull \hbox (badness 2790) in paragraph at lines 323--325
 \tf@lot=\write7
 \openout7 = `DP_ZÌŒid_Martin_2018.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1449.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1449.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1523.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1523.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1449.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1449.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1523.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1523.
 
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
 (rerunfilecheck)             Checksum: D622A58286BA6742CE82E46B50E45EC0;5165.
@@ -1936,16 +1938,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1449.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1523.
  ) 
 Here is how much of TeX's memory you used:
- 16446 strings out of 492995
- 226134 string characters out of 6132704
- 399896 words of memory out of 5000000
- 19280 multiletter control sequences out of 15000+600000
+ 16516 strings out of 492995
+ 227203 string characters out of 6132704
+ 399178 words of memory out of 5000000
+ 19309 multiletter control sequences out of 15000+600000
  82647 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,13n,40p,1104b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,40p,1104b,1267s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2017/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2017/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2017/texmf-dist/
@@ -1963,10 +1965,10 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (81 pages, 1901388 bytes).
+Output written on DP_ZÌŒid_Martin_2018.pdf (83 pages, 1909530 bytes).
 PDF statistics:
- 1396 PDF objects out of 1440 (max. 8388607)
- 1264 compressed objects within 13 object streams
- 534 named destinations out of 1000 (max. 500000)
+ 1463 PDF objects out of 1728 (max. 8388607)
+ 1328 compressed objects within 14 object streams
+ 575 named destinations out of 1000 (max. 500000)
  322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

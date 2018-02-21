@@ -327,6 +327,11 @@ SignalProducer. © 2018.
 MutableProperty. © 2018.
 \urlprefix\biburl{http://reactivecocoa.io/reactiveswift/docs/latest/Classes/MutableProperty.html}
 
+\bibitem{operators}
+Basic Operators. \emph{GitHub} [online]. California, US.: GitHub Inc., © 2018,
+  {[cit. 2018-02-20]}.
+\urlprefix\biburl{https://github.com/ReactiveCocoa/ReactiveSwift/blob/master/Documentation/BasicOperators.md}
+
 \bibitem{sus}
 Measuring Usability With The System Usability Scale (SUS). \emph{MeasuringU}
   [online]. Measuring Usability LLC, © 2004-2017, {[cit. 2018-02-12]}.
