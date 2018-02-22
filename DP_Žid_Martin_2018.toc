@@ -95,19 +95,20 @@
 \contentsline {subsection}{\numberline {5.3.3}Ukl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } a upravov\IeC {\'a}n\IeC {\'\i } objekt\IeC {\r u}}{49}{subsection.5.3.3}
 \contentsline {subsection}{\numberline {5.3.4}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i } u\IeC {\v z}ivatele}{50}{subsection.5.3.4}
 \contentsline {subsection}{\numberline {5.3.5}Objektov\IeC {\'y} server Realm}{51}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Unit testy}{51}{section.5.4}
-\contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{51}{section.5.5}
-\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{51}{section.5.6}
-\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje a knihovny p\IeC {\v r}i v\IeC {\'y}voji}{51}{section.5.7}
-\contentsline {section}{\numberline {5.8}Heuristick\IeC {\'a} anal\IeC {\'y}za}{51}{section.5.8}
-\contentsline {section}{\numberline {5.9}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{53}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{54}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{54}{subsection.5.9.2}
-\contentsline {subsection}{\numberline {5.9.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{55}{subsection.5.9.3}
-\contentsline {subsection}{\numberline {5.9.4}V\IeC {\'y}sledky test\IeC {\r u}}{56}{subsection.5.9.4}
-\contentsline {section}{\numberline {5.10}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{56}{section.5.10}
-\contentsline {section}{\numberline {5.11}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{56}{section.5.11}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{57}{chapter*.6}
-\contentsline {chapter}{Literatura}{59}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{67}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{69}{appendix.B}
+\contentsline {section}{\numberline {5.4}P\IeC {\v r}eklady}{51}{section.5.4}
+\contentsline {section}{\numberline {5.5}Generov\IeC {\'a}n\IeC {\'\i } PDF}{51}{section.5.5}
+\contentsline {section}{\numberline {5.6}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje a knihovny p\IeC {\v r}i v\IeC {\'y}voji}{51}{section.5.6}
+\contentsline {chapter}{\chapternumberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{53}{chapter.6}
+\contentsline {section}{\numberline {6.1}Unit testy}{53}{section.6.1}
+\contentsline {section}{\numberline {6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{54}{section.6.2}
+\contentsline {section}{\numberline {6.3}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{57}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{58}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{58}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{59}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}V\IeC {\'y}sledky test\IeC {\r u}}{59}{subsection.6.3.4}
+\contentsline {section}{\numberline {6.4}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{59}{section.6.4}
+\contentsline {section}{\numberline {6.5}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{59}{section.6.5}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{61}{chapter*.6}
+\contentsline {chapter}{Literatura}{63}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{71}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{73}{appendix.B}

@@ -1261,12 +1261,10 @@ Pro přihlašování uživatele bylo vybráno řešení pomocí iCloud tokenu. T
 
 Pro přihlášení uživatele pomocí iCloudu je nutné využít framework CloudKit. CloudKit obsahuje třídu $CKContainer$, která umožňuje získat uživatelův iCloud token pomocí funkce $fetchUserRecordID$. \cite{ckcontainer} Pomocí tohoto tokenu je uživatel následně přihlášen do Realmu. Získání tohoto tokenu má určitou časovou režii \cite{ckcontainer}, proto je token získáván pouze při prvním spuštění aplikace. Následně je již uživatel uložen v Realm objektu $SyncUser.current$ (dokud nedojde k expiraci přihlášení). O přihlášení uživatele se stará v aplikaci třída $RealmViewModel$.
 
-Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je nutné provést několik kroků. Nejprve je nutné vygenerovat dvoji soukromého a veřejného klíče pro objektový server Realm. Soukromý klíč je následně nutné vložit do CloudKit Dashboard. CloudKit Dashboard dále vygeneruje $Key ID$, které je nutné vložit do konfiguračního souboru objektového serveru Realm společně s cestou k dříve vytvořenému soukromému klíči. \cite{realmObjS}
+Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je nutné provést několik kroků. Nejprve je nutné vygenerovat dvoji soukromého a veřejného klíče pro objektový server Realm. Soukromý klíč je následně nutné vložit do CloudKit Dashboard. CloudKit Dashboard dále vygeneruje $Key ID$, které je nakonec nutné vložit do konfiguračního souboru objektového serveru Realm společně s cestou k dříve vytvořenému soukromému klíči. \cite{realmObjS}
 
 \subsection{Objektový server Realm}
 %... je servrovou casti aplikace, pri vyvoji byl spousten lokalne
-
-\section{Unit testy}
 
 \section{Překlady}
 
@@ -1274,6 +1272,72 @@ Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je n
 
 \section{Použité nástroje a knihovny při vývoji}
 
+\chapter{Testování}
+Tato kapitola se zabývá jednotkovými (unit) testy, které byly tvořeny v průběhu tvorby aplikace, dále také heuristickou analýzou, uživatelskými testy a nakonec také úpravami, které byly pro dokončení testování provedeny.
+
+\section{Unit testy}
+Unit testy, neboli jednotkové testy, jsou zaměřeny na části (jednotky) kódu. Těmito jednotkami jsou v objektově orientovaném programování např. funkce nebo třídy. \cite{unitTesting}
+
+Pro tvorbu unit testů ve vytvářené aplikaci byl použit framework XCTest, který je vytvořen společností Apple a má předpřipravené rozhraní v Xcode. \cite{appleTesting}
+
+Všechny testující třídy jsou podtřídou $XCTestCase$. $XCTestCase$ je základní třídou všech testovacích případů. Tato třída obsahuje metody $setUp$ -- umožňující nastavit výchozí stav před testováním, $tearDown$ -- umožňující \uv{uklizení} po skončení testů. Dále tato třída také obsahuje funkce pro vyhodnocení jednotlivých testů. Mezi tyto funkce patří: $XCTAssertEqual$ potvrzující, že dvě vstupní hodnoty jsou stejné; $expectation$ je spojováno s $waitForExpectations$, které čeká danou dobu na to, zda je $expectation$ vyplněno ($fulfill$); a další. Funkce definující testy jsou, v testovací třídě, označeny klíčovým slovem $test$, které je na začatku jejich názvu. Takto definované funkce jsou automaticky spouštěny a vyhodnocovány. Díky klíčovému slovu $test$ je možné definovat i pomocné funkce. \cite{XCTestCase}
+
+Pro třídy, které testují funkce pracující s databází Realm, byla vytvořena testovací třída $XCTestCase$. Tato třída se starala o konfiguraci instance Realmu, která byla pouze v paměti a tudíž testy probíhali stále stejně a neovlivňovali klasickou Realm databázi.
+
+Příklad \ref{lst:unitTests} zobrazuje obě dříve zmíněné funkce -- $setUp$ vytvářející $ViewModel$, který bude podléhat testům a $tearDown$, která $ViewModel$ znovu dealokuje. Následně jsou na ukázce zobrazeny dva testy. 
+
+První z nich testuje, zda jsou $Observeři$ na $Signalu$ informování o tom, že data z Realmu jsou připravena. U tohoto testu je použita dvojice $expectation$ a $waitForExpectations$. $Expectation$ je vyplněno právě, pokud je na $Signal$ odeslána hodnota indikující dokončení přípravy Realmu. 
+
+Druhý test také pracuje s instancí Realmu. Zde je ovšem klasická instance nahrazena instancí s konfigurací $in$ $memory$, protože dochází k zápisu do Realmu. Testováno je zde pomocí $XCTAssertEqual$, zda funkce $numberOfRecordsInSection$ správně reflektuje počet záznamů v databázi Realmu.
+
+Výsledek testů je zobrazen na obrázku \ref{}
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka unit testů},label={lst:unitTests}]
+@testable import FlightRecords
+...
+class RecordsViewModelTests: TestCaseBase {
+   var viewModelUnderTest: RecordsViewModel!
+    
+   override func setUp() {
+      super.setUp()
+      viewModelUnderTest = RecordsViewModel()
+   }
+    
+   override func tearDown() {
+      viewModelUnderTest = nil
+      super.tearDown()
+   }
+
+   func testRealmSetUpInformingOberversOnComplete() {
+      let promise = expectation(description: 
+         "observers recieved notification") 
+      viewModelUnderTest.collectionChangedSignal
+         .observeValues { changes in
+         promise.fulfill()
+      } 
+      waitForExpectations(timeout: 5, handler: nil)
+   }
+
+   func testNumberOfRecords() {
+      viewModelUnderTest.realm = setUpRealm()
+      try! viewModelUnderTest.realm.write {
+         viewModelUnderTest.realm.add(Record())
+         viewModelUnderTest.realm.add(Record())
+      }
+      viewModelUnderTest.realmInitCompleted() 
+      let numberOfRecords = 
+         viewModelUnderTest.numberOfRecordsInSection()  
+      XCTAssertEqual(numberOfRecords, 2, 
+         "Number of records is wrong.")
+   }
+   ...
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}
+	
 \section{Heuristická analýza}
 Heuristická analýza byla provedena znovu poté, co byla aplikace implementována do stavu tzv. beta verze aplikace. I tato heuristická analýze byla prováděna podle pravidel Jakoba Nielsena a nyní již bylo zohledněno všech deset pravidel. Všechny nalezené chyby, stejně jako u předchozí heuristické analýzy, byly ohodnoceny na stupnici 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. U všech nalezených problémů je také uvedeno řešení, pomocí kterého byly chyby opraveny. Nakonec tabulka \ref{tab:heu_eval_2} zobrazuje u každého pravidla, zda bylo porušeno a jaká byla maximální závažnost porušení tohoto pravidla.
 

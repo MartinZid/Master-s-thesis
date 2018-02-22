@@ -370,6 +370,21 @@ Realm Object Server Documentation. \emph{Realm} [online]. Realm, © 2014-2018,
   {[cit. 2018-02-22]}.
 \urlprefix\biburl{https://realm.io/docs/realm-object-server/latest/}
 
+\bibitem{unitTesting}
+Unit Testing. \emph{Software Testing Fundamentals} [online]. STF, 2018, {[cit.
+  2018-02-22]}.
+\urlprefix\biburl{http://softwaretestingfundamentals.com/unit-testing/}
+
+\bibitem{appleTesting}
+Foundation. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2018, {[cit. 2018-02-22]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/01-introduction.html}
+
+\bibitem{XCTestCase}
+XCTestCase. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2018, {[cit. 2018-02-22]}.
+\urlprefix\biburl{https://developer.apple.com/documentation/xctest/xctestcase}
+
 \bibitem{sus}
 Measuring Usability With The System Usability Scale (SUS). \emph{MeasuringU}
   [online]. Measuring Usability LLC, © 2004-2017, {[cit. 2018-02-12]}.
