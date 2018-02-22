@@ -50,53 +50,57 @@ Warning--to sort, need author or key in devExtensions
 Warning--to sort, need author or key in devGuard
 Warning--to sort, need author or key in devProtocol
 Warning--to sort, need author or key in devMemory
+Warning--to sort, need author or key in UIKit
+Warning--to sort, need author or key in foundation
 Warning--to sort, need author or key in signal
 Warning--to sort, need author or key in signalProducer
 Warning--to sort, need author or key in property
 Warning--to sort, need author or key in operators
 Warning--to sort, need author or key in realmDocs
 Warning--to sort, need author or key in predicate
+Warning--to sort, need author or key in ckcontainer
+Warning--to sort, need author or key in realmObjS
 Warning--to sort, need author or key in sus
 Warning--empty pages in Ztaltz2014
-You've used 67 entries,
+You've used 72 entries,
             3185 wiz_defined-function locations,
-            1019 strings with 16034 characters,
-and the built_in function-call counts, 18083 in all, are:
-= -- 1240
-> -- 165
+            1041 strings with 16608 characters,
+and the built_in function-call counts, 19451 in all, are:
+= -- 1339
+> -- 176
 < -- 0
-+ -- 108
-- -- 32
-* -- 867
-:= -- 1576
-add.period$ -- 134
-call.type$ -- 67
-change.case$ -- 152
++ -- 115
+- -- 34
+* -- 935
+:= -- 1693
+add.period$ -- 144
+call.type$ -- 72
+change.case$ -- 163
 chr.to.int$ -- 0
-cite$ -- 121
-duplicate$ -- 1993
-empty$ -- 2257
-format.name$ -- 34
-if$ -- 4105
+cite$ -- 130
+duplicate$ -- 2143
+empty$ -- 2426
+format.name$ -- 36
+if$ -- 4418
 int.to.chr$ -- 0
-int.to.str$ -- 67
-missing$ -- 445
-newline$ -- 277
-num.names$ -- 28
-pop$ -- 1191
+int.to.str$ -- 72
+missing$ -- 478
+newline$ -- 297
+num.names$ -- 30
+pop$ -- 1273
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 161
 quote$ -- 0
-skip$ -- 792
+skip$ -- 851
 stack$ -- 0
-substring$ -- 460
-swap$ -- 790
+substring$ -- 499
+swap$ -- 853
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 264
-warning$ -- 54
-while$ -- 28
-width$ -- 69
-write$ -- 616
-(There were 54 warnings)
+type$ -- 284
+warning$ -- 58
+while$ -- 30
+width$ -- 74
+write$ -- 666
+(There were 58 warnings)

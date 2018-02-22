@@ -789,7 +789,7 @@ Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku
 
 V této kapitole jsou dále rozebírány některé funkcionality a vlastnosti jazyka Swift společně s ukázkami kódu z vytvářené aplikace.
 
-\subsection{Optional}
+\subsection{Optionals}
 Swift je tzv. typově bezpečný jazyk, což zaručuje to, že daná proměnná bude mít vždy stejný typ. Tedy např. pokud náš kód vyžaduje $String$ není možné zadat $Int$. 
 Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné musí být vždy inicializované před použitím a objekty nikdy nemohou být $nil$. Pro práci s hodnotami $nil$ jsou ve Swiftu zavedeny tzv. $Optinals$.
 
@@ -935,13 +935,29 @@ Automatická správa paměti, jak už je řečeno dříve, je jednou z přednost
 
 Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, které zaručuje, že instance, na kterou reference ukazuje, nebude dealokována dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá pokud má instance v referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
 
+\subsection{Použíté Apple frameworky}
+Aplikace využívá třech Apple frameworků -- UIKit, Foundation a CloudKit.
+
+UIKit je základním frameworkem pro $View$ část aplikace. Obsahuje části pro:
+\begin{itemize}
+\item vytvoření uživatelského rozhraní;
+\item zajištění komunikaci mezi uživatelem, systémem a aplikací;
+\item zpracování uživatelských interakcí;
+\item kreslení a tisknutí;
+\item animace a mnohé další. \cite{UIKit}
+\end{itemize} 
+
+Foundation obsahuje základní datové typy, kolekce, třídy atd. Umožňuje i perzistenci dat, práci s datem a časem nebo poskytuje funkce pro práci s textem. \cite{foundation}
+
+CloudKit framework umožňuje práci s iCloudem, tedy ukládání dat a přístup k k uloženým datům z více zařízení. V této aplikaci byl tento framework použit pouze pro autentizaci uživatele (dále popsáno v kapitole: \nameref{chap:login}).
+
 \section{Reactive Cocoa}
 Tato kapitola se zabývá jednotlivými prvky frameworků Reactive Cocoa a Reactive Swift, společně s ukázkami a vysvětlením jak byly v aplikaci použity. Na ukázkách je také znázorněno, jak principy FRP fungovaly s MVVM architekturou.
 
 \subsection{Signal}
 Prvním základním prvkem frameworku Reactive Swift je $Signal$. Jedná se datový tok, který posílá v průběhu svého života události (Events) -- hodnoty (Value) nebo chyby (Error). Všichni pozorovatelé daného $Signalu$ dostávají stejné události ve stejný čas a nejsou schopni $Signal$ svou činností ovlivnit. \cite{signal}
 
-Příklad \ref{lst:signal} zobrazuje použití prvku $Signal$. Společně se $Signalem$ je vytvořen ještě $Observer$. Tato dvoji následně pracuje spolu -- všechny události odeslané $Observeru$ jsou možné pozorovat na $Signalu$. $Signal$ zobrazený v ukázce se stará o informování o změnách v kolekci Realm objektů. Tento druh $Signalu$ je ten, který následně zpracovává příslušný $UITableViewController$ pomocí rozšíření (extension) zobrazené na příkladu \ref{lst:extension}.
+Příklad \ref{lst:signal} zobrazuje použití prvku $Signal$. Společně se $Signalem$ je vytvořen ještě $Observer$. Tato dvojice je vytvořena pomocí funkce $pipe$, která vrací společně navázanou dvojici $Signal$ a $Observer$. Tato dvojice následně pracuje spolu -- všechny události odeslané $Observeru$ jsou možné pozorovat na $Signalu$. $Signal$ zobrazený v ukázce se stará o informování o změnách v kolekci Realm objektů. Tento druh $Signalu$ je ten, který následně zpracovává příslušný $UITableViewController$ pomocí rozšíření (extension) zobrazené na příkladu \ref{lst:extension}.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1172,7 +1188,7 @@ Nevýhodou objektů v Realmu je nedokonalá dědičnost. Dědičnost Realm objek
 
 \begin{figure}
 \begin{minipage}{\linewidth}
-\begin{lstlisting}[caption={Ukázka Realm objektu},label={lst:realmObject}]
+\begin{lstlisting}[caption={Ukázka modelu Plane},label={lst:realmObject}]
 final class Plane: Object {
    @objc dynamic var type: String?
    @objc dynamic var model: String?
@@ -1192,7 +1208,7 @@ final class Plane: Object {
 \subsection{Dotazy}
 Dotaz v Realmu vrací kolekci $Results$, která obsahuje jednotlivé objekty. Všechny dotazy jsou tzv. lazy, dochází ke čtení až v okamžiku, kdy jsou data vyžádána (jsou např. čtena). \cite{realmDocs} Základní dotaz je zobrazen na příkladu \ref{lst:realm}.
 
-Poté, co je získána kolekce $Results$, je možné výsledky filtrovat a řadit. Filtrování je možné pomocí $NSPredicate$. \cite{realmDocs} $NSPredicate$ je třída obsažená v knihovně $Foundation$ (oficiální knihovna Apple), která představuje podmínku, jenž může být použita pro filtrování nad kolekcemi objektů. $NSPredicate$ může obsahovat klíčová slova -- like, between, contains, and, or a mnohé další. \cite{predicate}
+Poté, co je získána kolekce $Results$, je možné výsledky filtrovat a řadit. Filtrování je možné pomocí $NSPredicate$. \cite{realmDocs} $NSPredicate$ je třída obsažená v knihovně $Foundation$, tato třída představuje podmínku, jenž může být použita pro filtrování nad kolekcemi objektů. $NSPredicate$ může obsahovat klíčová slova -- like, between, contains, and, or a mnohé další. \cite{predicate}
 
 U kolekce $Results$ je také možné se registrovat a tím získávat oznámení (notifications) o všech změnách. Tato registrace je možná jak pro kolekce, tak i pro celý Realm. \cite{realmDocs} V aplikaci byly notifikace předávány pomocí $Signalu$ do $View$, kde byly následně zobrazeny vhodné animace (zobrazeno na příkladech \ref{lst:signal} a \ref{lst:extension}).
 
@@ -1215,9 +1231,9 @@ notificationsToken = collection?.observe {
 \end{figure}
 
 \subsection{Ukládání a upravování objektů}
-Ukládání a upravování Realm objektů musí být prováděno v transakci $write$. Pro uložení objektu musí být objekt nejprve vytvořen (konstruktorem) a poté vložen do Realm v transakci $write$ pomocí funkce $add$. Po uložení je možné objekt nadále používat i upravovat (znovu v transakci $write$).
+Ukládání a upravování Realm objektů musí být prováděno v transakci $write$. Pro uložení objektu musí být objekt nejprve vytvořen (konstruktorem) a poté vložen do Realm v transakci $write$ pomocí funkce $add$. Po uložení je možné objekt nadále používat i upravovat (znovu v transakci $write$). \cite{realmDocs}
 
-Ukázka \ref{lst:realmWrite} zobrazuje uložení (upravení) objektu $Plane$ do Realmu. Pokud již proměnná $plane$ obsahovala objekt $Plane$, dojde k upravení (update) v Realmu. Pokud byla proměnná $
+Ukázka \ref{lst:realmWrite} zobrazuje uložení (upravení) objektu $Plane$ do Realmu. Pokud již proměnná $plane$ obsahovala objekt $Plane$, dojde k upravení (update) v Realmu. Pokud byla proměnná $plane$ $nil$, je vytvořen nový objekt $Plane$, který je následně uložen do Realmu.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1236,7 +1252,19 @@ try! realm.write {
 \end{lstlisting}
 \end{minipage}
 \end{figure}
-	\subsection{Přihlašování}
+	
+\subsection{Přihlašování uživatele}
+\label{chap:login}
+Realm umožňuje několik možností přihlášení (autentizace) uživatele -- pomocí přihlašovacích údajů (jméno, heslo), pomocí tokenu získaného od podporované autentizační služby třetí strany (iCloud, Facebook, Google) nebo pomocí tokenu od vlastní autentizační služby. \cite{realmDocs}
+
+Pro přihlašování uživatele bylo vybráno řešení pomocí iCloud tokenu. Toto řešení navrhuje i článek Sebastiana Kreutzbergera \cite{loginUX}. Tento článek rozebírá nespokojenost uživatelů, kteří jsou nuceni vyplňovat přihlašovací údaje ihned při prvním spuštění aplikace. Navrhovaným řešením je právě iCloud a to z toho důvodu, že každý uživatel má iCloud účet.  Kdy tento účet je nutný minimálně ke stahovaní aplikací z App Storu.
+
+Pro přihlášení uživatele pomocí iCloudu je nutné využít framework CloudKit. CloudKit obsahuje třídu $CKContainer$, která umožňuje získat uživatelův iCloud token pomocí funkce $fetchUserRecordID$. \cite{ckcontainer} Pomocí tohoto tokenu je uživatel následně přihlášen do Realmu. Získání tohoto tokenu má určitou časovou režii \cite{ckcontainer}, proto je token získáván pouze při prvním spuštění aplikace. Následně je již uživatel uložen v Realm objektu $SyncUser.current$ (dokud nedojde k expiraci přihlášení). O přihlášení uživatele se stará v aplikaci třída $RealmViewModel$.
+
+Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je nutné provést několik kroků. Nejprve je nutné vygenerovat dvoji soukromého a veřejného klíče pro objektový server Realm. Soukromý klíč je následně nutné vložit do CloudKit Dashboard. CloudKit Dashboard dále vygeneruje $Key ID$, které je nutné vložit do konfiguračního souboru objektového serveru Realm společně s cestou k dříve vytvořenému soukromému klíči. \cite{realmObjS}
+
+\subsection{Objektový server Realm}
+%... je servrovou casti aplikace, pri vyvoji byl spousten lokalne
 
 \section{Unit testy}
 
@@ -1244,7 +1272,7 @@ try! realm.write {
 
 \section{Generování PDF}
 
-\section{Použité nástroje při vývoji}
+\section{Použité nástroje a knihovny při vývoji}
 
 \section{Heuristická analýza}
 Heuristická analýza byla provedena znovu poté, co byla aplikace implementována do stavu tzv. beta verze aplikace. I tato heuristická analýze byla prováděna podle pravidel Jakoba Nielsena a nyní již bylo zohledněno všech deset pravidel. Všechny nalezené chyby, stejně jako u předchozí heuristické analýzy, byly ohodnoceny na stupnici 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. U všech nalezených problémů je také uvedeno řešení, pomocí kterého byly chyby opraveny. Nakonec tabulka \ref{tab:heu_eval_2} zobrazuje u každého pravidla, zda bylo porušeno a jaká byla maximální závažnost porušení tohoto pravidla.
@@ -1293,7 +1321,6 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
  		\item Řešení -- přejmenování popisu \uv{Typ} na \uv{Typ zařízení}.
  	\end{itemize}
 \end{itemize}
- 
  
 \item Uživatelská kontrola a volnost -- 
 \begin{itemize}
@@ -1446,8 +1473,11 @@ Tabulka \ref{tab:ut_eval} zobrazuje hodnocení splnění scénářů u jednotliv
 \end{table}
 
 
-\section{Postupy FRP v aplikaci}
-\section{Zhodnocení MVVM a FRP}
+\section{Zhodnocení postupů FRP v aplikaci}
+%vyhody a nevyhody
+
+\section{Zhodnocení časové a implementační náročnosti MVVM a FRP oproti MVC}
+%Zhodnoťte časovou a implementační náročnost oproti "klasickému" postupu a standardní MVC architektuře.
 
 \begin{conclusion}
 	%sem napište závěr Vaší práce

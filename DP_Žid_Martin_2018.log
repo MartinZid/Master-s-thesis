@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  21 FEB 2018 18:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  22 FEB 2018 12:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1174,7 +1174,7 @@ cí HTML5 a Ja-vaScriptu,
  []
 
 [5] [6]
-<./pictures/architektury/model_view_controller.png, id=337, 511.9125pt x 210.78
+<./pictures/architektury/model_view_controller.png, id=338, 511.9125pt x 210.78
 75pt>
 File: ./pictures/architektury/model_view_controller.png Graphic file (type png)
 
@@ -1183,7 +1183,7 @@ Package pdftex.def Info: ./pictures/architektury/model_view_controller.png used
  on input line 177.
 (pdftex.def)             Requested size: 365.31203pt x 150.42244pt.
 
-<./pictures/architektury/appleMVC.png, id=338, 511.9125pt x 281.05pt>
+<./pictures/architektury/appleMVC.png, id=339, 511.9125pt x 281.05pt>
 File: ./pictures/architektury/appleMVC.png Graphic file (type png)
 
 <use ./pictures/architektury/appleMVC.png>
@@ -1198,7 +1198,7 @@ ké o zkratku,
 
 [7 <./pictures/architektury/model_view_controller.png (PNG copy)> <./pictures/a
 rchitektury/appleMVC.png (PNG copy)>]
-<./pictures/architektury/MVVM.png, id=352, 652.4375pt x 240.9pt>
+<./pictures/architektury/MVVM.png, id=353, 652.4375pt x 240.9pt>
 File: ./pictures/architektury/MVVM.png Graphic file (type png)
 
 <use ./pictures/architektury/MVVM.png>
@@ -1213,7 +1213,7 @@ Overfull \hbox (20.02321pt too wide) in paragraph at lines 212--213
  []
 
 [8 <./pictures/architektury/MVVM.png (PNG copy)>]
-<./pictures/architektury/viper.png, id=366, 702.625pt x 431.6125pt>
+<./pictures/architektury/viper.png, id=367, 702.625pt x 431.6125pt>
 File: ./pictures/architektury/viper.png Graphic file (type png)
 
 <use ./pictures/architektury/viper.png>
@@ -1225,7 +1225,7 @@ Package pdftex.def Info: ./pictures/architektury/viper.png used on input line 2
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 239.
 
-<./pictures/storyboard.png, id=368, 1924.18875pt x 987.69pt>
+<./pictures/storyboard.png, id=369, 1924.18875pt x 987.69pt>
 File: ./pictures/storyboard.png Graphic file (type png)
 
 <use ./pictures/storyboard.png>
@@ -1271,7 +1271,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 386.
 
 
-<./pictures/existujiciAplikace/LogTenProX.png, id=500, 1555.8125pt x 1339.0025p
+<./pictures/existujiciAplikace/LogTenProX.png, id=501, 1555.8125pt x 1339.0025p
 t>
 File: ./pictures/existujiciAplikace/LogTenProX.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogTenProX.png>
@@ -1284,7 +1284,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 391.
 
 
-<./pictures/existujiciAplikace/LogbookPro.png, id=501, 1555.8125pt x 1339.0025p
+<./pictures/existujiciAplikace/LogbookPro.png, id=502, 1555.8125pt x 1339.0025p
 t>
 File: ./pictures/existujiciAplikace/LogbookPro.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogbookPro.png>
@@ -1297,7 +1297,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 396.
 
 
-<./pictures/existujiciAplikace/Safelog.png, id=502, 1555.8125pt x 1339.0025pt>
+<./pictures/existujiciAplikace/Safelog.png, id=503, 1555.8125pt x 1339.0025pt>
 File: ./pictures/existujiciAplikace/Safelog.png Graphic file (type png)
 
 <use ./pictures/existujiciAplikace/Safelog.png>
@@ -1309,7 +1309,7 @@ t line 397.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 401.
 
-<./pictures/existujiciAplikace/FlyLogio.png, id=503, 1254.6875pt x 1027.84pt>
+<./pictures/existujiciAplikace/FlyLogio.png, id=504, 1254.6875pt x 1027.84pt>
 File: ./pictures/existujiciAplikace/FlyLogio.png Graphic file (type png)
 
 <use ./pictures/existujiciAplikace/FlyLogio.png>
@@ -1322,7 +1322,7 @@ LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 406.
 
 
-<./pictures/existujiciAplikace/SmartLogbook.png, id=504, 1254.6875pt x 1027.84p
+<./pictures/existujiciAplikace/SmartLogbook.png, id=505, 1254.6875pt x 1027.84p
 t>
 File: ./pictures/existujiciAplikace/SmartLogbook.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/SmartLogbook.png>
@@ -1348,7 +1348,7 @@ ikace/SmartLogbook.png>] [24
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 544.
 
-<./pictures/UC/UC.png, id=595, 733.74126pt x 742.775pt>
+<./pictures/UC/UC.png, id=596, 733.74126pt x 742.775pt>
 File: ./pictures/UC/UC.png Graphic file (type png)
 
 <use ./pictures/UC/UC.png>
@@ -1358,7 +1358,7 @@ Package pdftex.def Info: ./pictures/UC/UC.png used on input line 545.
 Underfull \vbox (badness 6428) has occurred while \output is active []
 
  [26 <./pictures/UC/UC.png (PNG copy)>] [27] [28] [29] [30]
-<./pictures/heur_eval_finding_curve_trans.png, id=642, 501.875pt x 316.18124pt>
+<./pictures/heur_eval_finding_curve_trans.png, id=643, 501.875pt x 316.18124pt>
 File: ./pictures/heur_eval_finding_curve_trans.png Graphic file (type png)
 <use ./pictures/heur_eval_finding_curve_trans.png>
 Package pdftex.def Info: ./pictures/heur_eval_finding_curve_trans.png used on i
@@ -1433,91 +1433,91 @@ Overfull \hbox (3.52222pt too wide) in paragraph at lines 924--925
  []
 
 [40] [41]
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 949--950
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 965--966
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (17.31934pt too wide) in paragraph at lines 954--955
+Overfull \hbox (17.31934pt too wide) in paragraph at lines 970--971
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 956--958
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 972--974
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 960--961
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 976--977
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 961--962
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 977--978
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.42078pt too wide) in paragraph at lines 963--964
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 979--980
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 964--965
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 980--981
 [][][][][][][][][][][][][][][][][][] 
  []
 
 [42]
-Overfull \hbox (19.42778pt too wide) in paragraph at lines 983--984
+Overfull \hbox (19.42778pt too wide) in paragraph at lines 999--1000
 $\OML/lmm/m/it/10.95 MutableProperty$ \T1/lmr/m/n/10.95 je dal-²ím prv-kem fra-
 meworku Re-active Swift. $\OML/lmm/m/it/10.95 MutableProperty$
  []
 
 
-Overfull \hbox (8.5565pt too wide) in paragraph at lines 985--986
+Overfull \hbox (8.5565pt too wide) in paragraph at lines 1001--1002
 \T1/lmr/m/n/10.95 vých vrs-tev ar-chi-tek-tury. První pro-po-jení p°e-sta-vuje 
 pro-m¥nná $\OML/lmm/m/it/10.95 fromTextField$\T1/lmr/m/n/10.95 ,
  []
 
-
-Overfull \hbox (18.5483pt too wide) in paragraph at lines 987--988
+[43]
+Overfull \hbox (18.5483pt too wide) in paragraph at lines 1003--1004
 \T1/lmr/m/n/10.95 vy-tvo-°en $\OML/lmm/m/it/10.95 ViewModel$ \T1/lmr/m/n/10.95 
 (se zá-zna-mem letu nebo s hod-no-tou $\OML/lmm/m/it/10.95 nil$\T1/lmr/m/n/10.9
 5 ) i $\OML/lmm/m/it/10.95 MutableProperty$\T1/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (6.2315pt too wide) in paragraph at lines 1028--1029
+Overfull \hbox (6.2315pt too wide) in paragraph at lines 1044--1045
 \OML/lmm/m/it/10.95 execute$ \T1/lmr/m/n/10.95 je za-dán ve form¥ clo-sure. $\O
 ML/lmm/m/it/10.95 Action$ \T1/lmr/m/n/10.95 m·ºe ob-sa-ho-vat pod-mínku $\OML/l
 mm/m/it/10.95 enabledIf$\T1/lmr/m/n/10.95 ,
  []
 
 
-LaTeX Warning: Float too large for page by 5.48003pt on input line 1079.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[43] [44] [45] [46]
-Overfull \hbox (12.21165pt too wide) in paragraph at lines 1134--1135
+ [44]
+
+LaTeX Warning: Float too large for page by 5.48003pt on input line 1095.
+
+
+Overfull \hbox (12.21165pt too wide) in paragraph at lines 1150--1151
 \T1/lmr/m/n/10.95 chání hod-not v da-to-vém toku, ale pouze t¥ch které spl-¬ují
  za-da-nou podmínku.[[]] 
  []
 
-
-Underfull \vbox (badness 1028) has occurred while \output is active []
-
- [47]
-[48] [49]
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 1231--1232
+[45] [46] [47] [48]
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 1247--1248
 [][][][][][][][][][][][][][][] 
  []
 
-[50] [51]
+[49] [50] [51] [52]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52] [53] [54] [55] [56
+[53] [54] [55] [56] (./DP_ZÌŒid_Martin_2018.bbl [57
 
-] (./DP_ZÌŒid_Martin_2018.bbl [57] [58
+] [58
 
 ]
 bibitemlist
@@ -1908,24 +1908,30 @@ anguage /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
-[]\T1/lmr/m/n/10.95 Signal. [] 2018. Do-stupné z: []$\T1/lmtt/m/n/10.95 http : 
-/ / reactivecocoa\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 io /
+Underfull \hbox (badness 2142) in paragraph at lines 319--322
+[]\T1/lmr/m/n/10.95 UIKit. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-per \T1/lmr/m/n/1
+0.95 [on-line]. Ca-li-for-nia, U.S.: Ap-ple Inc., []
+ []
+
+[64]
+Underfull \hbox (badness 5787) in paragraph at lines 339--342
+[]\T1/lmr/m/n/10.95 MutableProperty. \T1/lmr/m/it/10.95 Re-acti-ve-Swift Docs \
+T1/lmr/m/n/10.95 [on-line]. Re-acti-ve-Co-coa, []
  []
 
 
-Underfull \hbox (badness 2790) in paragraph at lines 323--325
-[]\T1/lmr/m/n/10.95 SignalProducer. [] 2018. Do-stupné z: []$\T1/lmtt/m/n/10.95
- http : / / reactivecocoa\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 io /
+Underfull \hbox (badness 7888) in paragraph at lines 339--342
+\T1/lmr/m/n/10.95 2018, [cit. 2018-02-20]. Do-stupné z: []$\T1/lmtt/m/n/10.95 h
+ttp : / / reactivecocoa\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 io /
  []
 
 
-Underfull \hbox (badness 1052) in paragraph at lines 331--334
+Underfull \hbox (badness 1052) in paragraph at lines 344--347
 \T1/lmr/m/n/10.95 [cit. 2018-02-20]. Do-stupné z: []$\T1/lmtt/m/n/10.95 https :
  / / github\OML/lmm/m/it/10.95 :\T1/lmtt/m/n/10.95 com / ReactiveCocoa /
  []
 
-[64]) [65] [66
+) [65] [66
 
 ] [67] [68
 
@@ -1939,14 +1945,14 @@ Underfull \hbox (badness 1052) in paragraph at lines 331--334
 \tf@lot=\write7
 \openout7 = `DP_ZÌŒid_Martin_2018.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1609.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1609.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1639.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1639.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1609.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1609.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1639.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1639.
 
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
-(rerunfilecheck)             Checksum: D622A58286BA6742CE82E46B50E45EC0;5165.
+(rerunfilecheck)             Checksum: FABB3A89D835A841BD5932C1E81688A3;5551.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1954,13 +1960,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1609.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1639.
  ) 
 Here is how much of TeX's memory you used:
- 16598 strings out of 492995
- 228390 string characters out of 6132704
- 404607 words of memory out of 5000000
- 19336 multiletter control sequences out of 15000+600000
+ 16611 strings out of 492995
+ 228553 string characters out of 6132704
+ 403028 words of memory out of 5000000
+ 19342 multiletter control sequences out of 15000+600000
  82647 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,40p,1104b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1981,10 +1987,10 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (85 pages, 1919395 bytes).
+Output written on DP_ZÌŒid_Martin_2018.pdf (85 pages, 1924540 bytes).
 PDF statistics:
- 1551 PDF objects out of 1728 (max. 8388607)
- 1413 compressed objects within 15 object streams
- 630 named destinations out of 1000 (max. 500000)
+ 1580 PDF objects out of 1728 (max. 8388607)
+ 1442 compressed objects within 15 object streams
+ 637 named destinations out of 1000 (max. 500000)
  322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

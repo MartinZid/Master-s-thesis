@@ -315,16 +315,29 @@ Automatic Reference Counting. \emph{Apple Developer} [online]. California,
   U.S.: Apple Inc., © 2018, {[cit. 2018-02-17]}.
 \urlprefix\biburl{https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/AutomaticReferenceCounting.html}
 
+\bibitem{UIKit}
+UIKit. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., © 2018,
+  {[cit. 2018-02-22]}.
+\urlprefix\biburl{https://developer.apple.com/documentation/uikit}
+
+\bibitem{foundation}
+Foundation. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2018, {[cit. 2018-02-22]}.
+\urlprefix\biburl{https://developer.apple.com/documentation/foundation}
+
 \bibitem{signal}
-Signal. © 2018.
+Signal. \emph{ReactiveSwift Docs} [online]. ReactiveCocoa, © 2018, {[cit.
+  2018-02-20]}.
 \urlprefix\biburl{http://reactivecocoa.io/reactiveswift/docs/latest/Classes/Signal.html}
 
 \bibitem{signalProducer}
-SignalProducer. © 2018.
+SignalProducer. \emph{ReactiveSwift Docs} [online]. ReactiveCocoa, © 2018,
+  {[cit. 2018-02-20]}.
 \urlprefix\biburl{http://reactivecocoa.io/reactiveswift/docs/latest/Structs/SignalProducer.html}
 
 \bibitem{property}
-MutableProperty. © 2018.
+MutableProperty. \emph{ReactiveSwift Docs} [online]. ReactiveCocoa, © 2018,
+  {[cit. 2018-02-20]}.
 \urlprefix\biburl{http://reactivecocoa.io/reactiveswift/docs/latest/Classes/MutableProperty.html}
 
 \bibitem{operators}
@@ -333,7 +346,7 @@ Basic Operators. \emph{GitHub} [online]. California, US.: GitHub Inc., © 2018,
 \urlprefix\biburl{https://github.com/ReactiveCocoa/ReactiveSwift/blob/master/Documentation/BasicOperators.md}
 
 \bibitem{realmDocs}
-The Realm Mobile Platform. \emph{Realm} [online]. Realm, © 2014-2017, {[cit.
+The Realm Mobile Platform. \emph{Realm} [online]. Realm, © 2014-2018, {[cit.
   2018-02-21]}.
 \urlprefix\biburl{https://realm.io/docs/swift/latest/}
 
@@ -341,6 +354,21 @@ The Realm Mobile Platform. \emph{Realm} [online]. Realm, © 2014-2017, {[cit.
 NSPredicate. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
   2018, {[cit. 2018-02-21]}.
 \urlprefix\biburl{https://developer.apple.com/documentation/foundation/nspredicate}
+
+\bibitem{loginUX}
+Kreutzberger, S.: UX: iOS Onboarding without Signup Screens. \emph{Medium}
+  [online]. Medium.
+\urlprefix\biburl{https://medium.com/@skreutzb/ios-onboarding-without-signup-screens-cb7a76d01d6e}
+
+\bibitem{ckcontainer}
+Foundation. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., ©
+  2018, {[cit. 2018-02-22]}.
+\urlprefix\biburl{https://developer.apple.com/documentation/cloudkit/ckcontainer}
+
+\bibitem{realmObjS}
+Realm Object Server Documentation. \emph{Realm} [online]. Realm, © 2014-2018,
+  {[cit. 2018-02-22]}.
+\urlprefix\biburl{https://realm.io/docs/realm-object-server/latest/}
 
 \bibitem{sus}
 Measuring Usability With The System Usability Scale (SUS). \emph{MeasuringU}

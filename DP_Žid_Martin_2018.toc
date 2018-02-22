@@ -73,38 +73,40 @@
 \contentsline {subsection}{\numberline {4.4.3}FRP framework}{35}{subsection.4.4.3}
 \contentsline {chapter}{\chapternumberline {5}Realizace}{37}{chapter.5}
 \contentsline {section}{\numberline {5.1}Programovac\IeC {\'\i } jazyk Swift}{37}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Optional}{37}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.1}Optionals}{37}{subsection.5.1.1}
 \contentsline {subsection}{\numberline {5.1.2}Extensions}{38}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Protokoly}{39}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Automatick\IeC {\'e} po\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } referenc\IeC {\'\i }}{40}{subsection.5.1.4}
-\contentsline {section}{\numberline {5.2}Reactive Cocoa}{40}{section.5.2}
+\contentsline {subsection}{\numberline {5.1.5}Pou\IeC {\v z}\IeC {\'\i }t\IeC {\'e} Apple frameworky}{40}{subsection.5.1.5}
+\contentsline {section}{\numberline {5.2}Reactive Cocoa}{42}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Signal}{42}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}SignalProducer}{43}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.2}SignalProducer}{42}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}MutableProperty}{43}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Action}{43}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Pou\IeC {\v z}it\IeC {\'e} z\IeC {\'a}kladn\IeC {\'\i } oper\IeC {\'a}tory}{43}{subsection.5.2.5}
-\contentsline {subsubsection}{\numberline {5.2.5.1}Map}{46}{subsubsection.5.2.5.1}
-\contentsline {subsubsection}{\numberline {5.2.5.2}Reduce}{46}{subsubsection.5.2.5.2}
+\contentsline {subsection}{\numberline {5.2.4}Action}{45}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Pou\IeC {\v z}it\IeC {\'e} z\IeC {\'a}kladn\IeC {\'\i } oper\IeC {\'a}tory}{45}{subsection.5.2.5}
+\contentsline {subsubsection}{\numberline {5.2.5.1}Map}{45}{subsubsection.5.2.5.1}
+\contentsline {subsubsection}{\numberline {5.2.5.2}Reduce}{45}{subsubsection.5.2.5.2}
 \contentsline {subsubsection}{\numberline {5.2.5.3}Filter}{47}{subsubsection.5.2.5.3}
 \contentsline {subsubsection}{\numberline {5.2.5.4}Spojov\IeC {\'a}n\IeC {\'\i } datov\IeC {\'y}ch tok\IeC {\r u}}{47}{subsubsection.5.2.5.4}
 \contentsline {subsubsection}{\numberline {5.2.5.5}Binding oper\IeC {\'a}tor}{48}{subsubsection.5.2.5.5}
 \contentsline {section}{\numberline {5.3}Realm}{48}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Model}{48}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Dotazy}{48}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Dotazy}{49}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Ukl\IeC {\'a}d\IeC {\'a}n\IeC {\'\i } a upravov\IeC {\'a}n\IeC {\'\i } objekt\IeC {\r u}}{49}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i }}{50}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Unit testy}{50}{section.5.4}
-\contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{50}{section.5.5}
-\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{50}{section.5.6}
-\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{50}{section.5.7}
-\contentsline {section}{\numberline {5.8}Heuristick\IeC {\'a} anal\IeC {\'y}za}{50}{section.5.8}
-\contentsline {section}{\numberline {5.9}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{52}{section.5.9}
-\contentsline {subsection}{\numberline {5.9.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{53}{subsection.5.9.1}
-\contentsline {subsection}{\numberline {5.9.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{53}{subsection.5.9.2}
-\contentsline {subsection}{\numberline {5.9.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{54}{subsection.5.9.3}
-\contentsline {subsection}{\numberline {5.9.4}V\IeC {\'y}sledky test\IeC {\r u}}{55}{subsection.5.9.4}
-\contentsline {section}{\numberline {5.10}Postupy FRP v aplikaci}{55}{section.5.10}
-\contentsline {section}{\numberline {5.11}Zhodnocen\IeC {\'\i } MVVM a FRP}{55}{section.5.11}
+\contentsline {subsection}{\numberline {5.3.4}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i } u\IeC {\v z}ivatele}{50}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Objektov\IeC {\'y} server Realm}{51}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Unit testy}{51}{section.5.4}
+\contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{51}{section.5.5}
+\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{51}{section.5.6}
+\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje a knihovny p\IeC {\v r}i v\IeC {\'y}voji}{51}{section.5.7}
+\contentsline {section}{\numberline {5.8}Heuristick\IeC {\'a} anal\IeC {\'y}za}{51}{section.5.8}
+\contentsline {section}{\numberline {5.9}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{53}{section.5.9}
+\contentsline {subsection}{\numberline {5.9.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{54}{subsection.5.9.1}
+\contentsline {subsection}{\numberline {5.9.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{54}{subsection.5.9.2}
+\contentsline {subsection}{\numberline {5.9.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{55}{subsection.5.9.3}
+\contentsline {subsection}{\numberline {5.9.4}V\IeC {\'y}sledky test\IeC {\r u}}{56}{subsection.5.9.4}
+\contentsline {section}{\numberline {5.10}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{56}{section.5.10}
+\contentsline {section}{\numberline {5.11}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{56}{section.5.11}
 \contentsline {chapter}{Z{\' a}v{\v e}r}{57}{chapter*.6}
 \contentsline {chapter}{Literatura}{59}{section*.8}
 \contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{67}{appendix.A}
