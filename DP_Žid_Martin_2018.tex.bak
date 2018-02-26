@@ -1263,8 +1263,8 @@ Pro přihlášení uživatele pomocí iCloudu je nutné využít framework Cloud
 
 Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je nutné provést několik kroků. Nejprve je nutné vygenerovat dvoji soukromého a veřejného klíče pro objektový server Realm. Soukromý klíč je následně nutné vložit do CloudKit Dashboard. CloudKit Dashboard dále vygeneruje $Key ID$, které je nakonec nutné vložit do konfiguračního souboru objektového serveru Realm společně s cestou k dříve vytvořenému soukromému klíči. \cite{realmObjS}
 
-\subsection{Objektový server Realm}
-%... je servrovou casti aplikace, pri vyvoji byl spousten lokalne
+\section{Tvorba uživatelského rozhraní}
+% constraints, table views, splitviewcontroller
 
 \section{Překlady}
 
@@ -1290,7 +1290,7 @@ První z nich testuje, zda jsou $Observeři$ na $Signalu$ informování o tom, �
 
 Druhý test také pracuje s instancí Realmu. Zde je ovšem klasická instance nahrazena instancí s konfigurací $in$ $memory$, protože dochází k zápisu do Realmu. Testováno je zde pomocí $XCTAssertEqual$, zda funkce $numberOfRecordsInSection$ správně reflektuje počet záznamů v databázi Realmu.
 
-Výsledek testů je zobrazen na obrázku \ref{}
+Výsledek testů je zobrazen na obrázku \ref{fig:testsResult}.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1511,30 +1511,40 @@ Jako závěrečný dotazník byl zvolen SUS -- \uv{System Usability Scale}, kter
 Ke každé otázce je odpověď s~výběrem z~pěti možností. Odpovědi jsou ohodnoceny 1--5, kde 1 představuje silný nesouhlas a 5 silný souhlas. \cite{sus}
 
 \subsection{Výsledky testů}
-Tabulka \ref{tab:ut_eval} zobrazuje hodnocení splnění scénářů u jednotlivých uživatelů. Hodnocení bylo znovu v rozsahu 1 až 5, kde 1 představuje bezproblémové splnění a 5 nedokončení scénáře.
-%z tabulky je mozne videt, ze
-%provedene upravy
+Tabulka \ref{tab:ut_eval} zobrazuje hodnocení splnění scénářů u jednotlivých uživatelů. Hodnocení bylo znovu v rozsahu 1 až 5, kde 1 představuje bezproblémové splnění a 5 nedokončení scénáře.  Z tabulky je možné vidět, že všichni uživatelé nějakým způsobem splnily všechny zadané scénáře (nejhorší hodnocení je 4 a to se objevuje pouze jednou). Je také možné si všimnout, že pokud některé scénáře obsahovaly podobné kroky, jako scénáře již absolvované (např. filtrování nebo vkládání záznamu), uživatelé se s aplikací již seznámili a naučili a s dalšími obdobnými úlohami již neměli problém.
 
 \begin{table}\centering
  \begin{tabular}{ c | c | c | c | c |}
  	 & Uživatel 1 & Uživatel 2 & Uživatel 3 & Uživatel 4 \\
  	\hline
- 	Úloha 1  & - & - & - & -\\
- 	Úloha 2  & - & - & - & - \\
- 	Úloha 3  & - & - & - & -\\
- 	Úloha 4  & - & - & - & -\\
- 	Úloha 5  & - & - & - & -\\
- 	Úloha 6  & - & - & - & -\\
- 	Úloha 7  & - & - & - & -\\
- 	Úloha 8  & - & - & - & -\\
- 	Úloha 9  & - & - & - & -\\
- 	Úloha 10 & - & - & - & -\\
- 	Úloha 11 & - & - & - & -\\
- 	Úloha 12 & - & - & - & -\\
- 	Úloha 13 & - & - & - & -\\
+ 	Úloha 1  & 2 & 2 & 1 & - \\
+ 	Úloha 2  & 1 & 1 & 1 & - \\
+ 	Úloha 3  & 1 & 1 & 1 & - \\
+ 	Úloha 4  & 1 & 2 & 3 & - \\
+ 	Úloha 5  & 1 & 2 & 1 & - \\
+ 	Úloha 6  & 1 & 1 & 3 & - \\
+ 	Úloha 7  & 1 & 1 & 1 & - \\
+ 	Úloha 8  & 1 & 4 & 1 & - \\
+ 	Úloha 9  & 1 & 1 & 1 & - \\
+ 	Úloha 10 & 3 & 2 & 3 & - \\
+ 	Úloha 11 & 1 & 1 & 1 & - \\
+ 	Úloha 12 & 1 & 1 & 2 & - \\
  \end{tabular}
  \caption[Hodnocení splnění jednotlivých scénářů]{Hodnocení splnění jednotlivých scénářů}\label{tab:ut_eval}
 \end{table}
+
+Při testování nebyly objeveny žádné kritické problémy, však díky pozorování a nahrávání uživatelů bylo objeveno několik nedostatků, které byly následně opraveny. Zde je jejich seznam.
+
+\begin{itemize}
+\item Při přidávání nebo úpravě záznamu letů již nemizí určité řádky tabulky (opraveno již po prvním testování).
+\item Certifikát, který není pojmenovaný se nyní v tabulce označuje jako \uv{Nepojmenovaný}. Dříve nebyl označený nijak.
+\item U certifikátů s dlouhým názvem již není zobrazen celý název, ale pouze určitá část.
+\item U záložek, které obsahují $UISplitViewController$ již funguje vrácení se na hlavní stránku záložky, při dvojím poklepání na danou záložku.
+\item Zaměření textového pole je nyní možné při kliknutí kamkoliv na řádek s tímto textovým polem.
+\item Řádky statických tabulek jsou nyní zvýrazňovány pouze pokud fungují jako tlačítko.
+\item Akce \uv{Zrušit filtrování} je potvrzována dialogovým oknem.
+\item U filtrování je nyní možné zrušit nastavené letadlo.
+\end{itemize}
 
 
 \section{Zhodnocení postupů FRP v aplikaci}
