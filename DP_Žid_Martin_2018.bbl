@@ -370,6 +370,25 @@ Realm Object Server Documentation. \emph{Realm} [online]. Realm, © 2014-2018,
   {[cit. 2018-02-22]}.
 \urlprefix\biburl{https://realm.io/docs/realm-object-server/latest/}
 
+\bibitem{Xcode}
+Xcode. \emph{Apple Developer} [online]. California, U.S.: Apple Inc., © 2018,
+  {[cit. 2018-02-28]}.
+\urlprefix\biburl{https://developer.apple.com/xcode/ide/}
+
+\bibitem{git}
+Git. \emph{Git} [online]., {[cit. 2018-02-28]}.
+\urlprefix\biburl{https://git-scm.com/}
+
+\bibitem{carthage}
+Carthage. \emph{GitHub} [online]. California, US.: GitHub Inc., © 2018, {[cit.
+  2018-02-28]}.
+\urlprefix\biburl{https://github.com/Carthage/Carthage}
+
+\bibitem{realmStudio}
+Download Realm Studio. \emph{Realm} [online]. Realm, © 2014-2018, {[cit.
+  2018-02-28}.
+\urlprefix\biburl{https://realm.io/products/realm-studio/}
+
 \bibitem{unitTesting}
 Unit Testing. \emph{Software Testing Fundamentals} [online]. STF, 2018, {[cit.
   2018-02-22]}.

@@ -97,7 +97,11 @@
 \contentsline {section}{\numberline {5.4}Tvorba u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{51}{section.5.4}
 \contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{51}{section.5.5}
 \contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{51}{section.5.6}
-\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje a knihovny p\IeC {\v r}i v\IeC {\'y}voji}{51}{section.5.7}
+\contentsline {section}{\numberline {5.7}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{51}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Xcode}{51}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Git}{51}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}Carthage}{52}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.4}Realm Studio}{52}{subsection.5.7.4}
 \contentsline {chapter}{\chapternumberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{53}{chapter.6}
 \contentsline {section}{\numberline {6.1}Unit testy}{53}{section.6.1}
 \contentsline {section}{\numberline {6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{54}{section.6.2}
@@ -106,9 +110,10 @@
 \contentsline {subsection}{\numberline {6.3.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{58}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{59}{subsection.6.3.3}
 \contentsline {subsection}{\numberline {6.3.4}V\IeC {\'y}sledky test\IeC {\r u}}{60}{subsection.6.3.4}
-\contentsline {section}{\numberline {6.4}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{61}{section.6.4}
-\contentsline {section}{\numberline {6.5}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{61}{section.6.5}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{63}{chapter*.6}
-\contentsline {chapter}{Literatura}{65}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{73}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{75}{appendix.B}
+\contentsline {chapter}{\chapternumberline {7}Zhodnocen\IeC {\'\i }}{63}{chapter.7}
+\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{63}{section.7.1}
+\contentsline {section}{\numberline {7.2}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{63}{section.7.2}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{65}{chapter*.6}
+\contentsline {chapter}{Literatura}{67}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{75}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{77}{appendix.B}

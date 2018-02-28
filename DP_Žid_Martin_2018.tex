@@ -775,7 +775,7 @@ Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat po
 \section{Programovací jazyk Swift}
 Swift je programovací jazyk vytvořený společností Apple. Jedná se o nástupce jazyku C a Objective-C a používá se pro tvorbu iOS, macOS, watchOS a tvOS aplikací.
 
-Swift je objektově orientovaný open-source jazyk. Mezi jeho hlavní přednosti patří: 
+Swift je objektově orientovaný open source jazyk. Mezi jeho hlavní přednosti patří: 
 \begin{itemize}
 \item automaticky spravovaná paměť,
 \item podpora i funkcionálního programování (filter, map, reduce),
@@ -1270,7 +1270,36 @@ Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je n
 
 \section{Generování PDF}
 
-\section{Použité nástroje a knihovny při vývoji}
+\section{Použité nástroje při vývoji}
+\subsection{Xcode}
+Xcode 9 byly použity pro vývoj, testování a simulování vytvářené aplikace. 
+
+Xcode je software od Applu pro operační systém macOS a používá se pro vývoj aplikací na Mac, iPhone, iPad, Apple Watch a Apple TV. Xcode obsahují zabudované nástroje pro psání kódu, kompilaci, testování, vytváření uživatelského rozhraní, spouštění vytvářené aplikace na simulátorech a další. \cite{Xcode}
+
+\subsection{Git}
+Software Git byl používán pro zálohování, verzování a sdílení zdrojových kódů aplikace. 
+
+Git je open source software, který je zdarma a používá se pro verzování projektů. \cite{git}
+
+Repositář aplikace vyvíjené v rámci této magisterské práce byl uložen na GitHub (\url{https://github.com/MartinZid/FlightRecords}). Do tohoto repositáře byl přidán vedoucí této práce jako tzv. collaborator. Díky tomu byl stále informován o změnách a mohlo docházet k revizi zdrojových kódů.
+
+\subsection{Carthage}
+Carthage je software, který se používá pro správu frameworků. Carthage tyto frameworky stáhne a připraví pro vložení do projektu, dále je také možné pomocí Carthage frameworky aktualizovat na novější verze. \cite{carthage}
+
+Seznam použitých frameworků je uložen v souboru Cartfile, kde je možné i uvést požadovanou verzi frameworku. Pro stažení a připravení frameworků se používá příkaz $carthage$ $update$. Poté, co jsou frameworky připraveny, je nutné je vložit do Xcode projektu. \cite{carthage}
+
+Pomocí Carthage byly spravovány frameworky:
+\begin{itemize}
+\item ReactiveCocoa, který obsahuje i ReactiveSwift a Result. Tento framework je licencován pod licencí MIT a je k nalezení na adrese:\\ \url{https://github.com/ReactiveCocoa/ReactiveCocoa/}. A
+\item Realm k nalezení na adrese: \url{https://realm.io/docs/swift/latest/}.
+\end{itemize}
+
+\subsection{Realm Studio}
+Realm Studio je vývojářský nástroj vytvořený pro správu Realm databází. V Realm Studiu je možné se připojit na lokální Realm, spravovat jakoukoliv instanci objektového serveru Realm nebo se připojit na Realm Cloud. Realm Studio je dostupné pro Mac, Linux i Windows. \cite{realmStudio}
+
+Realm Studio umožňuje upravovat záznamy v databázi, vytvářet a spravovat uživatele, dotazovat se nad záznamy, zobrazovat logy a další. \cite{realmStudio}
+
+Při vývoje aplikace bylo Realm Studio použito pro testování, ladění a správu databáze.
 
 \chapter{Testování}
 Tato kapitola se zabývá jednotkovými (unit) testy, které byly tvořeny v průběhu tvorby aplikace, dále také heuristickou analýzou, uživatelskými testy a nakonec také úpravami, které byly pro dokončení testování provedeny.
@@ -1546,7 +1575,7 @@ Při testování nebyly objeveny žádné kritické problémy, však díky pozor
 \item U filtrování je nyní možné zrušit nastavené letadlo.
 \end{itemize}
 
-
+\chapter{Zhodnocení}
 \section{Zhodnocení postupů FRP v aplikaci}
 %vyhody a nevyhody
 
@@ -1554,6 +1583,7 @@ Při testování nebyly objeveny žádné kritické problémy, však díky pozor
 %Zhodnoťte časovou a implementační náročnost oproti "klasickému" postupu a standardní MVC architektuře.
 
 \begin{conclusion}
+
 	%sem napište závěr Vaší práce
 \end{conclusion}
 
