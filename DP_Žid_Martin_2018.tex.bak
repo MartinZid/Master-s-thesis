@@ -1268,21 +1268,24 @@ Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je n
 % constraints, table views, splitviewcontroller
 
 \section{Překlady}
-Celá aplikace je nyní vytvořená v češtině, ale byla vyvíjená tak, aby ji bylo možné přeložit do libovolného jazyka.
+Celá aplikace je nyní vytvořena v češtině, ale byla vyvíjená tak, aby ji bylo možné přeložit do libovolného jazyka.
 
-Soubory připravené pro překlad aplikace jsou dvojího typy -- překlady storyboardů a tzv. $Localizable.string$. Oba typy jsou závislé na tom, jaké jazyky jsou nastaveny v Xcode projektu.
+U překladů iOS aplikací je nutné uvést dva pojmy -- internacionalizaci a lokalizaci. Internacionalizace je proces zmezinárodnění aplikace, tedy upravení metadat na App Storu, zacílení marketingu, přizpůsobení kulturám daných zemí a lokalizace aplikace. Lokalizace je tedy součást internacionalizace, obsahuje procesy jako překlady, upravení formátu dat nebo změnění jednotek cen, váhy apod.
 
-Soubory pro překlad storyboardů vytváří samotné Xcode. Každý UI prvek je identifikován vygenerovaným ID, které je spojeno s textem, který daný prvek obsahuje. Ukázka lokalizace storyboardu je je zobrazena na příkladu \ref{lst:storyboardLoc}. Tento příklad zobrazuje českou verzi textů storyboardu. Při překladech by došlo k vygenerování např. anglické verze, kde by všechny prvky měli stejné ID jako u české verze a podle nich by došlo k přeložení příslušných textů. Tento způsob překladů byl použit u neměnících se textů prvků storyboardů.
+Soubory připravené pro překlad (lokalizaci) aplikace jsou dvojího typy -- překlady storyboardů a tzv. $Localizable.string$. Oba typy jsou závislé na tom, jaké jazyky jsou nastaveny v Xcode projektu.
 
-Druhý způsob byl použit u textů, které se mohou měnit po spuštění aplikace nebo nejsou definované ve storyboardech. Tento způsob používá soubory $Localizable.string$, kde každý překládaný jazyk má svůj vlastní soubor. Každý z těchto souborů obsahuje dvojice klíč-hodnota, kde klíč představuje ID a hodnota text. Získání hodnoty je možné pomocí $NSLocalizedString$
+Soubory pro překlad storyboardů vytváří samotné Xcode. Každý UI prvek je identifikován vygenerovaným ID, které je spojeno s textem, který daný prvek obsahuje. Ukázka storyboardu připraveného pro překlad je zobrazena na příkladu \ref{lst:storyboardLoc}. Tento příklad zobrazuje českou verzi textů storyboardu. Při překladech by došlo k vygenerování např. anglické verze, kde by všechny prvky měli stejné ID jako u české verze a podle nich by došlo k přeložení příslušných textů. Tento způsob překladů byl použit u neměnících se textů prvků ze storyboardů.
+
+Druhý způsob byl použit u textů, které se mohou měnit po spuštění aplikace nebo nejsou definované ve storyboardech. Tento způsob používá soubory $Localizable.string$, kde každý překládaný jazyk má svůj vlastní soubor. Každý z těchto souborů obsahuje dvojice klíč-hodnota, kde klíč představuje ID a hodnota text. Získání hodnoty je možné pomocí $NSLocalizedString$, který vrací přiřazený lokalizovaný text podle zadaného klíče. Ukázka použití $Localizable.string$ je zobrazena na příkladu \ref{lst:locString}.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
-\begin{lstlisting}[caption={Ukázka lokalizace storyboardu},label={lst:storyboardLoc}]
+\begin{lstlisting}[caption={Ukázka přípravy storyboardu pro překlad},label={lst:storyboardLoc}]
 /* Class = "UILabel"; text = "Datum";
  ObjectID = "bPZ-q2-xLN";
  */
 "bPZ-q2-xLN.text" = "Datum";
+...
 \end{lstlisting}
 \end{minipage}
 \end{figure}

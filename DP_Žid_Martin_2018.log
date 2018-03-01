@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  1 MAR 2018 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  1 MAR 2018 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1515,12 +1515,8 @@ Overfull \hbox (3.52222pt too wide) in paragraph at lines 1248--1249
 [][][][][][][][][][][][][][][] 
  []
 
-[49] [50]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51]
-[52]
-Overfull \hbox (3.05658pt too wide) in paragraph at lines 1323--1324
+[49] [50] [51] [52]
+Overfull \hbox (3.05658pt too wide) in paragraph at lines 1326--1327
 []\T1/lmr/m/n/10.95 ReactiveCocoa, který ob-sa-huje i Re-acti-ve-Swift a Re-sul
 t. Tento fra-mework
  []
@@ -1528,22 +1524,22 @@ t. Tento fra-mework
 [53] [54
 
 ]
-Overfull \hbox (21.00371pt too wide) in paragraph at lines 1346--1347
+Overfull \hbox (21.00371pt too wide) in paragraph at lines 1349--1350
 []\T1/lmr/m/n/10.95 P°íklad []6.1[] zob-ra-zuje ob¥ d°íve zmí-n¥né funkce -- $\
 OML/lmm/m/it/10.95 setUp$ \T1/lmr/m/n/10.95 vy-tvá-°e-jící $\OML/lmm/m/it/10.95
  ViewModel$\T1/lmr/m/n/10.95 ,
  []
 
 
-LaTeX Warning: Command \v invalid in math mode on input line 1348.
+LaTeX Warning: Command \v invalid in math mode on input line 1351.
 
 [55]
 
 LaTeX Warning: Reference `fig:testsResult' on page 56 undefined on input line 1
-352.
+355.
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 1390--1391
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 1393--1394
 [][][][][][][][][][][][][][][][] 
  []
 
@@ -1967,7 +1963,13 @@ Underfull \hbox (badness 1052) in paragraph at lines 344--347
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--401
+Underfull \hbox (badness 2726) in paragraph at lines 374--377
+[]\T1/lmr/m/n/10.95 Build Apps for the World. \T1/lmr/m/it/10.95 Ap-ple De-ve-l
+o-per \T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--406
 \T1/lmtt/m/n/10.95 library / content / documentation / DeveloperTools / Concept
 ual /
  []
@@ -1986,11 +1988,11 @@ ual /
 \tf@lot=\write7
 \openout7 = `DP_ZÌŒid_Martin_2018.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1773.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1773.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1776.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1776.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1773.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1773.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1776.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1776.
 
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
 (rerunfilecheck)             Checksum: 97ACCB6F1BC51E2C4F2CF613054BE1AB;5895.
@@ -2004,13 +2006,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1773.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1776.
  ) 
 Here is how much of TeX's memory you used:
- 16725 strings out of 492995
- 230246 string characters out of 6132704
- 403486 words of memory out of 5000000
- 19382 multiletter control sequences out of 15000+600000
+ 16728 strings out of 492995
+ 230309 string characters out of 6132704
+ 403542 words of memory out of 5000000
+ 19383 multiletter control sequences out of 15000+600000
  82647 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,13n,40p,1104b,1287s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2031,10 +2033,10 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (95 pages, 1943911 bytes).
+Output written on DP_ZÌŒid_Martin_2018.pdf (95 pages, 1944496 bytes).
 PDF statistics:
- 1740 PDF objects out of 2073 (max. 8388607)
- 1591 compressed objects within 16 object streams
- 711 named destinations out of 1000 (max. 500000)
+ 1745 PDF objects out of 2073 (max. 8388607)
+ 1596 compressed objects within 16 object streams
+ 713 named destinations out of 1000 (max. 500000)
  346 words of extra memory for PDF output out of 10000 (max. 10000000)
 

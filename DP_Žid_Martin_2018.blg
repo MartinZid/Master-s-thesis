@@ -60,6 +60,7 @@ Warning--to sort, need author or key in realmDocs
 Warning--to sort, need author or key in predicate
 Warning--to sort, need author or key in ckcontainer
 Warning--to sort, need author or key in realmObjS
+Warning--to sort, need author or key in internationalization
 Warning--to sort, need author or key in Xcode
 Warning--to sort, need author or key in git
 Warning--to sort, need author or key in carthage
@@ -69,45 +70,45 @@ Warning--to sort, need author or key in appleTesting
 Warning--to sort, need author or key in XCTestCase
 Warning--to sort, need author or key in sus
 Warning--empty pages in Ztaltz2014
-You've used 79 entries,
+You've used 80 entries,
             3185 wiz_defined-function locations,
-            1071 strings with 17280 characters,
-and the built_in function-call counts, 21215 in all, are:
-= -- 1464
-> -- 183
+            1074 strings with 17343 characters,
+and the built_in function-call counts, 21468 in all, are:
+= -- 1482
+> -- 184
 < -- 0
-+ -- 122
++ -- 123
 - -- 34
-* -- 1018
-:= -- 1825
-add.period$ -- 158
-call.type$ -- 79
-change.case$ -- 177
+* -- 1030
+:= -- 1844
+add.period$ -- 160
+call.type$ -- 80
+change.case$ -- 179
 chr.to.int$ -- 0
-cite$ -- 144
-duplicate$ -- 2338
-empty$ -- 2656
+cite$ -- 146
+duplicate$ -- 2366
+empty$ -- 2689
 format.name$ -- 36
-if$ -- 4829
+if$ -- 4888
 int.to.chr$ -- 0
-int.to.str$ -- 79
-missing$ -- 520
-newline$ -- 325
+int.to.str$ -- 80
+missing$ -- 526
+newline$ -- 329
 num.names$ -- 30
-pop$ -- 1395
+pop$ -- 1412
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 177
 quote$ -- 0
-skip$ -- 934
+skip$ -- 946
 stack$ -- 0
-substring$ -- 548
-swap$ -- 929
+substring$ -- 555
+swap$ -- 940
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 312
-warning$ -- 65
+type$ -- 316
+warning$ -- 66
 while$ -- 30
-width$ -- 81
-write$ -- 728
-(There were 65 warnings)
+width$ -- 82
+write$ -- 737
+(There were 66 warnings)
