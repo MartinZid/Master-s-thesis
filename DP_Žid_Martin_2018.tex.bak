@@ -1265,14 +1265,21 @@ Pro přihlášení uživatele pomocí iCloudu je nutné využít framework Cloud
 Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je nutné provést několik kroků. Nejprve je nutné vygenerovat dvoji soukromého a veřejného klíče pro objektový server Realm. Soukromý klíč je následně nutné vložit do CloudKit Dashboard. CloudKit Dashboard dále vygeneruje $Key ID$, které je nakonec nutné vložit do konfiguračního souboru objektového serveru Realm společně s cestou k dříve vytvořenému soukromému klíči. \cite{realmObjS}
 
 \section{Tvorba uživatelského rozhraní}
-% constraints, table views, splitviewcontroller
+Tvorba uživatelské rozhraní ve formě storyboardů je možná přímo v Xcode pomocí zabudovaného editoru tzv. Interface Builder.
+
+Pro pozicování jednotlivých prvků je vytvořený speciální systém rozložení tzv. Auto Layout. Auto Layout je postavený na myšlence vazeb (constraints). Každý prvek má definované tyto vazby k ostatním prvkům a díky tomu je přesně určeno jak se bude chovat na různých velikostech nebo orientacích displeje. \cite{ib}
+
+Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velikostí (size classes). Tyto třídy jsou dvě -- Regular a Compact, jsou definované pro výšku i šířku daného zařízení a mohou se lišit při orientaci na výšku a na šířku. Např. iPhone 6 má při orientaci na výšku definované třídy: pro výšku Regular a pro šířku Compact, zatímco při orientaci na šířku je to: pro výšku i šířku Compact. Tyto třídy umožňují přizpůsobit jednotlivé obrazovky, tak aby byly co nejideálněji zobrazeny na daném zařízení např. tím, že jsou změněny vazby nebo nedojde k zobrazení některých prvků. \cite{sizeClasses}
+
+Dalším prvkem, který je možné použít pro rozdílná zobrazení na různých velikostech displejů, je tzv. $UISplitViewController$. Tento $Controller$ obsahuje dva $ViewControllery$ -- $master$ a $detail$. Ty jsou zobrazeny v závislosti na třídách velikosti -- u menších displejů se $UISplitViewController$ chová spíše jako klasický $NavigationController$, zatímco u větších displejů (např. tabletů) jsou $master$ a $detail$ zobrazeny vedle sebe. \cite{splitVC} Pro ukázku byly zvoleny zařízení iPhone 6 (obrázek \ref{fig:split1} zobrazující $UISplitViewController$ jako $NavigationController$) a iPad Air 2 (obrázek \ref{fig:split2} zobrazující $master$ a $detail$ vedle sebe).
+% splitviewcontroller
 
 \section{Překlady}
-Celá aplikace je nyní vytvořena v češtině, ale byla vyvíjená tak, aby ji bylo možné přeložit do libovolného jazyka.
+U překladů iOS aplikací je nutné uvést dva pojmy -- internacionalizaci a lokalizaci. Internacionalizace je proces zmezinárodnění aplikace, tedy upravení metadat na App Storu, zacílení marketingu, přizpůsobení kulturám daných zemí a lokalizace aplikace. Lokalizace je tedy součást internacionalizace, obsahuje části jako překlady, upravení formátu dat nebo změnění jednotek cen, váhy apod. \cite{internationalization}
 
-U překladů iOS aplikací je nutné uvést dva pojmy -- internacionalizaci a lokalizaci. Internacionalizace je proces zmezinárodnění aplikace, tedy upravení metadat na App Storu, zacílení marketingu, přizpůsobení kulturám daných zemí a lokalizace aplikace. Lokalizace je tedy součást internacionalizace, obsahuje procesy jako překlady, upravení formátu dat nebo změnění jednotek cen, váhy apod.
+Celá aplikace je nyní vytvořena v češtině, ale byla vyvíjená tak, aby ji bylo možné přeložit (lokalizovat) do libovolného jazyka.
 
-Soubory připravené pro překlad (lokalizaci) aplikace jsou dvojího typy -- překlady storyboardů a tzv. $Localizable.string$. Oba typy jsou závislé na tom, jaké jazyky jsou nastaveny v Xcode projektu.
+Soubory připravené pro překlad aplikace jsou dvojího typy -- překlady storyboardů a tzv. $Localizable.string$. Oba typy jsou závislé na tom, jaké jazyky jsou nastaveny v Xcode projektu.
 
 Soubory pro překlad storyboardů vytváří samotné Xcode. Každý UI prvek je identifikován vygenerovaným ID, které je spojeno s textem, který daný prvek obsahuje. Ukázka storyboardu připraveného pro překlad je zobrazena na příkladu \ref{lst:storyboardLoc}. Tento příklad zobrazuje českou verzi textů storyboardu. Při překladech by došlo k vygenerování např. anglické verze, kde by všechny prvky měli stejné ID jako u české verze a podle nich by došlo k přeložení příslušných textů. Tento způsob překladů byl použit u neměnících se textů prvků ze storyboardů.
 
@@ -1301,7 +1308,56 @@ let label = NSLocalizedString("Plane", comment: "")
 \end{lstlisting}
 \end{minipage}
 \end{figure}
+
 \section{Generování PDF}
+Tato sekce se zabývá způsobem generování reportu do formátu PDF. Jedná se o funkcionalitu, kde je možné z vybraných záznamů letů a záznamů ze simulátoru vygenerovat report do formátu PDF ve stylu zápisníku letů Jeppesen (\url{http://www.transair.co.uk/sp+Jeppesen-European-Pilot-Logbook-EU-FCL-050+5946}).
+
+Při generování PDF reportu je vytvořena nejprve tabulka ve formátu HTML, ta je vyplněna daty a až z tohoto HTML souboru je generován PDF report. HTML tabulka je v kódu postupně skládána z několika HTML souborů:
+\begin{itemize}
+\item layout.html -- obsahuje základní definici HTML stránky společně s CSS stylováním,
+\item table.html -- obsahuje samotnou definici tabulky tedy rozložení sloupců  a hlavičkové buňky,
+\item všechny ostatní soubory s přívlastkem $row$ -- jsou řádky tabulky, které jsou v postupně generovány, vyplňovány a nakonec vloženy do tabulky.
+\end{itemize}
+Postupné skládání tabulky je zajištěno pomocí značek (začínající znakem \#) v HTML souborech. Tyto soubory jsou načteny ve formě $Stringu$ a následně, pomocí funkce $replacingOccurrences(of:with:)$, jsou jednotlivé značky nahrazovány reálným obsahem. Ukázku tohoto postupného skládání HTML souboru zobrazuje příklad \ref{lst:PDFGen}. Pomocí tohoto postupu jsou tedy vyplňována uživatelova data, počítány statistiky a připraveny překlady.
+
+Pro následné vytvoření PDF reportu byly použity dvě třídy z UIKit $UIMarkupTextPrintFormatter$ a $UIPrintPageRenderer$. První z nich se starala o připravení tisknutelného obsahu z HTML souboru. A od druhé
+
+\begin{figure}
+\begin{minipage}{\linewidth}
+\begin{lstlisting}[caption={Ukázka postupného skládání HTML souboru},label={lst:PDFGen}]
+// layout.html
+<!doctype html>
+<html>
+...
+   <body>
+      #TABLE
+   </body>
+</html>
+
+// ViewModel
+private struct Marks {
+   static let table = "#TABLE"
+}
+
+func generateHTMLString() -> String? {
+   ...
+   // get path to layout.html
+   let pathToLayout = Bundle.main
+      .path(forResource: HTMLFiles.layout, ofType: html)
+   // convert HTML file to String
+   var layout = try String(contentsOfFile: pathToLayout!)
+   // replace #TABLE with actual tables
+   layout = layout.replacingOccurrences(of: Marks.table, 
+               with: try generateTables())
+   ...
+}
+
+private func generateTables() throws -> String {
+   ...
+}
+\end{lstlisting}
+\end{minipage}
+\end{figure}
 
 \section{Použité nástroje při vývoji}
 \subsection{Xcode}
@@ -1335,7 +1391,7 @@ Realm Studio umožňuje upravovat záznamy v databázi, vytvářet a spravovat u
 Při vývoje aplikace bylo Realm Studio použito pro testování, ladění a správu databáze.
 
 \chapter{Testování}
-Tato kapitola se zabývá jednotkovými (unit) testy, které byly tvořeny v průběhu tvorby aplikace, dále také heuristickou analýzou, uživatelskými testy a nakonec také úpravami, které byly pro dokončení testování provedeny.
+Tato kapitola se zabývá jednotkovými (unit) testy, které byly tvořeny v průběhu tvorby aplikace, dále také heuristickou analýzou, uživatelskými testy a nakonec také úpravami, které byly po dokončení testování provedeny.
 
 \section{Unit testy}
 Unit testy, neboli jednotkové testy, jsou zaměřeny na části (jednotky) kódu. Těmito jednotkami jsou v objektově orientovaném programování např. funkce nebo třídy. \cite{unitTesting}

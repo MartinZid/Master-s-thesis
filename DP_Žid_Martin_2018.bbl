@@ -370,6 +370,21 @@ Realm Object Server Documentation. \emph{Realm} [online]. Realm, © 2014-2018,
   {[cit. 2018-02-22]}.
 \urlprefix\biburl{https://realm.io/docs/realm-object-server/latest/}
 
+\bibitem{ib}
+Interface Builder Built-In. \emph{Apple Developer} [online]. California, U.S.:
+  Apple Inc., © 2018, {[cit. 2018-03-01]}.
+\urlprefix\biburl{https://developer.apple.com/xcode/interface-builder/}
+
+\bibitem{sizeClasses}
+Interface Builder Built-In. \emph{Apple Developer} [online]. California, U.S.:
+  Apple Inc., © 2018, {[cit. 2018-03-01]}.
+\urlprefix\biburl{https://developer.apple.com/library/content/featuredarticles/ViewControllerPGforiPhoneOS/TheAdaptiveModel.html}
+
+\bibitem{splitVC}
+UISplitViewController. \emph{Apple Developer} [online]. California, U.S.: Apple
+  Inc., © 2018, {[cit. 2018-03-03]}.
+\urlprefix\biburl{https://developer.apple.com/documentation/uikit/uisplitviewcontroller}
+
 \bibitem{internationalization}
 Build Apps for the World. \emph{Apple Developer} [online]. California, U.S.:
   Apple Inc., © 2018, {[cit. 2018-03-01]}.
