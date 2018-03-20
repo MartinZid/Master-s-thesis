@@ -1359,6 +1359,13 @@ private func generateTables() throws -> String {
 \end{minipage}
 \end{figure}
 
+\section{Dokumentace}
+Společně s implementací aplikace byla vytvořena i její dokumentace. Při psaní kódu byly dodržovány Apple \uv{Design Guidelines} a byla tedy snaha o psaní tzv. self explanatory kódu. Kód byl doplňován komentáři -- proč daná část kódu dělá to, co dělá. 
+
+Samotná dokumentace byla poté zaměřena hlavně na veřejnou část tříd a na složitější metody. Pro tvorbu dokumentace bylo použito oficiální \\Apple značení (markup). A po dokončení aplikace byla dokumentace vygenerována pomocí programu \uv{Jazzy} (\url{https://github.com/realm/jazzy}) do formátu HTML.
+
+Vygenerovaná dokumentace k je nalezení v příloze této magisterské práce. 
+
 \section{Použité nástroje při vývoji}
 \subsection{Xcode}
 Xcode 9 byly použity pro vývoj, testování a simulování vytvářené aplikace. 
@@ -1379,8 +1386,9 @@ Seznam použitých frameworků je uložen v souboru Cartfile, kde je možné i u
 
 Pomocí Carthage byly spravovány frameworky:
 \begin{itemize}
-\item ReactiveCocoa, který obsahuje i ReactiveSwift a Result. Tento framework je licencován pod licencí MIT a je k nalezení na adrese:\\ \url{https://github.com/ReactiveCocoa/ReactiveCocoa/}. A
+\item ReactiveCocoa, který obsahuje i ReactiveSwift a Result. Tento framework je licencován pod licencí MIT a je k nalezení na adrese:\\ \url{https://github.com/ReactiveCocoa/ReactiveCocoa/}.
 \item Realm k nalezení na adrese: \url{https://realm.io/docs/swift/latest/}.
+\item Toast-Swift, který je také licencován pod MIT a je k nalezení na adrese: \url{https://github.com/scalessec/Toast-Swift}.
 \end{itemize}
 
 \subsection{Realm Studio}
@@ -1483,7 +1491,7 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
  		\item Závažnost -- 2.
  		\item Řešení -- po přidání záznamu/letadla bude uživateli zobrazena hláška o úspěšném přidání.
  	\end{itemize}
- 	\item Prvotní přihlášení uživatele a generování PDF může trvat delší dobu.
+ 	\item Zobrazení náhledu reportu a generování PDF může trvat delší dobu.
  	\begin{itemize}
  		\item Závažnost -- 3.
  		\item Řešení -- uživatel je informován o tom, že aplikace pracuje pomocí tzv. spinner. 
@@ -1659,7 +1667,7 @@ Při testování nebyly objeveny žádné kritické problémy, však díky pozor
 \item U certifikátů s dlouhým názvem již není zobrazen celý název, ale pouze určitá část.
 \item U záložek, které obsahují $UISplitViewController$ již funguje vrácení se na hlavní stránku záložky, při dvojím poklepání na danou záložku.
 \item Zaměření textového pole je nyní možné při kliknutí kamkoliv na řádek s tímto textovým polem.
-\item Řádky statických tabulek jsou nyní zvýrazňovány pouze pokud fungují jako tlačítko.
+\item Řádky statických tabulek jsou nyní zvýrazňovány pouze pokud obsahují nějakou akci.
 \item Akce \uv{Zrušit filtrování} je potvrzována dialogovým oknem.
 \item U filtrování je nyní možné zrušit nastavené letadlo.
 \item Při odesílaní reportu na email je nyní uživatel informován pokud nemá nastaveny emailový klient.
