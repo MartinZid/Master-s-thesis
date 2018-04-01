@@ -113,7 +113,7 @@
 \contentsline {subsection}{\numberline {6.3.4}V\IeC {\'y}sledky test\IeC {\r u}}{63}{subsection.6.3.4}
 \contentsline {chapter}{\chapternumberline {7}Zhodnocen\IeC {\'\i }}{65}{chapter.7}
 \contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{65}{section.7.1}
-\contentsline {section}{\numberline {7.2}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{65}{section.7.2}
+\contentsline {section}{\numberline {7.2}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{66}{section.7.2}
 \contentsline {chapter}{Z{\' a}v{\v e}r}{67}{chapter*.6}
 \contentsline {chapter}{Literatura}{69}{section*.8}
 \contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{77}{appendix.A}

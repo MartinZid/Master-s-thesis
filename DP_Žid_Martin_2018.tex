@@ -264,7 +264,7 @@ Pro tvorbu aplikace vytvářené v rámci této magisterské práce, jsem si zvo
 \section{Funkcionálně reaktivní programování}
 Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za daný čas. \cite{nayebi2016swift}
 
-Pro vysvětlení, co je reaktivní programování cituji André Staltze: \uv{reaktivní programování je programování s asynchronními datovými toky}. \cite{Ztaltz2014}
+Pro vysvětlení, co je to reaktivní programování, cituji André Staltze: \uv{reaktivní programování je programování s asynchronními datovými toky}. \cite{Ztaltz2014}
 
 Na spojení funkcionální a reaktivního programování může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko nebo i dotaz na server a jsme informování o každé změně v podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Je tedy možné toky:
 \begin{itemize}
@@ -768,7 +768,7 @@ Pro svou práci jsem si na základě navržených funkcionalit zvolil architektu
 Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat pomocí Realm. Prvním z důvodů této volby je podpora online i offline uložení dat. To umožňuje uživateli mít stejná data na více zařízeních, však i společně s možností používat aplikaci offline. Dalším důvodem bylo to, že je Realm zcela zdarma, což mu dává výhodu oproti iCloud -- Apple řešení.
 
 \subsection{FRP framework}
-
+Pro realizaci aplikace byla zvolena ReactiveCocoa jako FRP framework. ReactiveCocoa byla vybrána, protože příhodně rozšiřuje framework ReactiveSwift, má také přehlednou dokumentaci a existují kvalitní příklady demonstrující použití tohoto frameworku.
 
 \chapter{Realizace}
 \label{chap:realizace}
@@ -1674,8 +1674,16 @@ Při testování nebyly objeveny žádné kritické problémy, však díky pozor
 \end{itemize}
 
 \chapter{Zhodnocení}
+Tato kapitola se zabývá zhodnocením postupů FRP -- jejich výhodami a nevýhodami, a dále také zhodnocením časové a implementační náročnosti při vývoji aplikace za pomocí FRP a architektury MVVM v porovnání se standardním přístupem architektury MCV.
+
 \section{Zhodnocení postupů FRP v aplikaci}
-%vyhody a nevyhody
+Postupy funkcionálně reaktivní programování velice dobře  vyhovují požadavkům, které jsou kladeny na mobilní aplikace --  prezentování uživatelského rozhraní a neustálé reagování na změny, které mohou přijít jak od uživatele, tak i např. ze serveru. Díky FRP je možné všechny tyto změny pozorovat ve formě nezávislých datových toků a podle nich následně upravovat uživatelské rozhraní a to bez nutnosti složitého uchovávání stavů aplikace.
+
+ReactiveCocoa se prokázala jako velice kvalitní framework pro tvorbu reaktivní iOS aplikace. Nejen, že tento framework poskytuje řadu základní reaktivní prvků, on také přidává komponentám uživatelského rozhraní reaktivní rozšíření, čímž umožňuje vytvořit plně reaktivní aplikaci.
+
+Za zmínku zde stojí i Realm, který se dal velice jednoduše zkombinovat s frameworkem Reactive Cocoa. Kde pozorované změny např. na Realm kolekcích byly transformovány na $Signal$, na který následně reagovalo uživatelské rozhraní. Tímto postupem bylo dosaženo např. toho, že aplikace automaticky reagovala na každou změnu v Realmu, bez nutnosti jakékoliv uživatelovi iniciativy o znovu načtení dat.
+
+Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních aplikací. Je zde však nutné zmínit i pár nevýhod tohoto přístupu. Prvním drobným nedostatkem je to, že postupy FRP není možné zavést v rámci standardních Apple knihoven a je nutné použít neoficiální frameworky (tedy další knihovny/frameworky navíc). Další nevýhodou je to, že je nutné se seznámit se zcela novým programovacím stylem a tedy, i přizpůsobit to, jakým způsobem přemýšlíme nad problémy. Tato nevýhoda se projevuje hlavně na začátku, při přechodu od klasického tzv. imperativního stylu programovaní k FRP, a je později zcela zastíněna tím, že dochází k tvorbě nezávislých komponent, které jsou schopné reagovat na danou změnu pomocí velice přehledného a elegantního kódu.
 
 \section{Zhodnocení časové a implementační náročnosti MVVM a FRP oproti MVC}
 %Zhodnoťte časovou a implementační náročnost oproti "klasickému" postupu a standardní MVC architektuře.
