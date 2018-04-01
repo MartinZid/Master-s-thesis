@@ -1686,7 +1686,15 @@ Za zmínku zde stojí i Realm, který se dal velice jednoduše zkombinovat s fra
 Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních aplikací. Je zde však nutné zmínit i pár nevýhod tohoto přístupu. Prvním drobným nedostatkem je to, že postupy FRP není možné zavést v rámci standardních Apple knihoven a je nutné použít neoficiální frameworky (tedy další knihovny/frameworky navíc). Další nevýhodou je to, že je nutné se seznámit se zcela novým programovacím stylem a tedy, i přizpůsobit to, jakým způsobem přemýšlíme nad problémy. Tato nevýhoda se projevuje hlavně na začátku, při přechodu od klasického tzv. imperativního stylu programovaní k FRP, a je později zcela zastíněna tím, že dochází k tvorbě nezávislých komponent, které jsou schopné reagovat na danou změnu pomocí velice přehledného a elegantního kódu.
 
 \section{Zhodnocení časové a implementační náročnosti MVVM a FRP oproti MVC}
-%Zhodnoťte časovou a implementační náročnost oproti "klasickému" postupu a standardní MVC architektuře.
+Stejně jako postupy FRP, tak i architektura MVVM přinesla mnoho prospěšných aspektů. Tato architektura přidává novou vrstvu, která je zcela nezávislá na $View$. Tento fakt, může evokovat zbytečné zkomplikování struktury aplikace, však v tomto případě tomu tak jistě není. Nová vrstva $ViewModel$ je nejčastěji použita jedna ku jedné se třídami $ViewControllerů$ a jedná se hlavně o oddělení logiky -- té, co se zabývá $View$ a ostatní. Díky tomuto rozdělení obsahují $ViewControllery$ méně kódu a jsou daleko přehlednější.
+
+Tedy, i když je ke každému $ViewControlleru$ vytvářen pokaždé soubor $ViewModelu$ navíc, celkově je aplikace lépe upravitelná, rozšířitelná a obsahuje komponenty, které splňují tzv. \uv{single responsibility principle} a jsou často znovupoužitelné.
+
+Architektura MVVM skvěle funguje ve spojení s funkcionálně reaktivním programováním, které se dokáže postarat o jednoduché spojení vrstev $View$ a $ViewModelu$.
+
+Jak je již zmíněno dříve, FRP může být časově náročnější hlavně zpočátku při přechodu od klasického imperativního stylu. Toto je později zastíněno všemi výhodami, které FRP přináší (mezi něž patří i zjednodušení a urychlení implementace).
+
+Klasické postupy společně s architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace. Jakmile začne být aplikace lehce komplexnější, architektura MVVM ve spojení s FRP se, jak z pohledu časové tak i implementační náročností, vyplatí.
 
 \begin{conclusion}
 

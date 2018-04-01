@@ -1683,9 +1683,19 @@ ReactiveCocoa se prokázala jako velice kvalitní framework pro tvorbu reaktivn�
 
 Za zmínku zde stojí i Realm, který se dal velice jednoduše zkombinovat s frameworkem Reactive Cocoa. Kde pozorované změny např. na Realm kolekcích byly transformovány na $Signal$, na který následně reagovalo uživatelské rozhraní. Tímto postupem bylo dosaženo např. toho, že aplikace automaticky reagovala na každou změnu v Realmu, bez nutnosti jakékoliv uživatelovi iniciativy o znovu načtení dat.
 
-Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních aplikací. Je zde však nutné zmínit i pár nevýhod tohoto přístupu. Prvním drobným nedostatkem je to, že postupy FRP není možné zavést v rámci standardních Apple knihoven a je nutné použít neoficiální frameworky (tedy další knihovny/frameworky navíc). Další nevýhodou je to, že je nutné se seznámit se zcela novým programovacím stylem a tedy, i přizpůsobit to, jakým způsobem přemýšlíme nad problémy. Tato nevýhoda se projevuje hlavně na začátku, při přechodu od klasického tzv. imperativního stylu programovaní k FRP, a je později zcela zastíněna všemi výhodami, které postupy FRP přináší.
+Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních aplikací. Je zde však nutné zmínit i pár nevýhod tohoto přístupu. Prvním drobným nedostatkem je to, že postupy FRP není možné zavést v rámci standardních Apple knihoven a je nutné použít neoficiální frameworky (tedy další knihovny/frameworky navíc). Další nevýhodou je to, že je nutné se seznámit se zcela novým programovacím stylem a tedy, i přizpůsobit to, jakým způsobem přemýšlíme nad problémy. Tato nevýhoda se projevuje hlavně na začátku, při přechodu od klasického tzv. imperativního stylu programovaní k FRP, a je později zcela zastíněna tím, že dochází k tvorbě nezávislých komponent, které jsou schopné reagovat na danou změnu pomocí velice přehledného a elegantního kódu.
 
 \section{Zhodnocení časové a implementační náročnosti MVVM a FRP oproti MVC}
+Stejně jako postupy FRP, tak i architektura MVVM přinesla mnoho prospěšných aspektů. Tato architektura přidává novou vrstvu, která je zcela nezávislá na $View$. Tento fakt, může evokovat zbytečné zkomplikování struktury aplikace, však v tomto případě tomu, tak jistě není. Nová vrstva $ViewModel$ je nejčastěji použita jedna ku jedné se třídami $ViewControllerů$ a jedná se hlavně oddělení logiky, které se týká $View$ a té ostatní. Díky tomuto rozdělení obsahují $ViewControllery$ méně kódu a jsou daleko přehlednější.
+
+Tedy, i když je ke každému $ViewControlleru$ vytvářen pokaždé soubor $ViewModelu$ navíc, celkově je aplikace lépe upravitelná, rozšířitelná a obsahuje komponenty, které splňují tzv. \uv{single responsibility principle} a jsou často znovupoužitelné.
+
+Architektura MVVM skvěle funguje ve spojení s funkcionálně reaktivním programováním, které se dokáže postarat o jednoduché spojení vrstev $View$ a $ViewModelu$.
+
+Jak je již zmíněno dříve, FRP může být časově náročnější hlavně zpočátku při přechodu od klasického imperativního stylu. Toto je později zastíněno všemi výhodami, které FRP přináší (mezi něž patří i zjednodušení a urychlení implementace).
+
+Klasické postupy společně s architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace.
+
 %Zhodnoťte časovou a implementační náročnost oproti "klasickému" postupu a standardní MVC architektuře.
 
 \begin{conclusion}
