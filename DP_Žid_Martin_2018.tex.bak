@@ -1273,7 +1273,7 @@ Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velik
 
 Dalším prvkem, který je možné použít pro rozdílná zobrazení na různých velikostech displejů, je tzv. $UISplitViewController$. Tento $Controller$ obsahuje dva $ViewControllery$ -- $master$ a $detail$. Ty jsou zobrazeny v závislosti na třídách velikosti -- u menších displejů se $UISplitViewController$ chová spíše jako klasický $NavigationController$, zatímco u větších displejů (např. tabletů) jsou $master$ a $detail$ zobrazeny vedle sebe. \cite{splitVC} Pro ukázku byly zvoleny zařízení iPhone 6 (obrázek \ref{fig:split1} zobrazující $UISplitViewController$ jako $NavigationController$) a iPad Air 2 (obrázek \ref{fig:split2} zobrazující $master$ a $detail$ vedle sebe).
 
-V příloze této práce je k nalezení nafocená celá aplikace na zařízení iPhone 6 společně s obrazovkami ze zařízení iPad Air 2 ().
+V příloze této práce je k nalezení nafocená celá aplikace na zařízení iPhone 6 společně s obrazovkami (pouze těmi, co se na liší na tabletu) ze zařízení iPad Air 2. 
 
 \begin{figure}[]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/UISplitView/iphone}
