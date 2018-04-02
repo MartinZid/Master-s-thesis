@@ -1272,7 +1272,18 @@ Pro pozicování jednotlivých prvků je vytvořený speciální systém rozlož
 Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velikostí (size classes). Tyto třídy jsou dvě -- Regular a Compact, jsou definované pro výšku i šířku daného zařízení a mohou se lišit při orientaci na výšku a na šířku. Např. iPhone 6 má při orientaci na výšku definované třídy: pro výšku Regular a pro šířku Compact, zatímco při orientaci na šířku je to: pro výšku i šířku Compact. Tyto třídy umožňují přizpůsobit jednotlivé obrazovky, tak aby byly co nejideálněji zobrazeny na daném zařízení např. tím, že jsou změněny vazby nebo nedojde k zobrazení některých prvků. \cite{sizeClasses}
 
 Dalším prvkem, který je možné použít pro rozdílná zobrazení na různých velikostech displejů, je tzv. $UISplitViewController$. Tento $Controller$ obsahuje dva $ViewControllery$ -- $master$ a $detail$. Ty jsou zobrazeny v závislosti na třídách velikosti -- u menších displejů se $UISplitViewController$ chová spíše jako klasický $NavigationController$, zatímco u větších displejů (např. tabletů) jsou $master$ a $detail$ zobrazeny vedle sebe. \cite{splitVC} Pro ukázku byly zvoleny zařízení iPhone 6 (obrázek \ref{fig:split1} zobrazující $UISplitViewController$ jako $NavigationController$) a iPad Air 2 (obrázek \ref{fig:split2} zobrazující $master$ a $detail$ vedle sebe).
-% splitviewcontroller
+
+V příloze této práce je k nalezení nafocená celá aplikace na zařízení iPhone 6 společně s obrazovkami (pouze těmi, co se na liší na tabletu) ze zařízení iPad Air 2. 
+
+\begin{figure}[]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/UISplitView/iphone}
+ \caption[UISplitViewController na zařízení iPhone 6]{UISplitViewController na zařízení iPhone 6}\label{fig:split1}
+\end{figure}
+
+\begin{figure}[]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/UISplitView/ipad}
+ \caption[UISplitViewController na zařízení iPad Air 2]{UISplitViewController na zařízení iPad Air 2}\label{fig:split2}
+\end{figure}
 
 \section{Překlady}
 U překladů iOS aplikací je nutné uvést dva pojmy -- internacionalizaci a lokalizaci. Internacionalizace je proces zmezinárodnění aplikace, tedy upravení metadat na App Storu, zacílení marketingu, přizpůsobení kulturám daných zemí a lokalizace aplikace. Lokalizace je tedy součást internacionalizace, obsahuje části jako překlady, upravení formátu dat nebo změnění jednotek cen, váhy apod. \cite{internationalization}

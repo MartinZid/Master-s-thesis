@@ -1272,7 +1272,18 @@ Pro pozicování jednotlivých prvků je vytvořený speciální systém rozlož
 Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velikostí (size classes). Tyto třídy jsou dvě -- Regular a Compact, jsou definované pro výšku i šířku daného zařízení a mohou se lišit při orientaci na výšku a na šířku. Např. iPhone 6 má při orientaci na výšku definované třídy: pro výšku Regular a pro šířku Compact, zatímco při orientaci na šířku je to: pro výšku i šířku Compact. Tyto třídy umožňují přizpůsobit jednotlivé obrazovky, tak aby byly co nejideálněji zobrazeny na daném zařízení např. tím, že jsou změněny vazby nebo nedojde k zobrazení některých prvků. \cite{sizeClasses}
 
 Dalším prvkem, který je možné použít pro rozdílná zobrazení na různých velikostech displejů, je tzv. $UISplitViewController$. Tento $Controller$ obsahuje dva $ViewControllery$ -- $master$ a $detail$. Ty jsou zobrazeny v závislosti na třídách velikosti -- u menších displejů se $UISplitViewController$ chová spíše jako klasický $NavigationController$, zatímco u větších displejů (např. tabletů) jsou $master$ a $detail$ zobrazeny vedle sebe. \cite{splitVC} Pro ukázku byly zvoleny zařízení iPhone 6 (obrázek \ref{fig:split1} zobrazující $UISplitViewController$ jako $NavigationController$) a iPad Air 2 (obrázek \ref{fig:split2} zobrazující $master$ a $detail$ vedle sebe).
-% splitviewcontroller
+
+V příloze této práce je k nalezení nafocená celá aplikace na zařízení iPhone 6 společně s obrazovkami ze zařízení iPad Air 2 ().
+
+\begin{figure}[]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/UISplitView/iphone}
+ \caption[UISplitViewController na zařízení iPhone 6]{UISplitViewController na zařízení iPhone 6}\label{fig:split1}
+\end{figure}
+
+\begin{figure}[]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/UISplitView/ipad}
+ \caption[UISplitViewController na zařízení iPad Air 2]{UISplitViewController na zařízení iPad Air 2}\label{fig:split2}
+\end{figure}
 
 \section{Překlady}
 U překladů iOS aplikací je nutné uvést dva pojmy -- internacionalizaci a lokalizaci. Internacionalizace je proces zmezinárodnění aplikace, tedy upravení metadat na App Storu, zacílení marketingu, přizpůsobení kulturám daných zemí a lokalizace aplikace. Lokalizace je tedy součást internacionalizace, obsahuje části jako překlady, upravení formátu dat nebo změnění jednotek cen, váhy apod. \cite{internationalization}
@@ -1686,7 +1697,7 @@ Za zmínku zde stojí i Realm, který se dal velice jednoduše zkombinovat s fra
 Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních aplikací. Je zde však nutné zmínit i pár nevýhod tohoto přístupu. Prvním drobným nedostatkem je to, že postupy FRP není možné zavést v rámci standardních Apple knihoven a je nutné použít neoficiální frameworky (tedy další knihovny/frameworky navíc). Další nevýhodou je to, že je nutné se seznámit se zcela novým programovacím stylem a tedy, i přizpůsobit to, jakým způsobem přemýšlíme nad problémy. Tato nevýhoda se projevuje hlavně na začátku, při přechodu od klasického tzv. imperativního stylu programovaní k FRP, a je později zcela zastíněna tím, že dochází k tvorbě nezávislých komponent, které jsou schopné reagovat na danou změnu pomocí velice přehledného a elegantního kódu.
 
 \section{Zhodnocení časové a implementační náročnosti MVVM a FRP oproti MVC}
-Stejně jako postupy FRP, tak i architektura MVVM přinesla mnoho prospěšných aspektů. Tato architektura přidává novou vrstvu, která je zcela nezávislá na $View$. Tento fakt, může evokovat zbytečné zkomplikování struktury aplikace, však v tomto případě tomu, tak jistě není. Nová vrstva $ViewModel$ je nejčastěji použita jedna ku jedné se třídami $ViewControllerů$ a jedná se hlavně oddělení logiky, které se týká $View$ a té ostatní. Díky tomuto rozdělení obsahují $ViewControllery$ méně kódu a jsou daleko přehlednější.
+Stejně jako postupy FRP, tak i architektura MVVM přinesla mnoho prospěšných aspektů. Tato architektura přidává novou vrstvu, která je zcela nezávislá na $View$. Tento fakt, může evokovat zbytečné zkomplikování struktury aplikace, však v tomto případě tomu tak jistě není. Nová vrstva $ViewModel$ je nejčastěji použita jedna ku jedné se třídami $ViewControllerů$ a jedná se hlavně o oddělení logiky -- té, co se zabývá $View$ a ostatní. Díky tomuto rozdělení obsahují $ViewControllery$ méně kódu a jsou daleko přehlednější.
 
 Tedy, i když je ke každému $ViewControlleru$ vytvářen pokaždé soubor $ViewModelu$ navíc, celkově je aplikace lépe upravitelná, rozšířitelná a obsahuje komponenty, které splňují tzv. \uv{single responsibility principle} a jsou často znovupoužitelné.
 
@@ -1694,9 +1705,7 @@ Architektura MVVM skvěle funguje ve spojení s funkcionálně reaktivním progr
 
 Jak je již zmíněno dříve, FRP může být časově náročnější hlavně zpočátku při přechodu od klasického imperativního stylu. Toto je později zastíněno všemi výhodami, které FRP přináší (mezi něž patří i zjednodušení a urychlení implementace).
 
-Klasické postupy společně s architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace.
-
-%Zhodnoťte časovou a implementační náročnost oproti "klasickému" postupu a standardní MVC architektuře.
+Klasické postupy společně s architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace. Jakmile začne být aplikace lehce komplexnější, architektura MVVM ve spojení s FRP se, jak z pohledu časové tak i implementační náročností, vyplatí.
 
 \begin{conclusion}
 

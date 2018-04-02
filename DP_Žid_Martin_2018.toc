@@ -96,25 +96,25 @@
 \contentsline {subsection}{\numberline {5.3.4}P\IeC {\v r}ihla\IeC {\v s}ov\IeC {\'a}n\IeC {\'\i } u\IeC {\v z}ivatele}{50}{subsection.5.3.4}
 \contentsline {section}{\numberline {5.4}Tvorba u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{51}{section.5.4}
 \contentsline {section}{\numberline {5.5}P\IeC {\v r}eklady}{52}{section.5.5}
-\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{52}{section.5.6}
-\contentsline {section}{\numberline {5.7}Dokumentace}{53}{section.5.7}
+\contentsline {section}{\numberline {5.6}Generov\IeC {\'a}n\IeC {\'\i } PDF}{54}{section.5.6}
+\contentsline {section}{\numberline {5.7}Dokumentace}{55}{section.5.7}
 \contentsline {section}{\numberline {5.8}Pou\IeC {\v z}it\IeC {\'e} n\IeC {\'a}stroje p\IeC {\v r}i v\IeC {\'y}voji}{55}{section.5.8}
 \contentsline {subsection}{\numberline {5.8.1}Xcode}{55}{subsection.5.8.1}
-\contentsline {subsection}{\numberline {5.8.2}Git}{55}{subsection.5.8.2}
-\contentsline {subsection}{\numberline {5.8.3}Carthage}{55}{subsection.5.8.3}
-\contentsline {subsection}{\numberline {5.8.4}Realm Studio}{56}{subsection.5.8.4}
-\contentsline {chapter}{\chapternumberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Unit testy}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{58}{section.6.2}
-\contentsline {section}{\numberline {6.3}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{61}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{62}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{62}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{63}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}V\IeC {\'y}sledky test\IeC {\r u}}{63}{subsection.6.3.4}
-\contentsline {chapter}{\chapternumberline {7}Zhodnocen\IeC {\'\i }}{65}{chapter.7}
-\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{65}{section.7.1}
-\contentsline {section}{\numberline {7.2}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{66}{section.7.2}
-\contentsline {chapter}{Z{\' a}v{\v e}r}{67}{chapter*.6}
-\contentsline {chapter}{Literatura}{69}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{77}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{79}{appendix.B}
+\contentsline {subsection}{\numberline {5.8.2}Git}{57}{subsection.5.8.2}
+\contentsline {subsection}{\numberline {5.8.3}Carthage}{57}{subsection.5.8.3}
+\contentsline {subsection}{\numberline {5.8.4}Realm Studio}{57}{subsection.5.8.4}
+\contentsline {chapter}{\chapternumberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Unit testy}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{60}{section.6.2}
+\contentsline {section}{\numberline {6.3}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{63}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{64}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{64}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{65}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}V\IeC {\'y}sledky test\IeC {\r u}}{65}{subsection.6.3.4}
+\contentsline {chapter}{\chapternumberline {7}Zhodnocen\IeC {\'\i }}{67}{chapter.7}
+\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{67}{section.7.1}
+\contentsline {section}{\numberline {7.2}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{68}{section.7.2}
+\contentsline {chapter}{Z{\' a}v{\v e}r}{69}{chapter*.6}
+\contentsline {chapter}{Literatura}{71}{section*.8}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{79}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{81}{appendix.B}
