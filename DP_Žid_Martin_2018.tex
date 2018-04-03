@@ -259,7 +259,7 @@ Mezi výhody vlastního kód patří: znovupoužitelnost, bezproblémová práce
 Nevýhodou vytváření uživatelské rozhraní v kódu je rychlost tvorby bez možnosti svižného vytvoření prototypu aplikace. Dále také tento přístup postrádá vizuálnost a vyžaduje kompilaci. \cite{iOSUI} \cite{dominik}
 
 \subsection{Zvolené řešení}
-Pro tvorbu aplikace vytvářené v rámci této magisterské práce, jsem si zvolil možnost tvorby uživatelského rozhraní pomocí $storyboardů$. Tato volba vyplývá z výše zmíněných výhod $storyboardů$ a z toho důvodu, že aplikaci budu vytvářet sám.
+Pro tvorbu aplikace vytvářené v rámci této diplomové práce, jsem si zvolil možnost tvorby uživatelského rozhraní pomocí $storyboardů$. Tato volba vyplývá z výše zmíněných výhod $storyboardů$ a z toho důvodu, že aplikaci budu vytvářet sám.
 
 \section{Funkcionálně reaktivní programování}
 Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v závislosti na událostech přicházejících za daný čas. \cite{nayebi2016swift}
@@ -669,7 +669,7 @@ Wireframe je technika, která se používá v brzké fázi vývoje softwaru \cit
 
 Wireframe může posloužit k první heuristické analýze a k uživatelským testům ještě před vývojem dané aplikace. \cite{exux}
 
-Wireframe pro tuto práci byl vytvořen ve webovém nástroji NinjaMock (\url{https://ninjamock.com}). Z tohoto nástroje byl wireframe následně exportován do formátu pdf a ninjamock package. Tyto exporty jsou k nalezení v příloze této diplomové práce. 
+Wireframe byl pro tuto práci vytvořen ve webovém nástroji NinjaMock (\url{https://ninjamock.com}). Z tohoto nástroje byl wireframe následně exportován do formátu pdf a ninjamock package. Tyto exporty jsou k nalezení v příloze této diplomové práce. 
 
 Exportovaný wireframe ve formátu pdf je uložený vždy ve dvou provedeních: se zobrazeným mobilním zařízením a bez něj, je tomu tak, protože ve verzi se zobrazeným mobilním zařízením u obrazovek s více položkami (např. přidání záznamu letu) nejsou všechny položky vidět. U provedení bez zobrazeného mobilního zařízení jsou vždy všechny položky vidět, ale wireframe působí neúplným dojmem. Pro úplnost je přidána verze ninjamock package, kterou je možné importovat do webového nástroje NinjaMock. V této verzi jsou funkční i odkazy mezi jednotlivými obrazovkami. 
 
@@ -688,7 +688,7 @@ Heuristická analýze je metoda, která se používá pro hledání problémů p
  \item nápověda a dokumentace} \cite{10heuristics} (překlad vlastní).
 \end{enumerate}
 
-Tato pravidla byla použita při heuristické analýze vytvořeného wireframe. Však nebyla kontrolována pravidla:
+Tato pravidla byla použita při heuristické analýze vytvořeného wireframu. Však nebyla kontrolována pravidla:
 \begin{itemize}
 \item \uv{předcházení chyb} -- z důvodu, že ve fázi návrhu není možné např. vyplnit formulář a nebo smazat záznam letu;
 \item \uv{pomoci uživatelům rozpoznat, pochopit a vzpamatovat se z~chyb} -- také není možné vyvolat chybu;
@@ -706,7 +706,7 @@ Po provedení heuristické analýzy byla vytvořena tabulka \ref{tab:heuristics}
 
 \begin{table}
 \begin{tabular}{ c | c | p{9cm} }
-Problém & Závažnost & Provedená úprava \\
+Pravidlo & Závažnost & Provedená úprava \\
 \hline
 1 & 3 & Při přidávání nového záznamu se bude měnit nadpis (title) podle toho zda je přidáván záznam o letu nebo ze simulátoru. \\
 2 & 2 & Tlačítko \uv{Zavřít} bude přejmenováno na \uv{Zrušit}. Tato změna se týká obrazovek -- přidat záznam, přidat letadlo a přidat certifikát.\\
@@ -720,11 +720,11 @@ Problém & Závažnost & Provedená úprava \\
 \end{table}
 
 \subsection{Uživatelské testy}
-Uživatelské testy byly provedeny po heuristické analýze (na upraveném wireframe) ještě před samotnou implementací. Testy také nebylo možné provést v plné míře a sloužili převážné k odhalení nejvíce problematických částí návrhu uživatelského rozhraní.
+Uživatelské testy byly provedeny po heuristické analýze (na upraveném wireframu) ještě před samotnou implementací. Testy také nebylo možné provést v plné míře a sloužili převážné k odhalení nejvíce problematických částí návrhu uživatelského rozhraní.
 
 Jakob Nielsen \cite{usabilityTestingNNG} doporučuje pět uživatelů na uživatelské testování. Však ze stejných důvodů jako u heuristické analýzy, byly zvoleni nyní pouze dva uživatelé.
 
-Rozsáhlejší testování a heuristická analýza budou provedeny až po dokončení prototypu aplikace.
+Rozsáhlejší testování a heuristická analýza bude provedeno až po dokončení prototypu aplikace.
 
 Testovaní uživatelé nebyly děleni v této fázi do skupin z důvodu jejich malého počtu. Podmínky na uživatele však kladeny byly -- oba uživatelé museli používat operační systém iOS minimálně po dobu jednoho rok a alespoň jeden z nich se musel pohybovat v leteckém průmyslu.
 
@@ -748,7 +748,7 @@ Pro oba uživatele byly vytvořeny stejné testovací scénáře. Uživateli, kt
 Testovaní uživatelé byli při jednotlivých testech pozorováni, aby bylo zjištěno co a proč dělají špatně. Z čehož byly následně vyvozeny nutné úpravy v uživatelském rozhraní.
 
 \begin{enumerate}
-\item Smazání záznamu budu možné nyní ještě u detailu tohoto záznamu. Tato funkcionalita bude ještě znovu podrobena testu u prototypu aplikace. Gesto $swipe$ se u wireframe špatně testuje.
+\item Smazání záznamu budu možné nyní ještě u detailu tohoto záznamu. Tato funkcionalita bude ještě znovu podrobena testu u prototypu aplikace. Gesto $swipe$ se u wireframu špatně testuje.
 \item \uv{Má letadla} již nebudou pod záložkou \uv{Profil}, ale budou představovat samostatný $tab$.
 \item Vytvoření reportu bude nyní označeno ještě navíc textem.
 \item Při přidávání nového záznamu si uživatel nejprve vybere zda se jedná o záznam letu nebo o záznam ze simulátoru.
@@ -768,10 +768,10 @@ Případy užití zobrazené v této práci již zahrnují tuto přidanou a upra
 Tato kapitola popisuje a zdůvodňuje zvolená řešení architektury, perzistence dat a FRP framework.
 
 \subsection{Architektura}
-Pro svou práci jsem si na základě navržených funkcionalit zvolil architekturu MVVM. Architektura MVVM eliminuje nevýhodu MVC -- příliš mnoho logiky a kódu ve vrstvě $Controller$, a na druhou stranu není zbytečně složitá (pro navrhovanou funkcionalitu) jako VIPER.
+Pro svou práci jsem si na základě navržených funkcionalit zvolil architekturu MVVM. Architektura MVVM eliminuje nevýhodu MVC -- příliš mnoho logiky a kódu ve vrstvě $Controller$, a na druhou stranu není zbytečně složitá (pro navrženou funkcionalitu) jako VIPER.
 
 \subsection{Perzistence dat}
-Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat pomocí Realm. Prvním z důvodů této volby je podpora online i offline uložení dat. To umožňuje uživateli mít stejná data na více zařízeních, však i společně s možností používat aplikaci offline. Dalším důvodem bylo to, že je Realm zcela zdarma, což mu dává výhodu oproti iCloud -- Apple řešení.
+Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat pomocí Realmu. Prvním z důvodů této volby je podpora online i offline uložení dat. To umožňuje uživateli mít stejná data na více zařízeních, však i společně s možností používat aplikaci offline. Dalším důvodem bylo to, že je Realm zcela zdarma, což mu dává výhodu oproti iCloud -- Apple řešení.
 
 \subsection{FRP framework}
 Pro realizaci aplikace byla zvolena ReactiveCocoa jako FRP framework. ReactiveCocoa byla vybrána, protože příhodně rozšiřuje framework ReactiveSwift, má také přehlednou dokumentaci a existují kvalitní příklady demonstrující použití tohoto frameworku.
@@ -792,7 +792,7 @@ Swift je objektově orientovaný open source jazyk. Mezi jeho hlavní přednosti
 \item podpora protokolů a tzv. extension (rozšíření již existujících tříd). \cite{swift}
 \end{itemize}
 
-Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku 2014 a nyní je nejnovější verzí Swift 4. Právě v této verzi byla implementována aplikace v rámci této magisterské práce. \cite{swift2}
+Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku 2014 a nyní je nejnovější verzí Swift 4. Právě v této verzi byla implementována aplikace v rámci této diplomové práce. \cite{swift2}
 
 V této kapitole jsou dále rozebírány některé funkcionality a vlastnosti jazyka Swift společně s ukázkami kódu z vytvářené aplikace.
 
@@ -1381,7 +1381,7 @@ Společně s implementací aplikace byla vytvořena i její dokumentace. Při ps
 
 Samotná dokumentace byla poté zaměřena hlavně na veřejnou část tříd a na složitější metody. Pro tvorbu dokumentace bylo použito oficiální \\Apple značení (markup). A po dokončení aplikace byla dokumentace vygenerována pomocí programu \uv{Jazzy} (\url{https://github.com/realm/jazzy}) do formátu HTML.
 
-Vygenerovaná dokumentace k je nalezení v příloze této magisterské práce. 
+Vygenerovaná dokumentace k je nalezení v příloze této diplomové práce. 
 
 \section{Použité nástroje při vývoji}
 \subsection{Xcode}
@@ -1394,7 +1394,7 @@ Software Git byl používán pro zálohování, verzování a sdílení zdrojov�
 
 Git je open source software, který je zdarma a používá se pro verzování projektů. \cite{git}
 
-Repositář aplikace vyvíjené v rámci této magisterské práce byl uložen na GitHub (\url{https://github.com/MartinZid/FlightRecords}). Do tohoto repositáře byl přidán vedoucí této práce jako tzv. collaborator. Díky tomu byl stále informován o změnách a mohlo docházet k revizi zdrojových kódů.
+Repositář aplikace vyvíjené v rámci této diplomové práce byl uložen na GitHub (\url{https://github.com/MartinZid/FlightRecords}). Do tohoto repositáře byl přidán vedoucí této práce jako tzv. collaborator. Díky tomu byl stále informován o změnách a mohlo docházet k revizi zdrojových kódů.
 
 \subsection{Carthage}
 Carthage je software, který se používá pro správu frameworků. Carthage tyto frameworky stáhne a připraví pro vložení do projektu, dále je také možné pomocí Carthage frameworky aktualizovat na novější verze. \cite{carthage}
@@ -1612,7 +1612,7 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
 \section{Uživatelské testování}
 Uživatelské testování proběhlo ihned po heuristické analýze. Testováni byli celkem čtyři uživatelé, kteří byly rozděleni na dvě skupiny -- ti, co mají znalosti v oboru letectví a ostatní. U všech uživatelů bylo podmínkou používání operačního systému iOS po dobu alespoň dvou let. Všichni uživatelé dostaly stejné otázky před začátkem testování, stejné scénáře a stejný závěrečný dotazník. Skupině uživatelů, která neměla znalosti v leteckém oboru, byly nejprve vysvětleny základní informace nutné k plynulému absolvování testů.
 
-Všechny testy byly nahrávány z důvodu možné zpětné analýzy nedostatků aplikace. Všechny nahrávky testů společně s vyplněnými dotazníky jsou k nalezení v příloze této magisterské práce.
+Všechny testy byly nahrávány z důvodu možné zpětné analýzy nedostatků aplikace. Všechny nahrávky testů společně s vyplněnými dotazníky jsou k nalezení v příloze této diplomové práce.
 
 Před samotným testováním byli uživatelé seznámeni s testovacími scénáři (z důvodu vysvětlení nejasností) a odpovídali na několik otázek. Dále byli vyzvání ke komentování svých myšlenek v průběhu testování a také byli ujištěni o tom, že pokud cokoliv nepůjde, tak to není jejich chyba, ale chyba aplikace.
 

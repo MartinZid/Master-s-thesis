@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  3 APR 2018 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  3 APR 2018 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1357,7 +1357,7 @@ File: ./pictures/UC/UC.png Graphic file (type png)
 Package pdftex.def Info: ./pictures/UC/UC.png used on input line 553.
 (pdftex.def)             Requested size: 365.31203pt x 367.79143pt.
 
-Underfull \vbox (badness 7486) has occurred while \output is active []
+Underfull \vbox (badness 2213) has occurred while \output is active []
 
  [26 <./pictures/UC/UC.png (PNG copy)>] [27] [28] [29] [30]
 <./pictures/heur_eval_finding_curve_trans.png, id=670, 501.875pt x 316.18124pt>
@@ -1376,7 +1376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 715--716
  []
 
 
-Overfull \hbox (11.7178pt too wide) in paragraph at lines 708--719
+Overfull \hbox (11.7183pt too wide) in paragraph at lines 708--719
 [][] 
  []
 
@@ -2114,7 +2114,7 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_Žid_Martin_2018.pdf (99 pages, 2321612 bytes).
+Output written on DP_Žid_Martin_2018.pdf (99 pages, 2321700 bytes).
 PDF statistics:
  1840 PDF objects out of 2073 (max. 8388607)
  1680 compressed objects within 17 object streams
