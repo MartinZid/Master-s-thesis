@@ -1722,8 +1722,18 @@ Jak je již zmíněno dříve, FRP může být časově náročnější hlavně 
 Klasické postupy společně s~architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace. Jakmile začne být aplikace lehce komplexnější, architektura MVVM ve spojení s~FRP se, jak z~pohledu časové tak i implementační náročností, vyplatí.
 
 \begin{conclusion}
+Výsledkem této diplomové práce je funkční aplikace, která umožňuje pilotům evidovat záznamy svých letů a záznamy z výcvikového zařízení pro simulaci letu podle nařízení FCL.050. Tato aplikace také přehledně zobrazuje statistiky a limity nalétaných hodin (reflektující předpis ORO.FTL.210). Uživatelé mohou vkládat také své zdravotní certifikáty, kdy je znovu respektováno nařízení, tentokrát Part-MED. Aplikace dále umožňuje evidovat všechna pilotova letadla a nabízí možnost vygenerovat report s jednotlivými záznamy do formátu PDF. Uložená data jsou synchronizována se všemi uživatelovými iOS zařízeními a aplikaci je možné používat i offline.
 
-	%sem napište závěr Vaší práce
+V rámci této diplomové práce jsem popsat možnosti jakým způsobem je možné vyvíjet iOS aplikace. Dále jsem zanalyzoval různé typy softwarových architektur, které je možné při vývoji využít. Charakterizoval jsem také, co je to funkcionálně reaktivní programování (FRP) a jaké existují možnosti, v podobě frameworků, při tvorbě iOS aplikací. V neposlední řadě jsem analyzoval možnosti uložení dat, které byly hodnoceny i z pohledu jejich podpory online a offline přístupu k datům. 
+
+Dále jsem v rámci vývoje výše zmíněné aplikace provedl analýzu již existujících aplikací, společně s analýzou leteckých předpisů vydaných společností EASA. Po analýze jsem navrhl funkcionality vytvářené aplikace v podobě případů užití. Navrhl jsem také uživatelské rozhraní v podobě wireframu, které jsem již v této fázi podrobil heuristické analýze a uživatelským testům.
+
+Poté, co byla vytvořena první verze aplikace, znovu jsem provedl heuristickou analýzu a otestoval aplikaci uživatelskými a jednotkovými testy. Podle výsledků těchto testů jsem upravil aplikaci do její finální podoby a nakonec jsem vygeneroval webovou stránku s dokumentací.
+
+V poslední části své práce jsem hodnotil jaké výhody a nevýhody přinesly postupy FRP. A také jsem posuzoval časovou a implementační náročnost při použití architektury MVVM společně s FRP oproti klasickým postupům a standardní architektuře MVC. Tímto byly splněny všechny cíle této diplomové práce.
+
+V budoucnu by mohla být aplikace rozšířena o další funkcionality, bylo by možné vytvořit webovou a desktopovou verzi aplikace a po přeložení aplikace do více jazyků bych rád aplikaci publikoval v App Storu.
+
 \end{conclusion}
 
 \bibliographystyle{csn690}
@@ -1753,6 +1763,7 @@ Klasické postupy společně s~architekturou MVC se tedy hodí pouze pro velice 
 	\item[BPL] Balloon Pilot Licence
 	\item[PPL] Private Pilot Licence
 	\item[SUS] System Usability Scale
+	\item [PDF] Portable Document Format
 \end{description}
 
 

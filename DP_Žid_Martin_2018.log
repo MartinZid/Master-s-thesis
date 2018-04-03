@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  3 APR 2018 15:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  3 APR 2018 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1599,11 +1599,9 @@ Overfull \hbox (3.52222pt too wide) in paragraph at lines 1482--1483
 
 LaTeX Warning: Command \r invalid in math mode on input line 1714.
 
-[70] (./DP_Žid_Martin_2018.bbl [71
+[70] [71
 
-] [72
-
-]
+] (./DP_Žid_Martin_2018.bbl [72]
 bibitemlist
 
 Underfull \hbox (badness 10000) in paragraph at lines 18--21
@@ -1662,7 +1660,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--54
 tecture / MVC _
  []
 
-[73]
+[73
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 61--64
 []\T1/lmr/m/n/10.95 Model-View-Controller. \T1/lmr/m/it/10.95 Ap-ple De-ve-lo-p
 er \T1/lmr/m/n/10.95 [on-line]. Ca-li-for-nia,
@@ -2066,9 +2066,9 @@ ual /
 
 ) [80] [81
 
-] [82
+] [82] [83
 
-] [83]
+]
 \tf@toc=\write5
 \openout5 = `DP_Žid_Martin_2018.toc'.
 
@@ -2078,11 +2078,11 @@ ual /
 \tf@lot=\write7
 \openout7 = `DP_Žid_Martin_2018.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1882.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1882.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1893.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1893.
  (./DP_Žid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1882.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1882.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1893.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1893.
 
 Package rerunfilecheck Info: File `DP_Žid_Martin_2018.out' has not changed.
 (rerunfilecheck)             Checksum: FF700C82942328D0E1CA652C18337B9B;6005.
@@ -2093,7 +2093,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1882.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1893.
  ) 
 Here is how much of TeX's memory you used:
  16814 strings out of 492995
@@ -2120,7 +2120,7 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_Žid_Martin_2018.pdf (99 pages, 2321759 bytes).
+Output written on DP_Žid_Martin_2018.pdf (99 pages, 2324454 bytes).
 PDF statistics:
  1844 PDF objects out of 2073 (max. 8388607)
  1684 compressed objects within 17 object streams
