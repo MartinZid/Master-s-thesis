@@ -1728,11 +1728,13 @@ V rámci této diplomové práce jsem popsat možnosti jakým způsobem je možn
 
 Dále jsem v rámci vývoje výše zmíněné aplikace provedl analýzu již existujících aplikací, společně s analýzou leteckých předpisů vydaných společností EASA. Po analýze jsem navrhl funkcionality vytvářené aplikace v podobě případů užití. Navrhl jsem také uživatelské rozhraní v podobě wireframu, které jsem již v této fázi podrobil heuristické analýze a uživatelským testům.
 
-Poté, co byla vytvořena první verze aplikace, znovu jsem provedl heuristickou analýzu a otestoval aplikaci uživatelskými a jednotkovými testy. Podle výsledků těchto testů jsem upravil aplikaci do její finální podoby a nakonec jsem vygeneroval webovou stránku s dokumentací.
+Poté, co byla vytvořena první verze aplikace splňující všechny funkční i nefunkční požadavky, jsem znovu provedl heuristickou analýzu a otestoval aplikaci uživatelskými a jednotkovými testy. Podle výsledků těchto testů jsem upravil aplikaci do její finální podoby a nakonec jsem vygeneroval webovou stránku s dokumentací.
 
 V poslední části své práce jsem hodnotil jaké výhody a nevýhody přinesly postupy FRP. A také jsem posuzoval časovou a implementační náročnost při použití architektury MVVM společně s FRP oproti klasickým postupům a standardní architektuře MVC. Tímto byly splněny všechny cíle této diplomové práce.
 
-V budoucnu by mohla být aplikace rozšířena o další funkcionality, bylo by možné vytvořit webovou a desktopovou verzi aplikace a po přeložení aplikace do více jazyků bych rád aplikaci publikoval v App Storu.
+V tuto chvíli není aplikace nahrána do App Storu a databáze je spouštěna pouze lokálně. V budoucnu by mohla být aplikace rozšířena o další funkcionality, bylo by možné vytvořit webovou a desktopovou verzi aplikace a po přeložení aplikace do více jazyků a zprovoznění databáze např. v cloudu bych rád aplikaci publikoval v App Storu.
+
+Tato práce měla pro mě jako autora mnoho pozitivních přínosů.
 
 \end{conclusion}
 
