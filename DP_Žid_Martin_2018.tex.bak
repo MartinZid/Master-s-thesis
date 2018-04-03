@@ -138,7 +138,7 @@ Vývoj iOS aplikace je možný hned několika způsoby, každý má své výhody
 \subsection{Nativní aplikace}
 Nativní aplikace jsou vyvíjeny specificky pro jednu platformu. Díky tomu mají přístup ke všem funkcím daného zařízení jako např. GPS, kamera nebo kontakty. Mohou fungovat i pouze offline, tedy bez nutnosti internetového připojení. \cite{Nielsen}
 
-Však pokud bychom chtěli aplikaci distribuovat na více platforem, tak s tímto přístup by bylo nutné vytvořit pro každou platformu vlastní aplikaci. To by prodloužilo vývoj a znesnadnilo následnou údržbu aplikací.
+Však pokud bychom chtěli aplikaci distribuovat na více platforem, tak s tímto přístupem by bylo nutné vytvořit pro každou platformu vlastní aplikaci. To by prodloužilo vývoj a znesnadnilo následnou údržbu aplikací.
 
 Co se týče iOS vývoje, je možné si zvolit z dvou programovacích jazyků -- Objective-C nebo Swift. \cite{objc} \cite{swift}
 
@@ -161,14 +161,14 @@ Pro svou práci jsem si zvolil možnost nativní mobilní aplikace z důvodu zam
 Při tvorbě iOS aplikace je možné si vybrat z několika architektur. V této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
 
 \subsection{MVC}
-Architektura MVC je zkratka pro \uv{Model View Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o softwarovou architekturu, které se velice často používá při tvorbě aplikací s uživatelským rozhraním. \cite{MVCMozilla}
+Architektura MVC je zkratka pro \uv{Model-View-Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o softwarovou architekturu, které se velice často používá při tvorbě aplikací s uživatelským rozhraním. \cite{MVCMozilla}
 \begin{itemize}
 \item $Model$ definuje jaká data aplikace obsahuje, a pokud dojde k jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
 \item $View$ vrstva je prezentována samotnému uživateli. Tedy jsou zde zobrazena aplikační data a je zachycována uživatelova práce s aplikací.\cite{MVCMozilla}
-\item $Controller$ je vrstva mezi $View$ a $Model$ zabezpečující logiku aplikace. Stará se o promítnutí změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Model$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
+\item $Controller$ je vrstva mezi $View$ a $Model$ zajišťující logiku aplikace. Stará se o prezentaci změn do $View$ pokud se změní $Model$. Zároveň provádí úpravy v $Modelu$ při uživatelově manipulaci s $View$.  \cite{MVCGoogle}
 \end{itemize}
 
-Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controller$.\cite{Orlov}
+Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controlleru$.\cite{Orlov}
 
 Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} (převzato a přeloženo z originálu \cite{mvc-pic}) a \ref{fig:mvc-apple} (převzato a přeloženo z originálu \cite{mvc-apple-pic}).
 
@@ -188,16 +188,16 @@ MVC je základní architekturou pro tvorbu iOS aplikací. Není však jedinou mo
 Architektura MVVM má obdobné koncepce jako MVC. Jedná se také o zkratku, tentokrát \uv{Model-View-ViewModel}. \cite{MVVMMicrosoft}
 \begin{itemize}
 \item $Model$ je totožný s $Model$ vrstvou architektury MVC, jedná se tedy o datovou část aplikace.
-\item $View$ prezentuje aplikační data uživateli a monitoruje jeho akce. Však, jak již bylo zmíněno dříve, u iOS aplikací se jedná spíše o vrstvu\\ $View/View$ $controller$. Tato vrstva obsahuje pouze minimum logiky aplikace a reaguje hlavně na $ViewModel$.  \cite{Morrison}
-\item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s  $Model$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele např.: kliknutí na tlačítko. \cite{MVVMMicrosoft}
+\item $View$ prezentuje aplikační data uživateli a monitoruje jeho akce. Však, jak již bylo zmíněno dříve, u iOS aplikací se jedná spíše o vrstvu\\ $View/Controller$. Tato vrstva obsahuje pouze minimum logiky aplikace a reaguje hlavně na $ViewModel$.  \cite{Morrison}
+\item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s $Modelem$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele např. kliknutí na tlačítko. \cite{MVVMMicrosoft}
 \end{itemize}
 
-Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/View$ $controller$ a $Model$. Když potom uvažujeme architekturu MVVM ,$View/View$ $controller$  je opravdu pouze jednou vrstvou a mezi ní a $Model$ je vložena nová vrstva  $ViewModel$, která je spojuje, a do které je přesunuta i většina aplikační logiky.
+Tedy pro shrnutí rozdílů MVC a MVVM u iOS bych zmínil to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/Controller$ a $Model$. Když potom uvažujeme architekturu MVVM, $View/Controller$  je opravdu pouze jednou vrstvou a mezi ní a $Modelem$ je vložena nová vrstva $ViewModel$, která je spojuje, a do které je přesunuta i většina aplikační logiky.
 
 Mezi výhody architektury MVVM oproti MVC patří např.:
 \begin{itemize}
-\item poskytuje návrhový princip tzv. separation of concerns, neboli oddělení zájmů;
-\item zlepšuje možnost testovatelnosti aplikace.
+\item poskytnutí návrhového principu tzv. separation of concerns, neboli oddělení zájmů;
+\item zlepšení možnosti testovatelnosti aplikace.
 \end{itemize}
 
 Architekturu MVVM zobrazuje obrázek \ref{fig:mvvm} (převzato a přeloženo z originálu \cite{mvvm-pic}).
@@ -208,19 +208,19 @@ Architekturu MVVM zobrazuje obrázek \ref{fig:mvvm} (převzato a přeloženo z o
 \end{figure}
 
 \subsection{VIPER}
-VIPER je poslední rozebíranou možností, co se týče architektur. I zde je název složen z prvních písmen jednotlivých vrstev architektury, tedy \uv{View, Interactor, Presenter, Entity, Router}.
+VIPER je poslední analyzovanou možností, co se týče architektur. I zde je název složen z prvních písmen jednotlivých vrstev architektury, tedy \uv{View, Interactor, Presenter, Entity, Router}.
 \begin{itemize}
 \item $View$  zobrazuje data uživateli a předává uživatelovi vstupy vrstvě $Presenter$.
 \item $Interactor$ obsahuje logiku aplikace spojenou s daty ($Entity$).
-\item $Presenter$ vrstva má na starosti $View$ logiku.  Reaguje tedy na uživatelovy akce a komunikuje s vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
+\item $Presenter$ vrstva má na starosti $View$ logiku. Reaguje tedy na uživatelovy akce a komunikuje s vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
 \item $Entity$ jsou datové objekty aplikace přístupné pouze části $Interactor$.
-\item $Routing$ obsahuje navigační logiku. \cite{VIPER}
+\item $Router$ obsahuje navigační logiku. \cite{VIPER}
 \end{itemize}
 
 Mezi výhody architektury VIPER znovu patří např.:
 \begin{itemize}
-\item dobře rozděluje odpovědnosti;
-\item zlepšuje možnost testovatelnosti aplikace. \cite{Orlov}
+\item dobré rozdělení odpovědností;
+\item zlepšení možnosti testovatelnosti aplikace. \cite{Orlov}
 \end{itemize}
 
 Tato architektura však může být zbytečně složitá pro menší aplikace. \cite{Orlov}
@@ -249,7 +249,7 @@ Mezi výhody $storyboarů$ patří rychlost tvorby uživatelské rozhraní, což
 Nevýhodou $storyboardů$ může být výkon při více nebo složitějších obrazovkách. Tento problém se však dá zredukovat rozdělením obrazovek do více $storyboard$ souborů. Další nevýhodou je problematické znovupoužití jednotlivých prvků (obrazovek) nebo komplikovaná práce v týmu způsobená složitým spojením změn při verzování (i tento problém řeší z části více souborů se $storyboardy$). Posledním nedostatkem je to, že ne vše se dá vytvořit ve $storyboardu$ (hlavně dynamické prvky) a z toho důvodu dochází k tomu, že část uživatelského rozhraní je v kódu a část ve $storyboardu$. \cite{iOSUI} \cite{dominik}
 
 \subsection{Xib}
-$Xib$ je starším přístupem pro tvorbu uživatelského rozhraní iOS aplikací než $storyboard$, starší však neznamená zastaralý. Vytváří se jednoduché $view$ elementy stejným způsobem jako o $storyboardů$. Právě tato skutečnost přináší stejné výhody i problémy s tím rozdílem, že se jedná o drobnější prvky, což ulehčuje např. verzování, znovupoužitelnost nebo nezpůsobuje zpomalovaní Xcode. \cite{iOSUI} \cite{dominik}
+$Xib$ je starším přístupem pro tvorbu uživatelského rozhraní iOS aplikací než $storyboardy$, starší však neznamená zastaralý. Vytváří se jednoduché $view$ elementy stejným způsobem jako o $storyboardů$. Právě tato skutečnost přináší stejné výhody i problémy, s tím rozdílem, že se jedná o drobnější prvky, což ulehčuje např. verzování, znovupoužitelnost nebo nezpůsobuje zpomalovaní vývojového prostředí Xcode. \cite{iOSUI} \cite{dominik}
 
 \subsection{Uživatelské rozhraní v kódu}
 Poslední možností jak tvořit uživatelské rozhraní je vlastní kód. Tento způsob přináší mnoho výhod (hlavně tím, že redukuje nedostatky $storyboardů$ a $Xib$), ale má i své nevýhody.
@@ -274,10 +274,10 @@ Na spojení funkcionální a reaktivního programování může dívat i jako na
 \end{itemize}
 
 \subsection{FRP frameworky pro iOS}
-V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami jsou k nalezení v kapitole \nameref{chap:realizace}.
+V této kapitole jsou pouze rozebrány základy jednotlivých frameworků, podrobnější vysvětlení (zvoleného frameworku) společně s ukázkami je k nalezení v kapitole \nameref{chap:realizace}.
 
 \subsubsection{ReactiveSwift}
-ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$\ldots) a operátorů podporujících myšlenku \uv{tok hodnot za čas}. \cite{ReactiveSwift}
+ReactiveSwift je prvním frameworkem pro iOS podporující FRP. Obsahuje řadu základních prvků ($Signal$, $SignalProducer$, $Property$, $Action$\ldots) a operátorů podporujících myšlenku \uv{streams of values over time}. \cite{ReactiveSwift}
 
 \subsubsection{ReactiveCocoa}
 ReactiveCocoa je další z FRP frameworků pro iOS. ReactiveCocoa rozšiřuje různé aspekty Apple Cocoa frameworku základními prvky frameworku ReactiveSwift. Umožňuje vazbu na prvky uživatelského rozhraní, u interaktivních prvků napojuje $Signal$ a $Action$ pro kontrolu událostí a změn. Dále také umožňuje vytvářet signály na volání metod (např. i pro UIKit třídy). \cite{ReactiveCocoa}
@@ -291,14 +291,14 @@ Perzistence dat, neboli jejich uchování a uložení, je velice důležitou fun
 \subsection{Core Data}
 Core Data je Apple framework, který má na starosti model vrstvu aplikace. Stará se o životní cyklus objektů, jejich vztahy (objektový graf) i perzistenci. \cite{coredata}
 
-Core Data má více možností na způsob uložení např. SQLite a XML. Jedná se tedy o uložení dat na disku daného zařízení.  \cite{CoreDataPersistentTypes}
+Core Data má více možností jakým způsobem data uložit např. SQLite a XML. Jedná se tedy o uložení dat na disku daného zařízení.  \cite{CoreDataPersistentTypes}
 
 Výhodou tohoto frameworku je to, že je zcela zdarma a má podporu přímo v Xcode. \cite{CoreDataXcode}
 
 \subsection{iCloud}
 iCloud je cloudové úložiště od společnosti Apple. Umožňuje ukládat aplikační data i dokumenty a přistupovat k nim na všech Apple zařízeních a na webu. \cite{iCloud}
 
-Při vývoji iOS aplikací se pro využití iCloud používá framework CloudKit. CloudKit zajišťuje rozhraní pro komunikaci dané aplikace a iCloud. \cite{CloudKitDoc} Poskytuje ověření uživatele, tři druhy databáze -- soukromou, veřejnou a sdílenou, dále také analytický nástroj CloudKit Dashboard, který umožňuje prozkoumání dat, měření aktivity uživatelů a další. \cite{CloudKit}
+Při vývoji iOS aplikací se pro využití iCloudu používá framework CloudKit. CloudKit zajišťuje rozhraní pro komunikaci dané aplikace a iCloudu. \cite{CloudKitDoc} Poskytuje ověření uživatele, tři druhy databáze -- soukromou, veřejnou a sdílenou. Dále také analytický nástroj CloudKit Dashboard, který umožňuje analýzu dat, měření aktivity uživatelů a další. \cite{CloudKit}
 
 CloudKit je dostupný pro členy Apple Developer programu. \cite{AppleDeveloperProgram} Tento program stojí ročně v přepočtu 2150 Kč. \cite{AppleDeveloperProgramPrice} 
 
@@ -332,7 +332,7 @@ Každý záznam letů by měl obsahovat minimálně tyto informace:
 	\item typ, značku, model, variantu a registraci letadla,
 	\item označení zda je letadlo jednomotorové (SE -- single engine) nebo vícemotorové (ME -- multi engine),
 	\item čas letu,
-	\item celkový čas letu.
+	\item celkový čas letu;
 	\end{itemize}
 \item každý záznam z výcvikového zařízení pro simulaci letu (FSTD -- flight simulation training devices) by měl obsahovat:
 	\begin{itemize}
@@ -340,9 +340,15 @@ Každý záznam letů by měl obsahovat minimálně tyto informace:
 	\item instrukce výcvikového zařízení pro simulaci letu,
 	\item datum,
 	\item čas,
-	\item celkový čas.
+	\item celkový čas;
 	\end{itemize}
-\item funkce pilota -- velící pilot (včetně sólového, velícím pilotem student (Student PIC) nebo velící pilot pod dohledem (PICUS -- pilot-in-command under supervision)), druhý pilot, dvojí pilot (dual), instruktor (FI -- Flight Instructor) nebo zkoušející (FE -- Flight Examiner);
+\item funkce pilota:
+	\begin{itemize}
+	\item velící pilot (včetně sólového, studenta (Student PIC) nebo velícího pilota pod dohledem (PICUS -- pilot-in-command under supervision)),
+	\item druhý pilot,
+	\item dvojí pilot (dual),
+	\item instruktor (FI -- Flight Instructor) nebo zkoušející (FE -- Flight Examiner);
+	\end{itemize}
 \item provozní podmínky -- pokud se let uskutečnil v noci nebo pokud byl prováděn podle pravidel pro let podle přístrojů.
 \end{enumerate}
 } \cite{FCL} (překlad vlastní)
@@ -526,6 +532,7 @@ Funkční požadavky jsou uvedeny pouze jmenovitě. Podrobnější popis je uved
 \item Vyhledávání v leteckých záznamech.
 \item Kontrola limitů.
 \item Evidence zdravotních certifikátů.
+\item Zobrazení statistik.
 \item Generování reportů do formátu PDF.
 \end{enumerate}
 \subsection{Nefunkční požadavky}
@@ -538,7 +545,7 @@ Funkční požadavky jsou uvedeny pouze jmenovitě. Podrobnější popis je uved
 \end{enumerate}
 
 \section{Navržená funkcionalita v podobě případů užití}
-Případy užití (use cases) byly využity při návrhu funkcionalit iOS aplikace. Jsou obsaženy přímo v práci z důvodu přehledného zobrazení navržených funkcionalit a možnosti dovysvětlením u některých z nich.
+Případy užití (use cases) byly využity při návrhu funkcionalit iOS aplikace. Jsou obsaženy přímo v práci z důvodu přehledného zobrazení navržených funkcionalit a možnosti dovysvětlení u některých z nich.
 
 Diagram případů užití zobrazuje obrázek \ref{fig:UC}
 
@@ -553,7 +560,7 @@ Vytvoření leteckého záznam umožňuje uživateli vložit nový záznam letu 
 Hlavní scénář --
 \begin{itemize}
 \item Případ užití začíná, když chce uživatel evidovat svůj let.
-\item Systém zobrazí formulář umožňující zadat: jméno velícího pilota, datum letu, čas a místo odletu a příletu, letadlo, čas letu, celkový čas letu, počet vzletů a přistání, pilotovu funkci při letu a provozní podmínky.
+\item Systém zobrazí formulář umožňující zadat: jméno velícího pilota, datum letu, čas a místo odletu a příletu, letadlo, časy letu, celkový čas letu, počet vzletů a přistání, pilotovu funkci při letu a provozní podmínky.
 \item Uživatel vyplní formulář.
 \item Aplikace uloží informace o letu.
 \end{itemize}
@@ -565,15 +572,15 @@ Alternativní scénář --
 \item Případ užití pokračuje 3. krokem hlavního scénáře.
 \end{itemize}
 
-Aplikace bude napojena na databázi letišť, pro jednoduché evidování místa odletu a příletu. Nebude však napojena na databázi letadel, protože uživatel u každého letadla musí vyplnit minimálně registrační číslo. Pokud by uživatel musel letadlo najít a zeditovat, je výhodnější pokud si sám letadlo přidá. Dalším důvodem k tomu rozhodnutí je, že pilot létá velmi často pouze s jedním letadlem a proto funkcionalitu přidání letadla nebude používat příliš často.
+Aplikace nebude napojena na databázi letadel, protože uživatel u každého letadla musí vyplnit minimálně registrační číslo. Pokud by uživatel musel letadlo najít a zeditovat, je výhodnější pokud si sám letadlo přidá. Dalším důvodem k tomu rozhodnutí je, že pilot létá velmi často pouze s jedním letadlem a proto funkcionalitu přidání letadla nebude používat příliš často.
 
 \subsection{Přidat letadlo}
 Přidání letadla dává uživateli možnost přidat letadlo, které pak může vkládat do záznamů o letu.
 
 \begin{itemize}
 \item Případ užití začíná, když chce uživatel přidat nové letadlo.
-\item Systém zobrazí formulář  umožňující zadat: typ, značku model, variantu, registrační číslo letadla a zda je letadlo jednomotorové nebo vícemotorové.
-\item Uživatel vyplní všechna pole formuláře.
+\item Systém zobrazí formulář umožňující zadat: typ, značku model, variantu, registrační číslo letadla a zda je letadlo jednomotorové nebo vícemotorové.
+\item Uživatel vyplní formulář.
 \item Aplikace uloží letadlo.
 \end{itemize}
 
@@ -585,7 +592,7 @@ Tato funkcionalita umožňuje uživateli vyhledávání a filtrování leteckýc
 
 \begin{itemize}
 \item Případ užití začíná, pokud chce uživatel vyhledat nebo vyfiltrovat letecké záznamy.
-\item Include (Zobrazit letecké záznamy).
+\item Include(Zobrazit letecké záznamy).
 \item Aplikace zobrazí formulář, který umožňuje: zadat hledaný text, nastavit zda se jedná o záznam letu nebo o záznam z výcvikového zařízení, zvolit typ letadla nebo přesné letadlo a nastavit období.
 \item Uživatel vyplní pole, podle kterých chce vyhledávat/filtrovat.
 \item Systém zobrazí pouze záznamy odpovídající zvoleným parametrům.
@@ -596,7 +603,7 @@ Smazání leteckého záznamu umožňuje uživateli smazat letecký záznam, kte
 
 \begin{itemize}
 \item Případ užití začíná, když chce uživatel smazat jeden ze svých leteckých záznamů.
-\item Include (Zobrazit letecké záznamy).
+\item Include(Zobrazit letecké záznamy).
 \item Uživatel si zvolí záznam, který chce smazat.
 \item Aplikace zobrazí potvrzovací dialog.
 \item Uživatel potvrdí smazání.
@@ -608,7 +615,7 @@ Upravení leteckého záznamu umožňuje uživateli upravit všechny položky zv
 
 \begin{itemize}
 \item Případ užití začíná, když chce uživatel upravit letecký záznam.
-\item Include (Zobrazit letecké záznamy).
+\item Include(Zobrazit letecké záznamy).
 \item Uživatel si zvolí záznam, který chce upravit.
 \item Scénář pokračuje krokem 2 Vytvořit záznam letu.
 \end{itemize}
@@ -624,9 +631,9 @@ Tato funkce umožňuje uživateli přidat certifikát a to buď dle šablony pro
 
 \begin{itemize}
 \item Případ užití začíná, když chce uživatel vytvořit nový certifikát.
-\item Include (Zobrazit certifikáty).
+\item Include(Zobrazit certifikáty).
 \item Aplikace zobrazí formulář s možností vytvoření vlastního certifikátu nebo dle šablony. Ve formuláři je následně možné zadat: název certifikátu, datum vydání, datum expirace a popis.
-\item Uživatel povinně vyplní název a datum expirace.
+\item Uživatel vyplní formulář.
 \item Aplikace uloží certifikát.
 \end{itemize}
 
@@ -647,9 +654,8 @@ Generování reportu umožňuje uživateli vygenerovat report ve formátu PDF z 
 
 \begin{itemize}
 \item Případ užití začíná, jestliže se uživatel rozhodne vygenerovat report.
-\item Aplikace zobrazí formulář s možným výběrem záznamů, které se v reportu objeví.
-\item Uživatel si zvolí záznamy.
-\item Aplikace vytvoří report ve formátu PDF se zvolenými záznamy letů.
+\item Include(Zobrazit letecké záznamy).
+\item Aplikace zobrazí náhled generovaného reportu.
 \end{itemize}
 
 \subsection{Odeslat report emailem}
@@ -1428,6 +1434,11 @@ První z nich testuje, zda jsou $Observeři$ na $Signalu$ informování o tom, �
 Druhý test také pracuje s instancí Realmu. Zde je ovšem klasická instance nahrazena instancí s konfigurací $in$ $memory$, protože dochází k zápisu do Realmu. Testováno je zde pomocí $XCTAssertEqual$, zda funkce $numberOfRecordsInSection$ správně reflektuje počet záznamů v databázi Realmu.
 
 Výsledek testů je zobrazen na obrázku \ref{fig:testsResult}.
+
+\begin{figure}[]\centering
+ \includegraphics[width=0.99\textwidth]{./pictures/tests}
+ \caption[Výsledky testů]{Výsledky testů}\label{fig:testsResult}
+\end{figure}
 
 \begin{figure}
 \begin{minipage}{\linewidth}
