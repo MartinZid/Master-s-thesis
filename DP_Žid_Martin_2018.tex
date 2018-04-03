@@ -785,11 +785,11 @@ Swift je programovací jazyk vytvořený společností Apple. Jedná se o nástu
 Swift je objektově orientovaný open source jazyk. Mezi jeho hlavní přednosti patří: 
 \begin{itemize}
 \item automaticky spravovaná paměť,
-\item podpora i funkcionálního programování (filter, map, reduce),
+\item podpora funkcionálního programování (filter, map, reduce),
 \item možnost vracení  více  hodnot z funkcí,
 \item podpora tzv. generics,
 \item nativní zpracovávání chyb pomocí try, cache, trow,
-\item podpora protokolů a tzv. extension (rozšíření již existujících tříd). \cite{swift}
+\item podpora protokolů a tzv. extensions (rozšíření již existujících tříd). \cite{swift}
 \end{itemize}
 
 Swift je relativně mladý programovací jazyk, první oznámení proběhlo roku 2014 a nyní je nejnovější verzí Swift 4. Právě v této verzi byla implementována aplikace v rámci této diplomové práce. \cite{swift2}
@@ -802,7 +802,7 @@ Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné m
 
 $Optinal$ je jakýsi obal (wrapper) klasických typů ($String$, $Int$, $Double$ apod.), který reprezentuje dvě možnosti: hodnota je nastavena a je tedy možné tzv. $unwrap$ $optinal$ a tím získat danou hodnotu, nebo hodnota není nastavena (jedná se o $nil$). \cite{devBasics}
 
-Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné, kde otazník indikuje $optinal$ hodnotu uvnitř proměnné. Následně je ve funkci $save$ použito pro $unwrap$ proměnné tzv. $optional$ $binding$. To zpřístupní hodnotu $optional$ proměnné (pokud byla hodnota nastavena) v podobě dočasné konstanty. V případě, že je hodnota předána dočasné proměnné, můžeme k ní přistupovat klasicky a v našem případě delegovat funkci $save$.
+Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné, kde otazník indikuje $optinal$ hodnotu uvnitř proměnné. Následně je ve funkci $save$ použito pro $unwrap$ proměnné tzv. $optional$ $binding$. To zpřístupní hodnotu $optional$ proměnné (pokud byla hodnota nastavena) v podobě dočasné konstanty. V případě, že je hodnota předána dočasné konstantě, můžeme k ní přistupovat klasicky a v našem případě delegovat funkci $save$.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -812,8 +812,8 @@ var delegate: NoteViewControllerDelegate? = nil
 ...
 private func save(note: String) {
    // optional variable unwarpping using optional binding
-   if let unwappedDelegate = delegate {
-      unwappedDelegate.save(note: note)
+   if let delegate = delegate {
+      delegate.save(note: note)
    }
    ...
 }
@@ -824,7 +824,7 @@ private func save(note: String) {
 
 
 \subsection{Extensions}
-Extension, neboli rozšíření, je klíčové slovo v jazyce Swift, které umožňuje přidat novou funkcionalitu nebo atributy k již existující třídě, struktuře, protokolu apod. Toto zahrnuje i třídy, u kterých není možné upravit jejich zdrojový kód, tedy např. třídy UIKit.
+Extension, neboli rozšíření, je klíčové slovo jazyka Swift, které umožňuje přidat novou funkcionalitu nebo atributy k již existující třídě, struktuře, protokolu apod. Toto zahrnuje i třídy, u kterých není možné upravit jejich zdrojový kód, tedy např. třídy UIKit.
 
 Extensions umožňují: 
 \begin{itemize}
@@ -938,7 +938,7 @@ UIPickerViewDataSource {
 \end{figure}	
 	
 \subsection{Automatické počítání referencí}
-Automatická správa paměti, jak už je řečeno dříve, je jednou z předností Swiftu. Tato správa je zajištěna metodou automatického počítání referencí. Toto počítání zajišťuje udržení reference dané instance pouze po dobu, co je opravdu potřebná. V době, kdy instanci není nutné udržovat (již neexistují žádné reference), dojde k uvolnění předem alokované paměti.
+Automatická správa paměti, jak je již řečeno dříve, je jednou z předností jazyka Swift. Tato správa je zajištěna metodou automatického počítání referencí. Toto počítání zajišťuje udržení reference dané instance pouze po dobu, co je opravdu potřebná. V době, kdy instanci není nutné udržovat (již neexistují žádné reference), dojde k uvolnění předem alokované paměti.
 
 Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, které zaručuje, že instance, na kterou reference ukazuje, nebude dealokována dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá pokud má instance v referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
 
@@ -1050,7 +1050,7 @@ class AddFlightRecordViewModel: RealmViewModel {
 \subsection{Action}
 $Action$ je posledním použitým prvkem frameworku Reactive Swift. Hlavní částí prvku $Action$ je tzv. $execute$ reprezentovaný $SignalProducerem$. Tento $execute$ je zadán ve formě closure. $Action$ může obsahovat podmínku $enabledIf$, která určuje zda je umožněno akci provést.
 
-Použití prvku $Action$ je zobrazeno v ukázce \ref{lst:action}. Akce je znovu napojena pomocí vlastnosti $reactive$ frameworku Reactive Cocoa. Samotná akce pouze odesílá na stisknutí tlačítka proměnnou $note$, která je následně delegována do jiného $Controlleru$. Tato akce je však proveditelná pouze pokud je splněna podmínka v části $enabledIf$, tedy $note$ nemá nulovou délku. Díky propojení s tlačítkem ve $View$ se proveditelnost akce promítá i do vlastností tlačítka $UIBarButtonItem$. Po provedení akce je informován $observer$ ve $View$, který pozoruje $Signal$ vytvářený $SignalProducerem$ akce.
+Použití prvku $Action$ je zobrazeno v ukázce \ref{lst:action}. Akce je znovu napojena pomocí vlastnosti $reactive$ frameworku Reactive Cocoa. Samotná akce pouze odesílá na stisknutí tlačítka proměnou $note$, která je následně delegována do jiného $Controlleru$. Tato akce je však proveditelná pouze pokud je splněna podmínka v části $enabledIf$, tedy $note$ nemá nulovou délku. Díky propojení s tlačítkem ve $View$ se proveditelnost akce promítá i do vlastností tlačítka $UIBarButtonItem$. Po provedení akce je informován $observer$ ve $View$, který pozoruje $Signal$ vytvářený $SignalProducerem$ akce.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1107,7 +1107,7 @@ Reactive Swift obsahuje mnoho operátorů, které umí nějakým způsobem uprav
 \subsubsection{Map}
 Operátor $map$ je jeden z nejzákladnějších operátorů funkcionálního programování. V případě Reactive Swift přetváří hodnoty jednoho datového toku na jiný datový tok. \cite{operators}
 
-V aplikaci byl operátor $map$ velice užitečný. Byl použit hlavně pro spojení dvou $MutableProperty$ s odlišnými typy. Toto spojení probíhalo např. při práci s $UIDatePicker$ (výběr datu), kdy jedna $MutableProperty$ získává uživatelovi vstupy ve formátu $Date$ a tento tok hodnot je průběžné transformován jako $String$ do druhé $MutableProperty$. Ukázka je zobrazena v kódu \ref{lst:map}. V ukázce je možné vidět, že přepis transformace je zadán jako již existující funkce, stejného výsledku je však možné dosáhnout i při zadání přepisu ve formě closure.
+V aplikaci byl operátor $map$ velice užitečný. Byl použit hlavně pro spojení dvou $MutableProperty$ s odlišnými typy. Toto spojení probíhalo např. při práci s objekty typu $UIDatePicker$ (výběr datu), kdy jedna $MutableProperty$ získává uživatelovi vstupy ve formátu $Date$ a tento tok hodnot je průběžné transformován jako $String$ do druhé $MutableProperty$. Ukázka je zobrazena v kódu \ref{lst:map}. Na ukázce je možné vidět, že přepis transformace je zadán jako již existující funkce, stejného výsledku je však možné dosáhnout i při zadání přepisu ve formě closure.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1187,7 +1187,7 @@ Realm byl ve vytvářené aplikaci použit pro ukládání dat a to jak pro lok�
 Uživatel je do Realmu přihlašován pomocí svého iCloud účtu (popsáno dále) a inicializaci Realmu zpracovává v aplikaci třída $RealmViewModel$.
 	
 \subsection{Model}
-Objekty uložené v Realmu jsou definované jako klasické třídy ve Swiftu s nutností dědičnosti od třídy $Object$. Tyto objekty se chovají převážně jako klasické Swift objekty, je tedy možné aby splňovaly protokoly nebo měly vlastní metody. Tyto objekty mohou mít také definovány primární klíče nebo indexy. 
+Objekty uložené v Realmu jsou definované jako klasické třídy ve Swiftu s nutnou dědičnosti od třídy $Object$. Tyto objekty se chovají převážně jako klasické Swift objekty, je tedy možné aby splňovaly protokoly nebo měly vlastní metody. Tyto objekty mohou mít také definovány primární klíče nebo indexy. 
 
 Ukázka třídy $Plane$ definující Realm objekt je zobrazena v kódu \ref{lst:realmObject}. V aplikaci byly takto definovány třídy pro záznam letu nebo ze simulátoru, letadlo, osobní informace a zdravotní certifikáty.
 
@@ -1268,14 +1268,14 @@ Pro přihlašování uživatele bylo vybráno řešení pomocí iCloud tokenu. T
 
 Pro přihlášení uživatele pomocí iCloudu je nutné využít framework CloudKit. CloudKit obsahuje třídu $CKContainer$, která umožňuje získat uživatelův iCloud token pomocí funkce $fetchUserRecordID$. \cite{ckcontainer} Pomocí tohoto tokenu je uživatel následně přihlášen do Realmu. Získání tohoto tokenu má určitou časovou režii \cite{ckcontainer}, proto je token získáván pouze při prvním spuštění aplikace. Následně je již uživatel uložen v Realm objektu $SyncUser.current$ (dokud nedojde k expiraci přihlášení). O přihlášení uživatele se stará v aplikaci třída $RealmViewModel$.
 
-Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je nutné provést několik kroků. Nejprve je nutné vygenerovat dvoji soukromého a veřejného klíče pro objektový server Realm. Soukromý klíč je následně nutné vložit do CloudKit Dashboard. CloudKit Dashboard dále vygeneruje $Key ID$, které je nakonec nutné vložit do konfiguračního souboru objektového serveru Realm společně s cestou k dříve vytvořenému soukromému klíči. \cite{realmObjS}
+Aby bylo možné přihlášení uživatele do Realmu pomocí iCloud tokenu, je nutné provést několik kroků. Nejprve je nutné vygenerovat dvoji soukromého a veřejného klíče pro objektový server Realm. Soukromý klíč je následně nutné vložit do CloudKit Dashboardu. CloudKit Dashboard dále vygeneruje $Key ID$, které je nakonec nutné vložit do konfiguračního souboru objektového serveru Realm společně s cestou k dříve vytvořenému soukromému klíči. \cite{realmObjS}
 
 \section{Tvorba uživatelského rozhraní}
 Tvorba uživatelské rozhraní ve formě storyboardů je možná přímo v Xcode pomocí zabudovaného editoru tzv. Interface Builder.
 
 Pro pozicování jednotlivých prvků je vytvořený speciální systém rozložení tzv. Auto Layout. Auto Layout je postavený na myšlence vazeb (constraints). Každý prvek má definované tyto vazby k ostatním prvkům a díky tomu je přesně určeno jak se bude chovat na různých velikostech nebo orientacích displeje. \cite{ib}
 
-Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velikostí (size classes). Tyto třídy jsou dvě -- Regular a Compact, jsou definované pro výšku i šířku daného zařízení a mohou se lišit při orientaci na výšku a na šířku. Např. iPhone 6 má při orientaci na výšku definované třídy: pro výšku Regular a pro šířku Compact, zatímco při orientaci na šířku je to: pro výšku i šířku Compact. Tyto třídy umožňují přizpůsobit jednotlivé obrazovky, tak aby byly co nejideálněji zobrazeny na daném zařízení např. tím, že jsou změněny vazby nebo nedojde k zobrazení některých prvků. \cite{sizeClasses}
+Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velikostí (size classes). Tyto třídy jsou dvě -- $Regular$ a $Compact$, jsou definované pro výšku i šířku daného zařízení a mohou se lišit při orientaci na výšku a na šířku. Např. iPhone 6 má při orientaci na výšku definované třídy: pro výšku $Regular$ a pro šířku $Compact$, zatímco při orientaci na šířku je to: pro výšku i šířku $Compact$. Tyto třídy umožňují přizpůsobit jednotlivé obrazovky, tak aby byly co nejideálněji zobrazeny na daném zařízení např. tím, že jsou změněny vazby nebo nedojde k zobrazení některých prvků. \cite{sizeClasses}
 
 Dalším prvkem, který je možné použít pro rozdílná zobrazení na různých velikostech displejů, je tzv. $UISplitViewController$. Tento $Controller$ obsahuje dva $ViewControllery$ -- $master$ a $detail$. Ty jsou zobrazeny v závislosti na třídách velikosti -- u menších displejů se $UISplitViewController$ chová spíše jako klasický $NavigationController$, zatímco u větších displejů (např. tabletů) jsou $master$ a $detail$ zobrazeny vedle sebe. \cite{splitVC} Pro ukázku byly zvoleny zařízení iPhone 6 (obrázek \ref{fig:split1} zobrazující $UISplitViewController$ jako $NavigationController$) a iPad Air 2 (obrázek \ref{fig:split2} zobrazující $master$ a $detail$ vedle sebe).
 
@@ -1354,6 +1354,7 @@ Pro následné vytvoření PDF reportu byly použity dvě třídy z UIKit -- $UI
 // ViewModel
 private struct Marks {
    static let table = "#TABLE"
+   ...
 }
 
 func generateHTMLString() -> String? {
@@ -1423,13 +1424,15 @@ Unit testy, neboli jednotkové testy, jsou zaměřeny na části (jednotky) kód
 
 Pro tvorbu unit testů ve vytvářené aplikaci byl použit framework XCTest, který je vytvořen společností Apple a má předpřipravené rozhraní v Xcode. \cite{appleTesting}
 
-Všechny testující třídy jsou podtřídou $XCTestCase$. $XCTestCase$ je základní třídou všech testovacích případů. Tato třída obsahuje metody $setUp$ -- umožňující nastavit výchozí stav před testováním, $tearDown$ -- umožňující \uv{uklizení} po skončení testů. Dále tato třída také obsahuje funkce pro vyhodnocení jednotlivých testů. Mezi tyto funkce patří: $XCTAssertEqual$ potvrzující, že dvě vstupní hodnoty jsou stejné; $expectation$ je spojováno s $waitForExpectations$, které čeká danou dobu na to, zda je $expectation$ vyplněno ($fulfill$); a další. Funkce definující testy jsou, v testovací třídě, označeny klíčovým slovem $test$, které je na začatku jejich názvu. Takto definované funkce jsou automaticky spouštěny a vyhodnocovány. Díky klíčovému slovu $test$ je možné definovat i pomocné funkce. \cite{XCTestCase}
+Všechny testující třídy jsou podtřídou $XCTestCase$. $XCTestCase$ je základní třídou všech testovacích případů. Tato třída obsahuje metody $setUp$ -- umožňující nastavit výchozí stav před testováním, $tearDown$ -- umožňující \uv{uklizení} po skončení testů. Dále tato třída také obsahuje funkce pro vyhodnocení jednotlivých testů. Mezi tyto funkce patří: $XCTAssertEqual$ potvrzující, že dvě vstupní hodnoty jsou stejné; $expectation$ jenž je spojováno s $waitForExpectations$, které čeká danou dobu na to, zda je $expectation$ vyplněno ($fulfill$); a další. \cite{XCTestCase}
+
+Funkce definující testy jsou v testovací třídě označeny klíčovým slovem $test$, které je na začatku jejich názvu. Takto definované funkce jsou automaticky spouštěny a vyhodnocovány. Díky klíčovému slovu $test$ je možné definovat i pomocné funkce. \cite{XCTestCase}
 
 Pro třídy, které testují funkce pracující s databází Realm, byla vytvořena testovací třída $XCTestCase$. Tato třída se starala o konfiguraci instance Realmu, která byla pouze v paměti a tudíž testy probíhali stále stejně a neovlivňovali klasickou Realm databázi.
 
 Příklad \ref{lst:unitTests} zobrazuje obě dříve zmíněné funkce -- $setUp$ vytvářející $ViewModel$, který bude podléhat testům a $tearDown$, která $ViewModel$ znovu dealokuje. Následně jsou na ukázce zobrazeny dva testy. 
 
-První z nich testuje, zda jsou $Observeři$ na $Signalu$ informování o tom, že data z Realmu jsou připravena. U tohoto testu je použita dvojice $expectation$ a $waitForExpectations$. $Expectation$ je vyplněno právě, pokud je na $Signal$ odeslána hodnota indikující dokončení přípravy Realmu. 
+První z nich testuje, zda jsou $Observeři$ na $Signalu$ informování o tom, že data z Realmu jsou připravena. U tohoto testu je použita dvojice $expectation$ a $waitForExpectations$. $Expectation$ je vyplněno právě pokud je na $Signal$ odeslána hodnota indikující dokončení přípravy Realmu. 
 
 Druhý test také pracuje s instancí Realmu. Zde je ovšem klasická instance nahrazena instancí s konfigurací $in$ $memory$, protože dochází k zápisu do Realmu. Testováno je zde pomocí $XCTAssertEqual$, zda funkce $numberOfRecordsInSection$ správně reflektuje počet záznamů v databázi Realmu.
 
@@ -1516,7 +1519,7 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
  	\item Zobrazení náhledu reportu a generování PDF může trvat delší dobu.
  	\begin{itemize}
  		\item Závažnost -- 3.
- 		\item Řešení -- uživatel je informován o tom, že aplikace pracuje pomocí tzv. spinner. 
+ 		\item Řešení -- uživatel je informován o tom, že aplikace pracuje pomocí tzv. spinneru. 
  	\end{itemize}
 \end{itemize}
  
@@ -1696,7 +1699,7 @@ Při testování nebyly objeveny žádné kritické problémy, však díky pozor
 \end{itemize}
 
 \chapter{Zhodnocení}
-Tato kapitola se zabývá zhodnocením postupů FRP -- jejich výhodami a nevýhodami, a dále také zhodnocením časové a implementační náročnosti při vývoji aplikace za pomocí FRP a architektury MVVM v porovnání se standardním přístupem architektury MCV.
+Tato kapitola se zabývá zhodnocením postupů FRP -- jejich výhodami a nevýhodami, a dále také zhodnocením časové a implementační náročnosti při vývoji aplikace pomocí FRP a architektury MVVM v porovnání se standardním přístupem architektury MCV.
 
 \section{Zhodnocení postupů FRP v aplikaci}
 Postupy funkcionálně reaktivní programování velice dobře  vyhovují požadavkům, které jsou kladeny na mobilní aplikace --  prezentování uživatelského rozhraní a neustálé reagování na změny, které mohou přijít jak od uživatele, tak i např. ze serveru. Díky FRP je možné všechny tyto změny pozorovat ve formě nezávislých datových toků a podle nich následně upravovat uživatelské rozhraní a to bez nutnosti složitého uchovávání stavů aplikace.
@@ -1731,20 +1734,20 @@ Klasické postupy společně s architekturou MVC se tedy hodí pouze pro velice 
 \chapter{Seznam použitých zkratek}
 % \printglossaries
 \begin{description}
-	\item[FRP] Funkcionálně reaktivní programování
+	\item[FRP] Funkcionálně Reaktivní Programování
 	\item[MVC] Model View Controller
 	\item[MVVM] Model View ViewModel
 	\item[VIPER] View Interactor Presenter Entity Router
 	\item[PC] Personal Computer
 	\item[EASA] European Aviation Safety Agency
-	\item[PIC] Pilot-in-command
-	\item[SE] Single engine
-	\item[ME] Multi engine
+	\item[PIC] Pilot-In-Command
+	\item[SE] Single Engine
+	\item[ME] Multi Engine
 	\item[SPIC] Student PIC
-	\item[PICUS] PIC under supervision
-	\item[FSTD] flight simulation training devices
-	\item[FI] Flight instructor
-	\item[FE] Flight examiner
+	\item[PICUS] PIC Under Supervision
+	\item[FSTD] Flight Simulation Training Devices
+	\item[FI] Flight Instructor
+	\item[FE] Flight Examiner
 	\item[LAPL] Light Aircraft Pilot Licence
 	\item[SPL] Sailplane Pilot Licence
 	\item[BPL] Balloon Pilot Licence
