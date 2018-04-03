@@ -1734,20 +1734,20 @@ Klasické postupy společně s architekturou MVC se tedy hodí pouze pro velice 
 \chapter{Seznam použitých zkratek}
 % \printglossaries
 \begin{description}
-	\item[FRP] Funkcionálně reaktivní programování
+	\item[FRP] Funkcionálně Reaktivní Programování
 	\item[MVC] Model View Controller
 	\item[MVVM] Model View ViewModel
 	\item[VIPER] View Interactor Presenter Entity Router
 	\item[PC] Personal Computer
 	\item[EASA] European Aviation Safety Agency
-	\item[PIC] Pilot-in-command
-	\item[SE] Single engine
-	\item[ME] Multi engine
+	\item[PIC] Pilot-In-Command
+	\item[SE] Single Engine
+	\item[ME] Multi Engine
 	\item[SPIC] Student PIC
-	\item[PICUS] PIC under supervision
-	\item[FSTD] flight simulation training devices
-	\item[FI] Flight instructor
-	\item[FE] Flight examiner
+	\item[PICUS] PIC Under Supervision
+	\item[FSTD] Flight Simulation Training Devices
+	\item[FI] Flight Instructor
+	\item[FE] Flight Examiner
 	\item[LAPL] Light Aircraft Pilot Licence
 	\item[SPL] Sailplane Pilot Licence
 	\item[BPL] Balloon Pilot Licence

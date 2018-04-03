@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {2.3}Tvorba u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{9}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Storyboard}{10}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Xib}{10}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } v k\IeC {\'o}du}{11}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.3}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } v~k\IeC {\'o}du}{11}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{11}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{11}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}FRP frameworky pro iOS}{11}{subsection.2.4.1}
@@ -46,7 +46,7 @@
 \contentsline {section}{\numberline {4.1}Funk\IeC {\v c}n\IeC {\'\i } a nefunk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{25}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Funk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{25}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Nefunk\IeC {\v c}n\IeC {\'\i } po\IeC {\v z}adavky}{25}{subsection.4.1.2}
-\contentsline {section}{\numberline {4.2}Navr\IeC {\v z}en\IeC {\'a} funkcionalita v podob\IeC {\v e} p\IeC {\v r}\IeC {\'\i }pad\IeC {\r u} u\IeC {\v z}it\IeC {\'\i }}{26}{section.4.2}
+\contentsline {section}{\numberline {4.2}Navr\IeC {\v z}en\IeC {\'a} funkcionalita v~podob\IeC {\v e} p\IeC {\v r}\IeC {\'\i }pad\IeC {\r u} u\IeC {\v z}it\IeC {\'\i }}{26}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Vytvo\IeC {\v r}it z\IeC {\'a}znam letu}{27}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}P\IeC {\v r}idat letadlo}{27}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Zobrazit leteck\IeC {\'e} z\IeC {\'a}znamy}{28}{subsection.4.2.3}
@@ -112,7 +112,7 @@
 \contentsline {subsection}{\numberline {6.3.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{65}{subsection.6.3.3}
 \contentsline {subsection}{\numberline {6.3.4}V\IeC {\'y}sledky test\IeC {\r u}}{66}{subsection.6.3.4}
 \contentsline {chapter}{\chapternumberline {7}Zhodnocen\IeC {\'\i }}{69}{chapter.7}
-\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v aplikaci}{69}{section.7.1}
+\contentsline {section}{\numberline {7.1}Zhodnocen\IeC {\'\i } postup\IeC {\r u} FRP v~aplikaci}{69}{section.7.1}
 \contentsline {section}{\numberline {7.2}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{70}{section.7.2}
 \contentsline {chapter}{Z{\' a}v{\v e}r}{71}{chapter*.6}
 \contentsline {chapter}{Literatura}{73}{section*.8}
