@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  3 APR 2018 20:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.8.28)  4 APR 2018 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1002,31 +1002,31 @@ LaTeX Warning: Label `fig:LogTenProX' multiply defined.
 )
 \openout1 = `DP_ZÌŒid_Martin_2018.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 101.
-LaTeX Font Info:    ... okay on input line 101.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 101.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
+LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 114.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 \AtBeginShipoutBox=\box35
-Package hyperref Info: Link coloring OFF on input line 101.
-LaTeX Info: Redefining \ref on input line 101.
-LaTeX Info: Redefining \pageref on input line 101.
-LaTeX Info: Redefining \nameref on input line 101.
+Package hyperref Info: Link coloring OFF on input line 114.
+LaTeX Info: Redefining \ref on input line 114.
+LaTeX Info: Redefining \pageref on input line 114.
+LaTeX Info: Redefining \nameref on input line 114.
 
 (./DP_ZÌŒid_Martin_2018.out) (./DP_ZÌŒid_Martin_2018.out)
 \@outlinefile=\write4
@@ -1071,40 +1071,40 @@ e
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 101.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 114.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 101.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 114.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 101
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 114
 .
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 101
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 114
 .
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 101.
+(Font)              <10.95> on input line 114.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 101.
+(Font)              <8> on input line 114.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 101.
+(Font)              <6> on input line 114.
 
 <cvut-logo-bw.pdf, id=158, 91.34125pt x 69.25874pt>
 File: cvut-logo-bw.pdf Graphic file (type pdf)
  <use cvut-logo-bw.pdf>
-Package pdftex.def Info: cvut-logo-bw.pdf used on input line 101.
+Package pdftex.def Info: cvut-logo-bw.pdf used on input line 114.
 (pdftex.def)             Requested size: 59.04135pt x 44.76717pt.
 
 [1
@@ -1114,40 +1114,44 @@ Package pdftex.def Info: cvut-logo-bw.pdf used on input line 101.
 ]
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 101.
+(Font)              using `T1/lmr/bx/n' instead on input line 114.
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 101.
+LaTeX Font Info:    Try loading font information for T1+lmss on input line 114.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 
 LaTeX Font Warning: Font shape `T1/lmss/bx/sc' undefined
-(Font)              using `T1/lmss/bx/n' instead on input line 101.
+(Font)              using `T1/lmss/bx/n' instead on input line 114.
 
 [3
 
 ] [4
 
 ] [5]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 101.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 114.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 101.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 114.
 
 [6
 
-] [7
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [8] (./DP_ZÌŒid_Martin_2018.toc [9
+ [7
 
-]) [10] (./DP_ZÌŒid_Martin_2018.lof)
-[11
+]
+[8] (./DP_ZÌŒid_Martin_2018.toc [9
 
-] [12
+]) [10] (./DP_ZÌŒid_Martin_2018.lof) [11
+
+]
+[12
 
 ] (./DP_ZÌŒid_Martin_2018.lot) [13] [14
 
@@ -1155,20 +1159,20 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.121 \chapter
+l.134 \chapter
               {CÃ­l prÃ¡ce} [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.121 \chapter
+l.134 \chapter
               {CÃ­l prÃ¡ce} [2
 
 ] [3] [4
 
 ]
-Overfull \hbox (9.59679pt too wide) in paragraph at lines 146--147
+Overfull \hbox (9.59679pt too wide) in paragraph at lines 159--160
 \T1/lmr/m/n/10.95 Hybridní apli-kace jsou apli-kace tvo-°ené nej-£as-t¥ji po-mo
 cí HTML5 a Ja-vaScriptu,
  []
@@ -1180,7 +1184,7 @@ File: ./pictures/architektury/model_view_controller.png Graphic file (type png)
 
  <use ./pictures/architektury/model_view_controller.png>
 Package pdftex.def Info: ./pictures/architektury/model_view_controller.png used
- on input line 178.
+ on input line 191.
 (pdftex.def)             Requested size: 365.31203pt x 150.42244pt.
 
 <./pictures/architektury/appleMVC.png, id=365, 511.9125pt x 281.05pt>
@@ -1188,10 +1192,10 @@ File: ./pictures/architektury/appleMVC.png Graphic file (type png)
 
 <use ./pictures/architektury/appleMVC.png>
 Package pdftex.def Info: ./pictures/architektury/appleMVC.png used on input lin
-e 183.
+e 196.
 (pdftex.def)             Requested size: 365.31203pt x 200.56325pt.
 
-Overfull \hbox (4.5174pt too wide) in paragraph at lines 188--190
+Overfull \hbox (4.5174pt too wide) in paragraph at lines 201--203
 \T1/lmr/m/n/10.95 Architektura MVVM má ob-dobné kon-cepce jako MVC. Jedná se ta
 ké o zkratku,
  []
@@ -1202,11 +1206,11 @@ rchitektury/appleMVC.png (PNG copy)>]
 File: ./pictures/architektury/MVVM.png Graphic file (type png)
 
 <use ./pictures/architektury/MVVM.png>
-Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 20
-6.
+Package pdftex.def Info: ./pictures/architektury/MVVM.png used on input line 21
+9.
 (pdftex.def)             Requested size: 365.31203pt x 134.88837pt.
 
-Overfull \hbox (20.02321pt too wide) in paragraph at lines 213--214
+Overfull \hbox (20.02321pt too wide) in paragraph at lines 226--227
 []$\OML/lmm/m/it/10.95 View$ \T1/lmr/m/n/10.95 zob-ra-zuje data uºi-va-teli a p
 °e-dává uºi-va-te-lovi vstupy vrstv¥ $\OML/lmm/m/it/10.95 Presenter$\T1/lmr/m/n
 /10.95 . 
@@ -1218,47 +1222,47 @@ File: ./pictures/architektury/viper.png Graphic file (type png)
 
 <use ./pictures/architektury/viper.png>
 Package pdftex.def Info: ./pictures/architektury/viper.png used on input line 2
-31.
+44.
 (pdftex.def)             Requested size: 365.31203pt x 224.41344pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 240.
+               Default added (so using `tbp') on input line 253.
 
 <./pictures/storyboard.png, id=395, 1924.18875pt x 987.69pt>
 File: ./pictures/storyboard.png Graphic file (type png)
 
 <use ./pictures/storyboard.png>
-Package pdftex.def Info: ./pictures/storyboard.png used on input line 241.
+Package pdftex.def Info: ./pictures/storyboard.png used on input line 254.
 (pdftex.def)             Requested size: 365.31203pt x 187.51234pt.
  [9 <./pictures/architektury/viper.png (PNG copy)>]
 
-LaTeX Warning: Command \r invalid in math mode on input line 247.
+LaTeX Warning: Command \r invalid in math mode on input line 260.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 249.
+LaTeX Warning: Command \r invalid in math mode on input line 262.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 252.
+LaTeX Warning: Command \r invalid in math mode on input line 265.
 
 [10 <./pictures/storyboard.png>]
 
-LaTeX Warning: Command \r invalid in math mode on input line 255.
+LaTeX Warning: Command \r invalid in math mode on input line 268.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 262.
+LaTeX Warning: Command \r invalid in math mode on input line 275.
 
 
-LaTeX Warning: Command \r invalid in math mode on input line 262.
+LaTeX Warning: Command \r invalid in math mode on input line 275.
 
 
-Overfull \hbox (17.96669pt too wide) in paragraph at lines 267--268
+Overfull \hbox (17.96669pt too wide) in paragraph at lines 280--281
 []\T1/lmr/m/n/10.95 Pro vy-sv¥t-lení, co je to re-ak-tivní pro-gra-mo-vání, ci-
 tuji An-dré Staltze: ^^Rreaktivní
  []
 
 [11] [12]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 306.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 319.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1268,7 +1272,7 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ] [15] [16]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 393.
+               Default added (so using `tbp') on input line 406.
 
 
 <./pictures/existujiciAplikace/LogTenProX.png, id=526, 1555.8125pt x 1339.0025p
@@ -1276,12 +1280,12 @@ t>
 File: ./pictures/existujiciAplikace/LogTenProX.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogTenProX.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/LogTenProX.png used on i
-nput line 394.
+nput line 407.
 (pdftex.def)             Requested size: 365.31203pt x 314.40002pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 398.
+               Default added (so using `tbp') on input line 411.
 
 
 <./pictures/existujiciAplikace/LogbookPro.png, id=527, 1555.8125pt x 1339.0025p
@@ -1289,12 +1293,12 @@ t>
 File: ./pictures/existujiciAplikace/LogbookPro.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/LogbookPro.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/LogbookPro.png used on i
-nput line 399.
+nput line 412.
 (pdftex.def)             Requested size: 365.31203pt x 314.40002pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 403.
+               Default added (so using `tbp') on input line 416.
 
 
 <./pictures/existujiciAplikace/Safelog.png, id=528, 1555.8125pt x 1339.0025pt>
@@ -1302,24 +1306,24 @@ File: ./pictures/existujiciAplikace/Safelog.png Graphic file (type png)
 
 <use ./pictures/existujiciAplikace/Safelog.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/Safelog.png used on inpu
-t line 404.
+t line 417.
 (pdftex.def)             Requested size: 365.31203pt x 314.40002pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 408.
+               Default added (so using `tbp') on input line 421.
 
 <./pictures/existujiciAplikace/FlyLogio.png, id=529, 1254.6875pt x 1027.84pt>
 File: ./pictures/existujiciAplikace/FlyLogio.png Graphic file (type png)
 
 <use ./pictures/existujiciAplikace/FlyLogio.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/FlyLogio.png used on inp
-ut line 409.
+ut line 422.
 (pdftex.def)             Requested size: 365.31203pt x 299.25792pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 413.
+               Default added (so using `tbp') on input line 426.
 
 
 <./pictures/existujiciAplikace/SmartLogbook.png, id=530, 1254.6875pt x 1027.84p
@@ -1327,15 +1331,15 @@ t>
 File: ./pictures/existujiciAplikace/SmartLogbook.png Graphic file (type png)
  <use ./pictures/existujiciAplikace/SmartLogbook.png>
 Package pdftex.def Info: ./pictures/existujiciAplikace/SmartLogbook.png used on
- input line 414.
+ input line 427.
 (pdftex.def)             Requested size: 365.31203pt x 299.25792pt.
  [17]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 456.
+(Font)              <9> on input line 469.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 456.
+(Font)              <5> on input line 469.
 
-Underfull \vbox (badness 10000) detected at line 480
+Underfull \vbox (badness 10000) detected at line 493
  []
 
 [18 <./pictures/existujiciAplikace/LogTenProX.png>] [19 <./pictures/existujiciA
@@ -1348,13 +1352,13 @@ ikace/FlyLogio.png>] [23 <./pictures/existujiciAplikace/SmartLogbook.png>] [24
 ] [25]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 552.
+               Default added (so using `tbp') on input line 565.
 
 <./pictures/UC/UC.png, id=623, 738.76pt x 743.77875pt>
 File: ./pictures/UC/UC.png Graphic file (type png)
 
 <use ./pictures/UC/UC.png>
-Package pdftex.def Info: ./pictures/UC/UC.png used on input line 553.
+Package pdftex.def Info: ./pictures/UC/UC.png used on input line 566.
 (pdftex.def)             Requested size: 365.31203pt x 367.79143pt.
 
 Underfull \vbox (badness 2213) has occurred while \output is active []
@@ -1364,19 +1368,19 @@ Underfull \vbox (badness 2213) has occurred while \output is active []
 File: ./pictures/heur_eval_finding_curve_trans.png Graphic file (type png)
 <use ./pictures/heur_eval_finding_curve_trans.png>
 Package pdftex.def Info: ./pictures/heur_eval_finding_curve_trans.png used on i
-nput line 701.
+nput line 714.
 (pdftex.def)             Requested size: 365.31203pt x 230.15907pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 715--716
+Underfull \hbox (badness 10000) in paragraph at lines 728--729
 []|\T1/lmr/m/n/10.95 P°ejmenování ^^RM·j pro-fil^^P (v bý-valé zá-loºce
  []
 
 
-Overfull \hbox (11.7183pt too wide) in paragraph at lines 708--719
+Overfull \hbox (11.7183pt too wide) in paragraph at lines 721--732
 [][] 
  []
 
@@ -1385,111 +1389,111 @@ Overfull \hbox (11.7183pt too wide) in paragraph at lines 708--719
 
 ] [37]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 809.
+nput line 822.
 
-Overfull \hbox (24.2179pt too wide) in paragraph at lines 814--815
+Overfull \hbox (24.2179pt too wide) in paragraph at lines 827--828
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][] 
  []
 
 [38]
-Overfull \hbox (44.91357pt too wide) in paragraph at lines 845--846
+Overfull \hbox (44.91357pt too wide) in paragraph at lines 858--859
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.42078pt too wide) in paragraph at lines 855--856
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 868--869
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 864--865
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 877--878
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [39]
-Overfull \hbox (16.18748pt too wide) in paragraph at lines 881--882
+Overfull \hbox (16.18748pt too wide) in paragraph at lines 894--895
 \OML/lmm/m/it/10.95 NoteViewControllerDelegate$ \T1/lmr/m/n/10.95 a tedy mít im
 -ple-men-to-va-nou me-todu $\OML/lmm/m/it/10.95 save$ \T1/lmr/m/n/10.95 (ukázka
 
  []
 
 
-Overfull \hbox (10.42078pt too wide) in paragraph at lines 912--913
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 925--926
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (24.2179pt too wide) in paragraph at lines 918--919
+Overfull \hbox (24.2179pt too wide) in paragraph at lines 931--932
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 923--924
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 936--937
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 931--932
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 944--945
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [40] [41]
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 972--973
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 985--986
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (17.31934pt too wide) in paragraph at lines 977--978
+Overfull \hbox (17.31934pt too wide) in paragraph at lines 990--991
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 979--981
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 992--994
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 983--984
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 996--997
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 984--985
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 997--998
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.42078pt too wide) in paragraph at lines 986--987
+Overfull \hbox (10.42078pt too wide) in paragraph at lines 999--1000
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (38.01501pt too wide) in paragraph at lines 987--988
+Overfull \hbox (38.01501pt too wide) in paragraph at lines 1000--1001
 [][][][][][][][][][][][][][][][][][] 
  []
 
 [42]
-Overfull \hbox (19.42778pt too wide) in paragraph at lines 1006--1007
+Overfull \hbox (19.42778pt too wide) in paragraph at lines 1019--1020
 $\OML/lmm/m/it/10.95 MutableProperty$ \T1/lmr/m/n/10.95 je dal-²ím prv-kem fra-
 meworku Re-active Swift. $\OML/lmm/m/it/10.95 MutableProperty$
  []
 
 
-Overfull \hbox (8.5565pt too wide) in paragraph at lines 1008--1009
+Overfull \hbox (8.5565pt too wide) in paragraph at lines 1021--1022
 \T1/lmr/m/n/10.95 vých vrs-tev ar-chi-tek-tury. První pro-po-jení p°e-sta-vuje 
 pro-m¥nná $\OML/lmm/m/it/10.95 fromTextField$\T1/lmr/m/n/10.95 ,
  []
 
 [43]
-Overfull \hbox (18.5483pt too wide) in paragraph at lines 1010--1011
+Overfull \hbox (18.5483pt too wide) in paragraph at lines 1023--1024
 \T1/lmr/m/n/10.95 vy-tvo-°en $\OML/lmm/m/it/10.95 ViewModel$ \T1/lmr/m/n/10.95 
 (se zá-zna-mem letu nebo s hod-no-tou $\OML/lmm/m/it/10.95 nil$\T1/lmr/m/n/10.9
 5 ) i $\OML/lmm/m/it/10.95 MutableProperty$\T1/lmr/m/n/10.95 . 
  []
 
 
-Overfull \hbox (6.2315pt too wide) in paragraph at lines 1051--1052
+Overfull \hbox (6.2315pt too wide) in paragraph at lines 1064--1065
 \OML/lmm/m/it/10.95 execute$ \T1/lmr/m/n/10.95 je za-dán ve form¥ clo-sure. $\O
 ML/lmm/m/it/10.95 Action$ \T1/lmr/m/n/10.95 m·ºe ob-sa-ho-vat pod-mínku $\OML/l
 mm/m/it/10.95 enabledIf$\T1/lmr/m/n/10.95 ,
@@ -1500,67 +1504,67 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [44]
 
-LaTeX Warning: Float too large for page by 5.48003pt on input line 1102.
+LaTeX Warning: Float too large for page by 5.48003pt on input line 1115.
 
 
-Overfull \hbox (0.30182pt too wide) in paragraph at lines 1110--1111
+Overfull \hbox (0.30182pt too wide) in paragraph at lines 1123--1124
 \T1/lmr/m/n/10.95 práci s ob-jekty typu $\OML/lmm/m/it/10.95 UIDatePicker$ \T1/
 lmr/m/n/10.95 (vý-b¥r datu), kdy jedna $\OML/lmm/m/it/10.95 MutableProperty$
  []
 
 
-Overfull \hbox (12.21165pt too wide) in paragraph at lines 1157--1158
+Overfull \hbox (12.21165pt too wide) in paragraph at lines 1170--1171
 \T1/lmr/m/n/10.95 chání hod-not v da-to-vém toku, ale pouze t¥ch které spl-¬ují
  za-da-nou podmínku.[[]] 
  []
 
 [45] [46] [47] [48]
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 1254--1255
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 1267--1268
 [][][][][][][][][][][][][][][] 
  []
 
 [49] [50]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1284.
+               Default added (so using `tbp') on input line 1297.
 
 <./pictures/UISplitView/iphone.png, id=1146, 1431.3475pt x 1229.59375pt>
 File: ./pictures/UISplitView/iphone.png Graphic file (type png)
 
 <use ./pictures/UISplitView/iphone.png>
 Package pdftex.def Info: ./pictures/UISplitView/iphone.png used on input line 1
-285.
+298.
 (pdftex.def)             Requested size: 365.31203pt x 313.81432pt.
  [51]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1289.
+               Default added (so using `tbp') on input line 1302.
 
 <./pictures/UISplitView/ipad.png, id=1157, 1249.66875pt x 1666.225pt>
 File: ./pictures/UISplitView/ipad.png Graphic file (type png)
 
 <use ./pictures/UISplitView/ipad.png>
-Package pdftex.def Info: ./pictures/UISplitView/ipad.png used on input line 129
-0.
+Package pdftex.def Info: ./pictures/UISplitView/ipad.png used on input line 130
+3.
 (pdftex.def)             Requested size: 365.31203pt x 487.08282pt.
  [52 <./pictures/UISplitView/iphone.png>]
 [53 <./pictures/UISplitView/ipad.png>] [54]
-Overfull \hbox (17.31934pt too wide) in paragraph at lines 1364--1365
+Overfull \hbox (17.31934pt too wide) in paragraph at lines 1377--1378
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (24.2179pt too wide) in paragraph at lines 1366--1367
+Overfull \hbox (24.2179pt too wide) in paragraph at lines 1379--1380
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (17.31934pt too wide) in paragraph at lines 1368--1369
+Overfull \hbox (17.31934pt too wide) in paragraph at lines 1381--1382
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [55] [56]
-Overfull \hbox (3.05658pt too wide) in paragraph at lines 1407--1408
+Overfull \hbox (3.05658pt too wide) in paragraph at lines 1420--1421
 []\T1/lmr/m/n/10.95 ReactiveCocoa, který ob-sa-huje i Re-acti-ve-Swift a Re-sul
 t. Tento fra-mework
  []
@@ -1568,7 +1572,7 @@ t. Tento fra-mework
 [57] [58
 
 ]
-Overfull \hbox (21.00371pt too wide) in paragraph at lines 1433--1434
+Overfull \hbox (21.00371pt too wide) in paragraph at lines 1446--1447
 []\T1/lmr/m/n/10.95 P°íklad []6.1[] zob-ra-zuje ob¥ d°íve zmí-n¥né funkce -- $\
 OML/lmm/m/it/10.95 setUp$ \T1/lmr/m/n/10.95 vy-tvá-°e-jící $\OML/lmm/m/it/10.95
  ViewModel$\T1/lmr/m/n/10.95 ,
@@ -1576,20 +1580,20 @@ OML/lmm/m/it/10.95 setUp$ \T1/lmr/m/n/10.95 vy-tvá-°e-jící $\OML/lmm/m/it/10.95
 
 [59]
 
-LaTeX Warning: Command \v invalid in math mode on input line 1435.
+LaTeX Warning: Command \v invalid in math mode on input line 1448.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1441.
+               Default added (so using `tbp') on input line 1454.
 
 <./pictures/tests.png, id=1275, 656.4525pt x 32.12pt>
 File: ./pictures/tests.png Graphic file (type png)
 
 <use ./pictures/tests.png>
-Package pdftex.def Info: ./pictures/tests.png used on input line 1442.
+Package pdftex.def Info: ./pictures/tests.png used on input line 1455.
 (pdftex.def)             Requested size: 365.31203pt x 17.87483pt.
 
-Overfull \hbox (3.52222pt too wide) in paragraph at lines 1482--1483
+Overfull \hbox (3.52222pt too wide) in paragraph at lines 1495--1496
 [][][][][][][][][][][][][][][][] 
  []
 
@@ -1597,7 +1601,7 @@ Overfull \hbox (3.52222pt too wide) in paragraph at lines 1482--1483
 
 ] [69]
 
-LaTeX Warning: Command \r invalid in math mode on input line 1714.
+LaTeX Warning: Command \r invalid in math mode on input line 1727.
 
 [70] [71
 
@@ -2078,11 +2082,11 @@ ual /
 \tf@lot=\write7
 \openout7 = `DP_ZÌŒid_Martin_2018.lot'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1895.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1895.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1908.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1908.
  (./DP_ZÌŒid_Martin_2018.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1895.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1895.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1908.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1908.
 
 Package rerunfilecheck Info: File `DP_ZÌŒid_Martin_2018.out' has not changed.
 (rerunfilecheck)             Checksum: FF700C82942328D0E1CA652C18337B9B;6005.
@@ -2093,12 +2097,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1895.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1908.
  ) 
 Here is how much of TeX's memory you used:
  16814 strings out of 492995
  231712 string characters out of 6132704
- 404083 words of memory out of 5000000
+ 404644 words of memory out of 5000000
  19421 multiletter control sequences out of 15000+600000
  82647 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2120,7 +2124,7 @@ r/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on DP_ZÌŒid_Martin_2018.pdf (99 pages, 2324946 bytes).
+Output written on DP_ZÌŒid_Martin_2018.pdf (99 pages, 2326318 bytes).
 PDF statistics:
  1844 PDF objects out of 2073 (max. 8388607)
  1684 compressed objects within 17 object streams

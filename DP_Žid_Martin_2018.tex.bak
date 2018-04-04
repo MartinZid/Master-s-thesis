@@ -79,8 +79,9 @@
 \acknowledgements{Doplňte, máte-li komu a za co děkovat. V~opačném případě úplně odstraňte tento příkaz.}
 
 \abstractCS{
-%TOTO NENI FINALNI VERZE
-Tato práce realizuje iOS aplikaci pro evidenci letů.  V~první části analyzuji obdobné aplikace a předpisy pro piloty České republiky, podle nichž probíhá návrh funkcionality vytvářené aplikace. Podle návrhu je následně zvolena vhodná architektura a vytvořeno uživatelského rozhraní v~podobě wireframů.
+Tato práce realizuje iOS aplikaci pro evidenci letů.  V první části jsou rozebrány různé možnosti architektur a uložení dat při tvorbě iOS aplikací společně s popisem funkcionálně reaktivního programování.
+
+V~další části jsou analyzovány obdobné aplikace a předpisy pro piloty České republiky, podle nichž probíhá návrh funkcionality vytvářené aplikace. Podle návrhu je následně zvolena vhodná architektura a frameworky a je vytvořeno uživatelského rozhraní v~podobě wireframů, které slouží jako podklad pro samotnou implementaci aplikace.
 
 Aplikace je implementována s~použitím zvolené architektury a pomocí principů FRP. V~průběhu implementace aplikace jsou realizovány jednotkové testy a na konci jsou provedeny uživatelské testy. Na základě výsledků testů je aplikace upravena do finální podoby.
 
@@ -88,10 +89,20 @@ V~poslední části práce popisuji výhody a nevýhody, které přinesly postup
 
 V~práci jsem vytvořil funkční iOS aplikaci s~využitím moderní architektury a principů FRP. Aplikace bude sloužit pilotům České republiky pro elektronickou evidenci letů a bude jim také ulehčovat administrativu s~evidencí spojenou.
 
-V~příloze této diplomové práce je možné nalézt všechny zdrojové kódy jak aplikace, tak i testů společně s~vytvořenými wireframy.
+V~příloze této diplomové práce je možné nalézt všechny zdrojové kódy jak aplikace, tak i testů společně s~dokumentací, vytvořenými wireframy a záznamy z uživatelského testování.
 }
 
-\abstractEN{Sem doplňte ekvivalent abstraktu Vaší práce v~angličtině.}
+\abstractEN{
+This thesis implements an iOS application for flights recording. In the first part software architectures and data persistence solutions in the iOS development are analyzed along with funcional reactive programming characterization.
+
+Next I perform analysis of similar applications and regulations for pilots of the Czech Republic. According to which I design functionalities, choose the appropriate architecture and frameworks and create the user interface in a form of wireframes. These wireframes provide the basis for an impementation.
+
+The application is implemented with the selected architecture and the FRP. During the impelemetation, unit tests are created and at the end user tests are performed. These tets help to adjust the application to its final version.
+
+In the last part I describe advantages and disadvantages which caused FRP procedures. I also evaluate time and implementation difficulties compared to standard procedures and the classical MVC archicture.
+ 
+In this thesis I create the functional iOS application using the modern architecture and FRP. 
+}
 
 \placeForDeclarationOfAuthenticity{V~Praze}
 \declarationOfAuthenticityOption{4} %volba Prohlášení (číslo 1-6)
@@ -104,13 +115,13 @@ V~příloze této diplomové práce je možné nalézt všechny zdrojové kódy 
 % \newacronym{FIT}{FIT}{Fakulta informa{\v c}n{\' i}ch technologi{\' i}}
 
 \begin{introduction}
-V~dnešní době, kdy existují mobilní aplikace na téměř vše, mě zarazil fakt, že u~pilotů tomu tak nemusí být. Aplikace na evidenci letů samozřejmě existují, však je tu hned několik problémů. Tyto aplikace jsou často velice drahé, nemusí odpovídat leteckým přepisům České republiky nebo nemají vyhovující funkcionalitu.
+V~dnešní době, kdy existují mobilní aplikace na téměř vše, mě zarazil fakt, že u~pilotů tomu tak nemusí být. Aplikace na evidenci letů samozřejmě existují, však je tu hned několik problémů. Tyto aplikace jsou často velice drahé, nemusí odpovídat leteckým přepisům České republiky (resp. Evropské Unie) nebo nemají vyhovující funkcionalitu.
 
 Z~tohoto důvodu jsem se rozhodl vytvořit iOS aplikaci na evidenci letů. Tato aplikace bude pomáhat pilotům zaznamenávat elektronicky své lety, bude také kontrolovat předpisy a umožňovat export do formátu pro tisk.
 
-Začínám analýzou podobných aplikací, a to pro zařízení iOS i Android. Poté navrhuji vhodnou funkcionalitu a vytvářím návrh uživatelského rozhraní.
+Práce se zabývá analýzou podobných aplikací na evidenci letů, a to pro zařízení iOS i Android. Dále navrhuji vhodnou funkcionalitu a vytvářím návrh uživatelského rozhraní.
 
-Dalším tématem, které ve své práci řeším, jsou softwarové architektury při vývoji iOS aplikace. Zde analyzuji alternativy k~architektuře MVC ve spojení s~funkcionálně reaktivním programováním neboli FRP.
+Dalším tématem, které ve své práci řeším, jsou softwarové architektury při vývoji iOS aplikací. Zde analyzuji alternativy k~architektuře MVC ve spojení s~funkcionálně reaktivním programováním neboli FRP.
 
 Tuto analýzu následně aplikuji v~praxi, kdy se zvolenou architekturou a FRP implementuji společně s~jednotkovými testy dříve zmíněnou aplikaci. Nakonec aplikaci podrobím uživatelským testům a podle jejich výsledků
 upravím aplikaci do finální podoby.
@@ -121,7 +132,7 @@ V~poslední části své práce se snažím zhodnotit postupy FRP společně se 
 \chapter{Cíl práce}
 Cílem této práce je navrhnout a implementovat aplikaci k~evidenci letů pro platformu iOS, a to pomocí postupů FRP (funkcionálně reaktivního programování) a s~využitím moderní softwarové architektury jako např. MVVM nebo VIPER.  Tato aplikace bude sloužit pilotům České republiky k~elektronické evidenci letů. Tento cíl je rozdělen do několika podúkolů.
 
-V~první části analyzuji podobné aplikace pro evidenci letů, a to jak pro platformu iOS, tak i pro Android. Na základě této analýzy navrhnu vhodnou funkcionalitu pro vytvářenou aplikaci. Podle navržených funkcionalit si zvolím architekturu  a navrhnu uživatelské rozhraní v~podobě wireframů.
+V~první části rozebírám různé možnosti architektur a uložení dat při tvorbě iOS aplikací společně s popisem funkcionálně reaktivního programování. Analyzuji podobné aplikace pro evidenci letů, a to jak pro platformu iOS, tak i pro Android. Na základě této analýzy navrhnu vhodnou funkcionalitu pro vytvářenou aplikaci. Podle navržených funkcionalit si zvolím architekturu a navrhnu uživatelské rozhraní v~podobě wireframů.
 
 V~dalším kroku aplikaci implementuji pomocí postupů FRP a se zvolenou architekturou. V~průběhu realizace aplikace budou vytvářeny také testy a dokumentace aplikace.
 
@@ -1734,7 +1745,7 @@ V poslední části své práce jsem hodnotil jaké výhody a nevýhody přinesl
 
 V tuto chvíli není aplikace nahrána do App Storu a databáze je spouštěna pouze lokálně. V budoucnu by mohla být aplikace rozšířena o další funkcionality, bylo by možné vytvořit webovou a desktopovou verzi aplikace a po přeložení aplikace do více jazyků a zprovoznění databáze např. v cloudu bych rád aplikaci publikoval v App Storu.
 
-Tato práce měla pro mě jako autora mnoho pozitivních přínosů.
+Největším přínosem pro mě, jako autora, bylo získání mnoha zkušeností z oblasti vývoje iOS aplikací. Seznámil jsem se s moderními architekturami a novým programovacím paradigmatem a tedy i s novým pohledem, na řešení problémů.  Dalším velice zajímavým aspektem této práce bylo prozkoumání leteckého světa a spolupráce s pilotem z povolání.
 
 \end{conclusion}
 
