@@ -39,7 +39,7 @@
 \contentsline {subsubsection}{\numberline {3.2.3.1}LogTen Pro X}{20}{subsubsection.3.2.3.1}
 \contentsline {subsubsection}{\numberline {3.2.3.2}Logbook Pro Aviation Flight Log for Pilots}{21}{subsubsection.3.2.3.2}
 \contentsline {subsubsection}{\numberline {3.2.3.3}Safelog Pilot Logbook}{22}{subsubsection.3.2.3.3}
-\contentsline {subsubsection}{\numberline {3.2.3.4}FlyLogio - Pilot Logbook}{22}{subsubsection.3.2.3.4}
+\contentsline {subsubsection}{\numberline {3.2.3.4}FlyLogio -- Pilot Logbook}{22}{subsubsection.3.2.3.4}
 \contentsline {subsubsection}{\numberline {3.2.3.5}Smart Logbook}{23}{subsubsection.3.2.3.5}
 \contentsline {subsubsection}{\numberline {3.2.3.6}Z\IeC {\'a}v\IeC {\v e}r anal\IeC {\'y}zy}{23}{subsubsection.3.2.3.6}
 \contentsline {chapter}{\chapternumberline {4}N\IeC {\'a}vrh}{25}{chapter.4}
@@ -64,11 +64,11 @@
 \contentsline {section}{\numberline {4.3}N\IeC {\'a}vrh u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{30}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Wireframe}{30}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{31}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}U\IeC {\v z}ivatelsk\IeC {\'e} testy}{32}{subsection.4.3.3}
-\contentsline {subsubsection}{\numberline {4.3.3.1}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{32}{subsubsection.4.3.3.1}
+\contentsline {subsection}{\numberline {4.3.3}U\IeC {\v z}ivatelsk\IeC {\'e} testy}{33}{subsection.4.3.3}
+\contentsline {subsubsection}{\numberline {4.3.3.1}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{33}{subsubsection.4.3.3.1}
 \contentsline {subsubsection}{\numberline {4.3.3.2}V\IeC {\'y}sledky test\IeC {\r u} a proveden\IeC {\'e} \IeC {\'u}pravy}{34}{subsubsection.4.3.3.2}
 \contentsline {section}{\numberline {4.4}Navr\IeC {\v z}en\IeC {\'a} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i } pro tvorbu aplikace}{34}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Architektura}{34}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.1}Architektura}{35}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Perzistence dat}{35}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}FRP framework}{35}{subsection.4.4.3}
 \contentsline {chapter}{\chapternumberline {5}Realizace}{37}{chapter.5}
@@ -106,7 +106,7 @@
 \contentsline {chapter}{\chapternumberline {6}Testov\IeC {\'a}n\IeC {\'\i }}{59}{chapter.6}
 \contentsline {section}{\numberline {6.1}Unit testy}{59}{section.6.1}
 \contentsline {section}{\numberline {6.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{60}{section.6.2}
-\contentsline {section}{\numberline {6.3}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{64}{section.6.3}
+\contentsline {section}{\numberline {6.3}U\IeC {\v z}ivatelsk\IeC {\'e} testov\IeC {\'a}n\IeC {\'\i }}{63}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Z\IeC {\'a}kladn\IeC {\'\i } ot\IeC {\'a}zky na testovan\IeC {\'e} u\IeC {\v z}ivatele}{64}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Sc\IeC {\'e}n\IeC {\'a}\IeC {\v r}e}{64}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}Z\IeC {\'a}v\IeC {\v e}re\IeC {\v c}n\IeC {\'y} dotazn\IeC {\'\i }k}{65}{subsection.6.3.3}
