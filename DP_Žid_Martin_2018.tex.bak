@@ -79,12 +79,12 @@
 \author{Martin Žid} %jméno autora bez akademických titulů
 \supervisor{Ing. Dominik Veselý}
 
-\acknowledgements{Rád bych zde poděkoval pan Ing. Dominiku Veselému za vedení této diplomové práce a za poskytnutí mnoha cenných rad}
+\acknowledgements{Rád bych zde poděkoval panu Ing. Dominiku Veselému za vedení této diplomové práce a za poskytnutí mnoha cenných rad. Dále bych rád poděkoval všem zúčastněným, kteří byli ochotni podstoupit uživatelské testování. A nakonec bych také rád vyjádřil své díky všem, kteří mě podporovali v průběhu tvorby této diplomové práce.}
 
 \abstractCS{
 Tato práce realizuje iOS aplikaci pro evidenci letů.  V~první části jsou popsány různé možnosti architektur a uložení dat při tvorbě iOS aplikací společně s~charakteristikou funkcionálně reaktivního programování.
 
-V~další části jsou analyzovány obdobné aplikace a předpisy pro piloty České republiky, podle nichž probíhá návrh funkcionality vytvářené aplikace. Podle návrhu je následně zvolena vhodná architektura a frameworky a je navrženo uživatelského rozhraní v~podobě wireframů, které slouží jako podklad pro samotnou implementaci aplikace.
+V~další části jsou analyzovány obdobné aplikace a předpisy pro piloty České republiky, podle nichž probíhá návrh funkcionality vytvářené aplikace. Podle návrhu je následně zvolena vhodná architektura a frameworky a je navrženo uživatelské rozhraní v~podobě wireframů, které slouží jako podklad pro samotnou implementaci aplikace.
 
 Aplikace je implementována s~použitím zvolené architektury a pomocí principů FRP. V~průběhu implementace aplikace jsou realizovány jednotkové testy a na konci jsou provedeny uživatelské testy. Na základě výsledků testů je aplikace upravena do finální podoby.
 
@@ -120,7 +120,7 @@ In the appendix of the thesis, all source files for both application and tests c
 % \newacronym{FIT}{FIT}{Fakulta informa{\v c}n{\' i}ch technologi{\' i}}
 
 \begin{introduction}
-V~dnešní době, kdy existují mobilní aplikace na téměř na cokoliv, mě zarazil fakt, že u~pilotů tomu tak nemusí být. Aplikace na evidenci letů samozřejmě existují, je tu však hned několik problémů. Tyto aplikace jsou často velice drahé, nemusí odpovídat leteckým přepisům České republiky (resp. Evropské Unie) nebo nemají vyhovující funkcionalitu.
+V~dnešní době, kdy existují mobilní aplikace na téměř na cokoliv, mě zarazil fakt, že u~pilotů tomu tak nemusí být. Aplikace na evidenci letů samozřejmě existují, je tu však hned několik problémů. Tyto aplikace jsou často velice drahé, nemusí odpovídat leteckým přepisům České republiky (resp. Evropské unie) nebo nemají vyhovující funkcionalitu.
 
 Z~tohoto důvodu jsem se rozhodl vytvořit iOS aplikaci na evidenci letů. Tato aplikace bude pomáhat pilotům zaznamenávat elektronicky své lety, bude také kontrolovat předpisy a umožňovat export do formátu pro tisk.
 
@@ -137,7 +137,7 @@ V~poslední části své práce se snažím zhodnotit postupy FRP společně se 
 \chapter{Cíl práce}
 Cílem této práce je navrhnout a implementovat aplikaci k~evidenci letů pro platformu iOS, a to pomocí postupů FRP (funkcionálně reaktivního programování) a s~využitím moderní softwarové architektury jako např. MVVM nebo VIPER.  Tato aplikace bude sloužit pilotům České republiky k~elektronické evidenci letů. Tento cíl je rozdělen do několika podúkolů.
 
-V~první části popisuji různé možnosti architektur a uložení dat při tvorbě iOS aplikací společně s~charakteristikou funkcionálně reaktivního programování. Analyzuji podobné aplikace pro evidenci letů, a to jak pro platformu iOS, tak i pro Android. Na základě této analýzy navrhnu vhodnou funkcionalitu pro vytvářenou aplikaci. Podle navržených funkcionalit si zvolím architekturu a navrhnu uživatelské rozhraní v~podobě wireframů.
+V~první části popisuji různé možnosti architektur a uložení dat při tvorbě iOS aplikací společně s~charakteristikou funkcionálně reaktivního programování. Analyzuji podobné aplikace pro evidenci letů, a to jak pro platformu iOS, tak i pro Android. Na základě této analýzy navrhuji vhodnou funkcionalitu pro vytvářenou aplikaci. Podle navržených funkcionalit si zvolím architekturu a navrhuji uživatelské rozhraní v~podobě wireframů.
 
 V~dalším kroku aplikaci implementuji pomocí postupů FRP a se zvolenou architekturou. V~průběhu realizace aplikace budou vytvářeny také testy a dokumentace aplikace.
 
@@ -154,26 +154,26 @@ Vývoj iOS aplikace je možný hned několika způsoby, každý z nich má své 
 \subsection{Nativní aplikace}
 Nativní aplikace jsou vyvíjeny specificky pro jednu platformu. Díky tomu mají přístup ke všem funkcím daného zařízení jako např. GPS, kamera nebo kontakty. Mohou fungovat i pouze offline, tedy bez nutnosti internetového připojení. \cite{Nielsen}
 
-Však pokud bychom však chtěli aplikaci distribuovat na více platforem, tak s~tímto přístupem by bylo nutné vytvořit pro každou platformu vlastní aplikaci. To by prodloužilo vývoj a znesnadnilo následnou údržbu aplikací.
+Pokud bychom však chtěli aplikaci distribuovat na více platforem, pak by bylo nutné s~tímto přístupem vytvořit pro každou platformu vlastní aplikaci. To by prodloužilo vývoj a znesnadnilo následnou údržbu aplikací.
 
 Co se týče vývoje pro iOS, je možné si zvolit ze~dvou programovacích jazyků -- Objective-C nebo Swift. \cite{objc} \cite{swift}
 
 \subsection{Hybridní aplikace}
-Hybridní aplikace jsou aplikace tvořené nejčastěji pomocí HTML5 a JavaScriptu, následně jsou spuštěné v~nativním kontejneru. \cite{saleforce} Jako příklad je možné uvést např. Apache Cordova. Tento kontejner umožňuje přístup k~funkcím daného přístroje, podporuje použití aplikace offline a umožňuje publikovat vytvořenou aplikaci v obchodě tzv. app store. \cite{cordova}
+Hybridní aplikace jsou aplikace tvořené nejčastěji pomocí HTML5 a JavaScriptu, následně jsou spuštěné v~nativním kontejneru. \cite{saleforce} Jako příklad je možné uvést Apache Cordova. Tento kontejner umožňuje přístup k~funkcím daného přístroje, podporuje použití aplikace offline a umožňuje publikovat vytvořenou aplikaci v obchodě tzv. app store. \cite{cordova}
 
-Však výhodou nativních aplikacím oproti hybridním je to, že jsou vytvářeny přesně pro danou platformu, a tudíž jejich vzhled a výkon bude vždy lepší. \cite{upwork}
+Však výhodou nativních aplikací oproti hybridním je to, že jsou vytvářeny přesně pro danou platformu, a tudíž jejich vzhled a výkon bude vždy lepší. \cite{upwork}
 
 \subsection{Nativní aplikace vytvářené v JavaScriptu}
-U nativních aplikací vytvářených pomocí JavasScriptu je možné zmínit hlavně React Native \cite{reactNative} (popř. NativeScript \cite{nativeScript}). Tyto platformy vytváří jakýsi spojovník mezi kódem v JavaScriptu a cílovými platformami (Androidem a iOS). \cite{reactNative} Výhodou těchto aplikací je výkon, který je srovnatelný s čistě nativními aplikacemi \cite{calderaio}, možnost využití nativního vzhledu a samozřejmě tvorba multiplatformní aplikace. \cite{reactNative}
+U nativních aplikací vytvářených pomocí JavasScriptu je možné zmínit hlavně React Native \cite{reactNative} nebo NativeScript \cite{nativeScript}. Tyto platformy vytváří jakýsi spojovník mezi kódem v JavaScriptu a cílovými platformami (Androidem a iOS). \cite{reactNative} Výhodou těchto aplikací je výkon, který je srovnatelný s čistě nativními aplikacemi \cite{calderaio}, možnost využití nativního vzhledu a samozřejmě tvorba multiplatformní aplikace. \cite{reactNative}
 
-Nevýhodou tohoto řešení je např. nutnost vytvoření specifického uživatelského rozhraní pro každou platformu zvlášť, kvůli rozdílným standardům iOS a Android aplikací. Dále také závislost na zvoleném frameworku, který nemusí být dokonalý, a proto je občas nutné psát i čistě nativní kód. \cite{girish}
+Nevýhodou tohoto řešení je např. nutnost vytvoření specifického uživatelského rozhraní pro každou platformu zvlášť kvůli rozdílným standardům iOS a Android aplikací. Další nevýhodou je závislost na zvoleném frameworku, který nemusí být dokonalý, a proto je občas nutné psát i čistě nativní kód. \cite{girish}
 
 \subsection{Mobilní webové aplikace}
 Poslední možností jsou mobilní webové aplikace. Tyto aplikace jsou pouze upravené webové stránky do podoby a chování nativních aplikací. Přestože běží pouze v~prohlížeči, mohou mít i tyto aplikace přístup k~určitým (ne však ke všem) nativním funkcím. \cite{Nielsen}
 
 Tím, že jsou mobilní webové aplikace spouštěny v~prohlížeči a nejsou stahovány přes obchody, je ulehčena údržba a vývoj, protože si uživatel nemusí vždy stahovat novou verzi aplikace.
 
-Tento postup má však i své nevýhody. Jak již bylo zmíněno dříve, aplikace nemá přístup ke všem nativním funkcím daného přístroje. S~dalším problémem se můžeme setkat u~offline ukládání dat, a to se zabezpečením, které nemusí být tak dokonalé nebo uživatelsky přívětivé, jako u~nativních aplikací.  \cite{saleforce}
+Tento postup má však i své nevýhody. Jak již bylo zmíněno dříve, aplikace nemá přístup ke všem nativním funkcím daného přístroje. S~dalším problémem se můžeme setkat u~offline ukládání dat, a to se zabezpečením, které nemusí být tak dokonalé nebo uživatelsky přívětivé jako u~nativních aplikací.  \cite{saleforce}
 
 \subsection{Zvolené řešení}
 Pro svou práci jsem si zvolil možnost nativní mobilní aplikace vyvíjené v jazyce Swift z~důvodu zaměření jen na platformu iOS. Bude se tedy jednat pouze o~jednu aplikaci, která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
@@ -182,14 +182,14 @@ Pro svou práci jsem si zvolil možnost nativní mobilní aplikace vyvíjené v 
 Při tvorbě iOS aplikace je možné si vybrat z~několika architektur. V~této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
 
 \subsection{MVC}
-Architektura MVC je zkratka pro \uv{Model-View-Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o~softwarovou architekturu, které se velice často používá při tvorbě aplikací s~uživatelským rozhraním. \cite{MVCMozilla}
+Architektura MVC je zkratka pro \uv{Model-View-Controller} neboli tři komponenty, ze kterých se architektura skládá. Jedná se o~softwarovou architekturu, která se velice často používá při tvorbě aplikací s~uživatelským rozhraním. \cite{MVCMozilla}
 \begin{itemize}
-\item $Model$ definuje jaká data aplikace obsahuje, a pokud dojde k~jakékoliv změně, tak informuje buď $Controller$ nebo $View$ (tzv. své observery). \cite{MVCGoogle}
-\item $View$ vrstva je prezentována samotnému uživateli. Jsou zde tedy zobrazena aplikační data a je zachycována uživatelova práce s~aplikací.\cite{MVCMozilla}
+\item $Model$ definuje, jaká data aplikace obsahuje, a pokud dojde k~jakékoliv změně, informuje buď $Controller$, nebo $View$ (tzv. své observery). \cite{MVCGoogle}
+\item $View$ vrstva je prezentována samotnému uživateli. Jsou zde tedy zobrazena aplikační data a je zachycována uživatelova práce s~aplikací. \cite{MVCMozilla}
 \item $Controller$ je vrstva mezi $View$ a $Model$ zajišťující logiku aplikace. Stará se o~prezentaci změn do $View$, pokud se změní $Model$. Zároveň provádí úpravy v~$Modelu$ při uživatelově manipulaci s~$View$.  \cite{MVCGoogle}
 \end{itemize}
 
-Však co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controlleru$.\cite{Orlov}
+Co se týče iOS vývoje, vrstvy $View$ a $Controller$ jsou téměř spojeny, protože $Controller$ je příliš úzce zapojený do životního cyklu $View$, což následně způsobuje velký nárůst $Controlleru$. \cite{Orlov}
 
 Základní myšlenku MVC a MVC při vývoji iOS aplikace ukazují obrázky \ref{fig:mvc} (převzato a přeloženo z~originálu \cite{mvc-pic}) a \ref{fig:mvc-apple} (převzato a přeloženo z~originálu \cite{mvc-apple-pic}).
 
@@ -213,7 +213,7 @@ Architektura MVVM má obdobné koncepce jako MVC. Jedná se také o~zkratku, ten
 \item $ViewModel$ spojuje $View$ a $Model$ a zajišťuje hlavní logiku aplikace. $ViewModel$ tedy komunikuje s~$Modelem$ a jeho metodami a následně připravuje data pro $View$. Obsahuje také implementaci funkcí, které reagují a zpracovávají akce uživatele např. kliknutí na tlačítko. \cite{MVVMMicrosoft}
 \end{itemize}
 
-Při shrnutí rozdílů architektur MVC a MVVM u~iOS je nutné zmínit to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/Controller$ a $Model$. Když potom uvažujeme architekturu MVVM, $View/Controller$  je opravdu pouze jednou vrstvou a mezi ní a $Modelem$ je vložena nová vrstva $ViewModel$, která je spojuje, a do které je přesunuta i většina aplikační logiky.
+Při shrnutí rozdílů architektur MVC a MVVM u~iOS je nutné zmínit to, že iOS MVC má ve výsledku téměř jen dvě vrstvy $View/Controller$ a $Model$. Když potom uvažujeme architekturu MVVM, $View/Controller$  je opravdu pouze jednou vrstvou a mezi ní a $Modelem$ je vložena nová vrstva $ViewModel$, která je spojuje a do které je přesunuta i většina aplikační logiky.
 
 Mezi výhody architektury MVVM oproti MVC patří např.:
 \begin{itemize}
@@ -231,7 +231,7 @@ Architekturu MVVM zobrazuje obrázek \ref{fig:mvvm} (převzato a přeloženo z~o
 \subsection{VIPER}
 VIPER je poslední analyzovanou možností, mezi architekturami. I~zde je název složen z~prvních písmen jednotlivých vrstev architektury: \uv{View, Interactor, Presenter, Entity, Router}.
 \begin{itemize}
-\item $View$  zobrazuje data uživateli a předává uživatelovi vstupy vrstvě $Presenter$.
+\item $View$  zobrazuje data uživateli a předává uživatelovy vstupy vrstvě $Presenter$.
 \item $Interactor$ obsahuje logiku aplikace spojenou s~daty ($Entity$).
 \item $Presenter$ vrstva má na starosti $View$ logiku. Reaguje tedy na uživatelovy akce a komunikuje s~vrstvou $Interactor$, od ní také přijímá nová data. \cite{Orlov}
 \item $Entity$ jsou datové objekty aplikace přístupné pouze části $Interactor$.
@@ -263,31 +263,31 @@ Při vývoji iOS aplikace existují tři možnosti, jak vytvořit uživatelské 
  \caption[Storyboard]{Storyboard (pouze ilustrační)}\label{fig:SB}
 \end{figure}
 
-$Storyboard$ představuje grafickou reprezentaci uživatelského rozhraní -- zobrazuje jednotlivé obrazovky, jejich obsah a propojení těchto obrazovek. Xcode mají zabudovaný editor pro tvorbu a úpravu $storyboardu$ (viz. obrázek \ref{fig:SB}). Jednotlivé prvky jsou vkládány jednoduchým přetažením a je u~nich možné upravit obsah, velikost, barvu apod. ihned v~editoru. Tento editor také umožňuje propojení jednotlivých prvků a jejich akcí s~kódem aplikace. \cite{SB}
+$Storyboard$ představuje grafickou reprezentaci uživatelského rozhraní -- zobrazuje jednotlivé obrazovky, jejich obsah a propojení těchto obrazovek. Xcode mají zabudovaný editor pro tvorbu a úpravu $storyboardu$ (viz obrázek \ref{fig:SB}). Jednotlivé prvky jsou vkládány jednoduchým přetažením a je u~nich možné upravit obsah, velikost, barvu apod. ihned v~editoru. Tento editor také umožňuje propojení jednotlivých prvků a jejich akcí s~kódem aplikace. \cite{SB}
 
-Mezi výhody $storyboarů$ patří rychlost tvorby uživatelské rozhraní, což zahrnuje i rychlou tvorbu prototypů aplikace. Dále vizuální zobrazení nejen prvků, ale také propojení jednotlivých obrazovek, a to bez nutnosti kompilování aplikace. 
+Mezi výhody $storyboarů$ patří rychlost tvorby uživatelského rozhraní, což zahrnuje i rychlou tvorbu prototypů aplikace. Dále vizuální zobrazení nejen prvků, ale také propojení jednotlivých obrazovek, a to bez nutnosti kompilování aplikace. 
 
 Nevýhodou $storyboardů$ může být výkon při více nebo složitějších obrazovkách. Tento problém se však dá zredukovat rozdělením obrazovek do více $storyboard$ souborů. Další nevýhodou je problematické znovupoužití jednotlivých prvků (obrazovek) nebo komplikovaná práce v~týmu způsobená složitým spojením změn při verzování (i tento problém řeší z~části více souborů se $storyboardy$). Posledním nedostatkem je to, že ne vše se dá vytvořit ve $storyboardu$ (hlavně dynamické prvky) a z~toho důvodu dochází k~tomu, že část uživatelského rozhraní je v~kódu a část ve $storyboardu$. \cite{iOSUI} \cite{dominik}
 
 \subsection{Xib}
-$Xib$ je starším přístupem pro tvorbu uživatelského rozhraní iOS aplikací než $storyboardy$, starší však neznamená zastaralý. Vytváří se jednoduché $view$ elementy stejným způsobem jako o~$storyboardů$. Právě tato skutečnost přináší stejné výhody i problémy, s~tím rozdílem, že se jedná o~drobnější prvky, což ulehčuje např. verzování, znovupoužitelnost nebo nezpůsobuje zpomalovaní vývojového prostředí Xcode. \cite{iOSUI} \cite{dominik}
+$Xib$ je starším přístupem pro tvorbu uživatelského rozhraní iOS aplikací než $storyboardy$, starší však neznamená zastaralý. Vytváří se jednoduché $view$ elementy stejným způsobem jako u~$storyboardů$. Právě tato skutečnost přináší stejné výhody i problémy, s~tím rozdílem, že se jedná o~drobnější prvky, což ulehčuje např. verzování, znovupoužitelnost nebo nezpůsobuje zpomalovaní vývojového prostředí Xcode. \cite{iOSUI} \cite{dominik}
 
 \subsection{Uživatelské rozhraní v~kódu}
 Poslední možností, jak tvořit uživatelské rozhraní, je vlastní kód. Tento způsob přináší mnoho výhod (hlavně tím, že redukuje nedostatky $storyboardů$ a $Xib$), ale má i své nevýhody.
 
-Mezi výhody vlastního kód patří: znovupoužitelnost, bezproblémová spolupráce více lidí (verzování) a to, že se vše nachází na jedno místě. 
+Mezi výhody vlastního kódu patří: znovupoužitelnost, bezproblémová spolupráce více lidí (verzování) a to, že se vše nachází na jednom místě. 
 
-Nevýhodou vytváření uživatelské rozhraní v~kódu je rychlost tvorby bez možnosti svižného vytvoření prototypu aplikace. Dále také tento přístup postrádá vizuálnost a vyžaduje kompilaci. \cite{iOSUI} \cite{dominik}
+Nevýhodou vytváření uživatelského rozhraní v~kódu je rychlost tvorby bez možnosti svižného vytvoření prototypu aplikace. Dále také tento přístup postrádá vizuálnost a vyžaduje kompilaci. \cite{iOSUI} \cite{dominik}
 
 \subsection{Zvolené řešení}
-Pro tvorbu aplikace vytvářené v~rámci této diplomové práce, jsem si zvolil možnost tvorby uživatelského rozhraní pomocí $storyboardů$. Tato volba vyplývá z~výše zmíněných výhod $storyboardů$ a z~toho důvodu, že na tvorbě aplikace se nebude podílet žádná další osoba.
+Pro tvorbu aplikace vytvářené v~rámci této diplomové práce jsem si zvolil možnost tvorby uživatelského rozhraní pomocí $storyboardů$. Tato volba vyplývá z~výše zmíněných výhod $storyboardů$ a z~toho důvodu, že na tvorbě aplikace se nebude podílet žádná další osoba.
 
 \section{Funkcionálně reaktivní programování}
 Funkcionálně reaktivní programování je kombinací funkcionálního a reaktivního programování, díky němuž dokáže aplikace dynamicky měnit stav a chování v~závislosti na událostech přicházejících za daný čas. \cite{nayebi2016swift}
 
 Pro vysvětlení, co je to reaktivní programování, cituji André Staltze: \uv{reaktivní programování je programování s~asynchronními datovými toky}. \cite{Ztaltz2014}
 
-Na spojení funkcionální a reaktivního programování se může dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko nebo i dotaz na server a jsme informování o~každé změně v~podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Toky je tedy možné:
+Na spojení funkcionálního a reaktivního programování se lze dívat i jako na návrhový vzor $observer$. \cite{Blackheath2016} Pozorujeme tedy např. určité vstupní pole, tlačítko nebo i dotaz na server a jsme informování o~každé změně v~podobě asynchronního datového toku. Na tyto datové toky je možné aplikovat funkcionální programování. Toky je tedy možné:
 \begin{itemize}
 \item spojovat ($merge$),
 \item filtrovat ($filter$) např. pouze události, které nás zajímají,
@@ -324,7 +324,7 @@ Při vývoji iOS aplikací se pro využití iCloudu používá framework CloudKi
 CloudKit je dostupný pro členy Apple Developer programu. \cite{AppleDeveloperProgram} Tento program stojí ročně v~přepočtu 2150 Kč. \cite{AppleDeveloperProgramPrice} 
 
 \subsection{Realm}
-Realm, s~oficiální stránkou \url{https://realm.io}, je multiplatformní mobilní databáze, která je připravená pro jazyky Java (Android), Swift, Objective-C, JavaScript a Xamarin. Hlavní myšlenkou je kontejner objektů tzv. Realm. V~těchto kontejnerech jsou uložena data, na které je možné se dotazovat, tyto data filtrovat apod. Na rozdíl od klasických např. SQL databází, zde pracujeme přímo s~\uv{živými} objekty, tedy pokud máme instanci Realm objektu a cokoliv v~aplikaci tuto instanci změní, tato změna je ihned viditelná.
+Realm, s~oficiální stránkou \url{https://realm.io}, je multiplatformní mobilní databáze, která je připravená pro jazyky Java (Android), Swift, Objective-C, JavaScript a Xamarin. Hlavní myšlenkou je kontejner objektů tzv. Realm. V~těchto kontejnerech jsou uložena data, na která je možné se dotazovat, tato data filtrovat apod. Na rozdíl od klasických např. SQL databází zde pracujeme přímo s~\uv{živými} objekty. Tedy pokud máme instanci Realm objektu a cokoliv v~aplikaci tuto instanci změní, tato změna je ihned viditelná.
 
 Realm je rozdělený na dvě části -- mobilní databáze Realm (Realm Mobile Database) a objektový server Realm (Realm Object Server). Jak je již z~názvů možné usuzovat, mobilní databáze je pouze na mobilním zařízení, jedná se tedy o~offline uložení dat. Pokud však chceme data např. sdílet na více zařízeních, je možné se připojit na objektový server Realm a s~ním se synchronizovat. Realm se řídí strategii \uv{nejprve offine} -- čtení a zápis probíhá nejprve lokálně a až poté probíhá synchronizace se serverem.
 
@@ -341,8 +341,7 @@ Pro tuto diplomovou práci je EASA důležitá, protože vydává i pokyny např
 \subsection{Pokyny pro evidenci letů}
 Pokyny pro evidenci letů udává předpis FCL.050. Tento předpis specifikuje povinné položky každého leteckého záznamu. \cite{FCL} 
 
-\uv{
-Každý záznam letů by měl obsahovat minimálně tyto informace:
+\uv{Každý záznam letů by měl obsahovat minimálně tyto informace:
 \begin{enumerate}
 \item osobní informace: jméno a adresu pilota;
 \item každý záznam letu by měl obsahovat:
@@ -389,8 +388,7 @@ Celkový čas, na který je jedinec přidělen jako člen provozní posádky, ne
 \item 900 hodin letu v~kalendářním roce; a
 \item 1000 hodin letu během 12 po sobě jdoucích kalendářních měsících.
 \end{enumerate}
-Poletová služba se počítá do doby služby.
-} \cite{FTL} (překlad vlastní)
+Poletová služba se počítá do doby služby.} \cite{FTL} (překlad vlastní)
 
 \subsection{Zdravotní certifikáty}
 Informace o~zdravotních certifikátech obsahuje předpis Part-MED. Certifikáty jsou tří druhů -- zdravotní certifikát třídy 1 (Class 1 medical certificate), zdravotní certifikát třídy 2 (Class 2 medical certificate) a zdravotní certifikát pro licence na lehká letadla (LAPL -- Light Aircraft Pilot Licence). Každý z~těchto certifikátů má jinak nastavenou dobu platnosti a je pro jiné typy pilotních licencí.
@@ -407,7 +405,7 @@ Tato kapitola se zabývá analýzou již existujících aplikací pro evidenci l
 \item LogTen Pro X -- iOS aplikace v~angličtině vyvíjená společností Coradine Aviation. \cite{appStoreLogTen}
 \item Logbook Pro Aviation Flight Log for Pilots -- druhá iOS aplikace, také v~angličtině, vytvořená NC Software, Inc. \cite{appStoreLogbookPro}
 \item Safelog Pilot Logbook -- poslední z~analyzovaných iOS aplikací. I~tato aplikace je v~anglickém jazyce. Publikována Dauntless Software. \cite{appStoreSafeLog}
-\item FlyLogio - Pilot Logbook -- česká aplikace vyvinutá pro platformu Android společností FlyLogio.com. \cite{googleFlyLogio}
+\item FlyLogio -- Pilot Logbook -- česká aplikace vyvinutá pro platformu Android společností FlyLogio.com. \cite{googleFlyLogio}
 \item Smart Logbook -- anglická Andriod aplikace vydána firmou Kviation, Inc. \cite{googleSmartLogbook}
 \end{enumerate}
 
@@ -494,7 +492,7 @@ Všechny položky hodnocení jsou uváděny z~pohledu mobilní/tablet aplikace.
    \hline
    Generování reportů					 & \OK & \NOK & \OK \footnote{Safelog zobrazuje reporty ve webové verzi.}  & \NOK & \OK & 3/5 \\
    Reporty podle EASA					 & \NOK & \NOK & \OK & \NOK & \OK & 2/5 \\
-   Jiné reporty								 & \OK & \OK & \OK & \NOK & \OK & 2/5 \\
+   Jiné reporty								 & \OK & \OK & \OK & \NOK & \OK & 4/5 \\
    
    \hline
    \multicolumn{7}{c}{Perzistence dat} \\
@@ -518,7 +516,7 @@ LogTen Pro X je z~analyzovaných iOS aplikací nejvíce uživatelsky přívětiv
 	\item iPhone + iPad -- 2150 Kč.
 	\end{itemize}
 \end{itemize}
-Data o~aplikaci a cenách jsou získány přímo z~aplikace LogTen Pro X. 
+Data o~aplikaci a cenách jsou získána přímo z~aplikace LogTen Pro X. 
 
 \subsubsection{Logbook Pro Aviation Flight Log for Pilots}
 Aplikace Logbook Pro vyžaduje pro přihlášení stažení PC aplikace (pouze pro Windows). S~touto aplikací je následně synchronizován. Některá funkcionalita, např. generování reportů, je dostupná pouze v~PC verzi.
@@ -526,14 +524,14 @@ Aplikace Logbook Pro vyžaduje pro přihlášení stažení PC aplikace (pouze p
 PC verze aplikace je zadarmo pouze ve zkušební verzi, poté základní verze stojí v~přepočtu 1800 Kč. iOS verze aplikace se platí ročně v~přepočtu za 1045 Kč, je nutné si zaplatit i zálohování a další funkcionality. \cite{SafelogPrices}
 
 \subsubsection{Safelog Pilot Logbook}
-Safelog Pilot Logbook obsahuje pouze některé funkce přímo v~aplikaci, u~ostatních je uživatel odkázán do webového rozhraní (SafelogWeb Cloud) viz. \ref{fig:Safelog}. Toto webové rozhraní zobrazené v~aplikaci však není přizpůsobené pro mobilní zařízení, často je zobrazena pouze část stránky a není možné např. vyplnit všechna pole formuláře.
+Safelog Pilot Logbook obsahuje pouze některé funkce přímo v~aplikaci, u~ostatních je uživatel odkázán do webového rozhraní (SafelogWeb Cloud) viz \ref{fig:Safelog}. Toto webové rozhraní zobrazené v~aplikaci však není přizpůsobené pro mobilní zařízení, často je zobrazena pouze část stránky a není možné např. vyplnit všechna pole formuláře.
 
 Tato aplikace však, pokud budeme brát v~potaz i funkce ve webovém rozhraní, obsahuje nejširší spektrum funkcionalit.
 
-Samotná aplikace je zadarmo, ale pro plnou verzi aplikace je nutné předplatné. To se pohybuje od 1320 Kč za jeden rok až po 8990 Kč za deset let. Data o~aplikaci a cenách jsou získány z~aplikace Safelog Pilot Logbook.
+Samotná aplikace je zadarmo, ale pro plnou verzi aplikace je nutné předplatné. To se pohybuje od 1320 Kč za jeden rok až po 8990 Kč za deset let. Data o~aplikaci a cenách jsou získána z~aplikace Safelog Pilot Logbook.
 
 \subsubsection{FlyLogio -- Pilot Logbook}
-Android aplikace FlyLogio -- Pilot Logbook je jedinou aplikací kompletně zadarmo. Z~uživatelského pohledu se jedná o~přehlednou a jednoduchou aplikaci.  Však neobsahuje takovou funkcionalitu jako ostatní placené aplikace, např. chybí generování jakýchkoliv reportů nebo kontrolování limitů.
+Android aplikace FlyLogio -- Pilot Logbook je jedinou aplikací kompletně zadarmo. Z~uživatelského pohledu se jedná o~přehlednou a jednoduchou aplikaci.  Neobsahuje však takovou funkcionalitu jako ostatní placené aplikace, např. chybí generování jakýchkoliv reportů nebo kontrolování limitů.
 
 \subsubsection{Smart Logbook}
 Smart Logbook je poslední analyzovanou aplikací, jedná se o~Android aplikaci. Obsahuje mnoho funkcionalit -- generování reportů podle mnoha norem, zobrazení mapy se zaznamenáním jednotlivých letů, hlídání limitů i expirace certifikátů.
@@ -561,8 +559,8 @@ Funkční požadavky jsou uvedeny pouze jmenovitě. Podrobnější popis je uved
 \item Funkční pro iOS 11 -- aplikace bude dostupná pro verzi operačního systému iOS 11.
 \item Aplikace pro iPhone a iPad -- uživatelské rozhraní bude přizpůsobeno jak telefonům, tak tabletům.
 \item Stejná data na více uživatelových zařízeních -- všechna data budou zálohována online a uživatel k~nim bude mít přístup na všech zařízeních s~iOS 11 pod svým účtem.
-\item Dostupnost dat offline -- uživatel bude mít přistup ke všem dříve staženým/vytvořeným záznamům. Aplikaci bude možné používat i bez internetového připojení, k~synchronizaci dojde až ve chvíli, kdy bude internetové připojení k~dispozici.
-\item Aplikace podle EASA -- aplikace se bude řídit předpisy EASA a to přesně: FCL.050 u~evidence letů,  ORO.FTL.210 v~případě limitů a Part-MED při evidenci zdravotních certifikátů.
+\item Dostupnost dat offline -- uživatel bude mít přístup ke všem dříve staženým/vytvořeným záznamům. Aplikaci bude možné používat i bez internetového připojení, k~synchronizaci dojde až ve chvíli, kdy bude internetové připojení k~dispozici.
+\item Aplikace podle EASA -- aplikace se bude řídit předpisy EASA, a to přesně: FCL.050 u~evidence letů,  ORO.FTL.210 v~případě limitů a Part-MED při evidenci zdravotních certifikátů.
 \end{enumerate}
 
 \section{Navržená funkcionalita v~podobě případů užití}
@@ -593,7 +591,7 @@ Alternativní scénář --
 \item Případ užití pokračuje 3. krokem hlavního scénáře.
 \end{itemize}
 
-Aplikace nebude napojena na databázi letadel, protože uživatel u~každého letadla musí vyplnit minimálně registrační číslo. Pokud by uživatel musel letadlo najít a zeditovat, je výhodnější pokud si sám letadlo přidá. Dalším důvodem k~tomuto rozhodnutí je, že pilot létá velmi často pouze s~jedním letadlem, a proto funkcionalitu přidání letadla nebude používat příliš často.
+Aplikace nebude napojena na databázi letadel, protože uživatel u~každého letadla musí vyplnit minimálně registrační číslo. Pokud by uživatel musel letadlo najít a zeditovat, je výhodnější, pokud si sám letadlo přidá. Dalším důvodem k~tomuto rozhodnutí je, že pilot létá velmi často pouze s~jedním letadlem, a proto funkcionalitu přidání letadla nebude používat příliš často.
 
 \subsection{Přidat letadlo}
 Přidání letadla dává uživateli možnost přidat letadlo, které pak může vkládat do záznamů o~letu.
@@ -638,7 +636,7 @@ Upravení leteckého záznamu umožňuje uživateli upravit všechny položky zv
 \item Případ užití začíná, když chce uživatel upravit letecký záznam.
 \item Include(Zobrazit letecké záznamy).
 \item Uživatel si zvolí záznam, který chce upravit.
-\item Scénář pokračuje krokem 2 Vytvořit záznam letu.
+\item Scénář pokračuje krokem 2 -- Vytvořit záznam letu.
 \end{itemize}
 
 \subsection{Zobrazit limity}
@@ -648,7 +646,7 @@ Tato funkcionalita slouží ke zobrazení limitů a kontrole, zda jsou všechny 
 Tato funkcionalita umožňuje uživateli zobrazit všechny jeho certifikáty, společně s~kontrolou platnosti a počtem dní do jejich expirace.
 
 \subsection{Přidat certifikát}
-Tato funkce umožňuje uživateli přidat certifikát a to buď dle šablony pro zdravotní certifikáty (LALP, třídy 1 a třídy 2), nebo vlastní.
+Tato funkce umožňuje uživateli přidat certifikát, a to buď dle šablony pro zdravotní certifikáty (LALP, třídy 1 a třídy 2), nebo vlastní.
 
 \begin{itemize}
 \item Případ užití začíná, když chce uživatel vytvořit nový certifikát.
@@ -679,8 +677,8 @@ Generování reportu umožňuje uživateli vygenerovat report ve formátu PDF z~
 \item Aplikace zobrazí náhled generovaného reportu.
 \end{itemize}
 
-\subsection{Odeslat report emailem}
-Funkcionalita odeslání reportu emailem umožňuje uživateli, poté co vygeneroval report, odeslat tento report přes email.
+\subsection{Odeslat report e-mailem}
+Funkcionalita odeslání reportu e-mailem umožňuje uživateli, poté co vygeneroval report, odeslat tento report přes e-mail.
 
 \section{Návrh uživatelského rozhraní}
 Návrh uživatelského rozhraní přímo navazuje na návrh funkcionalit. Pro tento návrh byl použit wireframe.
@@ -709,7 +707,7 @@ Heuristická analýze je metoda, která se používá pro hledání problémů p
  \item nápověda a dokumentace} \cite{10heuristics} (překlad vlastní).
 \end{enumerate}
 
-Tato pravidla byla použita při heuristické analýze vytvořeného wireframu. Však nebyla kontrolována pravidla:
+Tato pravidla byla použita při heuristické analýze vytvořeného wireframu. Nebyla však kontrolována pravidla:
 \begin{itemize}
 \item \uv{předcházení chyb} -- z~důvodu, že ve fázi návrhu není možné např. vyplnit formulář anebo smazat záznam letu;
 \item \uv{pomoci uživatelům rozpoznat, pochopit a poučit se z~chyb} -- také není možné vyvolat chybu;
@@ -723,13 +721,13 @@ Tato pravidla byla použita při heuristické analýze vytvořeného wireframu. 
  \caption[Počet nalezených problémů v~závislosti na počtu hodnotitelů]{Počet nalezených problémů v~závislosti na počtu hodnotitelů. \cite{heur-eval-curve} (překlad vlastní)}\label{fig:heur}
 \end{figure}
 
-Po provedení heuristické analýzy byla vytvořena tabulka \ref{tab:heuristics} zobrazující nalezené problémy společně s~jejich řešením a ohodnocením 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. Byla také vytvořena nová verze wireframe, která je také k~nalezení v~příloze této práce.
+Po provedení heuristické analýzy byla vytvořena tabulka \ref{tab:heuristics} zobrazující nalezené problémy společně s~jejich řešením a ohodnocením 1--5, kde číslo 1 identifikuje pouze drobný problém a číslo 5 velice závažný problém. Byla také vytvořena nová verze wireframe, která je též k~nalezení v~příloze této práce.
 
 \begin{table}
 \begin{tabular}{ c | c | p{9cm} }
 Pravidlo & Závažnost & Provedená úprava \\
 \hline
-1 & 3 & Při přidávání nového záznamu se bude měnit nadpis (title) podle toho zda je přidáván záznam o~letu nebo ze simulátoru. \\
+1 & 3 & Při přidávání nového záznamu se bude měnit nadpis (title) podle toho, zda je přidáván záznam o~letu nebo ze simulátoru. \\
 2 & 2 & Tlačítko \uv{Zavřít} bude přejmenováno na \uv{Zrušit}. Tato změna se týká obrazovek -- přidat záznam, přidat letadlo a přidat certifikát.\\
 2 & 3 & U~nastavení hledání bude tlačítko \uv{Zpět} přejmenováno na \uv{Zrušit}.\\
 2 & 4 & Přejmenování záložky \uv{Nastavení} na \uv{Profil} a změnění ikonky.\\
@@ -745,7 +743,7 @@ Uživatelské testy byly provedeny po heuristické analýze (na upraveném wiref
 
 Jakob Nielsen \cite{usabilityTestingNNG} doporučuje pět uživatelů na uživatelské testování. Však ze stejných důvodů jako u~heuristické analýzy, byli zvoleni nyní pouze dva uživatelé.
 
-Rozsáhlejší testování a heuristická analýza bude provedeno až po dokončení prototypu aplikace.
+Rozsáhlejší testování a heuristická analýza bude provedena až po dokončení prototypu aplikace.
 
 Testovaní uživatelé nebyli děleni v~této fázi do skupin z~důvodu jejich malého počtu. Podmínky na uživatele však kladeny byly -- oba uživatelé museli používat operační systém iOS minimálně po dobu jednoho roku a alespoň jeden z~nich se musel pohybovat v~leteckém průmyslu.
 
@@ -753,12 +751,12 @@ Pro oba uživatele byly vytvořeny stejné testovací scénáře. Uživateli, kt
 
 \subsubsection{Scénáře}
 \begin{enumerate}
-\item Právě jste dokončil(a) svůj první let z~Brna do Prahy. Z~Brna jste odlétal(a) v~7:00 a do Prahy jste přiletěl(a) v~8:45, neměl jste žádné mezipřistání. Celou doby jste zastával(a) funkci vedoucího pilota a letěl(a) jste letadlem Boeing. Zaznamenejte svůj let.
+\item Právě jste dokončil(a) svůj první let z~Brna do Prahy. Z~Brna jste odlétal(a) v~7:00 a do Prahy jste přiletěl(a) v~8:45, neměl jste žádné mezipřistání. Celou dobu jste zastával(a) funkci vedoucího pilota a letěl(a) jste letadlem Boeing. Zaznamenejte svůj let.
 \item Zjistil(a) jste, že jste u~minulého záznamu chybně zaznamenal(a) čas. Upravte tedy čas příletu do Prahy na 7:45.
 \item Chcete si přidat další záznam, tentokrát z~výcvikového zařízení. Zadejte dnešní datum, čas na zařízení dvě hodiny a znovu jste zastával(a) funkci vedoucího pilota.
-\item Aplikaci používáte již delší dobu a máte tedy i více záznamu. Zobrazte si pouze lety, které byly provedeny za poslední týden.
+\item Aplikaci používáte již delší dobu a máte tedy i více záznamů. Zobrazte si pouze lety, které byly provedeny za poslední týden.
 \item Jeden ze záznamů z~minulého kroku smažte.
-\item Zobrazte si svůj profil a zkontrolujte, zda jsou všechny položky vyplněny správně. Pokud ne, opravte chybně vyplněné nebo chybějící pole.
+\item Zobrazte si svůj profil a zkontrolujte, zda jsou všechny položky vyplněny správně. Pokud ne, opravte chybně vyplněná nebo chybějící pole.
 \item U~letadla Boeing z~prvního kroku chcete změnit model. Proveďte tuto úpravu.
 \item Za poslední tři týdny jste absolvoval(a) mnoho letů, zkontrolujte, zda jste nepřekročil(a) jeden z~limitů.
 \item Dnes Vám vydali zdravotní certifikát třídy jedna (Class 1). Vložte ho do aplikace.
@@ -766,33 +764,33 @@ Pro oba uživatele byly vytvořeny stejné testovací scénáře. Uživateli, kt
 \end{enumerate}
 
 \subsubsection{Výsledky testů a provedené úpravy}
-Testovaní uživatelé byli při jednotlivých testech pozorováni, aby bylo zjištěno co a proč dělají špatně. Z~čehož byly následně vyvozeny nutné úpravy v~uživatelském rozhraní.
+Testovaní uživatelé byli při jednotlivých testech pozorováni, aby bylo zjištěno, co dělají špatně a proč. Z~čehož byly následně vyvozeny nutné úpravy v~uživatelském rozhraní.
 
 \begin{enumerate}
 \item Smazání záznamu bude nyní možné ještě u~detailu tohoto záznamu. Tato funkcionalita bude ještě znovu podrobena testu u~prototypu aplikace. Gesto $swipe$ se u~wireframu špatně testuje.
 \item \uv{Má letadla} již nebudou pod záložkou \uv{Profil}, ale budou představovat samostatný $tab$.
 \item Vytvoření reportu bude nyní označeno navíc ještě textem.
-\item Při přidávání nového záznamu si uživatel nejprve vybere zda se jedná o~záznam letu nebo o~záznam ze simulátoru.
-\item U~zobrazení seznamu záznamů budou informace o~jednotlivých záznamech v~jiném pořadí -- datum, čas, místa vzletu a příletu a letadlo.
+\item Při přidávání nového záznamu si uživatel nejprve vybere, zda se jedná o~záznam letu nebo o~záznam ze simulátoru.
+\item U~zobrazení seznamu záznamů budou informace o~jednotlivých záznamech v~jiném pořadí -- datum, čas, místo vzletu a příletu a letadlo.
 \end{enumerate}
 
 Po provedení testování s~pilotem byla diskutována navržená funkcionalita. Výsledkem této diskuze bylo:
 \begin{itemize}
 \item přidání celkové statistiky nalétaných hodin,
-\item filtrování bude nyní možné i podle typu letadla,
-\item záznamy letů budou zobrazovat nyní registrační číslo letadla místo jeho modelu, typu a varianty.
+\item filtrování i podle typu letadla,
+\item záznamy letů budou nyní zobrazovat registrační číslo letadla místo jeho modelu, typu a varianty.
 \end{itemize}
 
-Případy užití zobrazené v~této práci již zahrnují tuto přidanou a upravenou funkcionalitu. Po uživatelských testech a diskuzi byla vytvořena i poslední verze wireframe, také k~nalezení v~příloze této diplomové práce.
+Případy užití zobrazené v~této práci již zahrnují tuto přidanou a upravenou funkcionalitu. Po uživatelských testech a diskuzi byla vytvořena i poslední verze wireframe. Ta je také k~nalezení v~příloze této diplomové práce.
 
 \section{Navržená řešení pro tvorbu aplikace}
 Tato kapitola popisuje a zdůvodňuje zvolená řešení architektury, perzistence dat a FRP framework.
 
 \subsection{Architektura}
-Pro svou práci jsem si na základě navržených funkcionalit zvolil architekturu MVVM. Architektura MVVM eliminuje nevýhodu MVC -- příliš mnoho logiky a kódu ve vrstvě $Controller$, a na druhou stranu není zbytečně složitá (pro navrženou funkcionalitu) jako VIPER.
+Pro svou práci jsem si na základě navržených funkcionalit zvolil architekturu MVVM. Architektura MVVM eliminuje nevýhodu MVC -- příliš mnoho logiky a kódu ve vrstvě $Controller$, a současně není zbytečně složitá (pro navrženou funkcionalitu) jako VIPER.
 
 \subsection{Perzistence dat}
-Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat pomocí Realmu. Prvním z~důvodů této volby je podpora online i offline uložení dat. To umožňuje uživateli mít stejná data na více zařízeních, však i společně s~možností používat aplikaci offline. Dalším důvodem bylo to, že je Realm zcela zdarma, což mu dává výhodu oproti iCloud -- Apple řešení.
+Pro tvorbu aplikace na evidenci letů jsem si zvolil možnost perzistence dat pomocí Realmu. Prvním z~důvodů této volby je podpora online i offline uložení dat. To umožňuje uživateli mít stejná data na více zařízeních a současně používat aplikaci offline. Dalším důvodem bylo to, že je Realm zcela zdarma, což mu dává výhodu oproti iCloud -- Apple řešení.
 
 \subsection{FRP framework}
 Pro realizaci aplikace byla zvolena ReactiveCocoa jako FRP framework. ReactiveCocoa byla vybrána, protože příhodně rozšiřuje framework ReactiveSwift, má také přehlednou dokumentaci a existují kvalitní příklady demonstrující použití tohoto frameworku.
@@ -818,17 +816,17 @@ Swift je relativně nový programovací jazyk, první oznámení proběhlo roku 
 V~této kapitole jsou dále rozebírány některé funkcionality a vlastnosti jazyka Swift společně s~ukázkami kódu z~vytvářené aplikace.
 
 \subsection{Optionals}
-Swift je tzv. typově bezpečný jazyk, což zaručuje to, že daná proměnná bude mít vždy stejný typ. Tedy např. pokud náš kód vyžaduje $String$ není možné zadat $Int$. 
-Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné musí být vždy inicializované před použitím a objekty nikdy nemohou být $nil$. Pro práci s~hodnotami $nil$ jsou ve Swiftu zavedeny tzv. $Optinals$.
+Swift je tzv. typově bezpečný jazyk, což zaručuje to, že daná proměnná bude mít vždy stejný typ. Tedy např. pokud náš kód vyžaduje $String$, není možné zadat $Int$. 
+Proměnné se definují klíčovým slovem $var$ a konstanty $let$. Proměnné musí být vždy inicializované před použitím a objekty nikdy nemohou být $nil$. Pro práci s~hodnotami $nil$ jsou ve Swiftu zavedeny tzv. $Optionals$.
 
-$Optinal$ je jakýsi obal (wrapper) klasických typů ($String$, $Int$, $Double$ apod.), který reprezentuje dvě možnosti: hodnota je nastavena a je tedy možné tzv. $unwrap$ $optinal$, a tím získat danou hodnotu, nebo hodnota není nastavena (jedná se o~$nil$). \cite{devBasics}
+$Optional$ je jakýsi obal (wrapper) klasických typů ($String$, $Int$, $Double$ apod.), který reprezentuje dvě možnosti: hodnota je nastavena a je tedy možné tzv. $unwrap$ $optional$, a tím získat danou hodnotu, nebo hodnota není nastavena (jedná se o~$nil$). \cite{devBasics}
 
-Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné, kde otazník indikuje $optinal$ hodnotu uvnitř proměnné. Následně je ve funkci $save$ použito pro $unwrap$ proměnné tzv. $optional$ $binding$. To zpřístupní hodnotu $optional$ proměnné (pokud byla hodnota nastavena) v~podobě dočasné konstanty. V~případě, že je hodnota předána dočasné konstantě, můžeme k~ní přistupovat klasicky a v~našem případě delegovat funkci $save$.
+Příklad \ref{lst:optinal} zobrazuje nejprve inicializaci $optional$ proměnné, kde otazník indikuje $optional$ hodnotu uvnitř proměnné. Následně je ve funkci $save$ použito pro $unwrap$ proměnné tzv. $optional$ $binding$. To zpřístupní hodnotu $optional$ proměnné (pokud byla hodnota nastavena) v~podobě dočasné konstanty. V~případě, že je hodnota předána dočasné konstantě, můžeme k~ní přistupovat klasicky a v~našem případě delegovat funkci $save$.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
-\begin{lstlisting}[caption={Příklad práce s~Optinal},label={lst:optinal}]
-// optinal variable initialization
+\begin{lstlisting}[caption={Příklad práce s~Optional},label={lst:optinal}]
+// optional variable initialization
 var delegate: NoteViewControllerDelegate? = nil
 ...
 private func save(note: String) {
@@ -856,7 +854,7 @@ Extensions umožňují:
 
 Ukázka \ref{lst:extension} předvádí rozšíření třídy $UITableViewController$ o~novou generickou metodu. Tato metoda je použita u~dynamických tabulek zobrazujících data z~Realmu. Díky principů FRP může tabulka jednoduše podporovat např. smazání záznamu, protože je neustále pozorován $Signal$ se změnami a podle změn jsou následně provedeny vhodné animace na straně $UITableView$.
 
-Dalšího klíčového slova, kterého je možné si v~ukázce všimnout, je $guard$. $Guard$ je možné vnímat podobně jako tzv. assert. Tedy zadáváme podmínku, u~které chceme, aby byla splněna, pokud splněna není, dostáváme se do povinné $else$ větve. Klíčové slovo $guard$ je jednou z~možností pro $unwrap$ $optional$ proměnné a také zamezuje několikanásobné podmínce $if-else$ (ve složitějších případech), čímž dochází ke~zpřehlednění kódu. \cite{devGuard}
+Dalším klíčovým slovem, kterého je možné si v~ukázce všimnout, je $guard$. $Guard$ je možné vnímat podobně jako tzv. assert. Tedy zadáváme podmínku, u~které chceme, aby byla splněna, pokud splněna není, dostáváme se do povinné $else$ větve. Klíčové slovo $guard$ je jednou z~možností pro $unwrap$ $optional$ proměnné a také zamezuje několikanásobné podmínce $if-else$ (ve složitějších případech), čímž dochází ke~zpřehlednění kódu. \cite{devGuard}
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -899,9 +897,9 @@ extension UITableViewController {
 \subsection{Protokoly}
 Protokoly představují ve Swiftu předpis metod, vlastností a dalších náležitostí, které jsou nutné pro splnění daných úloh. Podmínky protokolu mohou splňovat třídy, struktury a další tím, že poskytnou implementaci všech požadavků. \cite{devProtocol}
 
-V~rámci implementace aplikace bylo definováno několik protokolů. Například v~ukázce \ref{lst:optinal}, musel $delegate$ odpovídat protokolu\\ $NoteViewControllerDelegate$ a tedy mít implementovanou metodu $save$ (ukázka definování protokolu viz. \ref{lst:protocol}). Jak je možné vidět, protokol neurčuje, jak má být metoda implementována, pouze určuje její definici.
+V~rámci implementace aplikace bylo definováno několik protokolů. Například v~ukázce \ref{lst:optinal} musel $delegate$ odpovídat protokolu\\ $NoteViewControllerDelegate$ a tedy mít implementovanou metodu $save$ (ukázka definování protokolu viz. \ref{lst:protocol}). Jak je možné vidět, protokol neurčuje, jak má být metoda implementována, pouze určuje její definici.
 
-Princip delegování je v~jazyce Swift velice častý. I~mnoho tříd např. z~UIKit vyžaduje pro podporu určitých funkcionalit splnění daného protokolu. Ukázka \ref{lst:pickerdelegate} ukazuje implementaci protokolu $UIPickerViewDelegate$\\ a $UIPickerViewDataSource$. Kdy po implementaci příslušných metod a nastavení $UITableViewController$ jako delegáta, je možné ve $View$ pracovat s~komponentou $UIPickerView$.
+Princip delegování je v~jazyce Swift velice častý. I~mnoho tříd např. z~UIKit vyžaduje pro podporu určitých funkcionalit splnění daného protokolu. Ukázka \ref{lst:pickerdelegate} ukazuje implementaci protokolu $UIPickerViewDelegate$\\ a $UIPickerViewDataSource$. Kdy po implementaci příslušných metod a nastavení $UITableViewController$ jako delegáta je možné ve $View$ pracovat s~komponentou $UIPickerView$.
 	
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -961,15 +959,15 @@ UIPickerViewDataSource {
 \subsection{Automatické počítání referencí}
 Automatická správa paměti, jak je již řečeno dříve, je jednou z~předností jazyka Swift. Tato správa je zajištěna metodou automatického počítání referencí. Toto počítání zajišťuje udržení reference dané instance pouze po dobu, co je opravdu potřebná. V~době, kdy instanci není nutné udržovat (již neexistují žádné reference), dojde k~uvolnění předem alokované paměti.
 
-Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, které zaručuje, že instance, na kterou reference ukazuje, nebude dealokována, dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k~uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z~tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá, pokud má instance v~referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v~opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
+Swift definuje tři druhy referencí -- $strong$, $weak$ a $unowned$. Nejčastějším a základním případem je $strong$ reference, která zaručuje, že instance, na kterou reference ukazuje, nebude dealokována, dokud reference existuje. Může však nastat případ nazývaný cyklus $strong$ referencí, který způsobí tzv. paměťový $leak$ (nedojde k~uvolnění veškeré alokované paměti). Tento cyklus může být způsoben vzájemnými referencemi dvou instancí nebo např. pokud třídní $closure$ zachytí $self$. Z~tohoto důvodu jsou vytvořeny další dva typy referencí. $Weak$ reference neudržuje $strong$ referenci na instanci a není tedy bráněno dealokaci dané instance. Toto chování umožňuje i to, že $weak$ reference může mít hodnotu $nil$. $Weak$ reference se používá, pokud má instance v~referenci kratší životnost než samotná instance vlastnící referenci. $Unowned$ reference se používá v~opačném případě a nemůže mít nikdy hodnotu $nil$. \cite{devMemory}
 
-\subsection{Použíté Apple frameworky}
+\subsection{Použité Apple frameworky}
 Aplikace využívá třech Apple frameworků -- UIKit, Foundation a CloudKit.
 
 UIKit je základním frameworkem pro $View$ část aplikace. Obsahuje části pro:
 \begin{itemize}
 \item vytvoření uživatelského rozhraní;
-\item zajištění komunikaci mezi uživatelem, systémem a aplikací;
+\item zajištění komunikace mezi uživatelem, systémem a aplikací;
 \item zpracování uživatelských interakcí;
 \item kreslení a tisknutí;
 \item animace a mnohé další. \cite{UIKit}
@@ -1028,7 +1026,7 @@ $MutableProperty$ je dalším prvkem frameworku Reactive Swift. $MutableProperty
 
 $MutableProperty$ v~aplikaci představuje nejčastější způsob namapování $View$ na $ViewModel$. Ukázka \ref{lst:property} zobrazuje hned několik propojení jednotlivých vrstev architektury. První propojení přestavuje proměnná $fromTextField$, která je označená jako $@IBOutlet$. Právě toto označení se používá při spojení prvků $storyboardu$ s~kódem. Další propojení, tentokrát již vrstev $View$ a $ViewModel$, je zobrazeno ve funkci $bindViewModel$, kde dojde nejprve k~nastavení výchozí hodnoty pole $UITextField$ a následně jsou pozorovány všechny změny. Toto pozorování umožňuje framework Reactive Cocoa, který přidává UI prvkům vlastnost $reactive$.
 
-Při nastavování výchozí hodnoty $UITextFieldu$ závisí na tom zda se jedná o~vytváření nového záznamu letu nebo o~úpravu již existujícího. Podle toho je vytvořen $ViewModel$ (se záznamem letu nebo s~hodnotou $nil$) i $MutableProperty$.
+Při nastavování výchozí hodnoty $UITextFieldu$ závisí na tom, zda se jedná o~vytváření nového záznamu letu nebo o~úpravu již existujícího. Podle toho je vytvořen $ViewModel$ (se záznamem letu nebo s~hodnotou $nil$) i $MutableProperty$.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1071,7 +1069,7 @@ class AddFlightRecordViewModel: RealmViewModel {
 \subsection{Action}
 $Action$ je posledním použitým prvkem frameworku Reactive Swift. Hlavní částí prvku $Action$ je tzv. $execute$ reprezentovaný $SignalProducerem$. Tento $execute$ je zadán ve formě closure. $Action$ může obsahovat podmínku $enabledIf$, která určuje zda, je umožněno akci provést.
 
-Použití prvku $Action$ je zobrazeno v~ukázce \ref{lst:action}. Akce je znovu napojena pomocí vlastnosti $reactive$ frameworku Reactive Cocoa. Samotná akce pouze odesílá na stisknutí tlačítka proměnou $note$, která je následně delegována do jiného $Controlleru$. Tato akce je však proveditelná pouze tehdy, pokud je splněna podmínka v~části $enabledIf$, tedy $note$ nemá nulovou délku. Díky propojení s~tlačítkem ve $View$ se proveditelnost akce promítá i do vlastností tlačítka $UIBarButtonItem$. Po provedení akce je informován $observer$ ve $View$, který pozoruje $Signal$ vytvářený $SignalProducerem$ akce.
+Použití prvku $Action$ je zobrazeno v~ukázce \ref{lst:action}. Akce je znovu napojena pomocí vlastnosti $reactive$ frameworku Reactive Cocoa. Samotná akce pouze odesílá na stisknutí tlačítka proměnnou $note$, která je následně delegována do jiného $Controlleru$. Tato akce je však proveditelná pouze tehdy, pokud je splněna podmínka v~části $enabledIf$, tedy $note$ nemá nulovou délku. Díky propojení s~tlačítkem ve $View$ se proveditelnost akce promítá i do vlastností tlačítka $UIBarButtonItem$. Po provedení akce je informován $observer$ ve $View$, který pozoruje $Signal$ vytvářený $SignalProducerem$ akce.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1128,7 +1126,7 @@ Reactive Swift obsahuje mnoho operátorů, které umí nějakým způsobem uprav
 \subsubsection{Map}
 Operátor $map$ je jeden z~nejzákladnějších operátorů funkcionálního programování. V~případě Reactive Swift přetváří hodnoty jednoho datového toku na jiný datový tok. \cite{operators}
 
-V~aplikaci byl operátor $map$ velice užitečný. Byl použit hlavně pro spojení dvou $MutableProperty$ s~odlišnými typy. Toto spojení probíhalo např. při práci s~objekty typu $UIDatePicker$ (výběr datu), kdy jedna $MutableProperty$ získává uživatelovy vstupy ve formátu $Date$ a tento tok hodnot je průběžné transformován jako $String$ do druhé $MutableProperty$. Ukázka je zobrazena v~kódu \ref{lst:map}. Na ukázce je možné vidět, že přepis transformace je zadán jako již existující funkce, stejného výsledku je však možné dosáhnout i při zadání přepisu ve formě closure.
+V~aplikaci byl operátor $map$ velice užitečný. Byl použit hlavně pro spojení dvou $MutableProperty$ s~odlišnými typy. Toto spojení probíhalo např. při práci s~objekty typu $UIDatePicker$ (výběr datu), kdy jedna $MutableProperty$ získává uživatelovy vstupy ve formátu $Date$ a tento tok hodnot je průběžně transformován jako $String$ do druhé $MutableProperty$. Ukázka je zobrazena v~kódu \ref{lst:map}. Na ukázce je možné vidět, že přepis transformace je zadán jako již existující funkce. Stejného výsledku je však možné dosáhnout i při zadání přepisu ve formě closure.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1208,11 +1206,11 @@ Realm byl ve vytvářené aplikaci použit pro ukládání dat, a to jak pro lok
 Uživatel je do Realmu přihlašován pomocí svého iCloud účtu (popsáno dále) a inicializaci Realmu zpracovává v~aplikaci třída $RealmViewModel$.
 	
 \subsection{Model}
-Objekty uložené v~Realmu jsou definovany jako klasické třídy ve Swiftu s~nutnou dědičnosti od třídy $Object$. Tyto objekty se chovají převážně jako klasické Swift objekty, je tedy možné, aby splňovaly protokoly nebo měly vlastní metody. Tyto objekty mohou mít také definovány primární klíče nebo indexy. 
+Objekty uložené v~Realmu jsou definovány jako klasické třídy ve Swiftu s~nutnou dědičností od třídy $Object$. Tyto objekty se chovají převážně jako klasické Swift objekty, je tedy možné, aby splňovaly protokoly nebo měly vlastní metody. Tyto objekty mohou mít také definovány primární klíče nebo indexy. 
 
 Ukázka třídy $Plane$ definující Realm objekt je zobrazena v~kódu \ref{lst:realmObject}. V~aplikaci byly takto definovány třídy: záznam letu nebo ze simulátoru, letadlo, osobní informace a zdravotní certifikáty.
 
-Nevýhodou objektů v~Realmu je nedokonalá dědičnost. Dědičnost Realm objektů nedovoluje: konverzi typu polymorfních tříd, dotazování se na více tříd najednou a více-třídní kontejnery. \cite{realmDocs} Z~důvodů těchto nedostatků nemohla být třída definující záznam letu a záznam simulátoru rozdělena do dvou (nebylo by možné nad záznamy vytvářet společný dotaz nebo je zobrazovat v~jedné tabulce). Bylo tedy nutné mít jednu třídu pro oba typy záznamů a mezi nimi rozlišovat pomocí příznaku $type$.
+Nevýhodou objektů v~Realmu je nedokonalá dědičnost. Dědičnost Realm objektů nedovoluje: konverzi typu polymorfních tříd, dotazování se na více tříd najednou a vícetřídní kontejnery. \cite{realmDocs} Z~důvodů těchto nedostatků nemohla být třída definující záznam letu a záznam simulátoru rozdělena do dvou (nebylo by možné nad záznamy vytvářet společný dotaz nebo je zobrazovat v~jedné tabulce). Bylo tedy nutné mít jednu třídu pro oba typy záznamů a mezi nimi rozlišovat pomocí příznaku $type$.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1285,7 +1283,7 @@ try! realm.write {
 \label{chap:login}
 Realm umožňuje několik možností přihlášení (autentizace) uživatele -- pomocí přihlašovacích údajů (jméno, heslo), pomocí tokenu získaného od podporované autentizační služby třetí strany (iCloud, Facebook, Google) nebo pomocí tokenu od vlastní autentizační služby. \cite{realmDocs}
 
-Pro přihlašování uživatele bylo vybráno řešení pomocí iCloud tokenu. Toto řešení navrhuje i článek Sebastiana Kreutzbergera \cite{loginUX}. Tento článek rozebírá nespokojenost uživatelů, kteří jsou nuceni vyplňovat přihlašovací údaje ihned při prvním spuštění aplikace. Navrhovaným řešením je právě iCloud a to z~toho důvodu, že každý uživatel má iCloud účet.  Který je nutný minimálně ke stahovaní aplikací z~App Storu.
+Pro přihlašování uživatele bylo vybráno řešení pomocí iCloud tokenu. Toto řešení navrhuje i článek Sebastiana Kreutzbergera \cite{loginUX}. Tento článek rozebírá nespokojenost uživatelů, kteří jsou nuceni vyplňovat přihlašovací údaje ihned při prvním spuštění aplikace. Navrhovaným řešením je právě iCloud, a to z~toho důvodu, že každý uživatel má iCloud účet.  Který je nutný minimálně ke stahovaní aplikací z~App Storu.
 
 Pro přihlášení uživatele pomocí iCloudu je nutné využít framework CloudKit. CloudKit obsahuje třídu $CKContainer$, která umožňuje získat uživatelův iCloud token pomocí funkce $fetchUserRecordID$. \cite{ckcontainer} Pomocí tohoto tokenu je uživatel následně přihlášen do Realmu. Získání tohoto tokenu má určitou časovou režii \cite{ckcontainer}, proto je token získáván pouze při prvním spuštění aplikace. Následně je již uživatel uložen v~Realm objektu $SyncUser.current$ (dokud nedojde k~expiraci přihlášení). O~přihlášení uživatele se stará v~aplikaci třída $RealmViewModel$.
 
@@ -1296,11 +1294,11 @@ Tvorba uživatelské rozhraní ve formě storyboardů je možná přímo v~Xcode
 
 Pro pozicování jednotlivých prvků je vytvořený speciální systém rozložení tzv. Auto Layout. Auto Layout je postavený na myšlence vazeb (constraints). Každý prvek má definované tyto vazby k~ostatním prvkům a díky tomu je přesně určeno, jak se bude chovat na různých velikostech nebo orientacích displeje. \cite{ib}
 
-Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velikostí (size classes). Tyto třídy jsou dvě -- $Regular$ a $Compact$, jsou definované pro výšku i šířku daného zařízení a mohou se lišit při orientaci na výšku a na šířku. Např. iPhone 6 má při orientaci na výšku definované třídy: pro výšku $Regular$ a pro šířku $Compact$, zatímco při orientaci na šířku je to: pro výšku i šířku $Compact$. Tyto třídy umožňují přizpůsobit jednotlivé obrazovky tak, aby byly co nejideálněji zobrazeny na daném zařízení např. tím, že jsou změněny vazby nebo nedojde k~zobrazení některých prvků. \cite{sizeClasses}
+Pro různé velikosti a orientace displejů zavádí Apple ještě třídy velikostí (size classes). Tyto třídy jsou dvě -- $Regular$ a $Compact$. Jsou definované pro výšku i šířku daného zařízení a mohou se lišit při orientaci na výšku a na šířku. Např. iPhone 6 má při orientaci na výšku definované třídy: pro výšku $Regular$ a pro šířku $Compact$, zatímco při orientaci na šířku je to: $Compact$ pro výšku i šířku. Tyto třídy umožňují přizpůsobit jednotlivé obrazovky tak, aby byly co nejideálněji zobrazeny na daném zařízení např. tím, že jsou změněny vazby nebo nedojde k~zobrazení některých prvků. \cite{sizeClasses}
 
 Dalším prvkem, který je možné použít pro rozdílná zobrazení na různých velikostech displejů, je tzv. $UISplitViewController$. Tento $Controller$ obsahuje dva $ViewControllery$ -- $master$ a $detail$. Ty jsou zobrazeny v~závislosti na třídách velikosti -- u~menších displejů se $UISplitViewController$ chová spíše jako klasický $NavigationController$, zatímco u~větších displejů (např. tabletů) jsou $master$ a $detail$ zobrazeny vedle sebe. \cite{splitVC} Pro ukázku byly zvoleny zařízení iPhone 6 (obrázek \ref{fig:split1} zobrazující $UISplitViewController$ jako $NavigationController$) a iPad Air 2 (obrázek \ref{fig:split2} zobrazující $master$ a $detail$ vedle sebe).
 
-V~příloze této práce je k~nalezení nafocená celá aplikace na zařízení iPhone 6 společně s~obrazovkami (pouze těmi, co se liší na tabletu) ze zařízení iPad Air 2. 
+V~příloze této práce je k~nalezení nafocená celá aplikace na zařízení iPhone~6 společně s~obrazovkami (pouze těmi, co se liší na tabletu) ze zařízení iPad Air 2. 
 
 \begin{figure}[]\centering
  \includegraphics[width=0.99\textwidth]{./pictures/UISplitView/iphone}
@@ -1319,9 +1317,9 @@ Celá aplikace je nyní vytvořena v~češtině, ale byla vyvíjená tak, aby ji
 
 Soubory připravené pro překlad aplikace jsou dvojího typu -- překlady storyboardů a tzv. $Localizable.string$. Oba typy jsou závislé na tom, jaké jazyky jsou nastaveny v~Xcode projektu.
 
-Soubory pro překlad storyboardů vytváří samotné Xcode. Každý UI prvek je identifikován vygenerovaným ID, jenž je spojeno s~textem, který daný prvek obsahuje. Ukázka storyboardu připraveného pro překlad je zobrazena na příkladu \ref{lst:storyboardLoc}. Tento příklad zobrazuje českou verzi textů storyboardu. Při překladech by došlo k~vygenerování např. anglické verze, kde by všechny prvky měly stejné ID jako u~české verze a podle nich by došlo k~přeložení příslušných textů. Tento způsob překladů byl použit u~neměnících se textů prvků ze storyboardů.
+Soubory pro překlad storyboardů vytváří samotné Xcode. Každý UI prvek je identifikován vygenerovaným ID, jenž je spojeno s~textem, který daný prvek obsahuje. Ukázka storyboardu připraveného pro překlad je zobrazena na příkladu \ref{lst:storyboardLoc}. Ten zobrazuje českou verzi textů storyboardu. Při překladech by došlo k~vygenerování např. anglické verze, kde by všechny prvky měly stejné ID jako u~české verze a podle nich by došlo k~přeložení příslušných textů. Tento způsob překladů byl použit u~neměnících se textů prvků ze storyboardů.
 
-Druhý způsob byl použit u~textů, které se mohou měnit po spuštění aplikace nebo nejsou definované ve storyboardech. Tento způsob používá soubory $Localizable.string$, kde každý překládaný jazyk má svůj vlastní soubor. Každý z~těchto souborů obsahuje dvojice klíč-hodnota, kde klíč představuje ID a hodnota text. Získání hodnoty je možné pomocí $NSLocalizedString$, který vrací přiřazený lokalizovaný text podle zadaného klíče. Ukázka použití $Localizable.string$ je zobrazena na příkladu \ref{lst:locString}.
+Druhý způsob byl použit u~textů, které se mohou měnit po spuštění aplikace nebo nejsou definované ve storyboardech. Tento způsob používá soubory $Localizable.string$, kde každý překládaný jazyk má svůj vlastní soubor. Každý z~těchto souborů obsahuje dvojice klíč--hodnota, kde klíč představuje ID a hodnota text. Získání hodnoty je možné pomocí $NSLocalizedString$, který vrací přiřazený lokalizovaný text podle zadaného klíče. Ukázka použití $Localizable.string$ je zobrazena na příkladu \ref{lst:locString}.
 
 \begin{figure}
 \begin{minipage}{\linewidth}
@@ -1403,13 +1401,13 @@ Společně s~implementací aplikace byla vytvořena i její dokumentace. Při ps
 
 Samotná dokumentace byla poté zaměřena hlavně na veřejnou část tříd a na složitější metody. Pro tvorbu dokumentace bylo použito oficiální \\Apple značení (markup). A~po dokončení aplikace byla dokumentace vygenerována pomocí programu \uv{Jazzy} (\url{https://github.com/realm/jazzy}) do formátu HTML.
 
-Vygenerovaná dokumentace k~je nalezení v~příloze této diplomové práce. 
+Vygenerovaná dokumentace je k nalezení v~příloze této diplomové práce. 
 
 \section{Použité nástroje při vývoji}
 \subsection{Xcode}
 Xcode 9 byly použity pro vývoj, testování a simulování vytvářené aplikace. 
 
-Xcode je software od firmy Apple pro operační systém macOS a používá se pro vývoj aplikací na Mac, iPhone, iPad, Apple Watch a Apple TV. Xcode obsahují zabudované nástroje pro psání kódu, kompilaci, testování, vytváření uživatelského rozhraní, spouštění vytvářené aplikace na simulátorech a další. \cite{Xcode}
+Xcode je software od firmy Apple pro operační systém macOS a používá se pro vývoj aplikací na Mac, iPhone, iPad, Apple Watch a Apple TV. Xcode obsahují zabudované nástroje pro psaní kódu, kompilaci, testování, vytváření uživatelského rozhraní, spouštění vytvářené aplikace na simulátorech a další. \cite{Xcode}
 
 \subsection{Git}
 Software Git byl používán pro zálohování, verzování a sdílení zdrojových kódů aplikace. 
@@ -1443,11 +1441,11 @@ Tato kapitola se zabývá jednotkovými (unit) testy, které byly tvořeny v~pr�
 \section{Unit testy}
 Unit testy, neboli jednotkové testy, jsou zaměřeny na části (jednotky) kódu. Těmito jednotkami jsou v~objektově orientovaném programování např. funkce nebo třídy. \cite{unitTesting}
 
-Pro tvorbu unit testů v aplikaci byl použit framework XCTest, který je vytvořen společností Apple a má předpřipravené rozhraní v~Xcode. \cite{appleTesting}
+Pro tvorbu unit testů v aplikaci byl použit framework XCTest, od společnosti Apple a má předpřipravené rozhraní v~Xcode. \cite{appleTesting}
 
-Všechny testující třídy jsou podtřídou $XCTestCase$. $XCTestCase$ je základní třídou všech testovacích případů. Tato třída obsahuje metody $setUp$ -- umožňující nastavit výchozí stav před testováním, $tearDown$ -- umožňující \uv{uklizení} po skončení testů. Dále tato třída také obsahuje funkce pro vyhodnocení jednotlivých testů. Mezi tyto funkce patří: $XCTAssertEqual$ potvrzující, že dvě vstupní hodnoty jsou stejné; $expectation$, jež je spojováno s~$waitForExpectations$, čekající danou dobu na to, zda je $expectation$ vyplněno ($fulfill$); a další. \cite{XCTestCase}
+Všechny testující třídy jsou podtřídou $XCTestCase$. $XCTestCase$ je základní třídou všech testovacích případů. Tato třída obsahuje metody $setUp$ -- umožňující nastavit výchozí stav před testováním, $tearDown$ -- umožňující \uv{uklizení} po skončení testů. Dále tato třída obsahuje funkce pro vyhodnocení jednotlivých testů. Mezi tyto funkce patří: $XCTAssertEqual$ potvrzující, že dvě vstupní hodnoty jsou stejné; $expectation$, jež je spojováno s~$waitForExpectations$, čekající danou dobu na to, zda je $expectation$ vyplněno ($fulfill$); a další. \cite{XCTestCase}
 
-Funkce definující testy jsou v~testovací třídě označeny klíčovým slovem $test$, které je na začatku jejich názvu. Takto definované funkce jsou automaticky spouštěny a vyhodnocovány. Díky klíčovému slovu $test$ je možné definovat i pomocné funkce. \cite{XCTestCase}
+Funkce definující testy jsou v~testovací třídě označeny klíčovým slovem $test$, které je na začátku jejich názvu. Takto definované funkce jsou automaticky spouštěny a vyhodnocovány. Díky klíčovému slovu $test$ je možné definovat i pomocné funkce. \cite{XCTestCase}
 
 Pro třídy, které testují funkce pracující s~databází Realm, byla vytvořena testovací třída $XCTestCase$. Tato třída se starala o~konfiguraci instance Realmu, která byla pouze v~paměti, a tudíž testy probíhaly stále stejně a neovlivňovaly klasickou Realm databázi.
 
@@ -1522,10 +1520,10 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
  		\item Závažnost problému -- 4,
  		\item řešení -- přidání informující záložky, která umožňuje i zrušení filtrování.
  	\end{itemize}
- 	\item Pokud neexistují žádné záznamy letů (ze simulátoru) nebo letadel, uživateli je zobrazena pouze prázdná tabulka.
+ 	\item Pokud neexistují žádné záznamy letů (ze simulátoru) nebo letadel, je uživateli zobrazena pouze prázdná tabulka.
  	\begin{itemize}
  		\item Závažnost problému -- 3,
- 		\item řešení -- přidání zprávy, která bude informovat uživatele, že žádné záznamy (letů, ze simulátoru a letadel) neexistují.
+ 		\item řešení -- přidání zprávy, která informuje uživatele, že žádné záznamy (letů, ze simulátoru a letadel) neexistují.
  	\end{itemize}
  	\item Pokud parametrům filtrování neodpovídají žádné záznamy, je uživateli zobrazena prázdná tabulka.
  	\begin{itemize}
@@ -1551,7 +1549,7 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
  		\item Závažnost -- 1,
  		\item řešení -- přejmenování \uv{Limity} na \uv{Limity nalétaných hodin}.
  	\end{itemize}
- 	\item Popis \uv{Typ} při přidávání/upravě záznamu ze simulátoru nemusí jasně specifikovat, že se má jednat o~typ simulátoru (zařízení).
+ 	\item Popis \uv{Typ} při přidávání/úpravě záznamu ze simulátoru nemusí jasně specifikovat, že se má jednat o~typ simulátoru (zařízení).
  	\begin{itemize}
  		\item Závažnost -- 2,
  		\item řešení -- přejmenování popisu \uv{Typ} na \uv{Typ zařízení}.
@@ -1634,7 +1632,7 @@ Heuristická analýza byla provedena znovu poté, co byla aplikace implementová
 \end{table}
 
 \section{Uživatelské testování}
-Uživatelské testování proběhlo ihned po heuristické analýze. Testováni byli celkem čtyři uživatelé, kteří byli rozděleni na dvě skupiny -- ti, co mají znalosti v~oboru letectví a ostatní. U~všech uživatelů bylo podmínkou používání operačního systému iOS po dobu alespoň dvou let. Všichni uživatelé dostali stejné otázky před začátkem testování, stejné scénáře a stejný závěrečný dotazník. Skupině uživatelů, která neměla znalosti v~leteckém oboru, byly nejprve vysvětleny základní informace nutné k~plynulému absolvování testů.
+Uživatelské testování proběhlo ihned po heuristické analýze. Testováni byli celkem čtyři uživatelé, kteří byli rozděleni na dvě skupiny -- ti, co mají znalosti v~oboru letectví, a ostatní. U~všech uživatelů bylo podmínkou používání operačního systému iOS po dobu alespoň dvou let. Všichni uživatelé dostali stejné otázky před začátkem testování, stejné scénáře a stejný závěrečný dotazník. Skupině uživatelů, která neměla znalosti v~leteckém oboru, byly nejprve vysvětleny základní informace nutné k~plynulému absolvování testů.
 
 Všechny testy byly nahrávány z~důvodu možné zpětné analýzy nedostatků aplikace. Všechny nahrávky testů společně s~vyplněnými dotazníky jsou k~nalezení v~příloze této diplomové práce.
 
@@ -1643,7 +1641,7 @@ Před samotným testováním byli uživatelé seznámeni s~testovacími scéná�
 \subsection{Základní otázky na testované uživatele}
 \begin{enumerate}
 \item Jak dlouho používáte iOS?
-\item Jaké zařízeni od Applu máte?
+\item Jaké zařízení od Applu máte?
 \item Jste právě teď přihlášeni do účtu iCloud?
 \item Je toto Vaše první uživatelské testování?
 \end{enumerate}
@@ -1652,7 +1650,7 @@ Před samotným testováním byli uživatelé seznámeni s~testovacími scéná�
 Testovací scénáře byly lehce upraveny a rozšířeny oproti scénářům použitým na otestování návrhu uživatelského rozhraní.
 
 \begin{enumerate}
-\item Právě jste dokončil(a) svůj první let z~Brna do Prahy. Z~Brna jste odlétal(a) v~7:00 a do Prahy jste přiletěl(a) v~8:45, neměl(a) jste žádné mezipřistání. Celou doby jste zastával(a) funkci vedoucího pilota a letěl(a) jste letadlem Boeing. Zaznamenejte svůj let.
+\item Právě jste dokončil(a) svůj první let z~Brna do Prahy. Z~Brna jste odlétal(a) v~7:00 a do Prahy jste přiletěl(a) v~8:45, neměl(a) jste žádné mezipřistání. Celou dobu jste zastával(a) funkci vedoucího pilota a letěl(a) jste letadlem Boeing. Zaznamenejte svůj let.
 \item Zjistil(a) jste, že jste u~minulého záznamu chybně zaznamenal(a) čas. Upravte tedy čas příletu do Prahy na 7:45.
 \item Chcete si přidat další záznam, tentokrát z~výcvikového zařízení. Zadejte dnešní datum, čas na zařízení dvě hodiny.
 \item Zadejte do aplikace další dva záznamy. Vyplňované hodnoty jsou na Vás, pouze datum specifikujte na minulý týden.
@@ -1663,7 +1661,7 @@ Testovací scénáře byly lehce upraveny a rozšířeny oproti scénářům pou
 \item Za poslední tři týdny jste absolvoval(a) mnoho letů, zkontrolujte, zda jste nepřekročil(a) jeden z~limitů.
 \item Zjistěte, kolik jste celkově nalétal(a) s~Vaším letadlem Boeing.
 \item Dnes Vám vydali zdravotní certifikát třídy jedna (Class 1). Vložte ho do aplikace.
-\item Vytvořte report ze všech záznamů letů i záznamů z~výcvikového zařízení za posledních čtrnáct dní a odešlete si tento report na email.
+\item Vytvořte report ze všech záznamů letů i záznamů z~výcvikového zařízení za posledních čtrnáct dní a odešlete si tento report na e-mail.
 \end{enumerate}
 
 \subsection{Závěrečný dotazník}
@@ -1683,7 +1681,7 @@ Jako závěrečný dotazník byl zvolen SUS -- \uv{System Usability Scale}, kter
 Ke každé otázce je odpověď s~výběrem z~pěti možností. Odpovědi jsou ohodnoceny 1--5, kde 1 představuje silný nesouhlas a 5 silný souhlas. \cite{sus}
 
 \subsection{Výsledky testů}
-Tabulka \ref{tab:ut_eval} zobrazuje hodnocení splnění scénářů u~jednotlivých uživatelů. Hodnocení bylo znovu v~rozsahu 1 až 5, kde 1 představuje bezproblémové splnění a 5 nedokončení scénáře.  Z~tabulky je možné vidět, že všichni uživatelé nějakým způsobem splnili všechny zadané scénáře (nejhorší hodnocení je 4 a to se objevuje pouze jednou). Je také možné si všimnout, že pokud některé scénáře obsahovaly podobné kroky, jako scénáře již absolvované (např. filtrování nebo vkládání záznamu), uživatelé se s~aplikací již seznámili a naučili a s~dalšími obdobnými úlohami již neměli problém.
+Tabulka \ref{tab:ut_eval} zobrazuje hodnocení splnění scénářů u~jednotlivých uživatelů. Hodnocení bylo znovu v~rozsahu 1 až 5, kde 1 představuje bezproblémové splnění a 5 nedokončení scénáře.  Z~tabulky je možné vidět, že všichni uživatelé nějakým způsobem splnili všechny zadané scénáře (nejhorší hodnocení je 4 a to se objevuje pouze jednou). Je také možné si všimnout, že pokud některé scénáře obsahovaly podobné kroky jako scénáře již absolvované (např. filtrování nebo vkládání záznamu), uživatelé se s~aplikací již seznámili a naučili a s~dalšími obdobnými úlohami již neměli problém.
 
 \begin{table}\centering
  \begin{tabular}{ c | c | c | c | c |}
@@ -1705,53 +1703,53 @@ Tabulka \ref{tab:ut_eval} zobrazuje hodnocení splnění scénářů u~jednotliv
  \caption[Hodnocení splnění jednotlivých scénářů]{Hodnocení splnění jednotlivých scénářů}\label{tab:ut_eval}
 \end{table}
 
-Při testování nebyly objeveny žádné kritické problémy, však díky pozorování a nahrávání uživatelů, bylo objeveno několik nedostatků, které byly následně opraveny. Zde je jejich seznam.
+Při testování nebyly objeveny žádné kritické problémy. Díky pozorování a nahrávání uživatelů však bylo objeveno několik nedostatků, které byly následně opraveny. Zde je jejich seznam.
 
 \begin{itemize}
 \item Při přidávání nebo úpravě záznamu letů již nemizí určité řádky tabulky (opraveno již po prvním testování).
 \item Certifikát, který není pojmenovaný, se nyní v~tabulce označuje jako \uv{Nepojmenovaný}. Dříve nebyl nijak označen.
 \item U~certifikátů s~dlouhým názvem již není zobrazen celý název, ale pouze určitá část.
-\item U~záložek, které obsahují $UISplitViewController$ již funguje vrácení se na hlavní stránku záložky, při dvojím poklepání na danou záložku.
+\item U~záložek, které obsahují $UISplitViewController$, již funguje vrácení se na hlavní stránku záložky, při dvojím poklepání na danou záložku.
 \item Zaměření textového pole je nyní možné při kliknutí kamkoliv na řádek s~tímto textovým polem.
-\item Řádky statických tabulek jsou nyní zvýrazňovány pouze pokud obsahují nějakou akci.
+\item Řádky statických tabulek jsou nyní zvýrazňovány pouze, pokud obsahují nějakou akci.
 \item Akce \uv{Zrušit filtrování} je potvrzována dialogovým oknem.
 \item U~filtrování je nyní možné zrušit nastavené letadlo.
-\item Při odesílaní reportu na email je nyní uživatel informován, pokud nemá nastaveného emailového klienta..
+\item Při odesílaní reportu na e-mail je nyní uživatel informován, pokud nemá nastaveného emailového klienta.
 \end{itemize}
 
 \chapter{Zhodnocení}
 Tato kapitola se zabývá zhodnocením postupů FRP -- jejich výhodami a nevýhodami, a dále také zhodnocením časové a implementační náročnosti při vývoji aplikace pomocí FRP a architektury MVVM v~porovnání se standardním přístupem architektury MCV.
 
 \section{Zhodnocení postupů FRP v~aplikaci}
-Postupy funkcionálně reaktivní programování velice dobře  vyhovují požadavkům, které jsou kladeny na mobilní aplikace --  prezentování uživatelského rozhraní a neustálé reagování na změny, které mohou přijít jak od uživatele, tak i např. ze serveru. Díky FRP je možné všechny tyto změny pozorovat ve formě nezávislých datových toků a podle nich následně upravovat uživatelské rozhraní a to bez nutnosti složitého uchovávání stavů aplikace.
+Postupy funkcionálně reaktivního programování velice dobře  vyhovují požadavkům, které jsou kladeny na mobilní aplikace --  prezentování uživatelského rozhraní a neustálé reagování na změny, které mohou přijít jak od uživatele, tak i např. ze serveru. Díky FRP je možné všechny tyto změny pozorovat ve formě nezávislých datových toků a podle nich následně upravovat uživatelské rozhraní, a to bez nutnosti složitého uchovávání stavů aplikace.
 
-ReactiveCocoa se prokázala jako velice kvalitní framework pro tvorbu reaktivní iOS aplikace. Nejen, že tento framework poskytuje řadu základní reaktivní prvků, on také přidává komponentám uživatelského rozhraní reaktivní rozšíření, čímž umožňuje vytvoření plně reaktivní aplikaci.
+ReactiveCocoa se prokázala jako velice kvalitní framework pro tvorbu reaktivní iOS aplikace. Nejen, že tento framework poskytuje řadu základních reaktivních prvků, on také přidává komponentám uživatelského rozhraní reaktivní rozšíření, čímž umožňuje vytvoření plně reaktivní aplikaci.
 
-Za zmínku zde stojí i Realm, který se dal velice jednoduše zkombinovat s~frameworkem Reactive Cocoa. Pozorované změny např. na Realm kolekcích byly transformovány na $Signal$, na který následně reagovalo uživatelské rozhraní. Tímto postupem bylo dosaženo toho, že aplikace např. automaticky reagovala na každou změnu v~Realmu bez nutnosti jakékoliv uživatelovi iniciativy o~znovu načtení dat.
+Za zmínku zde stojí i Realm, který se dal velice jednoduše zkombinovat s~frameworkem Reactive Cocoa. Pozorované změny např. na Realm kolekcích byly transformovány na $Signal$, na který následně reagovalo uživatelské rozhraní. Tímto postupem bylo dosaženo toho, že aplikace např. automaticky reagovala na každou změnu v~Realmu bez nutnosti jakékoliv uživatelovy iniciativy o~znovu načtení dat.
 
-Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních aplikací. Je zde však nutné zmínit i pár nevýhod tohoto přístupu. Prvním drobným nedostatkem je to, že postupy FRP není možné zavést v~rámci standardních Apple knihoven a je nutné použít neoficiální frameworky (tedy další knihovny/frameworky navíc). Další nevýhodou je nutnost seznámení se se zcela novým programovacím stylem a tudíž je nezbytné navyknout si na velice odlišné řešení problémů. Tato nevýhoda se projevuje hlavně na začátku, při přechodu od klasického tzv. imperativního stylu programovaní k~FRP, a je později zcela zastíněna tím, že dochází k~tvorbě nezávislých komponent, které jsou schopné reagovat na danou změnu pomocí velice přehledného a elegantního kódu.
+Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních aplikací. Je zde však nutné zmínit i pár nevýhod tohoto přístupu. Prvním drobným nedostatkem je to, že postupy FRP není možné zavést v~rámci standardních Apple knihoven a je nutné použít neoficiální frameworky (tedy další knihovny/frameworky navíc). Další nevýhodou je nutnost seznámení se se zcela novým programovacím stylem, a tudíž je nezbytné navyknout si na velice odlišné řešení problémů. Tato nevýhoda se projevuje hlavně na začátku, při přechodu od klasického tzv. imperativního stylu programovaní k~FRP, a je později zcela zastíněna tím, že dochází k~tvorbě nezávislých komponent, které jsou schopné reagovat na danou změnu pomocí velice přehledného a elegantního kódu.
 
 \section{Zhodnocení časové a implementační náročnosti MVVM a FRP oproti MVC}
-Stejně jako postupy FRP, tak i architektura MVVM přinesla mnoho prospěšných aspektů. Tato architektura přidává novou vrstvu, která je zcela nezávislá na $View$. Tento fakt může evokovat zbytečné zkomplikování struktury aplikace, avšak v~tomto případě tomu tak jistě není. Nová vrstva $ViewModel$ je nejčastěji použita jedna ku jedné s třídami $ViewControllerů$ a jedná se hlavně o~oddělení logiky -- té, co se zabývá $View$ a ostatní. Díky tomuto rozdělení obsahují $ViewControllery$ méně kódu a jsou daleko přehlednější.
+Stejně jako postupy FRP, tak i architektura MVVM přinesla mnoho prospěšných aspektů. Tato architektura přidává novou vrstvu, která je zcela nezávislá na $View$. Tento fakt může evokovat zbytečné zkomplikování struktury aplikace, avšak v~tomto případě tomu tak jistě není. Nová vrstva $ViewModel$ je nejčastěji použita jedna ku jedné s třídami $ViewControllerů$ a jedná se hlavně o~oddělení logiky -- té, co se zabývá $View$, a ostatní. Díky tomuto rozdělení obsahují $ViewControllery$ méně kódu a jsou daleko přehlednější.
 
 Tedy i když je ke každému $ViewControlleru$ vytvářen pokaždé soubor $ViewModelu$ navíc, celkově je aplikace lépe upravitelná, rozšířitelná a obsahuje komponenty, které splňují tzv. \uv{single responsibility principle} a jsou často znovupoužitelné.
 
 Architektura MVVM skvěle funguje ve spojení s~funkcionálně reaktivním programováním, které se dokáže postarat o~jednoduché spojení vrstev $View$ a $ViewModelu$.
 
-Jak již bylo zmíněno dříve, FRP může být časově náročnější hlavně zpočátku při přechodu od klasického imperativního stylu. Toto je později zastíněno všemi výhodami, které FRP přináší (mezi něž patří i zjednodušení a urychlení implementace).
+Jak již bylo zmíněno dříve, FRP může být časově náročnější hlavně zpočátku při přechodu od klasického imperativního stylu. Toto je později zastíněno všemi výhodami, které FRP přináší (mezi ně patří i zjednodušení a urychlení implementace).
 
-Klasické postupy společně s~architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace. Jakmile začne být aplikace komplexnější, architektura MVVM ve spojení s~FRP se, jak z~pohledu časové tak i implementační náročností, vyplatí.
+Klasické postupy společně s~architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace. Jakmile začne být aplikace komplexnější, architektura MVVM ve spojení s~FRP se, jak z~pohledu časové, tak i implementační náročnosti, vyplatí.
 
 \begin{conclusion}
 Výsledkem této diplomové práce je funkční aplikace, která umožňuje pilotům evidovat záznamy svých letů a záznamy z~výcvikového zařízení pro simulaci letu podle nařízení FCL.050. Tato aplikace také přehledně zobrazuje statistiky a limity nalétaných hodin (reflektující předpis ORO.FTL.210). Uživatelé mohou vkládat také své zdravotní certifikáty, přičemž je znovu respektováno nařízení, tentokrát Part-MED. Aplikace dále umožňuje evidovat všechna pilotova letadla a nabízí možnost vygenerovat report s~jednotlivými záznamy do formátu PDF. Uložená data jsou synchronizována se všemi uživatelovými iOS zařízeními a aplikaci je možné používat i offline.
 
 V~rámci této diplomové práce jsem popsal možnosti, jakým způsobem je možné vyvíjet iOS aplikace. Dále jsem zanalyzoval různé typy softwarových architektur, které lze při vývoji využít. Charakterizoval jsem také, co je funkcionálně reaktivní programování (FRP) a jaké existují možnosti, v~podobě frameworků, při tvorbě iOS aplikací. V~neposlední řadě jsem analyzoval možnosti uložení dat, které byly hodnoceny i z~pohledu jejich podpory online a offline přístupu k~datům. 
 
-Dále jsem v~rámci vývoje výše zmíněné aplikace provedl analýzu již existujících aplikací, společně s~analýzou leteckých předpisů vydaných společností EASA. Po analýze jsem navrhl funkcionality vytvářené aplikace v~podobě případů užití. Navrhl jsem také uživatelské rozhraní v~podobě wireframu, které jsem již v~této fázi podrobil heuristické analýze a uživatelským testům.
+Dále jsem v~rámci vývoje výše zmíněné aplikace provedl analýzu již existujících aplikací, společně s~analýzou leteckých předpisů vydaných společností EASA. Po té  jsem navrhl funkcionality vytvářené aplikace v~podobě případů užití. Navrhl jsem také uživatelské rozhraní v~podobě wireframu, které jsem již v~této fázi podrobil heuristické analýze a uživatelským testům.
 
 Poté, co byla vytvořena první verze aplikace splňující všechny funkční i nefunkční požadavky, jsem znovu provedl heuristickou analýzu a otestoval aplikaci uživatelskými a jednotkovými testy. Podle výsledků těchto testů jsem upravil aplikaci do její finální podoby a nakonec jsem vygeneroval webovou stránku s~dokumentací.
 
-V~poslední části své práce jsem hodnotil jaké výhody a nevýhody přinesly postupy FRP. A~také jsem posuzoval časovou a implementační náročnost při použití architektury MVVM společně s~FRP oproti klasickým postupům a standardní architektuře MVC. Tímto byly splněny všechny cíle této diplomové práce.
+V~poslední části své práce jsem hodnotil, jaké výhody a nevýhody přinesly postupy FRP. A~také jsem posuzoval časovou a implementační náročnost při použití architektury MVVM společně s~FRP oproti klasickým postupům a standardní architektuře MVC. Tímto byly splněny všechny cíle této diplomové práce.
 
 V~tuto chvíli není aplikace nahrána do App Storu a databáze je spouštěna pouze lokálně. V~budoucnu by mohla být aplikace rozšířena o~další funkcionality, bylo by možné vytvořit webovou a desktopovou verzi aplikace a po přeložení aplikace do více jazyků a zprovoznění databáze např. v~cloudu, bych rád aplikaci publikoval v~App Storu.
 
@@ -1790,124 +1788,21 @@ Největším přínosem pro mě, jako autora, bylo získání mnoha zkušeností
 	\item [PDF] Portable Document Format
 \end{description}
 
-
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% % Tuto kapitolu z výsledné práce ODSTRAŇTE.
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% 
-% \chapter{Návod k~použití této šablony}
-% 
-% Tento dokument slouží jako základ pro napsání závěrečné práce na Fakultě informačních technologií ČVUT v~Praze.
-% 
-% \section{Výběr základu}
-% 
-% Vyberte si šablonu podle druhu práce (bakalářská, diplomová), jazyka (čeština, angličtina) a kódování (ASCII, \mbox{UTF-8}, \mbox{ISO-8859-2} neboli latin2 a nebo \mbox{Windows-1250}). 
-% 
-% V~české variantě naleznete šablony v~souborech pojmenovaných ve formátu práce\_kódování.tex. Typ může být:
-% \begin{description}
-% 	\item[BP] bakalářská práce,
-% 	\item[DP] diplomová (magisterská) práce.
-% \end{description}
-% Kódování, ve kterém chcete psát, může být:
-% \begin{description}
-% 	\item[UTF-8] kódování Unicode,
-% 	\item[ISO-8859-2] latin2,
-% 	\item[Windows-1250] znaková sada 1250 Windows.
-% \end{description}
-% V~případě nejistoty ohledně kódování doporučujeme následující postup:
-% \begin{enumerate}
-% 	\item Otevřete šablony pro kódování UTF-8 v~editoru prostého textu, který chcete pro psaní práce použít -- pokud můžete texty s~diakritikou normálně přečíst, použijte tuto šablonu.
-% 	\item V~opačném případě postupujte dále podle toho, jaký operační systém používáte:
-% 	\begin{itemize}
-% 		\item v~případě Windows použijte šablonu pro kódování \mbox{Windows-1250},
-% 		\item jinak zkuste použít šablonu pro kódování \mbox{ISO-8859-2}.
-% 	\end{itemize}
-% \end{enumerate}
-% 
-% 
-% V~anglické variantě jsou šablony pojmenované podle typu práce, možnosti jsou:
-% \begin{description}
-% 	\item[bachelors] bakalářská práce,
-% 	\item[masters] diplomová (magisterská) práce.
-% \end{description}
-% 
-% \section{Použití šablony}
-% 
-% Šablona je určena pro zpracování systémem \LaTeXe{}. Text je možné psát v~textovém editoru jako prostý text, lze však také využít specializovaný editor pro \LaTeX{}, např. Kile.
-% 
-% Pro získání tisknutelného výstupu z~takto vytvořeného souboru použijte příkaz \verb|pdflatex|, kterému předáte cestu k~souboru jako parametr. Vhodný editor pro \LaTeX{} toto udělá za Vás. \verb|pdfcslatex| ani \verb|cslatex| \emph{nebudou} s~těmito šablonami fungovat.
-% 
-% Více informací o~použití systému \LaTeX{} najdete např. v~\cite{wikilatex}.
-% 
-% \subsection{Typografie}
-% 
-% Při psaní dodržujte typografické konvence zvoleného jazyka. České \uv{uvozovky} zapisujte použitím příkazu \verb|\uv|, kterému v~parametru předáte text, jenž má být v~uvozovkách. Anglické otevírací uvozovky se v~\LaTeX{}u zadávají jako dva zpětné apostrofy, uzavírací uvozovky jako dva apostrofy. Často chybně uváděný symbol "{} (palce) nemá s~uvozovkami nic společného.
-% 
-% Dále je třeba zabránit zalomení řádky mezi některými slovy, v~češtině např. za jednopísmennými předložkami a spojkami (vyjma \uv{a}). To docílíte vložením pružné nezalomitelné mezery -- znakem \texttt{\textasciitilde}. V~tomto případě to není třeba dělat ručně, lze použít program \verb|vlna|.
-% 
-%Více o~typografii viz \cite{kobltypo}.
-% 
-% \subsection{Obrázky}
-% 
-% Pro umožnění vkládání obrázků je vhodné použít balíček \verb|graphicx|, samotné vložení se provede příkazem \verb|\includegraphics|. Takto je možné vkládat obrázky ve formátu PDF, PNG a JPEG jestliže používáte pdf\LaTeX{} nebo ve formátu EPS jestliže používáte \LaTeX{}. Doporučujeme preferovat vektorové obrázky před rastrovými (vyjma fotografií).
-% 
-% \subsubsection{Získání vhodného formátu}
-% 
-% Pro získání vektorových formátů PDF nebo EPS z~jiných lze použít některý z~vektorových grafických editorů. Pro převod rastrového obrázku na vektorový lze použít rasterizaci, kterou mnohé editory zvládají (např. Inkscape). Pro konverze lze použít též nástroje pro dávkové zpracování běžně dodávané s~\LaTeX{}em, např. \verb|epstopdf|.
-% 
-% \subsubsection{Plovoucí prostředí}
-% 
-% Příkazem \verb|\includegraphics| lze obrázky vkládat přímo, doporučujeme však použít plovoucí prostředí, konkrétně \verb|figure|. Například obrázek \ref{fig:float} byl vložen tímto způsobem. Vůbec přitom nevadí, když je obrázek umístěn jinde, než bylo původně zamýšleno -- je tomu tak hlavně kvůli dodržení typografických konvencí. Namísto vynucování konkrétní pozice obrázku doporučujeme používat odkazování z~textu (dvojice příkazů \verb|\label| a \verb|\ref|).
-% 
-% \begin{figure}\centering
-% 	\includegraphics[width=0.5\textwidth, angle=30]{cvut-logo-bw}
-% 	\caption[Příklad obrázku]{Ukázkový obrázek v~plovoucím prostředí}\label{fig:float}
-% \end{figure}
-% 
-% \subsubsection{Verze obrázků}
-% 
-% % Gnuplot BW i barevně
-% Může se hodit mít více verzí stejného obrázku, např. pro barevný či černobílý tisk a nebo pro prezentaci. S~pomocí některých nástrojů na generování grafiky je to snadné.
-% 
-% Máte-li například graf vytvořený v programu Gnuplot, můžete jeho černobílou variantu (viz obr. \ref{fig:gnuplot-bw}) vytvořit parametrem \verb|monochrome dashed| příkazu \verb|set term|. Barevnou variantu (viz obr. \ref{fig:gnuplot-col}) vhodnou na prezentace lze vytvořit parametrem \verb|colour solid|.
-% 
-% \begin{figure}\centering
-% 	\includegraphics{gnuplot-bw}
-% 	\caption{Černobílá varianta obrázku generovaného programem Gnuplot}\label{fig:gnuplot-bw}
-% \end{figure}
-% 
-% \begin{figure}\centering
-% 	\includegraphics{gnuplot-col}
-% 	\caption{Barevná varianta obrázku generovaného programem Gnuplot}\label{fig:gnuplot-col}
-% \end{figure}
-% 
-% 
-% \subsection{Tabulky}
-% 
-% Tabulky lze zadávat různě, např. v~prostředí \verb|tabular|, avšak pro jejich vkládání platí to samé, co pro obrázky -- použijte plovoucí prostředí, v~tomto případě \verb|table|. Například tabulka \ref{tab:matematika} byla vložena tímto způsobem.
-% 
-% \begin{table}\centering
-% 	\caption[Příklad tabulky]{Zadávání matematiky}\label{tab:matematika}
-% 	\begin{tabular}{|l|l|c|c|}\hline
-% 		Typ		& Prostředí		& \LaTeX{}ovská zkratka	& \TeX{}ovská zkratka	\tabularnewline \hline \hline
-% 		Text		& \verb|math|		& \verb|\(...\)|	& \verb|$...$|		\tabularnewline \hline
-% 		Displayed	& \verb|displaymath|	& \verb|\[...\]|	& \verb|$$...$$|	\tabularnewline \hline
-% 	\end{tabular}
-% \end{table}
-% 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-
-\chapter{Obsah přiložené SD karty}
-
-%upravte podle skutecnosti
+\chapter{Obsah přiložené paměťové karty}
 
 \begin{figure}
 	\dirtree{%
-		.1 readme.txt\DTcomment{stručný popis obsahu CD}.
-		.1 exe\DTcomment{adresář se spustitelnou formou implementace}.
-		.1 src.
-		.2 impl\DTcomment{zdrojové kódy implementace}.
-		.2 thesis\DTcomment{zdrojová forma práce ve formátu \LaTeX{}}.
+		.1 readme.txt\DTcomment{stručný popis obsahu SD karty}.
+		.1 EAProject\DTcomment{adresář s projektem Enterprise Architect}.
+		.1 FlightRecords\DTcomment{adresář s projektem aplikace}.
+		.2 docs\DTcomment{adresář s dokumentací aplikace}.
+		.2 FlightRecords\DTcomment{adresář se zdrojovými soubory aplikace}.
+		.2 FlightRecordsTests\DTcomment{adresář s testy aplikace}.
+		.1 Screenshots\DTcomment{adresář se snímky obrazovek z aplikace}.
+		.1 User Testing\DTcomment{uživatelské testování}.
+		.2 form.pdf\DTcomment{soubor s vyplněnými dotazníky}.
+		.2 Records\DTcomment{adresář se záznamy z uživatelského testování}.
+		.1 Thesis\DTcomment{zdrojová forma práce ve formátu \LaTeX{}}.
 		.1 text\DTcomment{text práce}.
 		.2 thesis.pdf\DTcomment{text práce ve formátu PDF}.
 		.2 thesis.ps\DTcomment{text práce ve formátu PS}.

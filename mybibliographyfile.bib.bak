@@ -38,6 +38,7 @@
   medium = {online},
   accessed = {2018-04-23},
   URL = {https://facebook.github.io/react-native/},
+  note = "{[cit. 2017-04-23]}"
 }
 @misc{nativeScript,
   journal = {NativeScript},
@@ -49,26 +50,29 @@
   medium = {online},
   accessed = {2018-04-23},
   URL = {https://www.nativescript.org/},
+  note = "{[cit. 2017-04-23]}"
 }
 @misc{calderaio,
   author = {John Calderaio},
   journal = {Medium},
-  howpublished = {\emph{Medium} [online].},
+  howpublished = {\emph{Medium} [online]},
   title = {Comparing the Performance between Native iOS (Swift) and React-Native},
   year = {© 2018},
   medium = {online},
   accessed = {2018-04-23},
   URL = {https://medium.com/the-react-native-log/comparing-the-performance-between-native-ios-swift-and-react-native-7b5490d363e2},
+  note = "{[cit. 2017-04-23]}"
 }
 @misc{girish,
   author = {Girish R},
   journal = {Techathlon},
-  howpublished = {\emph{Techathlon} [online].},
+  howpublished = {\emph{Techathlon} [online]},
   title = {Is React Native a good choice for long-term Mobile App Development?},
   year = {© 2018},
   medium = {online},
   accessed = {2018-04-23},
   URL = {https://techathlon.com/limitations-drawbacks-license-patent-issues-react-native-hybrid-mobile/},
+  note = "{[cit. 2017-04-23]}"
 }
 @misc{upwork,
   journal = {UpWork},

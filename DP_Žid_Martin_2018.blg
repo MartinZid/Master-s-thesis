@@ -77,37 +77,37 @@ Warning--to sort, need author or key in sus
 Warning--empty pages in Ztaltz2014
 You've used 87 entries,
             3185 wiz_defined-function locations,
-            1109 strings with 18517 characters,
-and the built_in function-call counts, 23257 in all, are:
-= -- 1606
+            1110 strings with 18534 characters,
+and the built_in function-call counts, 23337 in all, are:
+= -- 1614
 > -- 203
 < -- 0
 + -- 134
 - -- 38
-* -- 1110
-:= -- 2009
+* -- 1118
+:= -- 2013
 add.period$ -- 174
 call.type$ -- 87
 change.case$ -- 195
 chr.to.int$ -- 0
 cite$ -- 158
-duplicate$ -- 2554
-empty$ -- 2916
+duplicate$ -- 2566
+empty$ -- 2920
 format.name$ -- 40
-if$ -- 5297
+if$ -- 5313
 int.to.chr$ -- 0
 int.to.str$ -- 87
-missing$ -- 566
+missing$ -- 570
 newline$ -- 357
 num.names$ -- 34
-pop$ -- 1527
+pop$ -- 1531
 preamble$ -- 1
 purify$ -- 193
 quote$ -- 0
 skip$ -- 1026
 stack$ -- 0
-substring$ -- 596
-swap$ -- 1013
+substring$ -- 604
+swap$ -- 1021
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -115,5 +115,5 @@ type$ -- 344
 warning$ -- 71
 while$ -- 34
 width$ -- 89
-write$ -- 798
+write$ -- 802
 (There were 71 warnings)

@@ -61,7 +61,7 @@
 \contentsline {subsection}{\numberline {4.2.11}Specifikovat data statistik}{29}{subsection.4.2.11}
 \contentsline {subsection}{\numberline {4.2.12}Editovat osobn\IeC {\'\i } \IeC {\'u}daje}{30}{subsection.4.2.12}
 \contentsline {subsection}{\numberline {4.2.13}Generovat report}{30}{subsection.4.2.13}
-\contentsline {subsection}{\numberline {4.2.14}Odeslat report emailem}{30}{subsection.4.2.14}
+\contentsline {subsection}{\numberline {4.2.14}Odeslat report e-mailem}{30}{subsection.4.2.14}
 \contentsline {section}{\numberline {4.3}N\IeC {\'a}vrh u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{30}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Wireframe}{30}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Heuristick\IeC {\'a} anal\IeC {\'y}za}{31}{subsection.4.3.2}
@@ -78,7 +78,7 @@
 \contentsline {subsection}{\numberline {5.1.2}Extensions}{38}{subsection.5.1.2}
 \contentsline {subsection}{\numberline {5.1.3}Protokoly}{39}{subsection.5.1.3}
 \contentsline {subsection}{\numberline {5.1.4}Automatick\IeC {\'e} po\IeC {\v c}\IeC {\'\i }t\IeC {\'a}n\IeC {\'\i } referenc\IeC {\'\i }}{40}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Pou\IeC {\v z}\IeC {\'\i }t\IeC {\'e} Apple frameworky}{40}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.5}Pou\IeC {\v z}it\IeC {\'e} Apple frameworky}{40}{subsection.5.1.5}
 \contentsline {section}{\numberline {5.2}Reactive Cocoa}{42}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}Signal}{42}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}SignalProducer}{42}{subsection.5.2.2}
@@ -117,5 +117,5 @@
 \contentsline {section}{\numberline {7.2}Zhodnocen\IeC {\'\i } \IeC {\v c}asov\IeC {\'e} a implementa\IeC {\v c}n\IeC {\'\i } n\IeC {\'a}ro\IeC {\v c}nosti MVVM a FRP oproti MVC}{70}{section.7.2}
 \contentsline {chapter}{Z{\' a}v{\v e}r}{71}{chapter*.6}
 \contentsline {chapter}{Literatura}{73}{section*.8}
-\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{81}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e} SD karty}{83}{appendix.B}
+\contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{83}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e} pam\IeC {\v e}\IeC {\v t}ov\IeC {\'e} karty}{85}{appendix.B}
