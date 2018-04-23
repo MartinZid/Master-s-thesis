@@ -7,25 +7,26 @@
 \contentsline {section}{\numberline {2.1}Mo\IeC {\v z}nosti v\IeC {\'y}voje}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Nativn\IeC {\'\i } aplikace}{5}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Hybridn\IeC {\'\i } aplikace}{5}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Mobiln\IeC {\'\i } webov\IeC {\'e} aplikace}{6}{subsection.2.1.3}
-\contentsline {subsection}{\numberline {2.1.4}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{6}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.3}Nativn\IeC {\'\i } aplikace vytv\IeC {\'a}\IeC {\v r}en\IeC {\'e} v JavaScriptu}{6}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Mobiln\IeC {\'\i } webov\IeC {\'e} aplikace}{6}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{6}{subsection.2.1.5}
 \contentsline {section}{\numberline {2.2}Architektury p\IeC {\v r}i tvorb\IeC {\v e} iOS aplikac\IeC {\'\i }}{6}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}MVC}{6}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}MVVM}{7}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}VIPER}{8}{subsection.2.2.3}
 \contentsline {section}{\numberline {2.3}Tvorba u\IeC {\v z}ivatelsk\IeC {\'e}ho rozhran\IeC {\'\i }}{9}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Storyboard}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Xib}{10}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.1}Storyboard}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Xib}{11}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}U\IeC {\v z}ivatelsk\IeC {\'e} rozhran\IeC {\'\i } v~k\IeC {\'o}du}{11}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Zvolen\IeC {\'e} \IeC {\v r}e\IeC {\v s}en\IeC {\'\i }}{11}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Funkcion\IeC {\'a}ln\IeC {\v e} reaktivn\IeC {\'\i } programov\IeC {\'a}n\IeC {\'\i }}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}FRP frameworky pro iOS}{11}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.1}FRP frameworky pro iOS}{12}{subsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.1.1}ReactiveSwift}{12}{subsubsection.2.4.1.1}
 \contentsline {subsubsection}{\numberline {2.4.1.2}ReactiveCocoa}{12}{subsubsection.2.4.1.2}
 \contentsline {subsubsection}{\numberline {2.4.1.3}RxSwift}{12}{subsubsection.2.4.1.3}
 \contentsline {section}{\numberline {2.5}Perzistence dat}{12}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Core Data}{12}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}iCloud}{12}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.1}Core Data}{13}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}iCloud}{13}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}Realm}{13}{subsection.2.5.3}
 \contentsline {chapter}{\chapternumberline {3}Anal\IeC {\'y}za evidence let\IeC {\r u}}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}EASA}{15}{section.3.1}
@@ -117,4 +118,4 @@
 \contentsline {chapter}{Z{\' a}v{\v e}r}{71}{chapter*.6}
 \contentsline {chapter}{Literatura}{73}{section*.8}
 \contentsline {appendix}{\chapternumberline {A}Seznam pou\IeC {\v z}it\IeC {\'y}ch zkratek}{81}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e}ho CD}{83}{appendix.B}
+\contentsline {appendix}{\chapternumberline {B}Obsah p\IeC {\v r}ilo\IeC {\v z}en\IeC {\'e} SD karty}{83}{appendix.B}

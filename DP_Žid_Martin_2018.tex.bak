@@ -79,7 +79,7 @@
 \author{Martin Žid} %jméno autora bez akademických titulů
 \supervisor{Ing. Dominik Veselý}
 
-\acknowledgements{Doplňte, máte-li komu a za co děkovat. V~opačném případě úplně odstraňte tento příkaz.}
+\acknowledgements{Rád bych zde poděkoval pan Ing. Dominiku Veselému za vedení této diplomové práce a za poskytnutí mnoha cenných rad}
 
 \abstractCS{
 Tato práce realizuje iOS aplikaci pro evidenci letů.  V~první části jsou popsány různé možnosti architektur a uložení dat při tvorbě iOS aplikací společně s~charakteristikou funkcionálně reaktivního programování.
@@ -149,7 +149,7 @@ V~poslední části budu popisovat výhody a nevýhody, které přinesly postupy
 \chapter{Tvorba iOS aplikací}
 
 \section{Možnosti vývoje}
-Vývoj iOS aplikace je možný hned několika způsoby, každý z nich má své výhody a nevýhody, které v této kapitole popisuji. Mezi možné způsoby vývoje bych rád zmínil nativní aplikace, hybridní aplikace a mobilní webové aplikace.
+Vývoj iOS aplikace je možný hned několika způsoby, každý z nich má své výhody a nevýhody, které v této kapitole popisuji. Mezi možné způsoby vývoje bych rád zmínil nativní aplikace, hybridní aplikace, nativní aplikace vytvářené v JavaScriptu a mobilní webové aplikace.
 
 \subsection{Nativní aplikace}
 Nativní aplikace jsou vyvíjeny specificky pro jednu platformu. Díky tomu mají přístup ke všem funkcím daného zařízení jako např. GPS, kamera nebo kontakty. Mohou fungovat i pouze offline, tedy bez nutnosti internetového připojení. \cite{Nielsen}
@@ -163,6 +163,11 @@ Hybridní aplikace jsou aplikace tvořené nejčastěji pomocí HTML5 a JavaScri
 
 Však výhodou nativních aplikacím oproti hybridním je to, že jsou vytvářeny přesně pro danou platformu, a tudíž jejich vzhled a výkon bude vždy lepší. \cite{upwork}
 
+\subsection{Nativní aplikace vytvářené v JavaScriptu}
+U nativních aplikací vytvářených pomocí JavasScriptu je možné zmínit hlavně React Native \cite{reactNative} (popř. NativeScript \cite{nativeScript}). Tyto platformy vytváří jakýsi spojovník mezi kódem v JavaScriptu a cílovými platformami (Androidem a iOS). \cite{reactNative} Výhodou těchto aplikací je výkon, který je srovnatelný s čistě nativními aplikacemi \cite{calderaio}, možnost využití nativního vzhledu a samozřejmě tvorba multiplatformní aplikace. \cite{reactNative}
+
+Nevýhodou tohoto řešení je např. nutnost vytvoření specifického uživatelského rozhraní pro každou platformu zvlášť, kvůli rozdílným standardům iOS a Android aplikací. Dále také závislost na zvoleném frameworku, který nemusí být dokonalý, a proto je občas nutné psát i čistě nativní kód. \cite{girish}
+
 \subsection{Mobilní webové aplikace}
 Poslední možností jsou mobilní webové aplikace. Tyto aplikace jsou pouze upravené webové stránky do podoby a chování nativních aplikací. Přestože běží pouze v~prohlížeči, mohou mít i tyto aplikace přístup k~určitým (ne však ke všem) nativním funkcím. \cite{Nielsen}
 
@@ -171,7 +176,7 @@ Tím, že jsou mobilní webové aplikace spouštěny v~prohlížeči a nejsou st
 Tento postup má však i své nevýhody. Jak již bylo zmíněno dříve, aplikace nemá přístup ke všem nativním funkcím daného přístroje. S~dalším problémem se můžeme setkat u~offline ukládání dat, a to se zabezpečením, které nemusí být tak dokonalé nebo uživatelsky přívětivé, jako u~nativních aplikací.  \cite{saleforce}
 
 \subsection{Zvolené řešení}
-Pro svou práci jsem si zvolil možnost nativní mobilní aplikace z~důvodu zaměření jen na platformu iOS. Bude se tedy jednat pouze o~jednu aplikaci, která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
+Pro svou práci jsem si zvolil možnost nativní mobilní aplikace vyvíjené v jazyce Swift z~důvodu zaměření jen na platformu iOS. Bude se tedy jednat pouze o~jednu aplikaci, která bude moci využít všech nativních funkcionalit, výkonu i vzhledu.
 
 \section{Architektury při tvorbě iOS aplikací}
 Při tvorbě iOS aplikace je možné si vybrat z~několika architektur. V~této kapitole budu rozebírat pouze MVC, MVVM a VIPER.
@@ -329,9 +334,9 @@ Realm Mobile Database je open source, tedy zdarma. \cite{realmOverview}
 
 \chapter{Analýza evidence letů}
 \section{EASA}
-EASA, neboli European Aviation Safety Agency, je agentura spadající pod Evropskou Unii, která má na starosti technické přepisy, bezpečnost, regulace a certifikace v~oboru letectví. \cite{EU} 
+EASA, neboli European Aviation Safety Agency, je agentura spadající pod Evropskou Unii, která má na starosti technické předpisy, bezpečnost, regulace a certifikace v~oboru letectví. \cite{EU} 
 
-Pro tuto diplomovou práci je EASA důležitá, protože vydává i pokyny např. pro evidenci letů nebo limity odlétaných hodin. \cite{EASARegulations}
+Pro tuto diplomovou práci je EASA důležitá, protože vydává i pokyny např. pro evidenci letů nebo limity odlétaných hodin. \cite{EASARegulations} Tyto předpisy byly dále zohledněny při návrhu funkcionalit mobilní aplikace.
 
 \subsection{Pokyny pro evidenci letů}
 Pokyny pro evidenci letů udává předpis FCL.050. Tento předpis specifikuje povinné položky každého leteckého záznamu. \cite{FCL} 
@@ -1729,18 +1734,18 @@ Postupy FRP tedy přináší mnoho výhod, které ulehčují tvorbu mobilních a
 \section{Zhodnocení časové a implementační náročnosti MVVM a FRP oproti MVC}
 Stejně jako postupy FRP, tak i architektura MVVM přinesla mnoho prospěšných aspektů. Tato architektura přidává novou vrstvu, která je zcela nezávislá na $View$. Tento fakt může evokovat zbytečné zkomplikování struktury aplikace, avšak v~tomto případě tomu tak jistě není. Nová vrstva $ViewModel$ je nejčastěji použita jedna ku jedné s třídami $ViewControllerů$ a jedná se hlavně o~oddělení logiky -- té, co se zabývá $View$ a ostatní. Díky tomuto rozdělení obsahují $ViewControllery$ méně kódu a jsou daleko přehlednější.
 
-Tedy, i když je ke každému $ViewControlleru$ vytvářen pokaždé soubor $ViewModelu$ navíc, celkově je aplikace lépe upravitelná, rozšířitelná a obsahuje komponenty, které splňují tzv. \uv{single responsibility principle} a jsou často znovupoužitelné.
+Tedy i když je ke každému $ViewControlleru$ vytvářen pokaždé soubor $ViewModelu$ navíc, celkově je aplikace lépe upravitelná, rozšířitelná a obsahuje komponenty, které splňují tzv. \uv{single responsibility principle} a jsou často znovupoužitelné.
 
 Architektura MVVM skvěle funguje ve spojení s~funkcionálně reaktivním programováním, které se dokáže postarat o~jednoduché spojení vrstev $View$ a $ViewModelu$.
 
-Jak je již zmíněno dříve, FRP může být časově náročnější hlavně zpočátku při přechodu od klasického imperativního stylu. Toto je později zastíněno všemi výhodami, které FRP přináší (mezi něž patří i zjednodušení a urychlení implementace).
+Jak již bylo zmíněno dříve, FRP může být časově náročnější hlavně zpočátku při přechodu od klasického imperativního stylu. Toto je později zastíněno všemi výhodami, které FRP přináší (mezi něž patří i zjednodušení a urychlení implementace).
 
-Klasické postupy společně s~architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace. Jakmile začne být aplikace lehce komplexnější, architektura MVVM ve spojení s~FRP se, jak z~pohledu časové tak i implementační náročností, vyplatí.
+Klasické postupy společně s~architekturou MVC se tedy hodí pouze pro velice malé a jednoduché aplikace. Jakmile začne být aplikace komplexnější, architektura MVVM ve spojení s~FRP se, jak z~pohledu časové tak i implementační náročností, vyplatí.
 
 \begin{conclusion}
-Výsledkem této diplomové práce je funkční aplikace, která umožňuje pilotům evidovat záznamy svých letů a záznamy z~výcvikového zařízení pro simulaci letu podle nařízení FCL.050. Tato aplikace také přehledně zobrazuje statistiky a limity nalétaných hodin (reflektující předpis ORO.FTL.210). Uživatelé mohou vkládat také své zdravotní certifikáty, kdy je znovu respektováno nařízení, tentokrát Part-MED. Aplikace dále umožňuje evidovat všechna pilotova letadla a nabízí možnost vygenerovat report s~jednotlivými záznamy do formátu PDF. Uložená data jsou synchronizována se všemi uživatelovými iOS zařízeními a aplikaci je možné používat i offline.
+Výsledkem této diplomové práce je funkční aplikace, která umožňuje pilotům evidovat záznamy svých letů a záznamy z~výcvikového zařízení pro simulaci letu podle nařízení FCL.050. Tato aplikace také přehledně zobrazuje statistiky a limity nalétaných hodin (reflektující předpis ORO.FTL.210). Uživatelé mohou vkládat také své zdravotní certifikáty, přičemž je znovu respektováno nařízení, tentokrát Part-MED. Aplikace dále umožňuje evidovat všechna pilotova letadla a nabízí možnost vygenerovat report s~jednotlivými záznamy do formátu PDF. Uložená data jsou synchronizována se všemi uživatelovými iOS zařízeními a aplikaci je možné používat i offline.
 
-V~rámci této diplomové práce jsem popsat možnosti jakým způsobem je možné vyvíjet iOS aplikace. Dále jsem zanalyzoval různé typy softwarových architektur, které je možné při vývoji využít. Charakterizoval jsem také, co je to funkcionálně reaktivní programování (FRP) a jaké existují možnosti, v~podobě frameworků, při tvorbě iOS aplikací. V~neposlední řadě jsem analyzoval možnosti uložení dat, které byly hodnoceny i z~pohledu jejich podpory online a offline přístupu k~datům. 
+V~rámci této diplomové práce jsem popsal možnosti, jakým způsobem je možné vyvíjet iOS aplikace. Dále jsem zanalyzoval různé typy softwarových architektur, které lze při vývoji využít. Charakterizoval jsem také, co je funkcionálně reaktivní programování (FRP) a jaké existují možnosti, v~podobě frameworků, při tvorbě iOS aplikací. V~neposlední řadě jsem analyzoval možnosti uložení dat, které byly hodnoceny i z~pohledu jejich podpory online a offline přístupu k~datům. 
 
 Dále jsem v~rámci vývoje výše zmíněné aplikace provedl analýzu již existujících aplikací, společně s~analýzou leteckých předpisů vydaných společností EASA. Po analýze jsem navrhl funkcionality vytvářené aplikace v~podobě případů užití. Navrhl jsem také uživatelské rozhraní v~podobě wireframu, které jsem již v~této fázi podrobil heuristické analýze a uživatelským testům.
 
@@ -1748,9 +1753,9 @@ Poté, co byla vytvořena první verze aplikace splňující všechny funkční 
 
 V~poslední části své práce jsem hodnotil jaké výhody a nevýhody přinesly postupy FRP. A~také jsem posuzoval časovou a implementační náročnost při použití architektury MVVM společně s~FRP oproti klasickým postupům a standardní architektuře MVC. Tímto byly splněny všechny cíle této diplomové práce.
 
-V~tuto chvíli není aplikace nahrána do App Storu a databáze je spouštěna pouze lokálně. V~budoucnu by mohla být aplikace rozšířena o~další funkcionality, bylo by možné vytvořit webovou a desktopovou verzi aplikace a po přeložení aplikace do více jazyků a zprovoznění databáze např. v~cloudu bych rád aplikaci publikoval v~App Storu.
+V~tuto chvíli není aplikace nahrána do App Storu a databáze je spouštěna pouze lokálně. V~budoucnu by mohla být aplikace rozšířena o~další funkcionality, bylo by možné vytvořit webovou a desktopovou verzi aplikace a po přeložení aplikace do více jazyků a zprovoznění databáze např. v~cloudu, bych rád aplikaci publikoval v~App Storu.
 
-Největším přínosem pro mě, jako autora, bylo získání mnoha zkušeností z~oblasti vývoje iOS aplikací. Seznámil jsem se s~moderními architekturami a novým programovacím paradigmatem a tedy i s~novým pohledem, na řešení problémů.  Dalším velice zajímavým aspektem této práce bylo prozkoumání leteckého světa a spolupráce s~pilotem z~povolání.
+Největším přínosem pro mě, jako autora, bylo získání mnoha zkušeností z~oblasti vývoje iOS aplikací. Seznámil jsem se s~moderními architekturami a novým programovacím paradigmatem, a tedy i s~novým pohledem na řešení problémů.  Dalším velice zajímavým aspektem této práce bylo nahlédnutí do leteckého světa a spolupráce s~pilotem z~povolání.
 
 \end{conclusion}
 
@@ -1766,6 +1771,7 @@ Největším přínosem pro mě, jako autora, bylo získání mnoha zkušeností
 	\item[MVC] Model View Controller
 	\item[MVVM] Model View ViewModel
 	\item[VIPER] View Interactor Presenter Entity Router
+	\item [UI] User Interface
 	\item[PC] Personal Computer
 	\item[EASA] European Aviation Safety Agency
 	\item[PIC] Pilot-In-Command
@@ -1891,7 +1897,7 @@ Největším přínosem pro mě, jako autora, bylo získání mnoha zkušeností
 % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-\chapter{Obsah přiloženého CD}
+\chapter{Obsah přiložené SD karty}
 
 %upravte podle skutecnosti
 
